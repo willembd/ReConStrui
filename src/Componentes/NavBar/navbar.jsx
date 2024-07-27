@@ -1,9 +1,13 @@
 
+import { Nav, NavLogo } from "./navbarStyle"
+
 
 export default function NavBar(){
     return(
         <>
-            <h1>ReConStrui</h1>
+            <Nav>
+                <NavLogo src="" alt=""/>
+            </Nav>
         </>
         
     )
