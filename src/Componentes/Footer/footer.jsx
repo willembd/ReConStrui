@@ -8,18 +8,20 @@ import Facebook from "../../assets/logo_facebook.png"
 import Whastzapp from "../../assets/logo_whatsapp.png"
 import LogoRecontrui from "../../assets/logo-recontrui.png"
 
+import * as S from "./footerStyle"
+
 export default function Footer(){
     return(
-        <footer>
-            <div>
+        <S.FooterContainer>
+            <S.Logo>
                 <img src={LogoRecontrui} alt="logo rescontrui" />
-            </div>
+            </S.Logo>
 
             <div>
                 <div>
-                    <div>
+                    <S.Link>
                         <h2>Link Rápidos</h2> 
-                    </div>
+                    </S.Link>
                     
                     <ul>
                         <li>
@@ -31,7 +33,7 @@ export default function Footer(){
                     </ul>
                 </div>
 
-                <div>
+                <S.Pagamentos>
                     <div>
                         <h2>Formas de Pagamentos</h2>
                     </div>
@@ -41,17 +43,17 @@ export default function Footer(){
                     <img src={LogoMaster} alt="logo master" />
                     <img src={LogoElo} alt="logo elo" />
                     <img src={LogoPix} alt=" logo pix" />
-                </div>
+                </S.Pagamentos>
 
-                <div>
+                <S.Contatos>
                     <h2>Contatos</h2>
                     <ul>
                         <li>Email:Reconstrue@gmail.com</li>
                         <li>Telefone:(81)3333-3333</li>
                     </ul>
-                </div>
+                </S.Contatos>
 
-                <div>
+                <S.Redes>
                     <div>
                         <h2>Redes Sociais</h2>
                     </div>
@@ -61,8 +63,8 @@ export default function Footer(){
                         <img src={Whastzapp} alt="whastzapp" />
                         <img src={Facebook} alt="facebook" />
                     </div>
-                </div>
+                </S.Redes>
             </div>
-        </footer>
+        </S.FooterContainer>
     );
 }
