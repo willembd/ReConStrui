@@ -1,6 +1,6 @@
 import * as S from "./navbarStyle"
 
-import ImgLogoNav from "../../assets/LogoNavBar.svg"
+import ImgLogoNav from "../../assets/logoNavBar.svg"
 import ButtonNav from "../ButtonNavBar/buttonNavBar"
 
 export default function NavBar(){
