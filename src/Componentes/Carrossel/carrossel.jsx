@@ -1,10 +1,13 @@
+
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "./carrossel.css"
 
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import "swiper/css/autoplay";
+
+import { Navigation, Pagination, Autoplay} from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import * as S from "./carrosselStyle"
 
@@ -24,10 +27,12 @@ export default function Carrossel(){
       <div className='Conteiner'>
 
          <Swiper 
-            modules={[Navigation, Pagination, Scrollbar, A11y]}
+            modules={[Navigation, Pagination, Autoplay]}
             slidesPerView={1}
-            pagination={{ clickable: true}}
             navigation 
+            autoplay={{delay: 4000, disableOnInteraction: true}}
+            pagination={{ clickable: true}}
+                 
            >
             
              {imagens.map( (item) => (
