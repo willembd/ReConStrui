@@ -1,4 +1,5 @@
 import Cards from "../../Componentes/cards/cards";
+import Cards2 from "../../Componentes/Cards2/cards2"
 import Carrossel from "../../Componentes/Carrossel/carrossel";
 import Filtro from "../../Componentes/Filtro/filtro";
 import Footer from "../../Componentes/Footer/footer"
@@ -12,6 +13,7 @@ export default function Home() {
             <Carrossel/>
             <Filtro/>
             <Cards/>
+            <Cards2/>
             <Footer/>
         </>
     );
