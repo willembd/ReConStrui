@@ -12,5 +12,8 @@ export const SelectStyle = styled.select`
             border-bottom: 0.125rem #008d2a solid;
             outline: 0;
         }
+        @media(max-width: 1000px){
+            padding: 0.625rem 1rem;
+        }
 
 `

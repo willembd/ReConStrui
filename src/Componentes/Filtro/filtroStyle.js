@@ -16,4 +16,9 @@ export const Container = styled.div`
     border: 0.25rem #4C7A56 solid;
     padding: 0.625rem 2.5rem;
     border-radius: 0.25rem;
+
+    @media(max-width: 1000px){
+        display: flex;
+        flex-direction: column;
+    }
 `
