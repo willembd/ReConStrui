@@ -21,17 +21,17 @@ export const FooterContato = styled.div`
     grid-template-columns: repeat(4, 1fr);
     align-content: center;
     justify-content: center;
-    gap: 60px;
-    padding: 20px;
+    gap: 3.75rem;
+    padding-bottom:1.688rem;
 `;
 
 //stilizando logo Reconstrue
 export const Logo = styled.div`
-    padding: 30px;
+    padding: 1.875rem;
     img {
         width: 100%;
         max-width: 20rem;
-        margin-left: 100px;
+        margin-left: 6.25rem;
     }
 `;
 
@@ -39,22 +39,22 @@ export const Logo = styled.div`
 export const Link = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 0.625rem;
 `;
 
 export const LinkContent = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 0.313rem;
 `;
 //stilizando o elemento de pagamentos imagens geral
 export const Pagamentos = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 0.625rem;
     img {
-        width: 55px;
-        height: 39px;
+        width: 3.438rem;
+        height: 2.438rem;
     }
 `;
 //stilizando posicionalmento das imagens de pagamento (pagamentosimg e imagemcont)
@@ -69,7 +69,7 @@ export const imagemcont = styled.div`
 export const Contatos = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 0.625rem;
 `;
 
 export const ContatosD = styled.div``;
@@ -80,9 +80,9 @@ export const Redes = styled.div`
 export const ContentRedes = styled.div`
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 1.25rem;
     img {
-        width: 35px;
-        height: 35px;
+        width: 2.188rem;
+        height: 2.188rem;
     }
 `;
