@@ -5,9 +5,11 @@ import "swiper/css/navigation";
 import "swiper/css/scrollbar";
 import { Navigation, Scrollbar, A11y } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { useState, useEffect } from "react"; 
 
 
 export default function Cards() {
+    const [slidePerView, setSlidePerView] = useState (5)
     const imagens = [
         { id: '1', image: "/pedrisco 1.svg",title:"Pedrisco" },
         { id: '2', image: "/rachao 1.svg",title:"Rachão" },
@@ -21,6 +23,36 @@ export default function Cards() {
         { id: '10', image: "/rachao 1.svg",title:"Rachão" },
     ];
 
+    useEffect(() => {
+        function handleResize(){
+            if(window.innerWidth<453){
+                setSlidePerView(1);
+            }else{
+                if(window.innerWidth<600){
+                    setSlidePerView(2)
+                }else{
+                    if(window.innerWidth<710){
+                        setSlidePerView(3)
+                    }else{
+                        if(window.innerWidth<1010){
+                            setSlidePerView(4)
+                        }else{
+                            setSlidePerView(5)
+                        }
+                    }
+                }
+            }
+        }
+        handleResize();
+
+        window.addEventListener("resize", handleResize)
+
+        return () => {
+            window.removeEventListener("resize", handleResize)
+        }
+
+    },[])
+
     return (
        <>
        <Alinhaborda>
@@ -32,7 +64,7 @@ export default function Cards() {
                 <Carrosel>
                     <Swiper 
                         modules={[Navigation, Scrollbar, A11y]}
-                        slidesPerView={5}
+                        slidesPerView={slidePerView}
                         navigation
                     >
                         {imagens.map((item) => (

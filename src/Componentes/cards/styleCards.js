@@ -52,6 +52,7 @@ export const Linha = styled.div`
 export const Carrosel = styled.div`
     height:19.011rem;
     width: 73.581rem;
+    min-width: 19rem;
 `
 export const Alinhamento = styled.div`
     display: flex;
