@@ -5,7 +5,6 @@ import "swiper/css/navigation";
 import "swiper/css/scrollbar";
 import { Navigation, Scrollbar, A11y } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import "./card.css"
 
 
 export default function Cards() {
