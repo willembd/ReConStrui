@@ -22,7 +22,7 @@ export const Botao = styled.button`
     width: 9rem;
     padding: 0.4rem;
     background-color: #AF7503;
-    color: #ffffff;
+    color: #ffff;
     border: none;
     border-radius: 0.5rem;
     cursor: pointer;
@@ -52,6 +52,7 @@ export const Linha = styled.div`
 export const Carrosel = styled.div`
     height:19.011rem;
     width: 73.581rem;
+    min-width: 19rem;
 `
 export const Alinhamento = styled.div`
     display: flex;
