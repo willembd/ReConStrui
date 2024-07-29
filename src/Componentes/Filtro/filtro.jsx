@@ -1,17 +1,21 @@
 import Select from "../Select/select";
+import Cidade from "../SelectCidade/cidade";
+import Estado from "../SelectEstado/estado";
+import Produto from "../SelectProduto/produto";
 import * as S from "./filtroStyle";
 
 export default function Filtro(){
+
+    
     return(
         <S.ContainerPai>
-            <p>Encontre o produto mais próximo a você:</p>
+            <S.ContainerTitulo>Encontre o produto mais próximo a você:</S.ContainerTitulo>
             <S.Container>
-                <Select/>
-                <Select/>
-                <Select/>
+                <Estado/>
+                <Cidade/>
+                <Produto/>
             </S.Container>
         </S.ContainerPai>
-       
        
     )
 }
