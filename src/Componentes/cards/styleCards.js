@@ -66,3 +66,21 @@ export const Palavra = styled.p`
     font-weight: normal;
     margin: 0.3rem;
 `
+export const Bordas = styled.div`
+    width: 50%;
+  border-top: 0.2rem solid #1C4525;
+  margin: 1.2rem 0;
+`
+export const Alinhaborda = styled.div`
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap:8rem ;
+    margin: 1rem;
+
+`
+export const Texto = styled.h2`
+    font-size: 1.3rem ;
+    font-weight: bolder;
+    color:#1C4525
+`

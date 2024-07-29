@@ -15,11 +15,11 @@ export const NavLogo = styled.img`
 `
 
 export const Borda = styled.div`
+    
     border-bottom: 6px #1C4525 solid;
     margin-top: 1rem;
     margin-bottom: 2.5rem;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-    
     
 `
 

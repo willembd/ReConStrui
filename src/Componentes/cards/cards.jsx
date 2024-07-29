@@ -1,5 +1,5 @@
 
-import { Alinhamento, Botao, Caixa, Carrosel, Container, Im, Linha, Palavra, Title } from "./styleCards";
+import { Alinhaborda, Alinhamento, Bordas, Botao, Caixa, Carrosel, Container, Im, Linha, Palavra, Texto, Title } from "./styleCards";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/scrollbar";
@@ -22,36 +22,43 @@ export default function Cards() {
     ];
 
     return (
-        <Container>
-            <Carrosel>
-                <Swiper 
-                    modules={[Navigation, Scrollbar, A11y]}
-                    slidesPerView={5}
-                    navigation
-                >
-                    {imagens.map((item) => (
-                        <SwiperSlide key={item.id}>
-                            <Container>
-                                <Caixa>
-                                    <div className="box-item">
-                                        <div className="img">
-                                            <Im src={item.image} alt="Slide" className='slide-item'/>
+       <>
+       <Alinhaborda>
+            <Texto>Recomendações para você</Texto>
+            <Bordas/>
+       </Alinhaborda>
+        
+            <Container>
+                <Carrosel>
+                    <Swiper 
+                        modules={[Navigation, Scrollbar, A11y]}
+                        slidesPerView={5}
+                        navigation
+                    >
+                        {imagens.map((item) => (
+                            <SwiperSlide key={item.id}>
+                                <Container>
+                                    <Caixa>
+                                        <div className="box-item">
+                                            <div className="img">
+                                                <Im src={item.image} alt="Slide" className='slide-item'/>
+                                            </div>
+                                            <Alinhamento>
+                                                <Linha>
+                                                    <Title>{item.title}</Title>
+                                                    <Palavra>AGR Ambiental</Palavra>
+                                                    <Botao>Comprar</Botao>
+                                                </Linha>
+                                            </Alinhamento>
                                         </div>
-                                        <Alinhamento>
-                                            <Linha>
-                                                <Title>{item.title}</Title>
-                                                <Palavra>AGR Ambiental</Palavra>
-                                                <Botao>Compra</Botao>
-                                            </Linha>
-                                        </Alinhamento>
-                                    </div>
-                                </Caixa>
+                                    </Caixa>
 
-                            </Container>
-                        </SwiperSlide>
-                    ))}
-                </Swiper>
-            </Carrosel>
-        </Container>
+                                </Container>
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
+                </Carrosel>
+            </Container>
+        </> 
     );
 }
