@@ -64,7 +64,7 @@ export default function Cards2(){
                 <Carrosel>
                     <Swiper 
                         modules={[Navigation, Scrollbar, A11y]}
-                        slidesPerView={5}
+                        slidesPerView={slidePerView}
                         navigation
                     >
                         {imagens.map((item) => (
