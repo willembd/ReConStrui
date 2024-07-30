@@ -36,8 +36,8 @@ export default function Cards() {
                     if(window.innerWidth<710){
                         setSlidePerView(3)
                     }else{
-                        if(window.innerWidth<1010){
-                            setSlidePerView(4)
+                        if(window.innerWidth<=1920){
+                            setSlidePerView(5)
                         }else{
                             setSlidePerView(6)
                         }
