@@ -1,0 +1,22 @@
+.swiper-button-next, .swiper-button-prev {
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    color: #fff;
+  }
+
+  .swiper-pagination-bullet {
+    background-color: #fff;
+  }
+  
+  @media screen and (max-width: 750px) {
+    .swiper-button-prev:after, .swiper-button-next:after  {
+   
+      
+        font-size: 1rem;
+        
+    }
+  }

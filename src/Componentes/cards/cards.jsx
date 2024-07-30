@@ -7,9 +7,11 @@ import { Navigation, Scrollbar, A11y } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { useState, useEffect } from "react"; 
 
+import "./cards.css"
+
 
 export default function Cards() {
-    const [slidePerView, setSlidePerView] = useState (5)
+    const [slidePerView, setSlidePerView] = useState(6)
     const imagens = [
         { id: '1', image: "/pedrisco 1.svg",title:"Pedrisco" },
         { id: '2', image: "/rachao 1.svg",title:"Rachão" },
@@ -37,7 +39,7 @@ export default function Cards() {
                         if(window.innerWidth<1010){
                             setSlidePerView(4)
                         }else{
-                            setSlidePerView(5)
+                            setSlidePerView(6)
                         }
                     }
                 }
@@ -66,6 +68,7 @@ export default function Cards() {
                         modules={[Navigation, Scrollbar, A11y]}
                         slidesPerView={slidePerView}
                         navigation
+                        className="cards"
                     >
                         {imagens.map((item) => (
                             <SwiperSlide key={item.id}>

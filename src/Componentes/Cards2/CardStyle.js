@@ -51,8 +51,8 @@ export const Linha = styled.div`
 `
 export const Carrosel = styled.div`
     height:19.011rem;
-    width: 73.581rem;
-    min-width: 19rem;
+    width: 96rem;
+    
 `
 export const Alinhamento = styled.div`
     display: flex;
@@ -68,7 +68,7 @@ export const Descricao = styled.p`
     margin: 0.3rem;
 `
 export const Bordas = styled.div`
-    width: 50%;
+    width: 70%;
   border-top: 0.2rem solid #1C4525;
   margin: 1.2rem 0;
 `
@@ -76,8 +76,8 @@ export const Alinhaborda = styled.div`
     display: flex;
     justify-content:center;
     align-items: center;
-    gap:8rem ;
-    margin: 1rem;
+    gap:2rem ;
+    margin: 1rem 0;
 
 `
 export const Texto = styled.h2`

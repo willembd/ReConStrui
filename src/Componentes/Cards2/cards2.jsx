@@ -10,7 +10,7 @@ import { useState, useEffect } from "react";
 
 export default function Cards2(){
 
-  const [slidePerView, setSlidePerView] = useState (5) 
+  const [slidePerView, setSlidePerView] = useState (6) 
   const imagens = [
         { id: '1', image: "/pedrisco 1.svg",Titulo:"Pedrisco" },
         { id: '2', image: "/rachao 1.svg",Titulo:"Rachão" },
@@ -38,7 +38,7 @@ export default function Cards2(){
                     if(window.innerWidth<1010){
                         setSlidePerView(4)
                     }else{
-                        setSlidePerView(5)
+                        setSlidePerView(6)
                     }
                 }
             }

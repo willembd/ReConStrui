@@ -21,13 +21,13 @@ export const FooterContato = styled.div`
     grid-template-columns: repeat(4, 1fr);
     align-content: center;
     justify-content: center;
-    gap: 3.75rem;
+    gap: 13.5rem;
     padding-bottom:1.688rem;
 `;
 
 //stilizando logo Reconstrue
 export const Logo = styled.div`
-    padding: 1.875rem;
+    padding: 2rem 4rem; 
     img {
         width: 100%;
         max-width: 20rem;
