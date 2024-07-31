@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 //stilizando o footer.
 export const FooterContainer = styled.footer`
     background-color: #1c4525f0;
@@ -28,10 +29,14 @@ export const FooterContato = styled.div`
 //stilizando logo Reconstrue
 export const Logo = styled.div`
     padding: 2rem 4rem; 
+  
     img {
         width: 100%;
-        max-width: 20rem;
-        margin-left: 6.25rem;
+        max-width: 25rem; 
+        line-height:1px; 
+        margin-top:20px;
+        margin-bottom:20px;
+        margin-left:55px;
     }
 `;
 
@@ -47,6 +52,7 @@ export const LinkContent = styled.div`
     flex-direction: column;
     gap: 0.313rem;
 `;
+
 //stilizando o elemento de pagamentos imagens geral
 export const Pagamentos = styled.div`
     display: flex;
@@ -57,6 +63,7 @@ export const Pagamentos = styled.div`
         height: 2.438rem;
     }
 `;
+
 //stilizando posicionalmento das imagens de pagamento (pagamentosimg e imagemcont)
 export const Pagamentosimg = styled.div`
     display: flex;
@@ -66,13 +73,20 @@ export const imagemcont = styled.div`
     display: flex;
     justify-content: space-evenly;
 `;
+
+//stilizando elemento contato
 export const Contatos = styled.div`
     display: flex;
     flex-direction: column;
     gap: 0.625rem;
 `;
 
-export const ContatosD = styled.div``;
+export const ContatosD = styled.div`
+p {
+  line-height: 1.875rem;
+}
+
+`;
 //stilizando elemento redes sociais
 export const Redes = styled.div`
     display: grid;
