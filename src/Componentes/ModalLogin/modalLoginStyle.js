@@ -8,6 +8,7 @@ export const Caixa = styled.div`
     left: 0;
     right: 0;
     background-color: rgba(0, 0, 0, 0.356);
+    z-index: 9999;
 `
 
 export const Modal = styled.div`
