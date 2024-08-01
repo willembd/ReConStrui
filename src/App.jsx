@@ -1,12 +1,15 @@
-import Home from "./Pages/Home/home";
+import { RouterProvider } from "react-router-dom";
 import GlobalStyles from "./styles/GlobalStyles";
+import { router } from "./Routes/routes";
 
 export default function App() {
 
   return (
     <>
         <GlobalStyles/>
-        <Home/>
+        <RouterProvider router={router}/>
+  
+        
     </>
   )
 }
