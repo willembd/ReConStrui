@@ -8,8 +8,7 @@ export default function NavBar(){
         <>
             <S.Nav>
                 <S.NavLogo src={ImgLogoNav} alt=""/>
-                <ButtonNav/>
-                
+                <ButtonNav text="Entrar"/>
             </S.Nav>
             <S.Borda/>
         </>

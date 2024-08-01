@@ -1,7 +1,7 @@
 import * as S from "./buttonNavBarStyle"
 
-export default function ButtonNav(){
+export default function ButtonNav({ text, ...rest }){
     return(
-        <S.ButtonNavBar>Entrar</S.ButtonNavBar>
+        <S.ButtonNavBar {...rest}>{text}</S.ButtonNavBar>
     )
 }
