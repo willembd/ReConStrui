@@ -8,7 +8,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { useState, useEffect } from "react"; 
 
 import "./cards.css"
-import ModalCards from "./modalCards/modalCards";
+import ModalCards from "./modalCards/modalCards.jsx";
 
 
 export default function CarrosselCards() {

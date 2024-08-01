@@ -1,5 +1,5 @@
 import React, { Children } from 'react'
-import { BACKGROUND_STYLE, MODAL_STYLE } from './modalCards'
+import { BACKGROUND_STYLE, MODAL_STYLE } from './modalCards.js'
 
 
 
