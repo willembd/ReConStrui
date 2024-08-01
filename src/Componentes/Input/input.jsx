@@ -6,7 +6,7 @@ export default function Input({ text }) {
     <S.InputContainer>
       <input type="text" id="input" required />
       <label htmlFor="input" className="label">{text}</label>
-      <div className="underline"></div>
+      
     </S.InputContainer>
   );
 }

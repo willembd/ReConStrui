@@ -1,9 +1,10 @@
-import Select from "react-select"
+import Select from "../Select/select";
+
 
 export default function Cidade({}){
     return(
-        <Select 
-            
-        />
+        <Select>
+            <option value="">Selecione uma Cidade</option>
+        </Select>
     )
 }
