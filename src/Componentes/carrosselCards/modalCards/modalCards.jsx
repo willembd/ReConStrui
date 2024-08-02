@@ -1,8 +1,6 @@
-import * as S from '../../Input/inputStyle';
-import { Button } from '../styleCards.js';
+import { Button } from '../Style.js';
 import { BACKGROUND_STYLE, MODAL_STYLE } from './modalCards.js'
 
-import { Input } from 'react-select/animated'
 
 
 export default function ModalCards({isOpen,setModalOpen,children }) {

@@ -96,12 +96,13 @@ export const ContainerDivModal =styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 3.4rem;
 
     
 ` 
 export const Button = styled.button`
     position: fixed;
-    padding: 5px;
+    padding: 10px;
     top: 20px;
     right: 40px;
     background-color: green;
@@ -113,15 +114,18 @@ export const Button = styled.button`
 `;
 export const Imagem = styled.div`
     display: flex;
-    padding: 10px;
+    padding: 30px 0 0 0;
     gap: 50px;
 `;
 export const Logo = styled.img`
     width: 320px;
+    padding-bottom: 2rem;
 `;
 export const Barra = styled.div`
-    padding: 200px 1px;
+    padding: 230px 1px;
     background-color: rgba(28, 69, 37, 0.94);
+    margin-left: 2rem;
+    margin-right: 2rem;
 `
 export const FormOrçamento = styled.div`
     display: flex;
@@ -133,12 +137,24 @@ export const TituloModal = styled.h1`
     margin: 0.1rem;
 `
 
-export const DivInput = styled.div`
-  
-    
-`
+
 export const DivRadio =styled.div`
     display: flex;
     margin-bottom: 1rem;
     gap: 16px;
+    margin-top: 1rem;
+
 `
+export const Transporte = styled.div`
+    
+    margin: 1rem;
+    margin-top: 1rem;
+    font-size: 1rem;
+`
+export const DivInput = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    padding-top: 0.5rem;
+`
+

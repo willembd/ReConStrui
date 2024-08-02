@@ -1,16 +1,17 @@
 
-import { Alinhaborda, Alinhamento, Barra, Bordas, Botao, Button, Caixa, Carrosel, Container, ContainerDivModal, ContainerModal, DivInput, DivRadio, Im, Imagem, Linha, Logo, Palavra, Texto, Title, TituloModal } from "./styleCards";
+import { Alinhaborda, Alinhamento, Barra, Bordas, Botao, Caixa, Carrosel, Container, ContainerDivModal, ContainerModal, DivInput, DivRadio, Im, Imagem, Linha, Logo, Palavra, Texto, Title, TituloModal,Transporte } from "./Style.js";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/scrollbar";
 import { Navigation, Scrollbar, A11y } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { useState, useEffect } from "react"; 
-import Cards from './modalCards/Cards'
-import "./cards.css"
+import Cards from "../cards/cards.jsx"
+import "../cards/cards.css"
 import ModalCards from "./modalCards/modalCards.jsx";
 import Input from "../Input/input";
 import ImgLogoNav from "../../assets/logoNavBar.svg"
+import ButtonMod from "../ButtonModelo/buttonModelo.jsx";
 
 
 export default function CarrosselCards() {
@@ -121,29 +122,29 @@ export default function CarrosselCards() {
                     <Barra>
                     </Barra>
                     <ContainerModal>
+                    <TituloModal>Orçamento</TituloModal>
                         <DivInput>
-                            <TituloModal>Orçamento</TituloModal>
                             <Input text="Quantidade"/>
+                            <Input text="CEP"/>
                             <Input text="Endereço"/>
                             <Input text="Cidade"/>
                             <Input text="Bairro"/>
-                            <Container>
-                                <Input text="Número"/>
-                                <Input text="CEP"/>
-                            </Container>
+                            <Input text="Número"/>
                         </DivInput>
-                        <DivRadio>
-                        <p>Forma de transpote</p>
-                        <div>
-                            <input type="radio" value="Usuario"/>
-                            <label htmlFor="">Frete</label>
-                        </div>
-                        <div>
-                            <input type="radio" value="Empresa"/>
-                            <label htmlFor="">Transporte próprio</label>
-                        </div>
-                        </DivRadio>
-                        <Botao>Enviar pedidos</Botao>
+                        <Transporte>
+                            <p className="transorte">Forma de transpote</p>
+                            <DivRadio>
+                                <div>
+                                    <input type="radio" value="Usuario"/>
+                                    <label htmlFor="">Frete</label>
+                                </div>
+                                <div>
+                                    <input type="radio" value="Empresa"/>
+                                    <label htmlFor="">Transporte próprio</label>
+                                </div>
+                            </DivRadio>
+                        </Transporte>
+                        <ButtonMod  text="Envia"></ButtonMod>
                     </ContainerModal>
                     <ContainerModal>
                         
