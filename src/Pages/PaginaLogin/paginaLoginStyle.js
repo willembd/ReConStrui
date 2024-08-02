@@ -22,12 +22,15 @@ export const Modal = styled.div`
     border-radius: 8px;
     display: flex;
     align-items: center;
+    gap: 78px;
+    padding: 0 30px;
 `;
+
 export const Button = styled.button`
     position: fixed;
     padding: 5px;
-    top: 10px;
-    right: 10px;
+    top: 20px;
+    right: 40px;
     background-color: green;
     color: white;
     text-align: center;
@@ -36,13 +39,52 @@ export const Button = styled.button`
     cursor: pointer;
 `;
 
-export const Itens = styled.div`
+export const Imagem = styled.div`
     display: flex;
     padding: 10px;
     gap: 50px;
 `;
 
 export const Logo = styled.img`
-    width: 400px;
+    width: 320px;
 `;
-export const Logintext = styled.div``;
+
+export const Linha = styled.div`
+    padding: 200px 1px;
+    background-color: rgba(28, 69, 37, 0.94);
+`
+
+export const FormLogin = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+`;
+
+export const Titulo = styled.h1`
+    color: #228137;
+`
+
+export const DivInput = styled.div`
+  
+    
+`
+export const DivRadio =styled.div`
+    display: flex;
+    margin-bottom: 14px;
+    gap: 16px;
+`
+
+export const DivLink = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+`
+
+
+export const Links = styled.a`
+    text-decoration: none;
+    color: #228137;
+`

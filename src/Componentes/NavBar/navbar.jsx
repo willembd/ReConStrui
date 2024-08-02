@@ -19,6 +19,7 @@ export default function NavBar(){
                 
             </S.Nav>
             <S.Borda/>
+
         </>
         
     )
