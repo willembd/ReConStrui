@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 export const Caixa = styled.div`
     position: fixed;
     top: 0;
@@ -9,7 +8,7 @@ export const Caixa = styled.div`
     right: 0;
     background-color: rgba(0, 0, 0, 0.356);
     z-index: 9999;
-`
+`;
 
 export const Modal = styled.div`
     position: fixed;
@@ -23,32 +22,27 @@ export const Modal = styled.div`
     border-radius: 8px;
     display: flex;
     align-items: center;
-    
-
-`
+`;
 export const Button = styled.button`
     position: fixed;
     padding: 5px;
-    top: 10px; 
-    right: 10px;  
+    top: 10px;
+    right: 10px;
     background-color: green;
     color: white;
     text-align: center;
     line-height: 30px;
     border: none;
     cursor: pointer;
-
-`
+`;
 
 export const Itens = styled.div`
     display: flex;
     padding: 10px;
     gap: 50px;
-
-`
-
+`;
 
 export const Logo = styled.img`
     width: 400px;
-
-`
+`;
+export const Logintext = styled.div``;

@@ -2,20 +2,21 @@ import * as S from "./navbarStyle"
 
 import ImgLogoNav from "../../assets/logoNavBar.svg"
 import ButtonNav from "../ButtonNavBar/buttonNavBar"
-import ModalLogin from "../ModalLogin/modalLogin"
-import { useState } from "react"
+import { useNavigate } from "react-router-dom"
+
+
 
 export default function NavBar(){
 
-    const [open, setOpen] = useState(false)
+ const navigation = useNavigate()   
 
     return(
         <>
             <S.Nav>
                 <S.NavLogo src={ImgLogoNav} alt=""/>
-                <ButtonNav text="Entrar" onClick={() => setOpen(!open)} />
+                <ButtonNav text="Entrar" onClick={() => navigation('/paginalogin')} />
 
-                <ModalLogin isOpen={open} setOpen={setOpen}/>
+                
             </S.Nav>
             <S.Borda/>
         </>
