@@ -66,7 +66,10 @@ export const Titulo = styled.h1`
 `
 
 export const DivInput = styled.div`
-  
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin: 50px 0px 20px 0px;
     
 `
 export const DivRadio =styled.div`
@@ -79,7 +82,7 @@ export const DivLink = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8px;
+    gap: 4px;
     margin-top: 10px;
 `
 

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const InputContainer = styled.div`
     position: relative;
-    margin: 50px auto;
+    margin: 5px auto;
     width: 300px;
 
     input[type="text"] {
