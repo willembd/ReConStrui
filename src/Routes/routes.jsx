@@ -2,10 +2,10 @@ import { createBrowserRouter } from "react-router-dom";
 import Home from "../Pages/Home/home";
 import Pedidos from "../Pages/Pedidos/pedidos";
 import PaginaLogin from "../Pages/PaginaLogin/paginaLogin";
-import PaginaCadastro from "../Pages/PaginaCadastro/paginaCadastro";
 import CadastroEmpresa from "../Pages/CadastroEmpresa/cadastroEmpresa";
 import EsqueceuSenha from "../Pages/EsqueceuSenha/esqueceuSenha"
 import Cartao from "../Pages/PagamentoCartao/cartao";
+import CadastroUsuario from "../Pages/cadastroUsuario/cadastroUsuario";
 
 export const router = createBrowserRouter([
     {
@@ -21,8 +21,8 @@ export const router = createBrowserRouter([
         element: <PaginaLogin />,
     },
     {
-        path: "paginacadastro",
-        element: <PaginaCadastro/>,
+        path: "/cadastrousuario",
+        element: <CadastroUsuario />
     },
     {
         path: '/cadastroempresa',
