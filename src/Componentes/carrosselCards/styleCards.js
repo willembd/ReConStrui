@@ -130,6 +130,7 @@ export const FormOrçamento = styled.div`
 `
 export const TituloModal = styled.h1`
     color: #228137;
+    margin: 0.1rem;
 `
 
 export const DivInput = styled.div`
@@ -138,6 +139,6 @@ export const DivInput = styled.div`
 `
 export const DivRadio =styled.div`
     display: flex;
-    margin-bottom: 14px;
+    margin-bottom: 1rem;
     gap: 16px;
 `

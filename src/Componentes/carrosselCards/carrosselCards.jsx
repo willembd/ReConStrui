@@ -121,14 +121,16 @@ export default function CarrosselCards() {
                     <Barra>
                     </Barra>
                     <ContainerModal>
-                        <TituloModal>Orçamento</TituloModal>
                         <DivInput>
+                            <TituloModal>Orçamento</TituloModal>
                             <Input text="Quantidade"/>
                             <Input text="Endereço"/>
                             <Input text="Cidade"/>
                             <Input text="Bairro"/>
-                            <Input text="Número"/>
-                            <Input text="CEP"/>
+                            <Container>
+                                <Input text="Número"/>
+                                <Input text="CEP"/>
+                            </Container>
                         </DivInput>
                         <DivRadio>
                         <p>Forma de transpote</p>
@@ -141,6 +143,7 @@ export default function CarrosselCards() {
                             <label htmlFor="">Transporte próprio</label>
                         </div>
                         </DivRadio>
+                        <Botao>Enviar pedidos</Botao>
                     </ContainerModal>
                     <ContainerModal>
                         

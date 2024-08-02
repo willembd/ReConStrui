@@ -10,7 +10,7 @@ export const InputContainer = styled.div`
         width: 100%;
         border: none;
         border-bottom: 2px solid #1C4525;
-        padding: 5px 0;
+        /* padding: 5px 0; */
         background-color: transparent;
         outline: none;
     }
