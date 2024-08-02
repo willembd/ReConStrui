@@ -2,14 +2,14 @@ import styled from 'styled-components';
 
 export const InputContainer = styled.div`
     position: relative;
-    margin: 50px auto;
-    width: 200px;
+    margin: 5px auto;
+    width: 300px;
 
     input[type="text"] {
         font-size: 20px;
         width: 100%;
         border: none;
-        border-bottom: 2px solid #ccc;
+        border-bottom: 4px solid #1C4525;
         padding: 5px 0;
         background-color: transparent;
         outline: none;
