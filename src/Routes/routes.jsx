@@ -4,6 +4,7 @@ import Pedidos from "../Pages/Pedidos/pedidos";
 import PaginaLogin from "../Pages/PaginaLogin/paginaLogin";
 import PaginaCadastro from "../Pages/PaginaCadastro/paginaCadastro";
 import CadastroEmpresa from "../Pages/CadastroEmpresa/cadastroEmpresa";
+import EsqueceuSenha from "../Pages/EsqueceuSenha/esqueceuSenha"
 
 export const router = createBrowserRouter([
     {
@@ -25,5 +26,9 @@ export const router = createBrowserRouter([
     {
         path: '/cadastroempresa',
         element: <CadastroEmpresa/>
+    },
+    {
+        path: '/esqueceusenha',
+        element: <EsqueceuSenha/>
     }
 ]);
