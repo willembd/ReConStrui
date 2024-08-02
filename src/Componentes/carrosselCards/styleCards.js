@@ -84,5 +84,60 @@ export const Alinhaborda = styled.div`
 export const Texto = styled.h2`
     font-size: 1.3rem ;
     font-weight: bolder;
-    color:#1C4525
+    color:#1C4525;
+`
+export const ContainerModal =styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+` 
+export const ContainerDivModal =styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+` 
+export const Button = styled.button`
+    position: fixed;
+    padding: 5px;
+    top: 20px;
+    right: 40px;
+    background-color: green;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    border: none;
+    cursor: pointer;
+`;
+export const Imagem = styled.div`
+    display: flex;
+    padding: 10px;
+    gap: 50px;
+`;
+export const Logo = styled.img`
+    width: 320px;
+`;
+export const Barra = styled.div`
+    padding: 200px 1px;
+    background-color: rgba(28, 69, 37, 0.94);
+`
+export const FormOrçamento = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`
+export const TituloModal = styled.h1`
+    color: #228137;
+`
+
+export const DivInput = styled.div`
+  
+    
+`
+export const DivRadio =styled.div`
+    display: flex;
+    margin-bottom: 14px;
+    gap: 16px;
 `

@@ -1,21 +1,23 @@
 
-import { Alinhaborda, Alinhamento, Bordas, Botao, Caixa, Carrosel, Container, Im, Linha, Palavra, Texto, Title } from "./styleCards";
+import { Alinhaborda, Alinhamento, Barra, Bordas, Botao, Button, Caixa, Carrosel, Container, ContainerDivModal, ContainerModal, DivInput, DivRadio, Im, Imagem, Linha, Logo, Palavra, Texto, Title, TituloModal } from "./styleCards";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/scrollbar";
 import { Navigation, Scrollbar, A11y } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { useState, useEffect } from "react"; 
-
+import Cards from './modalCards/Cards'
 import "./cards.css"
 import ModalCards from "./modalCards/modalCards.jsx";
+import Input from "../Input/input";
+import ImgLogoNav from "../../assets/logoNavBar.svg"
 
 
 export default function CarrosselCards() {
-    const [openModal, setOpenModal] = useState(false)
-
+    const [openModal, setOpenModal] = useState(null)
+    const [select, setSelect] = useState(null)
     const [slidePerView, setSlidePerView] = useState(6)
-    const imagens = [
+    const produtos = [
         { id: '1', image: "/pedrisco 1.svg",title:"Pedrisco" },
         { id: '2', image: "/rachao 1.svg",title:"Rachão" },
         { id: '3', image: "/image 36areia.svg" ,title:"Areia reciclada"},
@@ -58,6 +60,12 @@ export default function CarrosselCards() {
 
     },[])
 
+    const handleComprar = (id) => {
+        setOpenModal(true)
+        setSelect(id)
+    }
+    
+
     return (
        <>
        <Alinhaborda>
@@ -73,7 +81,7 @@ export default function CarrosselCards() {
                         navigation
                         className="cards"
                     >
-                        {imagens.map((item) => (
+                        {produtos.map((item) => (
                             <SwiperSlide key={item.id}>
                                 <Container>
                                     <Caixa>
@@ -85,7 +93,7 @@ export default function CarrosselCards() {
                                                 <Linha>
                                                     <Title>{item.title}</Title>
                                                     <Palavra>AGR Ambiental</Palavra>
-                                                    <Botao onClick={() => setOpenModal(true)}>Comprar</Botao>
+                                                    <Botao onClick={() => handleComprar(item.id)}>Comprar</Botao>
                                                     
                                                 </Linha>
                                             </Alinhamento>
@@ -98,8 +106,47 @@ export default function CarrosselCards() {
                     </Swiper>
                 </Carrosel>
             </Container>
+            
             <ModalCards isOpen={openModal} setModalOpen= {() => setOpenModal(!openModal)}>
-                <button onClick={setOpenModal}>botão</button>
+                <ContainerDivModal>
+                    <>
+                    <ContainerModal>
+                        
+                        <Imagem>
+                            <Logo src={ImgLogoNav} alt="Logo" />  
+                        </Imagem>
+
+                        <Cards item = {produtos.find((p) => (p.id===select))}/>
+                    </ContainerModal>
+                    <Barra>
+                    </Barra>
+                    <ContainerModal>
+                        <TituloModal>Orçamento</TituloModal>
+                        <DivInput>
+                            <Input text="Quantidade"/>
+                            <Input text="Endereço"/>
+                            <Input text="Cidade"/>
+                            <Input text="Bairro"/>
+                            <Input text="Número"/>
+                            <Input text="CEP"/>
+                        </DivInput>
+                        <DivRadio>
+                        <p>Forma de transpote</p>
+                        <div>
+                            <input type="radio" value="Usuario"/>
+                            <label htmlFor="">Frete</label>
+                        </div>
+                        <div>
+                            <input type="radio" value="Empresa"/>
+                            <label htmlFor="">Transporte próprio</label>
+                        </div>
+                        </DivRadio>
+                    </ContainerModal>
+                    <ContainerModal>
+                        
+                    </ContainerModal>
+                    </>
+                </ContainerDivModal>
             </ModalCards>
         </> 
     );

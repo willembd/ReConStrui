@@ -1,19 +1,20 @@
-import React, { Children } from 'react'
+import * as S from '../../Input/inputStyle';
+import { Button } from '../styleCards.js';
 import { BACKGROUND_STYLE, MODAL_STYLE } from './modalCards.js'
 
+import { Input } from 'react-select/animated'
 
 
-export default function ModalCards({isOpen, Children,setModalOpen}) {
+export default function ModalCards({isOpen,setModalOpen,children }) {
   
     if(isOpen){
         return(
 
             <BACKGROUND_STYLE>
                 <MODAL_STYLE>
-                    <div>
-                        {Children}
-                    </div>
-                    <button onClick={setModalOpen}>Fechar</button>
+                    {children}
+                    <Button onClick={setModalOpen}>X</Button>
+
                 </MODAL_STYLE>
             </BACKGROUND_STYLE>
         )

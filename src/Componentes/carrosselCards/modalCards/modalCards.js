@@ -12,11 +12,18 @@ export const BACKGROUND_STYLE = styled.div`
 
 export const MODAL_STYLE = styled.div`
     position: fixed;
+    max-height: 93%;
+    max-width: 60%;
     top:50%;
     left:50%;
     transform: translate(-50%,-50%);
-    padding: 250px 400px;
-    background-color:#fff;
-    border-radius: 10px;
-    color:black
+    background-color: aliceblue;
+    color: black;
+    width: 900px;
+    height: 700px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 78px;
+    padding: 0 30px;
 `
