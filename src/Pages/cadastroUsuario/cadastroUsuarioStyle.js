@@ -17,7 +17,6 @@ export const Modal = styled.div`
     transform: translate(-50%, -50%);
     background-color: aliceblue;
     color: black;
-    width: 900px;
     height: 700px;
     border-radius: 8px;
     display: flex;
@@ -58,6 +57,8 @@ export const FormLogin = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap:35px;
+    padding-right:30px;
 `;
 
 export const Titulo = styled.h1`
@@ -67,8 +68,8 @@ export const Titulo = styled.h1`
 export const DivInput = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    margin: 50px 0px 20px 0px;
+    gap: 0.8rem;
+    padding-top: 0.5rem;
 `;
 
 export const DivLink = styled.div`

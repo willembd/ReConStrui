@@ -2,13 +2,21 @@ import * as S from "./paginaLoginStyle.js";
 import ImgLogo from "../../assets/logoNavBar.svg";
 import Input from "../../Componentes/Input/input";
 import ButtonMod from "../../Componentes/ButtonModelo/buttonModelo.jsx";
+import { useNavigate } from "react-router-dom";
 
 export default function PaginaLogin() {
+    const navigate = useNavigate();
+
+    const handleFechar = () => {
+        navigate("/");
+    };
+
     return (
         <S.Caixa>
             <S.Modal>
-
-                <S.Button>X</S.Button>
+                <div>
+                    <S.Button onClick={handleFechar}>x</S.Button>
+                </div>
 
                 <S.Imagem>
                     <S.Logo src={ImgLogo} alt="" />

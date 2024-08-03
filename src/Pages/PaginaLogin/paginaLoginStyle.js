@@ -23,7 +23,7 @@ export const Modal = styled.div`
     display: flex;
     align-items: center;
     gap: 78px;
-    padding: 0 30px;
+    
 `;
 
 export const Button = styled.button`
@@ -46,7 +46,7 @@ export const Imagem = styled.div`
 `;
 
 export const Logo = styled.img`
-    width: 320px;
+    width: 300px;
 `;
 
 export const Linha = styled.div`
@@ -58,7 +58,8 @@ export const FormLogin = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+    gap:35px;
+    padding-right:2rem;
 `;
 
 export const Titulo = styled.h1`
