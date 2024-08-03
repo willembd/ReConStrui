@@ -5,42 +5,55 @@ export const FooterContainer = styled.footer`
     background-color: #1c4525f0;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: 35vh;
     color: white;
-    min-width: 10rem;
-    a {
-        color: white;
-    }
-    width: 100%;
-
+    padding: 20px 0px 40px 0px;
 `;
 
 //stilizando footercontato  Maior div componente onde os elementos do footer estão dentro.
 export const FooterContato = styled.div`
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    grid-template-columns: repeat(4, 1fr);
-    align-content: center;
-    justify-content: center;
-    gap: 13.5rem;
-    padding-bottom:1.688rem;
+    justify-content: space-evenly;
+    gap: 40px;
+
+    @media screen and (max-width: 1024px) {
+        gap: 0px;
+    }
+    @media screen and (max-width: 1000px) {
+        gap: 40px;
+    }
+
 `;
 
 //stilizando logo Reconstrue
 export const Logo = styled.div`
-    padding: 2rem 4rem; 
-  
+    display: flex;
+    padding: 20px 176px 50px ;
+
     img {
         width: 100%;
         max-width: 25rem; 
         line-height:1px; 
-        margin-top:1.2;
-        margin-bottom:1.2;
-        margin-left:3.8rem;
+    }
+    @media screen and (max-width: 1440px) {
+        padding: 20px 82px;
+    }
+    @media screen and (max-width: 1024px) {
+        padding: 20px 24px;
+    }
+    @media screen and (max-width: 768px) {
+        padding: 20px 82px;
     }
 `;
+
+export const Titulo = styled.h2`
+    font-size: 26px;
+
+    @media screen and (max-width: 682px) {
+        font-size: 22px;
+    }
+`
+
 
 //stilizando o elemento link
 export const Link = styled.div`
@@ -53,6 +66,11 @@ export const LinkContent = styled.div`
     display: flex;
     flex-direction: column;
     gap: 0.313rem;
+
+    a{
+        color: #fff;
+        text-decoration: none;
+    }
 `;
 
 //stilizando o elemento de pagamentos imagens geral

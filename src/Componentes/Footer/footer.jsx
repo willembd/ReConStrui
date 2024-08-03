@@ -6,7 +6,7 @@ import LogoPix from "../../assets/logo-pix1.svg";
 import Instagram from "../../assets/logo_instagram.png";
 import Facebook from "../../assets/logo_facebook.png";
 import Whastzapp from "../../assets/logo_whatsapp.png";
-import LogoRecontrui from "../../assets/logo-recontrui.png";
+import Logo from "../../assets/logoFooter.svg"
 
 import * as S from "./footerStyle";
 
@@ -14,12 +14,12 @@ export default function Footer() {
     return (
         <S.FooterContainer>
             <S.Logo>
-                <img src={LogoRecontrui} alt="logo rescontrui" />
+                <img src={Logo} alt="logo rescontrui" />
             </S.Logo>
 
             <S.FooterContato>
                 <S.Link>
-                    <h2>Link Rápidos</h2>
+                    <S.Titulo>Link Rápidos</S.Titulo>
                     <S.LinkContent>
                         <a href="">Sobre nós</a>
 
@@ -28,7 +28,7 @@ export default function Footer() {
                 </S.Link>
 
                 <S.Pagamentos>
-                    <h2>Formas de Pagamentos</h2>
+                    <S.Titulo>Formas de Pagamentos</S.Titulo>
 
                     <S.Pagamentosimg>
                         <img src={LogoHiper} alt="logo mastercard" />
@@ -42,7 +42,7 @@ export default function Footer() {
                 </S.Pagamentos>
 
                 <S.Contatos>
-                    <h2>Contatos</h2>
+                    <S.Titulo>Contatos</S.Titulo>
                     <S.ContatosD>
                         <p>Email: Reconstrue@gmail.com</p>
                         <p>Telefone: (81)3333-3333</p>
@@ -50,7 +50,7 @@ export default function Footer() {
                 </S.Contatos>
 
                 <S.Redes>
-                    <h2>Redes Sociais</h2>
+                    <S.Titulo>Redes Sociais</S.Titulo>
 
                     <S.ContentRedes>
                         <img src={Instagram} alt="instagram" />
@@ -58,6 +58,7 @@ export default function Footer() {
                         <img src={Facebook} alt="facebook" />
                     </S.ContentRedes>
                 </S.Redes>
+
             </S.FooterContato>
         </S.FooterContainer>
     );
