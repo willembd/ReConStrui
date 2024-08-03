@@ -1,8 +1,10 @@
-import { Container, CheckboxTransporte, InputRight, Caixa, TextoCadastro, InputLeft, ContainerLogo, ContainerInputs, ContainerCheckbox, TextoCheckbox, CheckboxMateriais1, BotaoCadastrar, LinkCadastro, ContainerRight, CheckboxMateriais2, CheckboxTransporte1,CheckboxTransporte2 } from "./cadastroEmpresaStyle"
+import { Container, CheckboxTransporte, InputRight, Caixa, TextoCadastro, InputLeft, ContainerLogo, ContainerInputs, ContainerCheckbox, TextoCheckbox, CheckboxMateriais1, LinkCadastro, ContainerRight, CheckboxMateriais2, CheckboxTransporte1,CheckboxTransporte2 } from "./cadastroEmpresaStyle"
 import Logo from "../../assets/Logo2.svg"
 import NavBar from "../../Componentes/NavBar/navbar"
 import Footer from "../../Componentes/Footer/footer"
 import Input from "../../Componentes/Input/input";
+// import { Button } from "../EsqueceuSenha/ModalVerifiqueEmail/modalEmailStyle";
+import ButtonMod from "../../Componentes/ButtonModelo/buttonModelo";
 
 
 export default function CadastroEmpresa(){
@@ -80,8 +82,13 @@ export default function CadastroEmpresa(){
                    </CheckboxTransporte>
                         
                     </div>
-                    <BotaoCadastrar>Cadastrar</BotaoCadastrar>
+                        
+
+                         
+                             <ButtonMod text="Cadastrar"/>
+                            
                     <LinkCadastro  href="">Cadastrar Usuário</LinkCadastro >
+                         
                    
                 </ContainerCheckbox>
             </ContainerRight>

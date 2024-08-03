@@ -1,25 +1,28 @@
-import EsqueceuSenha from "../esqueceuSenhaStyle"
+import * as S from "./modalEmailStyle"
+
 
 export default function ModalVerifiqueEmail({ isOpen, setOpen }){
+   
+    const setOpenModal = () => {
+        setOpen(false);  
+    }   
 
+    
     if(isOpen){
         return(
-            <>
-                <section>
-                        <div  onClick={() => setOpen(!isOpen)} >Fechar</div>
-                        <div>
-    
-                             <h1>Verifique seu email</h1>
-                            
-                        </div>
+            <S.CaixaEmail>
+                <S.ModalStyle>
+                        <S.Itens>
+                           
+                             <S.Texto>Verifique seu e-mail</S.Texto>
+                             <S.X onClick={setOpenModal}>x</S.X>
+                        </S.Itens>
                         
-                </section>        
-            </>
+                </S.ModalStyle>        
+            </S.CaixaEmail>
         )
     }
 
     
 }
 
-
-    

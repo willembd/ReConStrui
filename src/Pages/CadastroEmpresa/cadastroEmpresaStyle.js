@@ -132,17 +132,6 @@ export const CheckboxTransporte = styled.div`
     
 ` 
 
-export const BotaoCadastrar = styled.button`
-    background-color: #C39B58;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 10px;
-    width: 100%;
-`;
 
 export const LinkCadastro = styled.a`
     color: #228137;

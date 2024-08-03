@@ -86,10 +86,10 @@ export const Texto = styled.p `
     font-size: 16px ;
 `
 
-export const  ButtonEnviar  = styled.div `
-          margin-top: 10px;
+// export const  ButtonEnviar  = styled.div `
+//           margin-top: 10px;
 
-`
+// `
 
 
 
