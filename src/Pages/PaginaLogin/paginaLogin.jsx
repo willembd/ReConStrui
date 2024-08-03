@@ -14,9 +14,8 @@ export default function PaginaLogin() {
     return (
         <S.Caixa>
             <S.Modal>
-                <div>
-                    <S.Button onClick={handleFechar}>x</S.Button>
-                </div>
+
+                <S.Button onClick={handleFechar}>x</S.Button>
 
                 <S.Imagem>
                     <S.Logo src={ImgLogo} alt="" />

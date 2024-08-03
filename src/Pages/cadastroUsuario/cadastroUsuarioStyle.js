@@ -57,7 +57,7 @@ export const FormLogin = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap:35px;
+    gap:20px;
     padding-right:30px;
 `;
 

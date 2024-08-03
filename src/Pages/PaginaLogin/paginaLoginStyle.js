@@ -22,6 +22,7 @@ export const Modal = styled.div`
     border-radius: 8px;
     display: flex;
     align-items: center;
+    justify-content: space-around;
     gap: 78px;
     
 `;
@@ -58,7 +59,7 @@ export const FormLogin = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap:35px;
+
     padding-right:2rem;
 `;
 
