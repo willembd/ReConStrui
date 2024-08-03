@@ -8,10 +8,12 @@ export const FooterContainer = styled.footer`
     justify-content: space-between;
     height: 35vh;
     color: white;
+    min-width: 10rem;
     a {
         color: white;
     }
     width: 100%;
+
 `;
 
 //stilizando footercontato  Maior div componente onde os elementos do footer estão dentro.
@@ -34,9 +36,9 @@ export const Logo = styled.div`
         width: 100%;
         max-width: 25rem; 
         line-height:1px; 
-        margin-top:20px;
-        margin-bottom:20px;
-        margin-left:55px;
+        margin-top:1.2;
+        margin-bottom:1.2;
+        margin-left:3.8rem;
     }
 `;
 

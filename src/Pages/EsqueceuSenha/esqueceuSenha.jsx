@@ -3,7 +3,7 @@ import * as S from "./esqueceuSenhaStyle.js";
 import ImgLogo from "../../assets/logoNavBar.svg";
 import Input from "../../Componentes/Input/input";
 import ButtonMod from "../../Componentes/ButtonModelo/buttonModelo.jsx";
-import ModalVerifiqueEmail from "../../Pages/EsqueceuSenha/ModalVerifiqueEmail/modalVerifiqueEmail.jsx"
+import ModalVerifiqueEmail from "./ModalVerifiqueEmail/ModalVerifiqueEmail.jsx"
 
 
 
