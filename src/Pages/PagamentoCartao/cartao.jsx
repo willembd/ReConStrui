@@ -19,7 +19,7 @@ export default function Cartao() {
                 <S.Linha>
                 </S.Linha>
 
-                <S.FormLogin>
+                <S.Form>
                     <S.Titulo>Pagamento</S.Titulo>
                     <S.DivInput>
                         <Input text="Titular" />
@@ -52,12 +52,9 @@ export default function Cartao() {
                     <ButtonMod text="Finalizar"/>
 
 
-                </S.FormLogin>
+                </S.Form>
             </S.Modal>
         </S.Caixa>
-
-
-
 
     );
 }

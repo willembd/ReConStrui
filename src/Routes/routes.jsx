@@ -6,6 +6,7 @@ import CadastroEmpresa from "../Pages/CadastroEmpresa/cadastroEmpresa";
 import EsqueceuSenha from "../Pages/EsqueceuSenha/esqueceuSenha"
 import Cartao from "../Pages/PagamentoCartao/cartao";
 import CadastroUsuario from "../Pages/cadastroUsuario/cadastroUsuario";
+import Pix from "../Pages/PagamentoPix/pix";
 
 export const router = createBrowserRouter([
     {
@@ -35,6 +36,10 @@ export const router = createBrowserRouter([
     {
         path: '/pagamentocartao',
         element: <Cartao/>
+    },
+    {
+        path: '/pagamentopix',
+        element: <Pix/>
     }
     
 ]);

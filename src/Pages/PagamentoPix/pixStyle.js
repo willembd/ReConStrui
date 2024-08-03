@@ -7,7 +7,6 @@ export const Caixa = styled.div`
     left: 0;
     right: 0;
     background-color: rgba(0, 0, 0, 0.356);
-    
     z-index: 9999;
 `;
 
@@ -59,27 +58,10 @@ export const Form = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+    gap: 20px;
 `;
 
 export const Titulo = styled.h1`
     color: #228137;
 `
-
-export const DivInput = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  margin: 30px 0px 20px 0px;
-    
-`
-export const DivRadio =styled.div`
-    display: flex;
-    margin-bottom: 4px;
-    gap: 16px;
-`
-export const DivSelect = styled.div`
-    margin-bottom: 20px;
-`
-
 
