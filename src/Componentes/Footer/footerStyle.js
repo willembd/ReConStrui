@@ -22,6 +22,12 @@ export const FooterContato = styled.div`
     @media screen and (max-width: 1000px) {
         gap: 40px;
     }
+    @media screen and (max-width: 849px) {
+        gap: 18px;
+    }
+    @media screen and (max-width: 830px) {
+        gap: 40px;
+    }
 
 `;
 
@@ -38,6 +44,9 @@ export const Logo = styled.div`
     @media screen and (max-width: 1440px) {
         padding: 20px 82px;
     }
+    @media screen and (max-width: 1200px) {
+        padding: 20px 34px;
+    }
     @media screen and (max-width: 1024px) {
         padding: 20px 24px;
     }
@@ -52,6 +61,7 @@ export const Titulo = styled.h2`
     @media screen and (max-width: 682px) {
         font-size: 22px;
     }
+    
 `
 
 
