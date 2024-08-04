@@ -9,4 +9,10 @@ export const ButtonNavBar =styled.button`
     font-size: 1.5rem;
     cursor: pointer;
     
+
+    @media screen and (max-width: 500px) {
+        padding: 0.15rem;
+        border-bottom: 0.12rem #228137 solid;
+        font-size: 1rem;
+    }
 `
