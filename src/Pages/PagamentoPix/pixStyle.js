@@ -1,13 +1,8 @@
 import styled from "styled-components";
 
 export const Caixa = styled.div`
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.356);
-    z-index: 9999;
+    
+    
 `;
 
 export const Modal = styled.div`
@@ -15,7 +10,7 @@ export const Modal = styled.div`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #fff;
+    background-color: black;
     color: black;
     width: 900px;
     height: 700px;
