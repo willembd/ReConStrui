@@ -23,7 +23,7 @@ export default function PaginaLogin() {
                     <S.ModalContainer>
                         <S.Imagem>
                             <S.ButtonContainer>
-                            <S.Button onClick={handleFechar}>Voltar</S.Button>
+                                <S.Button onClick={handleFechar}>Voltar</S.Button>
                             </S.ButtonContainer>
                             <S.Logo src={LogoBranca} alt="" />
                             <div>
