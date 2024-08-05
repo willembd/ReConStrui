@@ -1,110 +1,119 @@
-import { Container, CheckboxTransporte, InputRight, Caixa, TextoCadastro, InputLeft, ContainerLogo, ContainerInputs, ContainerCheckbox, TextoCheckbox, CheckboxMateriais1, LinkCadastro, ContainerRight, CheckboxMateriais2, CheckboxTransporte1,CheckboxTransporte2 } from "./cadastroEmpresaStyle"
+import * as S from "./cadastroEmpresaStyle"
+// import { useState } from "react"
 import Logo from "../../assets/Logo2.svg"
 import NavBar from "../../Componentes/NavBar/navbar"
 import Footer from "../../Componentes/Footer/footer"
 import Input from "../../Componentes/Input/input";
-// import { Button } from "../EsqueceuSenha/ModalVerifiqueEmail/modalEmailStyle";
+import { useNavigate } from "react-router-dom";
 import ButtonMod from "../../Componentes/ButtonModelo/buttonModelo";
+// import ModalVerifiqueEmail from "../../Componentes/ModalVerifiqueEmail/ModalVerifiqueEmail.jsx"
+
+
 
 
 export default function CadastroEmpresa(){
-        return(
-            <>
-                <NavBar/>
 
-<Caixa>
-    <Container>
-        <ContainerLogo>
-            <img src={Logo} alt="Logo" />
-            <TextoCadastro>Cadastrar Empresa</TextoCadastro>
-        </ContainerLogo>
-        <ContainerInputs>
-            <InputLeft>
-                <Input text="Nome"/>
-                <Input text="CNPJ"/>
-                <Input text="Email"/>
-                <Input text="Senha"/>
-                <Input text="Telefone"/>
-                <Input text="Cep"/>
-                <Input text="Estado"/>
-            </InputLeft>
-            <ContainerRight>
-                <InputRight>
-                    <Input text="Endereço"/>
-                    <Input text="Cidade"/>
-                    <Input text="Bairro"/>
-                    <Input text="Número"/>
-                </InputRight>
-            <ContainerCheckbox>
-                            <TextoCheckbox>Materiais</TextoCheckbox>
-
-                    <div>
-                    < CheckboxMateriais1>
-                         
-                        <li>
-                           <input type="checkbox"  />
-                           <label for="Areia">Areia Reciclada</label>
-                        </li>
-                        <li>      
-                             <input type="checkbox"  />
-                             <label for="Pedrisco">Brita Reciclada</label>
-                        </li>
-                    </ CheckboxMateriais1>
-                    <CheckboxMateriais2>
-                        <li>      
-                             <input type="checkbox"  />
-                             <label for="Pedrisco">Pedrisco</label>
-                        </li>
-                      
-                        <li>
-                             <input type="checkbox"  />
-                             <label for="">Rachão</label>
-                        </li>
-                    </CheckboxMateriais2>
-                       
-                
-                    </div>
-                    <TextoCheckbox>Transporte</TextoCheckbox>
-                    <div>
-
-
+    // const [isOpen, setOpen] = useState(false)
     
-                        {/* <TextoCheckbox>Transporte</TextoCheckbox> */}
-                    <CheckboxTransporte>
-                        <CheckboxTransporte1>      
-                             <input type="checkbox"  />
-                             <label for="Entrega">Entrega</label>
-                        </CheckboxTransporte1>
-                        <CheckboxTransporte2>
-                             <input type="checkbox"  />
-                             <label for="Retirada">Retirada</label>
-                        </CheckboxTransporte2>
-                   </CheckboxTransporte>
-                        
-                    </div>
-                        
+    const navigate = useNavigate();
+     
 
-                         
-                             <ButtonMod text="Cadastrar"/>
-                            
-                    <LinkCadastro  href="">Cadastrar Usuário</LinkCadastro >
-                         
-                   
-                </ContainerCheckbox>
-            </ContainerRight>
-            
-        </ContainerInputs>
-        
+    const handleFechar = () => {
+        navigate("/");
+    };
+    
+       
+        return(
+                <>
+                  <NavBar/>
+                       <S.BigBox>
+                           <S.ContainerLogo>
+                                   <img src={Logo} alt="Logo" />
+                                                
+                                  </S.ContainerLogo>
+                                      <S.Caixa>
+                                          <S.Container> 
+                                          <S.ButtonContainer>
+                                             <S.ButtonVoltar onClick={handleFechar}>Voltar</S.ButtonVoltar>
+                                          </S.ButtonContainer>
+                                            <S.TextoCadastro>Cadastrar Empresa</S.TextoCadastro>
+                                            <S.ContainerInputs>
+                                                <S.InputLeft>
+                                                        <Input text="Nome"/>
+                                                        <Input text="CNPJ"/>
+                                                        <Input text="Email"/>
+                                                        <Input text="Senha"/>
+                                                        <Input text="Telefone"/>
+                                                        <Input text="Cep"/>
+                                                        <Input text="Estado"/>
+                                                </S.InputLeft>
+                                     <S.ContainerRight>
+                                                <S.InputRight>
+                                                        <Input text="Endereço"/>
+                                                        <Input text="Cidade"/>
+                                                        <Input text="Bairro"/>
+                                                        <Input text="Número"/>
+                                                </S.InputRight>
+                                       <S.ContainerCheckbox>
+                                                <S.TextoCheckbox>Materiais</S.TextoCheckbox>
 
-    </Container> 
-</Caixa> 
-<Footer/>
+                                                <div>
+                                                < S.CheckboxMateriais1>
+                                                    
+                                                <li>
+                                                <input id="Areia" type="checkbox"  />
+                                                <label htmlFor="Areia">Areia Reciclada</label>
+                                                </li>
+                                                <li>      
+                                                    <input id="Brita" type="checkbox"  />
+                                                    <label htmlFor="Brita">Brita Reciclada</label>
+                                                </li>
+                                            </ S.CheckboxMateriais1>
+                                            <S.CheckboxMateriais2>
+                                                <li>      
+                                                    <input id="Pedrisco" type="checkbox"  />
+                                                    <label htmlFor="Pedrisco">Pedrisco</label>
+                                                </li>
+                                            
+                                                <li>
+                                                    <input id="Rachao" type="checkbox"  />
+                                                    <label htmlFor="Rachao">Rachão</label>
+                                                </li>
+                                            </S.CheckboxMateriais2>
+                                            
+                                        
+                                            </div>
+                                            <S.TextoCheckbox>Transporte</S.TextoCheckbox>
+                                       <div>
+                                            <S.CheckboxTransporte>
+                                                  <S.CheckboxTransporte1>      
+                                                        <input id="Entrega" type="checkbox"  />
+                                                        <label htmlFor="Entrega">Entrega</label>
+                                                   </S.CheckboxTransporte1>
+                                                   <S.CheckboxTransporte2>
+                                                        <input id="Retirada" type="checkbox"  />
+                                                        <label htmlFor="Retirada">Retirada</label>
+                                                   </S.CheckboxTransporte2>
+                                            </S.CheckboxTransporte>
+                                        </div>
+                                                        <ButtonMod onClick={handleFechar} text="Cadastrar"> Cadastrar </ButtonMod>
+                                                        {/* <ButtonMod text="Enviar" onClick={() => setOpen(!isOpen)} />
+                                                        <ModalVerifiqueEmail isOpen={isOpen} setOpen={setOpen} /> */}
+                                         <S.LinkCadastro  href="">Cadastrar Usuário</S.LinkCadastro >
+                                                    
+                                        </S.ContainerCheckbox>
+                                    </S.ContainerRight>
+                                </S.ContainerInputs>
+                            </S.Container> 
+                         </S.Caixa> 
+                     </S.BigBox>
+                 <Footer/>
 
-</>
+          </>
 
+       )
+     }
 
-        )
-}
 
 
 

@@ -1,5 +1,13 @@
 import styled from "styled-components";
 
+export const BigBox = styled.div`
+     display: flex;
+    flex-direction: column;   
+    justify-content: center; 
+    
+
+`
+
 export const Caixa = styled.div`
     box-sizing: border-box;
     display: flex;
@@ -8,6 +16,7 @@ export const Caixa = styled.div`
     justify-content: center;
     min-height: 100vh;
     background-color: #F8F8F8;
+
 `;
 
 export const Container = styled.div`
@@ -16,19 +25,45 @@ export const Container = styled.div`
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+  
 `;
 
 export const ContainerLogo = styled.div`
     display: flex;
     align-items: center;
     flex-direction: column;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     text-align: center;
+`;
+
+export const ButtonVoltar = styled.button`
+    padding: 5px;
+    background-color: green;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    border: none;
+    position: absolute; 
+    top: 0; 
+    left: 0;
+  
+   
+  
+`;
+export const ButtonContainer = styled.div`
+    width: 100%;
+ 
+
 `;
 
 export const TextoCadastro = styled.h1`
     color: #228137;
     margin-top: 10px;
+    justify-content: center;
+    display: flex;
+    margin-bottom: 20px;
+    /* margin-bottom: 40px; */
    
     
 `;
