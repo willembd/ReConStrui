@@ -38,6 +38,7 @@ export const ContainerLogo = styled.div`
 `;
 
 export const ButtonVoltar = styled.button`
+    cursor: pointer;
     padding: 5px;
     background-color: green;
     color: white;

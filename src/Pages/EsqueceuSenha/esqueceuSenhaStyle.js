@@ -7,10 +7,11 @@ export const Caixa = styled.div`
     justify-content: center;
     align-items: center;
     width: 100%;
+    margin: 100px 0px;
 `;
 
 export const Modal = styled.div`
-    background-color: aliceblue;
+    background-color: #FCFCFC;
     color: black;
     width: 900px;
     height: 500px;
@@ -20,7 +21,8 @@ export const Modal = styled.div`
     align-items: flex-start;
     gap: 20px;
     margin-bottom:40px;
-    border-radius:25px;
+    border-radius:12px;
+    box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.25);
 `;
 
 export const ModalContainer = styled.div`
@@ -30,17 +32,18 @@ export const ModalContainer = styled.div`
 `;
 
 export const Button = styled.button`
-    padding: 5px;
-    background-color: green;
+    padding: 12px;
+    background-color: #228137;;
     color: white;
     text-align: center;
-    line-height: 30px;
+    /* line-height: 30px; */
     border: none;
     cursor: pointer;
 `;
 
 export const ButtonContainer = styled.div`
     width: 100%;
+    margin-top: 10px;
 
 `;
 
@@ -52,6 +55,8 @@ export const Imagem = styled.div`
     background-color: rgba(28, 69, 37, 0.94);
     width: 50%;
     height: 500px;
+    border-radius: 12px 0px 0px 12px;
+
 
 `;
 
@@ -63,9 +68,10 @@ export const FormSenha = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     width: 50%;
-    padding-right: 2rem;
-    margin-top:50px;
+    /* padding-right: 2rem;
+    margin-top:50px; */
     
 `;
 
@@ -92,6 +98,8 @@ export const DivInput = styled.div`
     flex-direction: column;
     gap: 40px;  
     margin: 0px 0px 20px 0px;
+    /* margin: 50px 0px 20px 0px; */
+
 `;
 export const EsqueceuETexto = styled.div`
   display: flex; 
