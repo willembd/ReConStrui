@@ -1,10 +1,13 @@
-import * as S from "./cadastroUsuarioStyle.js";
-import ImgLogo from "../../assets/logoNavBar.svg";
-import Input from "../../Componentes/Input/input";
+import React from "react";
+import * as S from "./CadastroUsuarioStyle.js";
+import LogoBranca from "../../assets/LogoBranca.svg";
+import Input from "../../Componentes/Input/input.jsx";
 import ButtonMod from "../../Componentes/ButtonModelo/buttonModelo.jsx";
 import { useNavigate } from "react-router-dom";
+import NavBar from "../../Componentes/NavBar/navbar.jsx";
+import Footer from "../../Componentes/Footer/footer.jsx";
 
-export default function CadastroUsuario() {
+export default function PaginaLogin() {
     const navigate = useNavigate();
 
     const handleFechar = () => {
@@ -12,36 +15,43 @@ export default function CadastroUsuario() {
     };
 
     return (
-        <S.Caixa>
-            <S.Modal>
-                
-                <S.Button onClick={handleFechar}>x</S.Button>
-            
-                <S.Imagem>
-                    <S.Logo src={ImgLogo} alt="" />
-                </S.Imagem>
+        <>
+            <NavBar />
+            <S.Caixa>
+                <S.Modal>
+                    <S.ModalContainer>
+                        <S.Imagem>
+                            <S.ButtonContainer>
+                                <S.Button onClick={handleFechar}>
+                                    Voltar
+                                </S.Button>
+                            </S.ButtonContainer>
+                            <S.Logo src={LogoBranca} alt="" />
+                            <div></div>
+                        </S.Imagem>
 
-                <S.Linha></S.Linha>
+                        <S.FormLogin>
+                            <S.Titulo>Cadastro Usuário</S.Titulo>
+                            <S.DivInput>
+                                <Input text="Nome Completo" />
+                                <Input text="Data de Nascimento" />
+                                <Input text="CPF" />
+                                <Input text="E-mail" />
+                                <Input text="Senha" />
+                            </S.DivInput>
 
-                <S.FormLogin>
-                    <S.Titulo>Cadastrar Usuário</S.Titulo>
-                    <S.DivInput>
-                        <Input text="Nome Completo" />
-                        <Input text="Data de Nascimento" />
-                        <Input text="CPF" />
-                        <Input text="E-mail" />
-                        <Input text="Senha" />
-                    </S.DivInput>
+                            <ButtonMod text="Cadastrar" />
 
-                    <ButtonMod text="Cadastrar" />
-
-                    <S.DivLink>
-                        <S.Links href="cadastra Empresa">
-                            Cadastrar Empresa
-                        </S.Links>
-                    </S.DivLink>
-                </S.FormLogin>
-            </S.Modal>
-        </S.Caixa>
+                            <S.DivLink>
+                                <S.Links href="cadastrar empresa">
+                                    Cadastrar Empresa
+                                </S.Links>
+                            </S.DivLink>
+                        </S.FormLogin>
+                    </S.ModalContainer>
+                </S.Modal>
+            </S.Caixa>
+            <Footer />
+        </>
     );
 }
