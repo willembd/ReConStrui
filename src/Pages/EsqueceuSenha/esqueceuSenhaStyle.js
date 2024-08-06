@@ -14,7 +14,7 @@ export const Modal = styled.div`
     background-color: #FCFCFC;
     color: black;
     width: 900px;
-    height: 500px;
+    height: 540px;
     border-radius: 8px;
     display: flex;
     flex-direction: column;
@@ -54,7 +54,7 @@ export const Imagem = styled.div`
     align-items:center;
     background-color: rgba(28, 69, 37, 0.94);
     width: 50%;
-    height: 500px;
+    height: 540px;
     border-radius: 12px 0px 0px 12px;
 
 
