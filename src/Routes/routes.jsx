@@ -5,7 +5,7 @@ import PaginaLogin from "../Pages/PaginaLogin/paginaLogin";
 import CadastroEmpresa from "../Pages/CadastroEmpresa/cadastroEmpresa";
 import EsqueceuSenha from "../Pages/EsqueceuSenha/esqueceuSenha"
 import Cartao from "../Pages/PagamentoCartao/cartao";
-import CadastroUsuario from "../Pages/cadastroUsuario/cadastroUsuario";
+import CadastroUsuario from "../Pages/CadastroUsuario/CadastroUsuario";
 import Pix from "../Pages/PagamentoPix/pix";
 
 export const router = createBrowserRouter([
