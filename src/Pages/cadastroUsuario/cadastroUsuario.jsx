@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 import NavBar from "../../Componentes/NavBar/navbar.jsx";
 import Footer from "../../Componentes/Footer/footer.jsx";
 
-export default function PaginaLogin() {
+export default function CadastroUsuario() {
     const navigate = useNavigate();
 
     const handleFechar = () => {
