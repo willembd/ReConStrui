@@ -1,5 +1,5 @@
 import React from "react";
-import * as S from "./CadastroUsuarioStyle.js";
+import * as S from "./cadastroUsuarioStyle.js";
 import LogoBranca from "../../assets/LogoBranca.svg";
 import Input from "../../Componentes/Input/input.jsx";
 import ButtonMod from "../../Componentes/ButtonModelo/buttonModelo.jsx";
