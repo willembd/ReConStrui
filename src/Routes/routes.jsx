@@ -5,8 +5,9 @@ import PaginaLogin from "../Pages/PaginaLogin/paginaLogin";
 import CadastroEmpresa from "../Pages/CadastroEmpresa/cadastroEmpresa";
 import EsqueceuSenha from "../Pages/EsqueceuSenha/esqueceuSenha"
 import Cartao from "../Pages/PagamentoCartao/cartao";
-import CadastroUsuario from "../Pages/CadastroUsuario/CadastroUsuario";
+import CadastroUsuario from "../Pages/CadastroUsuario/cadastroUsuario";
 import Pix from "../Pages/PagamentoPix/pix";
+import NovosOrcamentoEmp from "../Pages/NovosOrcamentoEmpresa/novosOrcamentoEmp";
 
 export const router = createBrowserRouter([
     {
@@ -40,6 +41,10 @@ export const router = createBrowserRouter([
     {
         path: '/pagamentopix',
         element: <Pix/>
+    },
+    {
+        path: '/novosOrcamentoEmp',
+        element: <NovosOrcamentoEmp/>
     }
     
 ]);
