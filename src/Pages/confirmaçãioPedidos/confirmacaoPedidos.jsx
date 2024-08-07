@@ -8,7 +8,7 @@ import { Barra } from "../../Componentes/carrosselCards/Style";
 import Cards from "../../Componentes/cards/cards";
 
 
-export default function Confirmação({}){
+export default function Confirmação(){
         return(
             <>
                 <NavBar/>
@@ -40,11 +40,12 @@ export default function Confirmação({}){
                                             <Input text="Bairro"/>
                                             <Input text="Número"/>
                                             <Input text="CEP"/>
+                                            <ContainerCheckbox>    
+                                                <ButtonMod text="Cadastrar"/>
+                                            </ContainerCheckbox>
                                         </InputRight>
                                     </QuebraLinha>
-                                    <ContainerCheckbox>    
-                                        <ButtonMod text="Cadastrar"/>
-                                    </ContainerCheckbox>
+                                    
                                 </ContainerRight>
                             </ContainerInputs>
                             

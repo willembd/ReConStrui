@@ -5,9 +5,10 @@ import PaginaLogin from "../Pages/PaginaLogin/paginaLogin";
 import CadastroEmpresa from "../Pages/CadastroEmpresa/cadastroEmpresa";
 import EsqueceuSenha from "../Pages/EsqueceuSenha/esqueceuSenha"
 import Cartao from "../Pages/PagamentoCartao/cartao";
-import CadastroUsuario from "../Pages/CadastroUsuario/cadastroUsuario";
+import CadastroUsuario from "../Pages/cadastroUsuario/CadastroUsuario";
 import Pix from "../Pages/PagamentoPix/pix";
 import NovosOrcamentoEmp from "../Pages/NovosOrcamentoEmpresa/novosOrcamentoEmp";
+import Confirmação from "../Pages/confirmaçãioPedidos/confirmacaoPedidos";
 
 export const router = createBrowserRouter([
     {
@@ -45,6 +46,10 @@ export const router = createBrowserRouter([
     {
         path: '/novosOrcamentoEmp',
         element: <NovosOrcamentoEmp/>
+    },
+    {
+        path: '/confirmaçãoPedidos',
+        element: <Confirmação/>
     }
     
 ]);
