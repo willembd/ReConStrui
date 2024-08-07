@@ -49,7 +49,7 @@ export const router = createBrowserRouter([
         element: <NovosOrcamentoEmp/>
     },
     {
-        path: '/confirmaçãoPedidos',
+        path: '/confirmacaoPedidos',
         element: <Confirmacao/>
     }
     
