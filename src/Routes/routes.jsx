@@ -8,7 +8,7 @@ import Cartao from "../Pages/PagamentoCartao/cartao";
 import CadastroUsuario from "../Pages/cadastroUsuario/CadastroUsuario";
 import Pix from "../Pages/PagamentoPix/pix";
 import NovosOrcamentoEmp from "../Pages/NovosOrcamentoEmpresa/novosOrcamentoEmp";
-import Confirmação from "../Pages/confirmaçãioPedidos/confirmacaoPedidos";
+import Confirmação from "../Pages/confirmacaoPedidos/confirmacaoPedidos";
 
 export const router = createBrowserRouter([
     {
