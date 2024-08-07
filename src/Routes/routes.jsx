@@ -9,6 +9,7 @@ import CadastroUsuario from "../Pages/CadastroUsuario/cadastroUsuario";
 import Pix from "../Pages/PagamentoPix/pix";
 import NovosOrcamentoEmp from "../Pages/NovosOrcamentoEmpresa/novosOrcamentoEmp";
 import Confirmacao from "../Pages/ConfirmacaoPedidos/confirmacaoPedidos.jsx";
+import OrcamentosEmpresa from "../Pages/OrcamentosEmpresa/orcamentosEmpresa.jsx";
 
 
 export const router = createBrowserRouter([
@@ -49,8 +50,13 @@ export const router = createBrowserRouter([
         element: <NovosOrcamentoEmp/>
     },
     {
+        path: '/orcamentosempresa',
+        element: <OrcamentosEmpresa/>
+
+    },
+    {
         path: '/confirmacaoPedidos',
         element: <Confirmacao/>
-    }
+    },
     
 ]);

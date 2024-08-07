@@ -1,4 +1,3 @@
-import React from "react";
 import * as S from "./paginaLoginStyle.js";
 import LogoBranca from "../../assets/LogoBranca.svg";
 import Input from "../../Componentes/Input/input";
@@ -19,16 +18,15 @@ export default function PaginaLogin() {
             <NavBar />
             <S.Caixa>
                 <S.Modal>
-                    
                     <S.ModalContainer>
                         <S.Imagem>
                             <S.ButtonContainer>
-                                <S.Button onClick={handleFechar}>Voltar</S.Button>
+                                <S.Button onClick={handleFechar}>
+                                    Voltar
+                                </S.Button>
                             </S.ButtonContainer>
                             <S.Logo src={LogoBranca} alt="" />
-                            <div>
-
-                            </div>
+                            <div></div>
                         </S.Imagem>
 
                         <S.FormLogin>
@@ -61,7 +59,7 @@ export default function PaginaLogin() {
                     </S.ModalContainer>
                 </S.Modal>
             </S.Caixa>
-            <Footer/>
+            <Footer />
         </>
     );
 }
