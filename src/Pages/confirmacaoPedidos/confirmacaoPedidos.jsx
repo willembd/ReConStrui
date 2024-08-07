@@ -12,10 +12,8 @@ export default function Confirmacao(){
         return(
             <>
                 <NavBar/>
-
-                    <Caixa>
-                        
                         <Container>
+                            <Caixa>
                             <ContainerInputs>
                                 <InputLeft>
                                     <ContainerModal>
@@ -29,23 +27,22 @@ export default function Confirmacao(){
                                             <Input text="Rua Joaquim Nabuco"/>
                                             <Input text="Olinda"/>
                                             <Input text="Rio Doce"/>
-                                            <Input text="405"/>
-                                            <Input text="53370-058"/>
-                                            <ContainerCheckbox>
-                                                <Button>Voltar</Button>
-                                            </ContainerCheckbox>
+                                            <QuebraLinha>
+                                                <Input text="405"/>
+                                                <Input text="53370-058"/>
+                                            </QuebraLinha>
                                         </InputRight>
                                         <Barra/>
                                         <InputRight>
                                             <Input text="Preço: 450.00 R$"/>
                                             <Input text="Frete: 00,00 R$"/>
                                             <Input text="Taxa: 10,00 R$"/>
-                                            <p>Taxa de serviço</p>
                                             <Input text="Valor Total: 460,00 R$"/>
-                                            <Input text="Número"/>
-                                            <Input text="CEP"/>
                                             <ContainerCheckbox>    
-                                                <ButtonMod text="Comprar"/>
+                                                <QuebraLinha>
+                                                    <Button>Voltar</Button>
+                                                    <ButtonMod text="Comprar"/>
+                                                </QuebraLinha>
                                             </ContainerCheckbox>
                                         </InputRight>
                                     </QuebraLinha>
@@ -53,9 +50,8 @@ export default function Confirmacao(){
                                 </ContainerRight>
                             </ContainerInputs>
                             
-
-                        </Container> 
-                    </Caixa> 
+                            </Caixa>
+                        </Container>  
                 <Footer/>
 </>
 

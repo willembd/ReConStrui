@@ -24,7 +24,7 @@ export default function Cards({ item }) {
                         </div>
                         <Alinhamento>
                             <Linha>
-                                <Title>{item.title}</Title>
+                                <Title>Brita reciclada</Title>
                                 <Palavra>AGR Ambiental</Palavra>
                             </Linha>
                         </Alinhamento>

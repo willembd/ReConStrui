@@ -2,17 +2,14 @@ import styled from "styled-components";
 
 export const Caixa = styled.div`
     box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
+    
+    min-height: 80vh;
     background-color: #F8F8F8;
 `;
 
 export const Container = styled.div`
     background-color: white;
-    padding: 20px;
+    padding-left: 10rem;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 `;
@@ -21,12 +18,11 @@ export const ContainerInputs = styled.div`
     display: flex;
     flex-direction: row;
     margin-bottom: 20px;
-    gap: 10px;
+    gap: 30px;
 `;
 
 export const InputLeft = styled.div`
     display: flex;
-    width: 25%;
 `;
 
 export const ContainerRight = styled.div`
@@ -47,7 +43,7 @@ export const ContainerCheckbox = styled.div`
     display: flex;
     justify-content: space-between;
     margin-bottom: 0px;
-    flex-direction: column;
+    flex-direction: row;
     height: 100%;
     align-items: center;
     width: 100%;
@@ -56,12 +52,12 @@ export const ContainerCheckbox = styled.div`
 export const QuebraLinha = styled.div`
     display: flex;
     padding-top: 30px;
-    gap: 50px;
+    gap: 20px;
 `
 
 export const Button = styled.button`
     
-    padding: 10px 100px;
+    padding: 10px 70px;
     background-color: white;
     color: #228137;
     border: 2px solid #228137;
