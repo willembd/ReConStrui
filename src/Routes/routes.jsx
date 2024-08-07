@@ -5,7 +5,7 @@ import PaginaLogin from "../Pages/PaginaLogin/paginaLogin";
 import CadastroEmpresa from "../Pages/CadastroEmpresa/cadastroEmpresa";
 import EsqueceuSenha from "../Pages/EsqueceuSenha/esqueceuSenha"
 import Cartao from "../Pages/PagamentoCartao/cartao";
-import CadastroUsuario from "../Pages/cadastroUsuario/CadastroUsuario";
+import CadastroUsuario from "../Pages/CadastroUsuario/cadastroUsuario";
 import Pix from "../Pages/PagamentoPix/pix";
 import NovosOrcamentoEmp from "../Pages/NovosOrcamentoEmpresa/novosOrcamentoEmp";
 import Confirmacao from "../Pages/ConfirmacaoPedidos/confirmacaoPedidos.jsx";

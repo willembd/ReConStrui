@@ -1,43 +1,77 @@
 import styled from "styled-components";
 
-export const Titulo = styled.h1`
-  text-align: center;
-  color: #2c6c35;
-  margin-bottom: 40px;
+export const Caixa = styled.div`
+    margin: 60px 180px;
+    
+    @media screen and (max-width: 1210px){
+        margin: 60px 70px;
+    }
+`
+
+export const DivLink = styled.div`
+    display: flex;
+    justify-content: space-around;
+
+    h1{
+        color: #228137;
+        font-size: 38px;
+        margin-bottom: 20px;
+    }
+`
+
+export const Pedido = styled.div`
+    display: flex;
+    justify-content: space-around;
+    border: 2px solid black;
+    padding: 20px;
+    margin: 20px 0px;
+`
+
+export const DivEmpresa = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    h1{
+        color: #228137;
+    }
+
+    @media screen and (max-width: 1144px) {
+        h1{
+            font-size: 22px;
+        }
+    }
 `
 
 
-export const Primeiracaixa = styled.div `
-width: 100%;
-max-width: 1200px;
-margin: 0 auto;
-padding: 20px;
-box-sizing: border-box;
-
-`
-export const Cards = styled.img`
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  padding: 20px;
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-
+export const Dados = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 `
 
-export const SegundaCaixa = styled.div `
- width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-  box-sizing: border-box;
+export const DivResposta = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
 
+    h1{
+        color: #228137;
+        font-size: 32px;
+    }
+
+    @media screen and (max-width: 1144px) {
+        h1{
+            font-size: 22px;
+        }
+    }
 `
-export const TerceiraCaixa = styled.div `
- width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-  box-sizing: border-box;
 
+export const DivButton = styled.div`
+    display: flex;
+    gap: 20px;
 `
