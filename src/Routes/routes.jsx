@@ -8,7 +8,8 @@ import Cartao from "../Pages/PagamentoCartao/cartao";
 import CadastroUsuario from "../Pages/cadastroUsuario/CadastroUsuario";
 import Pix from "../Pages/PagamentoPix/pix";
 import NovosOrcamentoEmp from "../Pages/NovosOrcamentoEmpresa/novosOrcamentoEmp";
-import Confirmação from "../Pages/confirmacaoPedidos/confirmacaoPedidos";
+import Confirmacao from "../Pages/ConfirmacaoPedidos/confirmacaoPedidos.jsx";
+
 
 export const router = createBrowserRouter([
     {
@@ -49,7 +50,7 @@ export const router = createBrowserRouter([
     },
     {
         path: '/confirmaçãoPedidos',
-        element: <Confirmação/>
+        element: <Confirmacao/>
     }
     
 ]);

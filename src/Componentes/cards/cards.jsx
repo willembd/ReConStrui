@@ -6,7 +6,7 @@ import {
     Title,
     Palavra,
     Im,
-} from "../carrosselCards/Style";
+} from "../Filtro/Style";
 
 export default function Cards({ item }) {
     

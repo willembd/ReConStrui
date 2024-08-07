@@ -58,3 +58,14 @@ export const QuebraLinha = styled.div`
     padding-top: 30px;
     gap: 50px;
 `
+
+export const Button = styled.button`
+    
+    padding: 10px 100px;
+    background-color: white;
+    color: #228137;
+    border: 2px solid #228137;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0px 4px 4px 0px;
+`;

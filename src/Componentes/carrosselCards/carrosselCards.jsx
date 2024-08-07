@@ -1,5 +1,5 @@
 
-import { Alinhaborda, Alinhamento, Barra, Bordas, Botao, Caixa, Carrosel, Container, ContainerDivModal, ContainerModal, DivInput, DivRadio, Im, Imagem, Linha, Logo, Palavra, Texto, Title, TituloModal,Transporte } from "./Style.js";
+import { Alinhaborda, Alinhamento, Barra, Bordas, Botao, Caixa, Carrosel, Container, ContainerDivModal, ContainerModal, DivInput, DivRadio, Im, Imagem, Linha, Logo, Palavra, Texto, Title, TituloModal,Transporte } from "../Filtro/Style.js";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/scrollbar";
