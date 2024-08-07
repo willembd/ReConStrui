@@ -10,6 +10,7 @@ import Pix from "../Pages/PagamentoPix/pix";
 import NovosOrcamentoEmp from "../Pages/NovosOrcamentoEmpresa/novosOrcamentoEmp";
 import Confirmacao from "../Pages/ConfirmacaoPedidos/confirmacaoPedidos.jsx";
 import OrcamentosEmpresa from "../Pages/OrcamentosEmpresa/orcamentosEmpresa.jsx";
+import ConfirmacaoEntrega from "../Pages/ConfirmacaoEntrega/confirmacaoEntrega.jsx";
 
 
 export const router = createBrowserRouter([
@@ -58,5 +59,8 @@ export const router = createBrowserRouter([
         path: '/confirmacaoPedidos',
         element: <Confirmacao/>
     },
-    
+    {
+         path: '/confirmacaoentrega',
+         element: <ConfirmacaoEntrega/>
+    },
 ]);
