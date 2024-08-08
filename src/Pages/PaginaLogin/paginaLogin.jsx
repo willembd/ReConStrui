@@ -47,11 +47,11 @@ export default function PaginaLogin() {
                                 </div>
                             </S.DivRadio>
 
-                            <ButtonMod text="Entrar" />
+                            <ButtonMod text="Entrar" onClick={handleFechar} />
 
                             <S.DivLink>
-                                <S.Links href="cadastra">Cadastrar</S.Links>
-                                <S.Links href="Esqueceu a Senha?">
+                                <S.Links href="/cadastrousuario">Cadastrar</S.Links>
+                                <S.Links href="/">
                                     Esqueci Senha
                                 </S.Links>
                             </S.DivLink>

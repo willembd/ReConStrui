@@ -19,7 +19,7 @@ export default function CadastroEmpresa(){
      
 
     const handleFechar = () => {
-        navigate("/");
+        navigate("/paginalogin");
     };
     
        
@@ -99,7 +99,7 @@ export default function CadastroEmpresa(){
                                                         <ButtonMod onClick={handleFechar} text="Cadastrar"> Cadastrar </ButtonMod>
                                                         {/* <ButtonMod text="Enviar" onClick={() => setOpen(!isOpen)} />
                                                         <ModalVerifiqueEmail isOpen={isOpen} setOpen={setOpen} /> */}
-                                         <S.LinkCadastro  href="">Cadastrar Usuário</S.LinkCadastro >
+                                         <S.LinkCadastro  href="/cadastrousuario">Cadastrar Usuário</S.LinkCadastro >
                                                     
                                         </S.ContainerCheckbox>
                                     </S.ContainerRight>

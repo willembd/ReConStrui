@@ -19,7 +19,8 @@ export default function Cards({ item }) {
                         />
                     </div>
                     <AAlinhamento>
-                        <LLinha>
+                        <LLinha
+                        >
                             <TTitle>{item.title}</TTitle>
                             <PPalavra>AGR Ambiental</PPalavra>
                         </LLinha>

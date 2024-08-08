@@ -7,6 +7,7 @@ import "swiper/css/scrollbar";
 import { Navigation, Scrollbar, A11y } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { useState, useEffect } from "react"; 
+import { useNavigate } from "react-router-dom";
 import Cards from "../cards/cards.jsx"
 import "../cards/cards.css"
 import ModalCards from "./modalCards/modalCards.jsx";
@@ -65,6 +66,11 @@ export default function CarrosselCards() {
         setOpenModal(true)
         setSelect(id)
     }
+
+    const navigate = useNavigate();
+    const handleFechar = () => {
+        navigate("/pedidos");
+    };
     
 
     return (
@@ -140,7 +146,7 @@ export default function CarrosselCards() {
                                 </div>
                             </DivRadio>
                         </DivInput>
-                        <ButtonMod  text="Envia"></ButtonMod>
+                        <ButtonMod  text="Envia" onClick={handleFechar}></ButtonMod>
                     </ContainerModal>
                     <ContainerModal>
                         

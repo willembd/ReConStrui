@@ -18,7 +18,7 @@ export default function EsqueceuSenha() {
      
 
     const handleFechar = () => {
-        navigate("/");
+        navigate("/paginalogin");
     };
     
 

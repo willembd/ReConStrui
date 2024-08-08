@@ -6,7 +6,7 @@ export const Caixa = styled.div`
     background-color: #fff;
     border-radius: 0.75rem;
     box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.5);
-    height: 19rem;
+    height: 19.5rem;
     width: 14rem;
     box-sizing: border-box;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -19,19 +19,13 @@ export const Im = styled.img`
     
 `
 export const Botao = styled.button`
-    width: 9rem;
-    padding: 0.4rem;
-    background-color: #AF7503;
+    background-color: rgba(175, 117, 3, 0.9);
     color: #fff;
+    font-size: 16px;
     border: none;
-    border-radius: 0.5rem;
+    padding: 0.5rem 4rem;
+    border-radius: 4px;
     cursor: pointer;
-    font-size: 1em;
-    transition: background-color 0.3s ease;
-    margin: 0.625rem;
-    font-weight: bolder;
-    font-size: 1rem;
-    margin: 0.4rem;
 `
 export const Container = styled.div`
     position: relative;
@@ -45,7 +39,6 @@ export const Container = styled.div`
 export const Linha = styled.div`
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     align-items: center;
     color:#1C4525 ;
 `
