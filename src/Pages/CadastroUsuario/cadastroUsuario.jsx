@@ -1,11 +1,11 @@
 import React from "react";
 import * as S from "./cadastroUsuarioStyle.js";
 import LogoBranca from "../../../assets/LogoBranca.svg";
-import Input from "../../../Componentes/Input/input.jsx";
-import ButtonMod from "../../../Componentes/ButtonModelo/buttonModelo.jsx";
+import Input from "../../Componentes/Input/input.jsx";
+import ButtonMod from "../../Componentes/ButtonModelo/buttonModelo.jsx";
 import { useNavigate } from "react-router-dom";
-import NavBar from "../../../Componentes/NavBar/navbar.jsx";
-import Footer from "../../../Componentes/Footer/footer.jsx";
+import NavBar from "../../Componentes/NavBar/navbar.jsx";
+import Footer from "../../Componentes/Footer/footer.jsx";
 
 export default function CadastroUsuario() {
     const navigate = useNavigate();
