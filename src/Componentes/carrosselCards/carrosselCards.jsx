@@ -20,16 +20,16 @@ export default function CarrosselCards() {
     const [select, setSelect] = useState(null)
     const [slidePerView, setSlidePerView] = useState(6)
     const produtos = [
-        { id: '1', image: "/pedrisco 1.svg",title:"Pedrisco" },
-        { id: '2', image: "/rachao 1.svg",title:"Rachão" },
-        { id: '3', image: "/image 36areia.svg" ,title:"Areia reciclada"},
-        { id: '4', image: "/brita 1.svg" ,title:"Brita reciclada"},
-        { id: '5', image: "/pedrisco 1.svg" ,title:"Pedrisco"},
-        { id: '6', image: "/rachao 1.svg" ,title:"Rachão"},
-        { id: '7', image: "/image 36areia.svg" ,title:"Areia reciclada"},
-        { id: '8', image: "/brita 1.svg" ,title:"Brita reciclada"},
-        { id: '9', image: "/pedrisco 1.svg" ,title:"Pedrisco"},
-        { id: '10', image: "/rachao 1.svg",title:"Rachão" },
+        { id: '1', image: "/pedrisco1.svg",title:"Pedrisco" },
+        { id: '2', image: "/rachao1.svg",title:"Rachão" },
+        { id: '3', image: "/image36areia.svg" ,title:"Areia reciclada"},
+        { id: '4', image: "/brita1.svg" ,title:"Brita reciclada"},
+        { id: '5', image: "/pedrisco1.svg" ,title:"Pedrisco"},
+        { id: '6', image: "/rachao1.svg" ,title:"Rachão"},
+        { id: '7', image: "/image36areia.svg" ,title:"Areia reciclada"},
+        { id: '8', image: "/brita1.svg" ,title:"Brita reciclada"},
+        { id: '9', image: "/pedrisco1.svg" ,title:"Pedrisco"},
+        { id: '10', image: "/rachao1.svg",title:"Rachão" },
     ];
 
     useEffect(() => {

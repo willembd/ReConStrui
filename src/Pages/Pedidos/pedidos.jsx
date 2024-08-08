@@ -21,6 +21,7 @@ export default function Pedidos () {
                 
                 <S.Pedido>
                     <S.DivEmpresa>
+                        <img src="" alt="" />
                         <h1>Brita Reciclada</h1>
                         <p>AGR Ambiental</p>
                     </S.DivEmpresa>

@@ -12,16 +12,16 @@ export default function Cards2(){
 
   const [slidePerView, setSlidePerView] = useState (6) 
   const imagens = [
-        { id: '1', image: "/pedrisco 1.svg",Titulo:"Pedrisco" },
-        { id: '2', image: "/rachao 1.svg",Titulo:"Rachão" },
-        { id: '3', image: "/image 36areia.svg" ,Titulo:"Areia reciclada"},
-        { id: '4', image: "/brita 1.svg" ,Titulo:"Brita reciclada"},
-        { id: '5', image: "/pedrisco 1.svg" ,Titulo:"Pedrisco"},
-        { id: '6', image: "/rachao 1.svg" ,Titulo:"Rachão"},
-        { id: '7', image: "/image 36areia.svg" ,Titulo:"Areia reciclada"},
-        { id: '8', image: "/brita 1.svg" ,Titulo:"Brita reciclada"},
-        { id: '9', image: "/pedrisco 1.svg" ,Titulo:"Pedrisco"},
-        { id: '10', image: "/rachao 1.svg",Titulo:"Rachão" },
+        { id: '1', image: "/pedrisco1.svg",Titulo:"Pedrisco" },
+        { id: '2', image: "/rachao1.svg",Titulo:"Rachão" },
+        { id: '3', image: "/image36areia.svg" ,Titulo:"Areia reciclada"},
+        { id: '4', image: "/brita1.svg" ,Titulo:"Brita reciclada"},
+        { id: '5', image: "/pedrisco1.svg" ,Titulo:"Pedrisco"},
+        { id: '6', image: "/rachao1.svg" ,Titulo:"Rachão"},
+        { id: '7', image: "/image36areia.svg" ,Titulo:"Areia reciclada"},
+        { id: '8', image: "/brita1.svg" ,Titulo:"Brita reciclada"},
+        { id: '9', image: "/pedrisco1.svg" ,Titulo:"Pedrisco"},
+        { id: '10', image: "/rachao1.svg",Titulo:"Rachão" },
   ];
 
   useEffect(() => {
