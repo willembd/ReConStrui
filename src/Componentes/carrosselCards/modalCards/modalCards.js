@@ -57,12 +57,12 @@ export const QuebraLinha = styled.div`
     display: flex;
     flex-direction: row;
     gap: 1rem;
-    width: 300px;
+    width: 19rem;
 
 `;
 
 export const IImagem = styled.img`
-    width: 18rem;
+    width: 25rem;
     height: 18rem;
 
 `;
@@ -116,6 +116,7 @@ export const PPalavra = styled.p`
 export const AAlinhamento = styled.div`
     display: flex;
     flex-direction: row;
+    padding-left: 3rem;
 
 `;
 
