@@ -1,35 +1,30 @@
 import {
     Container,
-    Caixa,
     Alinhamento,
-    Linha,
-    Title,
-    Palavra,
-    Im,
-} from "../Filtro/Style";
+    Linha
+} from "../carrosselCards/carrosselCardsStyle";
+import { AAlinhamento, IImagem, LLinha, PPalavra, TTitle } from "../carrosselCards/modalCards/modalCards";
 
 export default function Cards({ item }) {
     
     return (
         <>
             <Container key={item.id}>
-                <Caixa>
-                    <div className="box-item">
-                        <div className="img">
-                            <Im
-                                src={item.image}
-                                alt="Slide"
-                                className="slide-item"
-                            />
-                        </div>
-                        <Alinhamento>
-                            <Linha>
-                                <Title>Brita reciclada</Title>
-                                <Palavra>AGR Ambiental</Palavra>
-                            </Linha>
-                        </Alinhamento>
+                <div className="box-item">
+                    <div className="img">
+                        <IImagem
+                            src={item.image}
+                            alt="Slide"
+                            className="slide-item"
+                        />
                     </div>
-                </Caixa>
+                    <AAlinhamento>
+                        <LLinha>
+                            <TTitle>{item.title}</TTitle>
+                            <PPalavra>AGR Ambiental</PPalavra>
+                        </LLinha>
+                    </AAlinhamento>
+                </div>
             </Container>
         </>
     );

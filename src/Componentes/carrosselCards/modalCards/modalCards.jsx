@@ -1,4 +1,4 @@
-import { Button } from '../../Filtro/Style.js';
+import { Button } from './modalCards.js'
 import { BACKGROUND_STYLE, MODAL_STYLE } from './modalCards.js'
 
 

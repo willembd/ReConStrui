@@ -58,6 +58,7 @@ export const Carrosel = styled.div`
 export const Alinhamento = styled.div`
     display: flex;
     flex-direction: column;
+    
 `
 export const Title = styled.h1`
     font-size: 1rem ;
@@ -86,75 +87,3 @@ export const Texto = styled.h2`
     font-weight: bolder;
     color:#1C4525;
 `
-export const ContainerModal =styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-` 
-export const ContainerDivModal =styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 3.4rem;
-
-    
-` 
-export const Button = styled.button`
-    position: fixed;
-    padding: 10px;
-    top: 20px;
-    right: 40px;
-    background-color: green;
-    color: white;
-    text-align: center;
-    line-height: 30px;
-    border: none;
-    cursor: pointer;
-`;
-export const Imagem = styled.div`
-    display: flex;
-    padding: 30px 0 0 0;
-    gap: 50px;
-`;
-export const Logo = styled.img`
-    width: 320px;
-    padding-bottom: 2rem;
-`;
-export const Barra = styled.div`
-    padding: 230px 1px;
-    background-color: rgba(28, 69, 37, 0.94);
-    margin-left: 2rem;
-    margin-right: 2rem;
-`
-export const FormOrçamento = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-`
-export const TituloModal = styled.h1`
-    color: #228137;
-    margin: 0.1rem;
-`
-
-
-export const DivRadio =styled.div`
-    display: flex;
-    margin-bottom: 1rem;
-    gap: 16px;
-    margin-top: 1rem;
-
-`
-export const Transporte = styled.div`
-    
-    margin: 1rem;
-    margin-top: 1rem;
-    font-size: 1rem;
-`
-export const DivInput = styled.div`
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
-    padding-top: 0.5rem;
-`
-

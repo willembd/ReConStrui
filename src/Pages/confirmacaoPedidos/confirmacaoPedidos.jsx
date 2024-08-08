@@ -1,14 +1,13 @@
 import { Container, InputRight, Caixa, InputLeft, ContainerInputs, ContainerCheckbox, ContainerRight, QuebraLinha, Button } from "./confirmacaoPedidosStyle"
-import { ContainerModal } from "../../Componentes/Filtro/Style";
 import NavBar from "../../Componentes/NavBar/navbar"
 import Footer from "../../Componentes/Footer/footer"
 import Input from "../../Componentes/Input/input";
 import ButtonMod from "../../Componentes/ButtonModelo/buttonModelo";
-import { Barra } from "../../Componentes/Filtro/Style";
+import { Barra,ContainerModal } from "../../Componentes/carrosselCards/modalCards/modalCards";
 import Cards from "../../Componentes/cards/cards";
 
 
-export default function Confirmacao(){
+export default function Confirmacao({item}){
         return(
             <>
                 <NavBar/>
@@ -17,7 +16,23 @@ export default function Confirmacao(){
                             <ContainerInputs>
                                 <InputLeft>
                                     <ContainerModal>
-                                        <Cards item />
+                                        <Container key={item.id}>
+                                            <div className="box-item">
+                                                <div className="img">
+                                                    <IImagem
+                                                        src={item.image}
+                                                        alt="Slide"
+                                                        className="slide-item"
+                                                    />
+                                                </div>
+                                                <Alinhamento>
+                                                    <Linha>
+                                                        <Title>{item.title}</Title>
+                                                        <Palavra>AGR Ambiental</Palavra>
+                                                    </Linha>
+                                                </Alinhamento>
+                                            </div>
+                                        </Container>
                                     </ContainerModal>
                                 </InputLeft>
                                 <ContainerRight>
