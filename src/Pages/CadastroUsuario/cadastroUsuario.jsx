@@ -1,6 +1,6 @@
 import React from "react";
 import * as S from "./cadastroUsuarioStyle.js";
-import LogoBranca from "../../../assets/LogoBranca.svg";
+import LogoBranca from "../../assets/LogoBranca.svg";
 import Input from "../../Componentes/Input/input.jsx";
 import ButtonMod from "../../Componentes/ButtonModelo/buttonModelo.jsx";
 import { useNavigate } from "react-router-dom";
