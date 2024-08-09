@@ -11,6 +11,8 @@ import NovosOrcamentoEmp from "../Pages/NovosOrcamentoEmpresa/novosOrcamentoEmp"
 import Confirmacao from "../Pages/ConfirmacaoPedidos/confirmacaoPedidos.jsx";
 import OrcamentosEmpresa from "../Pages/OrcamentosEmpresa/orcamentosEmpresa.jsx";
 import ConfirmacaoEntrega from "../Pages/ConfirmacaoEntrega/confirmacaoEntrega.jsx";
+import EntregasEmpresa from "../Pages/EntregasEmpresa/entregasEmpresa.jsx";
+import RetiradasEmpresa from "../Pages/RetiradasEmpresa/retiradasEmpresa.jsx";
 
 
 export const router = createBrowserRouter([
@@ -63,4 +65,14 @@ export const router = createBrowserRouter([
          path: '/confirmacaoentrega',
          element: <ConfirmacaoEntrega/>
     },
+    {
+        path: '/entregasEmpresa',
+        element: <EntregasEmpresa/>
+    },
+    {
+        path: '/retiradasEmpresa',
+        element: <RetiradasEmpresa/>
+    }
+
+
 ]);

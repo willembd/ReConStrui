@@ -106,6 +106,10 @@ export const DivResposta = styled.div`
         color: #228137;
         font-size: 32px;
     }
+    h2{
+        color: #228137;
+        font-size: 18px;
+    }
 
     @media screen and (max-width: 1540px) {
         h1{
@@ -133,18 +137,18 @@ export const Progress = styled.div`
     }
 `
 export const ProgressCampo = styled.div`
-    width: 120px;
+    width: 240px;
     height: 12px;
     background-color: #228137;
     border-radius: 5px; 
 
 
     @media screen and (max-width: 1540px) {
-        width: 86px;
+        width: 172px;
     }
 
     @media screen and (max-width: 1080px) {
-        width: 60px;
+        width: 120px;
     }
 `
 

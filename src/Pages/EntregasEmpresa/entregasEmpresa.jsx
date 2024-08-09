@@ -1,4 +1,4 @@
-import * as S from "./novosOrcamentoEmpStyle"
+import * as S from "./entregasEmpresaStyles"
 
 import Brita from "../../../public/brita.png"
 import Areia from "../../../public/areia.png"
@@ -9,7 +9,7 @@ import CampoDados from "../../Componentes/CampoDados/campoDados";
 import ButtonCancelar from "../../Componentes/ButtonCancelar/buttonCancelar";
 import ButtonPadrao from "../../Componentes/ButtonPadrao/buttonPadrao";
 
-export default function NovosOrcamentoEmp(){
+export default function EntregasEmpresa(){
     return (
         <>
             <NavBar/>
@@ -39,7 +39,7 @@ export default function NovosOrcamentoEmp(){
                         <CampoDados text="Cep: 53380-058"/>
                     </S.Dados>
                     <S.DivResposta>
-                        <h1>Aguardando Orçamento </h1>
+                        <h1>Em Andamento</h1>
                         
                         <S.Progress>
                             <S.ProgressCampo></S.ProgressCampo>
@@ -69,7 +69,7 @@ export default function NovosOrcamentoEmp(){
                         <CampoDados text="Cep: 53380-058"/>
                     </S.Dados>
                     <S.DivResposta>
-                        <h1>Aguardando Orçamento </h1>
+                        <h1>Em Andamento</h1>
 
                         <S.Progress>
                             <S.ProgressCampo></S.ProgressCampo>
