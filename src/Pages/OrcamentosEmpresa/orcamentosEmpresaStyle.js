@@ -48,15 +48,15 @@ export const ButtonContainer = styled.div`
 
 export const Campos = styled.div`
     display: flex;
-    flex-direction:column;
-    justify-content:flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
     width: 500%;
-    height: 540px;
+    height: 600px;
     border-radius: 12px 0px 0px 12px;
-    margin-top:10px;
-    gap:20px;
-    
+    margin-top: 10px;
+    gap: 20px;
+    margin-right: 50px;
 `;
 
 export const Titulo = styled.h1`
@@ -76,8 +76,10 @@ export const Titulo1 = styled.h1`
     color: #228137;
     margin-top: 60px;
     margin-right: 70px;
-    display:flex;
-    padding-left:10px;
-    padding:5px;
-    margin-bottom:30px;
+    display: flex;
+    padding-left: 10px;
+    padding: 5px;
+    margin-bottom: 30px;
 `;
+
+

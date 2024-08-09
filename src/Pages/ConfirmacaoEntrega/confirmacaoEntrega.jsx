@@ -1,11 +1,10 @@
-import React from "react";
 import * as S from "../ConfirmacaoEntrega/confirmacaoEntregaStyle.js";
 import ButtonMod from "../../Componentes/ButtonModelo/buttonModelo.jsx";
 import { useNavigate } from "react-router-dom";
 import NavBar from "../../Componentes/NavBar/navbar.jsx";
 import Footer from "../../Componentes/Footer/footer.jsx";
 import CampoDados from "../../Componentes/CampoDados/campoDados.jsx";
-import Input from "../../Componentes/Input/input.jsx";
+import { Barra } from "../../Componentes/carrosselCards/modalCards/modalCards.js";
 
 export default function ConfirmacaoEntrega() {
     const navigation = useNavigate();
@@ -36,15 +35,14 @@ export default function ConfirmacaoEntrega() {
                             </div>
                         </S.Campos>
 
+                        <Barra></Barra>
+
                         <S.Dados>
                             <S.Titulo>
                                 <h4>Notificar Cliente</h4>
                             </S.Titulo>
 
-                            <p>
-                                Enviar notificação de 
-                                entrega para o cliente.
-                            </p>
+                            <p>Enviar notificação de entrega para o cliente.</p>
 
                             <ButtonMod text="Enviar" />
                         </S.Dados>

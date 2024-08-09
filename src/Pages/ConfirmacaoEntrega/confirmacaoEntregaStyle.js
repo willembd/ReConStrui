@@ -11,7 +11,6 @@ export const Caixa = styled.div`
 `;
 
 export const Modal = styled.div`
-    background-color: #fcfcfc;
     color: black;
     width: 900px;
     height: 540px;
@@ -28,7 +27,7 @@ export const Modal = styled.div`
 export const ModalContainer = styled.div`
     display: flex;
     width: 100%;
-    justify-content: space-around;
+    justify-content: center;
 `;
 
 export const Button = styled.button`
@@ -48,15 +47,15 @@ export const ButtonContainer = styled.div`
 
 export const Campos = styled.div`
     display: flex;
-    flex-direction:column;
-    justify-content:flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
     width: 500%;
-    height: 540px;
+    height: 300px;
     border-radius: 12px 0px 0px 12px;
-    margin-top:10px;
-    gap:20px;
-    
+    margin-top: 60px;
+    gap: 20px;
+    margin-right: 50px;
 `;
 
 export const Titulo = styled.h1`
@@ -70,14 +69,15 @@ export const Dados = styled.div`
     gap: 25px;
     margin-right: 50px;
     margin-top: 50px;
+    color: #228137;
 `;
 
 export const Titulo1 = styled.h1`
     color: #228137;
     margin-top: 60px;
     margin-right: 70px;
-    display:flex;
-    padding-left:10px;
-    padding:5px;
-    margin-bottom:30px;
+    display: flex;
+    padding-left: 10px;
+    padding: 5px;
+    margin-bottom: 30px;
 `;
