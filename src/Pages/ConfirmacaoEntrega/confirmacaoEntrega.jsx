@@ -13,26 +13,23 @@ export default function ConfirmacaoEntrega() {
             <NavBar />
             <S.Caixa>
                 <S.Modal>
+                    <S.ButtonContainer>
+                        <S.Button onClick={() => navigation("/")}>
+                            Voltar
+                        </S.Button>
+                    </S.ButtonContainer>
                     <S.ModalContainer>
-                        <S.ButtonContainer>
-                            <S.Button onClick={() => navigation("/")}>
-                                Voltar
-                            </S.Button>
-                        </S.ButtonContainer>
-
                         <S.Campos>
-                            <div>
-                                <S.Titulo1>
-                                    <h4>Dados do Cliente</h4>
-                                </S.Titulo1>
+                            <S.Titulo1>
+                                <h4>Dados do Cliente</h4>
+                            </S.Titulo1>
 
-                                <CampoDados text="Nome: Rute Cajueiro" />
-                                <CampoDados text="Quantidade: 15 Metros" />
-                                <CampoDados text="Cidade: Olinda" />
-                                <CampoDados text="Bairro: Rio Doce" />
-                                <CampoDados text="CEP:54370-058 " />
-                                <CampoDados text="N°:405" />
-                            </div>
+                            <CampoDados text="Nome: Rute Cajueiro" />
+                            <CampoDados text="Quantidade: 15 Metros" />
+                            <CampoDados text="Cidade: Olinda" />
+                            <CampoDados text="Bairro: Rio Doce" />
+                            <CampoDados text="CEP:54370-058 " />
+                            <CampoDados text="N°:405" />
                         </S.Campos>
 
                         <Barra></Barra>

@@ -28,6 +28,8 @@ export const ModalContainer = styled.div`
     display: flex;
     width: 100%;
     justify-content: center;
+    gap: 50px;
+    
 `;
 
 export const Button = styled.button`
@@ -49,13 +51,11 @@ export const Campos = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
-    width: 500%;
+    width: 40%;
     height: 300px;
     border-radius: 12px 0px 0px 12px;
-    margin-top: 60px;
-    gap: 20px;
-    margin-right: 50px;
+    gap: 10px;
+    
 `;
 
 export const Titulo = styled.h1`
@@ -67,9 +67,9 @@ export const Dados = styled.div`
     display: flex;
     flex-direction: column;
     gap: 25px;
-    margin-right: 50px;
     margin-top: 50px;
     color: #228137;
+    align-items:center;
 `;
 
 export const Titulo1 = styled.h1`
