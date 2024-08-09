@@ -13,6 +13,7 @@ import OrcamentosEmpresa from "../Pages/OrcamentosEmpresa/orcamentosEmpresa.jsx"
 import ConfirmacaoEntrega from "../Pages/ConfirmacaoEntrega/confirmacaoEntrega.jsx";
 import EntregasEmpresa from "../Pages/EntregasEmpresa/entregasEmpresa.jsx";
 import RetiradasEmpresa from "../Pages/RetiradasEmpresa/retiradasEmpresa.jsx";
+import FinalizadosEmpresa from "../Pages/FinalizadosEmpresa/finalizadosEmpresa.jsx";
 
 
 export const router = createBrowserRouter([
@@ -72,6 +73,10 @@ export const router = createBrowserRouter([
     {
         path: '/retiradasEmpresa',
         element: <RetiradasEmpresa/>
+    },
+    {
+        path: '/finalizadosEmpresa',
+        element: <FinalizadosEmpresa/>
     }
 
 
