@@ -1,34 +1,37 @@
 import * as S from "./cadastroEmpresaStyle"
-// import { useState } from "react"
+import { useState } from "react"
 import Logo from "../../assets/Logo2.svg"
 import NavBar from "../../Componentes/NavBar/navbar"
 import Footer from "../../Componentes/Footer/footer"
 import Input from "../../Componentes/Input/input";
 import { useNavigate } from "react-router-dom";
 import ButtonMod from "../../Componentes/ButtonModelo/buttonModelo";
-// import ModalVerifiqueEmail from "../../Componentes/ModalVerifiqueEmail/ModalVerifiqueEmail.jsx"
+import ModalCartãoPix from "../../Componentes/ModalCartãoPix/modalCartãoPix"
+
 
 
 
 
 export default function CadastroEmpresa(){
 
-    // const [isOpen, setOpen] = useState(false)
+    const [isOpen, setOpen] = useState(false)
     
-    const navigate = useNavigate();
+    const navigation = useNavigate();
      
 
     const handleFechar = () => {
-        navigate("/paginalogin");
+        navigation("/");
     };
     
        
         return(
                 <>
                   <NavBar/>
-                       <S.BigBox>
-                           <S.ContainerLogo>
-                                   <img src={Logo} alt="Logo" />
+                        <S.BigBox>
+                                 <ButtonMod text="Enviar" onClick={() => setOpen(!isOpen)} />
+                                 <ModalCartãoPix text="Pagamento?" isOpen={isOpen} setOpen={setOpen} />
+                                 <S.ContainerLogo>
+                                     <img src={Logo} alt="Logo" />
                                                 
                                   </S.ContainerLogo>
                                       <S.Caixa>
@@ -99,8 +102,8 @@ export default function CadastroEmpresa(){
                                                         <ButtonMod onClick={handleFechar} text="Cadastrar"> Cadastrar </ButtonMod>
                                                         {/* <ButtonMod text="Enviar" onClick={() => setOpen(!isOpen)} />
                                                         <ModalVerifiqueEmail isOpen={isOpen} setOpen={setOpen} /> */}
-                                         <S.LinkCadastro  href="/cadastrousuario">Cadastrar Usuário</S.LinkCadastro >
-                                                    
+                                         <S.LinkCadastro onClick={() => navigation('/CadastroUsuario')}  href="">Cadastrar Usuário</S.LinkCadastro >
+                                         
                                         </S.ContainerCheckbox>
                                     </S.ContainerRight>
                                 </S.ContainerInputs>

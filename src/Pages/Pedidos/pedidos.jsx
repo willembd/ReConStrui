@@ -1,4 +1,6 @@
 import * as S from "./pedidosStyle"
+import { useState } from "react";
+
 
 import Brita from "../../../public/brita.png"
 import Areia from "../../../public/areia.png"
@@ -8,9 +10,13 @@ import Footer from "../../Componentes/Footer/footer"
 import CampoDados from "../../Componentes/CampoDados/campoDados";
 import ButtonCancelar from "../../Componentes/ButtonCancelar/buttonCancelar";
 import ButtonPadrao from "../../Componentes/ButtonPadrao/buttonPadrao";
+import ModalCancelar from "../../Componentes/ModalCancelar/modalCancelar";
 
 
 export default function Pedidos () {
+
+    const [isOpenTest, setOpenTest] = useState(false)
+
     return (
 
         <>
@@ -45,7 +51,9 @@ export default function Pedidos () {
                         </S.Progress>
 
                         <S.DivButton>
-                            <ButtonCancelar text="Cancelar"/>
+                            <ButtonCancelar text="Cancelar" onClick={() => setOpenTest(!isOpenTest) }/>
+                            <ModalCancelar text="Tem Certeza que deseja cancelar compra?" isOpenTest={isOpenTest} setOpenTest={setOpenTest} />
+
                             <ButtonPadrao text="Ver Orçamento"/>
                         </S.DivButton>
                     </S.DivResposta>
@@ -75,8 +83,10 @@ export default function Pedidos () {
                         </S.Progress>
                         
                         <S.DivButton>
-                            <ButtonCancelar text="Cancelar"/>
-                            <ButtonPadrao text="Ver Orçamento"/>
+                            <ButtonCancelar text="Cancelar" onClick={() => setOpenTest(!isOpenTest) }/>
+                            <ModalCancelar text="Tem Certeza que deseja cancelar compra?" isOpenTest={isOpenTest} setOpenTest={setOpenTest} />
+
+                            <ButtonPadrao text="Ver Orçamento" />
                         </S.DivButton>
                     </S.DivResposta>
                 </S.Pedido>   

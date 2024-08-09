@@ -1,9 +1,9 @@
 import * as S from "./buttonModeloStyle"
 
-export default function ButtonMod({ text, ...rest }){
+export default function ButtonMod({ padding, text, ...rest }){
     return(
         <>
-            <S.Button {...rest}>{text}</S.Button>
+            <S.Button tamanhobutton={padding} {...rest}>{text}</S.Button>
         </>
     )
 }
