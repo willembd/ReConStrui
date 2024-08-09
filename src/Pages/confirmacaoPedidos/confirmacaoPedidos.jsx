@@ -5,9 +5,14 @@ import Input from "../../Componentes/Input/input";
 import ButtonMod from "../../Componentes/ButtonModelo/buttonModelo";
 import { Barra,ContainerModal } from "../../Componentes/carrosselCards/modalCards/modalCards";
 import Cards from "../../Componentes/cards/cards";
+import { useState } from "react";
+import ModalCartãoPix from "../../Componentes/ModalCartãoPix/modalCartãoPix";
 
 
 export default function Confirmacao({item}){
+
+     const [isOpen, setOpen] = useState(false)
+
         return(
             <>
                 <NavBar/>
@@ -40,7 +45,9 @@ export default function Confirmacao({item}){
                                             <ContainerCheckbox>    
                                                 <QuebraLinha>
                                                     <Button>Voltar</Button>
-                                                    <ButtonMod text="Comprar"/>
+                                                    <ButtonMod text="Comprar"  onClick={() => setOpen(!isOpen)} />
+                                                    <ModalCartãoPix text="Pagamento" isOpen={isOpen} setOpen={setOpen} />
+
                                                 </QuebraLinha>
                                             </ContainerCheckbox>
                                         </InputRight>

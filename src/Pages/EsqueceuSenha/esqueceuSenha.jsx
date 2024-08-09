@@ -8,11 +8,9 @@ import { useNavigate } from "react-router-dom";
 import NavBar from "../../Componentes/NavBar/navbar.jsx";
 import Footer from "../../Componentes/Footer/footer.jsx";
 import ModalVerifiqueEmail from "../../Componentes/ModalVerifiqueEmail/ModalVerifiqueEmail.jsx"
-// import ModalCancelar from "../../Componentes/ModalCancelar/modalCancelar.jsx";
 
 export default function EsqueceuSenha() {
 
-    // const [isOpenTest, setOpenTest] = useState(false)
 
     const [isOpen, setOpen] = useState(false)
 
@@ -46,8 +44,7 @@ export default function EsqueceuSenha() {
 
                         <S.FormSenha>
                          <S.EsqueceuETexto>
-                         {/* <ButtonMod text="Enviar" onClick={() => setOpenTest(!isOpenTest)} />
-                         <ModalCancelar text = "Tem Certeza que deseja cancelar compra?" isOpenTest={isOpenTest} setOpenTest={setOpenTest} /> */}
+
                              
                             <S.Titulo>Esqueceu sua senha?</S.Titulo>
                             <S.Texto>

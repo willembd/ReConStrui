@@ -1,4 +1,5 @@
 import * as S from "./novosOrcamentoEmpStyle"
+import { useState } from "react";
 
 import Brita from "../../../public/brita.png"
 import Areia from "../../../public/areia.png"
@@ -8,8 +9,11 @@ import NavBar from "../../Componentes/NavBar/navbar";
 import CampoDados from "../../Componentes/CampoDados/campoDados";
 import ButtonCancelar from "../../Componentes/ButtonCancelar/buttonCancelar";
 import ButtonPadrao from "../../Componentes/ButtonPadrao/buttonPadrao";
+import ModalCancelar from "../../Componentes/ModalCancelar/modalCancelar";
 
 export default function NovosOrcamentoEmp(){
+    const [isOpenTest, setOpenTest] = useState(false)
+
     return (
         <>
             <NavBar/>
@@ -46,8 +50,11 @@ export default function NovosOrcamentoEmp(){
                         </S.Progress>
 
                         <S.DivButton>
-                            <ButtonCancelar text="Cancelar"/>
+                            <ButtonCancelar text="Cancelar" onClick={() => setOpenTest(!isOpenTest) }/>
                             <ButtonPadrao text="Ver Orçamento"/>
+                            <ModalCancelar text="Tem Certeza que deseja cancelar Orçamento?" isOpenTest={isOpenTest} setOpenTest={setOpenTest} />
+
+
                         </S.DivButton>
                     </S.DivResposta>
                 </S.Pedido>    
@@ -76,8 +83,10 @@ export default function NovosOrcamentoEmp(){
                         </S.Progress>
                         
                         <S.DivButton>
-                            <ButtonCancelar text="Cancelar"/>
+                            <ButtonCancelar text="Cancelar"  onClick={() => setOpenTest(!isOpenTest) }/>
                             <ButtonPadrao text="Ver Orçamento"/>
+                            <ModalCancelar text="Tem Certeza que deseja cancelar Orçamento?" isOpenTest={isOpenTest} setOpenTest={setOpenTest} />
+
                         </S.DivButton>
                     </S.DivResposta>
                 </S.Pedido> 

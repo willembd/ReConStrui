@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import * as S from "./modalCartãoPixStyle"
 
 
-export default function ModalCartãoSenha({ isOpen, setOpen, text }){
+export default function ModalCartãoPix({ isOpen, setOpen, text }){
    
     const setOpenModal = () => {
         setOpen(false);  

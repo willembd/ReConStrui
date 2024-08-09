@@ -1,12 +1,10 @@
 import * as S from "./cadastroEmpresaStyle"
-import { useState } from "react"
 import Logo from "../../assets/Logo2.svg"
 import NavBar from "../../Componentes/NavBar/navbar"
 import Footer from "../../Componentes/Footer/footer"
 import Input from "../../Componentes/Input/input";
 import { useNavigate } from "react-router-dom";
 import ButtonMod from "../../Componentes/ButtonModelo/buttonModelo";
-import ModalCartãoPix from "../../Componentes/ModalCartãoPix/modalCartãoPix"
 
 
 
@@ -14,7 +12,6 @@ import ModalCartãoPix from "../../Componentes/ModalCartãoPix/modalCartãoPix"
 
 export default function CadastroEmpresa(){
 
-    const [isOpen, setOpen] = useState(false)
     
     const navigation = useNavigate();
      
@@ -28,8 +25,6 @@ export default function CadastroEmpresa(){
                 <>
                   <NavBar/>
                         <S.BigBox>
-                                 <ButtonMod text="Enviar" onClick={() => setOpen(!isOpen)} />
-                                 <ModalCartãoPix text="Pagamento?" isOpen={isOpen} setOpen={setOpen} />
                                  <S.ContainerLogo>
                                      <img src={Logo} alt="Logo" />
                                                 

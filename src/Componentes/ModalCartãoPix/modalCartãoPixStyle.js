@@ -89,6 +89,6 @@ export const ButtonPix = styled.div`
 export const StyleButtons = styled.div`
      display: flex;
      align-items: center;
-     gap: 60px;
+     gap: 54px;
 
 `

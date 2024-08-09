@@ -1,5 +1,6 @@
 import * as S from "./retiradasEmpresaStyles"
 
+
 import Brita from "../../../public/brita.png"
 import Areia from "../../../public/areia.png"
 
@@ -8,8 +9,13 @@ import NavBar from "../../Componentes/NavBar/navbar";
 import CampoDados from "../../Componentes/CampoDados/campoDados";
 import ButtonCancelar from "../../Componentes/ButtonCancelar/buttonCancelar";
 import ButtonPadrao from "../../Componentes/ButtonPadrao/buttonPadrao";
+import { useState } from "react";
+import ModalCancelar from "../../Componentes/ModalCancelar/modalCancelar";
 
 export default function RetiradasEmpresa(){
+
+    const [isOpenTest, setOpenTest] = useState(false)
+
     return (
         <>
             <NavBar/>
@@ -46,7 +52,9 @@ export default function RetiradasEmpresa(){
                         </S.Progress>
                         <h2>Pronto para Retirada</h2>
                         <S.DivButton>
-                            <ButtonCancelar text="Cancelar"/>
+                             <ButtonCancelar text="Cancelar" onClick={() => setOpenTest(!isOpenTest)}/>
+                             <ModalCancelar text="Tem Certeza que deseja cancelar Venda?" isOpenTest={isOpenTest} setOpenTest={setOpenTest} />
+
                         </S.DivButton>
                     </S.DivResposta>
                 </S.Pedido>    
@@ -77,7 +85,9 @@ export default function RetiradasEmpresa(){
                         <h2>Pronto para Retirada</h2>
 
                         <S.DivButton>
-                            <ButtonCancelar text="Cancelar"/>
+                            <ButtonCancelar text="Cancelar" onClick={() => setOpenTest(!isOpenTest)}/>
+                            <ModalCancelar text="Tem Certeza que deseja cancelar Venda?" isOpenTest={isOpenTest} setOpenTest={setOpenTest} />
+
                         </S.DivButton>
                     </S.DivResposta>
                 </S.Pedido> 

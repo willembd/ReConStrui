@@ -59,7 +59,7 @@ export default function Pedidos () {
                         </S.Progress>
 
                         <S.DivButton>
-                            <ButtonCancelar text="Cancelar" onClick={handleFechar} onClick={() => setOpenTest(!isOpenTest) }/>
+                            <ButtonCancelar text="Cancelar" onClick={() => setOpenTest(!isOpenTest) } />
                             <ModalCancelar text="Tem Certeza que deseja cancelar compra?" isOpenTest={isOpenTest} setOpenTest={setOpenTest} />
 
                             <ButtonPadrao text="Ver Orçamento"onClick={handleEntrar}/>
@@ -91,7 +91,7 @@ export default function Pedidos () {
                         </S.Progress>
                         
                         <S.DivButton>
-                            <ButtonCancelar text="Cancelar" onClick={() => setOpenTest(!isOpenTest) } onClick={handleFechar}/>
+                            <ButtonCancelar text="Cancelar" onClick={() => setOpenTest(!isOpenTest) }/>
                             <ModalCancelar text="Tem Certeza que deseja cancelar compra?" isOpenTest={isOpenTest} setOpenTest={setOpenTest} />
 
                             <ButtonPadrao text="Ver Orçamento" onClick={handleEntrar}/>
