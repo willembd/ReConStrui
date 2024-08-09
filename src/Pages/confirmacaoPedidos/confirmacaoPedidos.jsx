@@ -16,23 +16,7 @@ export default function Confirmacao({item}){
                             <ContainerInputs>
                                 <InputLeft>
                                     <ContainerModal>
-                                        <Container key={item.id}>
-                                            <div className="box-item">
-                                                <div className="img">
-                                                    <IImagem
-                                                        src={item.image}
-                                                        alt="Slide"
-                                                        className="slide-item"
-                                                    />
-                                                </div>
-                                                <Alinhamento>
-                                                    <Linha>
-                                                        <Title>{item.title}</Title>
-                                                        <Palavra>AGR Ambiental</Palavra>
-                                                    </Linha>
-                                                </Alinhamento>
-                                            </div>
-                                        </Container>
+                                        <Cards item />
                                     </ContainerModal>
                                 </InputLeft>
                                 <ContainerRight>

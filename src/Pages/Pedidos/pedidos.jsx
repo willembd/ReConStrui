@@ -4,7 +4,7 @@ import { useState } from "react";
 
 import Brita from "../../../public/brita.png"
 import Areia from "../../../public/areia.png"
-
+import { useNavigate } from "react-router-dom"
 import NavBar from "../../Componentes/NavBar/navbar"
 import Footer from "../../Componentes/Footer/footer"
 import CampoDados from "../../Componentes/CampoDados/campoDados";
@@ -17,6 +17,14 @@ export default function Pedidos () {
 
     const [isOpenTest, setOpenTest] = useState(false)
 
+
+    const navigate = useNavigate();
+        const handleEntrar = () => {
+            navigate("/confirmacaoPedidos");
+        };
+        const handleFechar = () => {
+            navigate("/");
+        };
     return (
 
         <>
@@ -51,10 +59,10 @@ export default function Pedidos () {
                         </S.Progress>
 
                         <S.DivButton>
-                            <ButtonCancelar text="Cancelar" onClick={() => setOpenTest(!isOpenTest) }/>
+                            <ButtonCancelar text="Cancelar" onClick={handleFechar} onClick={() => setOpenTest(!isOpenTest) }/>
                             <ModalCancelar text="Tem Certeza que deseja cancelar compra?" isOpenTest={isOpenTest} setOpenTest={setOpenTest} />
 
-                            <ButtonPadrao text="Ver Orçamento"/>
+                            <ButtonPadrao text="Ver Orçamento"onClick={handleEntrar}/>
                         </S.DivButton>
                     </S.DivResposta>
                 </S.Pedido>   
@@ -83,10 +91,10 @@ export default function Pedidos () {
                         </S.Progress>
                         
                         <S.DivButton>
-                            <ButtonCancelar text="Cancelar" onClick={() => setOpenTest(!isOpenTest) }/>
+                            <ButtonCancelar text="Cancelar" onClick={() => setOpenTest(!isOpenTest) } onClick={handleFechar}/>
                             <ModalCancelar text="Tem Certeza que deseja cancelar compra?" isOpenTest={isOpenTest} setOpenTest={setOpenTest} />
 
-                            <ButtonPadrao text="Ver Orçamento" />
+                            <ButtonPadrao text="Ver Orçamento" onClick={handleEntrar}/>
                         </S.DivButton>
                     </S.DivResposta>
                 </S.Pedido>   
