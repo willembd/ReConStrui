@@ -26,6 +26,7 @@ export const MODAL_STYLE = styled.div`
     display: flex;
     align-items: center;
     padding: 0 30px;
+    justify-content: center;
 `
 export const ContainerModal =styled.div`
     display: flex;
@@ -62,8 +63,8 @@ export const QuebraLinha = styled.div`
 `;
 
 export const IImagem = styled.img`
-    width: 25rem;
     height: 18rem;
+    border-radius: 0.8rem;
 
 `;
 
@@ -116,7 +117,6 @@ export const PPalavra = styled.p`
 export const AAlinhamento = styled.div`
     display: flex;
     flex-direction: row;
-    padding-left: 3rem;
 
 `;
 
