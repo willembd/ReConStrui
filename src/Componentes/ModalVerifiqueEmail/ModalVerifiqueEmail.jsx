@@ -1,7 +1,7 @@
 import * as S from "./modalEmailStyle"
 
 
-export default function ModalVerifiqueEmail({ isOpen, setOpen }){
+export default function ModalVerifiqueEmail({ isOpen, setOpen, text }){
    
     const setOpenModal = () => {
         setOpen(false);  
@@ -14,7 +14,7 @@ export default function ModalVerifiqueEmail({ isOpen, setOpen }){
                 <S.ModalStyle>
                         <S.Itens>
                            
-                             <S.Texto>Verifique seu e-mail</S.Texto>
+                             <S.Texto> {text} </S.Texto>
                              <S.X onClick={setOpenModal}>x</S.X>
                         </S.Itens>
                         

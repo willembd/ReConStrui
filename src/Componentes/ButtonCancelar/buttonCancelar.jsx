@@ -1,7 +1,7 @@
 import * as S from "./buttonCancelarStyles"
 
-export default function ButtonCancelar({ text, ...rest }){
+export default function ButtonCancelar({padding, color, border, text, ...rest }){
     return(
-        <S.ButtonCancelar {...rest}>{ text }</S.ButtonCancelar>
+        <S.ButtonCancelar tamanhobutton = {padding} modelobutton = {color} borderbutton = {border}  {...rest}>{ text }</S.ButtonCancelar>
     )
 }
