@@ -2,7 +2,7 @@ import * as S from "./pedidosStyle"
 
 import Brita from "../../../public/brita.png"
 import Areia from "../../../public/areia.png"
-
+import { useNavigate } from "react-router-dom"
 import NavBar from "../../Componentes/NavBar/navbar"
 import Footer from "../../Componentes/Footer/footer"
 import CampoDados from "../../Componentes/CampoDados/campoDados";
@@ -11,6 +11,14 @@ import ButtonPadrao from "../../Componentes/ButtonPadrao/buttonPadrao";
 
 
 export default function Pedidos () {
+
+    const navigate = useNavigate();
+        const handleEntrar = () => {
+            navigate("/confirmacaoPedidos");
+        };
+        const handleFechar = () => {
+            navigate("/");
+        };
     return (
 
         <>
@@ -45,8 +53,8 @@ export default function Pedidos () {
                         </S.Progress>
 
                         <S.DivButton>
-                            <ButtonCancelar text="Cancelar"/>
-                            <ButtonPadrao text="Ver Orçamento"/>
+                            <ButtonCancelar text="Cancelar" onClick={handleFechar}/>
+                            <ButtonPadrao text="Ver Orçamento"onClick={handleEntrar}/>
                         </S.DivButton>
                     </S.DivResposta>
                 </S.Pedido>   
@@ -75,8 +83,8 @@ export default function Pedidos () {
                         </S.Progress>
                         
                         <S.DivButton>
-                            <ButtonCancelar text="Cancelar"/>
-                            <ButtonPadrao text="Ver Orçamento"/>
+                            <ButtonCancelar text="Cancelar" onClick={handleFechar}/>
+                            <ButtonPadrao text="Ver Orçamento"onClick={handleEntrar}/>
                         </S.DivButton>
                     </S.DivResposta>
                 </S.Pedido>   
