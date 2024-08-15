@@ -44,7 +44,7 @@ module.exports = class empresaControllers {
       response.status(201).json(empresa);
 
     } catch (error) {
-      response.status(500).json({ error: "Erro ao criar usuário", error });
+      response.status(500).json({ error: "Erro ao criar empresa", error });
     }
   }
 
