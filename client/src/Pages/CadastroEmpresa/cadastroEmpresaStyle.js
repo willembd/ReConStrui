@@ -14,13 +14,13 @@ export const Caixa = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
-    background-color: #F8F8F8;
+    min-height: 120.1rem;
 
 `;
 
 export const Container = styled.div`
-    width: 900px;
+    width: 1097px;
+    height: 1648px;
     background-color: white;
     padding: 20px;
     border-radius: 10px;
@@ -29,13 +29,6 @@ export const Container = styled.div`
   
 `;
 
-export const ContainerLogo = styled.div`
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin-bottom: 10px;
-    text-align: center;
-`;
 
 export const ButtonVoltar = styled.button`
     cursor: pointer;
@@ -64,29 +57,30 @@ export const TextoCadastro = styled.h1`
     justify-content: center;
     display: flex;
     margin-bottom: 20px;
-    /* margin-bottom: 40px; */
+    font-weight: bold;
+    font-size: 3.5rem;
    
     
 `;
 
 export const ContainerInputs = styled.div`
     display: flex;
-    flex-direction: row;
-    margin-bottom: 20px;
+    flex-direction: column;
+    gap: 30px;
+    padding-bottom: 40px;
+
 `;
 
-export const InputLeft = styled.div`
+export const InputFlex = styled.div`
     display: flex;
-    flex-direction: column;
-    gap: 20px;
-    width: 50%;
+    gap: 117px;
+
 `;
 
-export const ContainerRight = styled.div`
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 50%;
+export const TTitulo = styled.h2`
+    font-size: 2rem;
+    width: auto;
+    align-items: end;
 `;
 
 export const InputRight = styled.div`
@@ -118,27 +112,24 @@ export const CheckboxMateriais1 = styled.div`
     gap: 20px;
     margin-bottom: 5px;
     color: #228137;
-    list-style-type: none 
+    list-style-type: none ;
     
-     
-  
+`;
 
-`
 export const CheckboxMateriais2 = styled.div`
     display: flex;
     align-items: center ;
     gap: 75px;
     margin-bottom: 5px;
     color: #228137;
-    list-style-type: none 
+    list-style-type: none ;
     
      
 
-`
+`;
 export const CheckboxTransporte1 = styled.li`
     display: flex;
     align-items: center ;
-    /* margin-bottom: 5px; */
     color: #228137;
     margin-right: 130px;
     
@@ -161,7 +152,7 @@ export const CheckboxTransporte2 = styled.li`
 export const CheckboxTransporte = styled.div`
     display: flex;
     
-    align-items: flex-start
+    align-items: flex-start;
     
      
      
@@ -175,5 +166,21 @@ export const LinkCadastro = styled.a`
     margin-top: 10px;
     font-size: 16px;
     
+    
+`;
+
+export const CaixaFundo = styled.div`
+    height: 1923px;
+    width: 1500px;
+    background:#33603D;
+    clip-path: polygon(0% 0%, 100% 0%, 40% 100%, 0% 100%);
+    position: absolute;
+`;
+export const BarraVertical = styled.div`
+    height: 1923px;
+    width: 1500px;
+    background: #B7821C;
+    clip-path: polygon(100% 0%, 90% 0%, 40% 100%, 100% 0%);
+    position: absolute;
     
 `;
