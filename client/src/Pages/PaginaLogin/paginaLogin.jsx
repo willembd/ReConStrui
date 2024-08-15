@@ -1,5 +1,5 @@
 import * as S from "./paginaLoginStyle.js";
-import LogoBranca from "../../assets/LogoBranca.svg";
+import Imagempadrao from "../../assets/imagem-padrao1.svg";
 import Input from "../../Componentes/Input/input";
 import ButtonMod from "../../Componentes/ButtonModelo/buttonModelo.jsx";
 import { useNavigate } from "react-router-dom";
@@ -16,26 +16,28 @@ export default function PaginaLogin() {
     return (
         <>
             <NavBar />
+            <S.ButtonContainer>
+                <S.Button onClick={handleFechar}>Voltar</S.Button>
+            </S.ButtonContainer>
             <S.Caixa>
                 <S.Modal>
                     <S.ModalContainer>
                         <S.Imagem>
-                            <S.ButtonContainer>
-                                <S.Button onClick={handleFechar}>
-                                    Voltar
-                                </S.Button>
-                            </S.ButtonContainer>
-                            <S.Logo src={LogoBranca} alt="" />
+                            <S.Logo src={Imagempadrao} alt="" />
                             <div></div>
                         </S.Imagem>
 
                         <S.FormLogin>
                             <S.Titulo>Entrar</S.Titulo>
-                            <S.DivInput>
-                                <Input text="E-mail" />
-                                <Input text="Senha" />
-                            </S.DivInput>
-
+                            <S.Organizacao>
+                                <S.DivInput>
+                                    <Input text="E-mail" />
+                                    <Input text="Senha" />
+                                </S.DivInput>
+                                <S.Linksenha href="/">
+                                    Esqueceu a senha?
+                                </S.Linksenha>
+                            </S.Organizacao>
                             <S.DivRadio>
                                 <div>
                                     <input type="radio" value="Usuario" />
@@ -50,9 +52,9 @@ export default function PaginaLogin() {
                             <ButtonMod text="Entrar" onClick={handleFechar} />
 
                             <S.DivLink>
-                                <S.Links href="/cadastrousuario">Cadastrar</S.Links>
-                                <S.Links href="/">
-                                    Esqueci Senha
+                                <p>Não tem Cadastro?</p>
+                                <S.Links href="/cadastrousuario">
+                                    Cadastre-se
                                 </S.Links>
                             </S.DivLink>
                         </S.FormLogin>

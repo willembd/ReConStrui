@@ -8,22 +8,22 @@ export const Caixa = styled.div`
     align-items: center;
     width: 100%;
     margin: 100px 0px;
-    
 `;
 
 export const Modal = styled.div`
-    background-color: #FCFCFC;
+    background-color: #fcfcfc;
     color: black;
-    width: 900px;
-    height: 540px;
+    width: 1040px;
+    height: 590px;
     border-radius: 8px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
-    margin-bottom:40px;
-    border-radius:12px;
+    margin-bottom: 40px;
+    border-radius: 12px;
     box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
 `;
 
 export const ModalContainer = styled.div`
@@ -48,19 +48,18 @@ export const ButtonContainer = styled.div`
 `;
 
 export const Imagem = styled.div`
-    display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items:center;
-    background-color: rgba(28, 69, 37, 0.94);
+    align-items: center;
     width: 50%;
-    height: 540px;
+    height: 590px;
     border-radius: 12px 0px 0px 12px;
-
 `;
 
 export const Logo = styled.img`
-    width: 300px;
+    object-fit: contain;
+    max-width: 135%;
+    max-height: 100%;
 `;
 
 export const FormLogin = styled.div`
@@ -69,35 +68,45 @@ export const FormLogin = styled.div`
     align-items: center;
     justify-content: center;
     width: 50%;
-    
 `;
 
 export const Titulo = styled.h1`
     color: #228137;
+    font-size: 43px;
+`;
+
+export const Organizacao = styled.div`
+    display: flex;
+    flex-direction: column;
 `;
 
 export const DivInput = styled.div`
     display: flex;
     flex-direction: column;
     gap: 40px;
-    margin: 50px 0px 20px 0px;
+    margin: 50px 0px 05px 0px;
+`;
+export const Linksenha = styled.div`
+    color: #288137;
 `;
 export const DivRadio = styled.div`
     display: flex;
-    margin-bottom: 14px;
-    gap: 16px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    gap: 40px;
 `;
 
 export const DivLink = styled.div`
     display: flex;
-    flex-direction: column;
     align-items: center;
     gap: 8px;
-    margin-top: 10px;
-    
+    margin-top: 20px;
+    color: #288137;
 `;
 
 export const Links = styled.a`
     text-decoration: none;
-    color: #228137;
+    color: #af7503;
+    text-decoration: underline;
+    font-size:18px;
 `;
