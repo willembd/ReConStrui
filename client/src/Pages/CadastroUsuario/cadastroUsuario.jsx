@@ -1,6 +1,6 @@
 import React from "react";
 import * as S from "./cadastroUsuarioStyle.js";
-import LogoBranca from "../../assets/LogoBranca.svg";
+import Imagempadrao from "../../assets/imagem-padrao1.svg";
 import Input from "../../Componentes/Input/input.jsx";
 import ButtonMod from "../../Componentes/ButtonModelo/buttonModelo.jsx";
 import { useNavigate } from "react-router-dom";
@@ -17,16 +17,16 @@ export default function CadastroUsuario() {
     return (
         <>
             <NavBar />
+                     <S.ButtonContainer>
+                                <S.Button onClick={handleFechar}>
+                                    Voltar
+                                </S.Button>
+                     </S.ButtonContainer>
             <S.Caixa>
                 <S.Modal>
                     <S.ModalContainer>
                         <S.Imagem>
-                            <S.ButtonContainer>
-                                <S.Button onClick={handleFechar}>
-                                    Voltar
-                                </S.Button>
-                            </S.ButtonContainer>
-                            <S.Logo src={LogoBranca} alt="" />
+                            <S.Logo src={Imagempadrao} alt="" />
                             <div></div>
                         </S.Imagem>
 

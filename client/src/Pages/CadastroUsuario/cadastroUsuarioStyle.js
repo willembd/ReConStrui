@@ -13,7 +13,7 @@ export const Caixa = styled.div`
 export const Modal = styled.div`
     background-color: #fcfcfc;
     color: black;
-    width: 900px;
+    width: 1040px;
     height: 540px;
     border-radius: 8px;
     display: flex;
@@ -51,14 +51,15 @@ export const Imagem = styled.div`
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(28, 69, 37, 0.94);
     width: 50%;
     height: 540px;
     border-radius: 12px 0px 0px 12px;
 `;
 
 export const Logo = styled.img`
-    width: 300px;
+    object-fit: contain;
+    max-width: 135%;
+    max-height: 100%;
 `;
 
 export const FormLogin = styled.div`
@@ -74,11 +75,10 @@ export const Titulo = styled.h1`
 `;
 
 export const DivInput = styled.div`
-    display:flex;
+    display: flex;
     flex-direction: column;
     gap: 15px;
     margin: 50px 0px 20px 0px;
-    
 `;
 
 export const DivLink = styled.div`
@@ -87,7 +87,6 @@ export const DivLink = styled.div`
     align-items: center;
     gap: 10px;
     margin-top: 10px;
-    
 `;
 
 export const Links = styled.a`

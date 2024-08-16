@@ -88,6 +88,7 @@ export const DivInput = styled.div`
 `;
 export const Linksenha = styled.div`
     color: #288137;
+    font-size:14px;
 `;
 export const DivRadio = styled.div`
     display: flex;
@@ -102,6 +103,7 @@ export const DivLink = styled.div`
     gap: 8px;
     margin-top: 20px;
     color: #288137;
+    
 `;
 
 export const Links = styled.a`
