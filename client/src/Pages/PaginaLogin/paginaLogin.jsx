@@ -34,9 +34,11 @@ export default function PaginaLogin() {
                                     <Input text="E-mail" />
                                     <Input text="Senha" />
                                 </S.DivInput>
-                                <S.Linksenha href="/">
+
+                                <S.Linksenha href="/esqueceusenha">
                                     Esqueceu a senha?
                                 </S.Linksenha>
+
                             </S.Organizacao>
                             <S.DivRadio>
                                 <div>

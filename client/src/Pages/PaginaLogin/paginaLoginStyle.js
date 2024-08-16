@@ -88,7 +88,7 @@ export const DivInput = styled.div`
 `;
 export const Linksenha = styled.div`
     color: #288137;
-    font-size:14px;
+    font-size:16px;
 `;
 export const DivRadio = styled.div`
     display: flex;
