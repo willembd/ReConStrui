@@ -3,7 +3,6 @@ import NavBar from "../../Componentes/NavBar/navbar";
 import Footer from "../../Componentes/Footer/footer";
 import Input from "../../Componentes/Input/input";
 import { useNavigate } from "react-router-dom";
-import ButtonMod from "../../Componentes/ButtonModelo/buttonModelo";
 
 export default function CadastroEmpresa() {
     const navigation = useNavigate();
@@ -25,11 +24,14 @@ export default function CadastroEmpresa() {
                                 Voltar
                             </S.ButtonVoltar>
                         </S.ButtonContainer>
-                        <S.TextoCadastro>Cadastrar Empresa</S.TextoCadastro>
+                            <S.TextoCadastro>Cadastrar Empresa</S.TextoCadastro>
                             <S.BigBox>
                                 <S.BigBox>
                                 <S.ContainerInputs>
+                                <S.QuebraLinha>
                                     <S.TTitulo>Informação da empresa</S.TTitulo>
+                                    <S.BBarra/>
+                                </S.QuebraLinha>
                                     <S.InputFlex>
                                         <Input text='Nome'/>
                                         <Input text='Razão social'/>
@@ -42,7 +44,10 @@ export default function CadastroEmpresa() {
                                 </S.BigBox>
                                 <S.BigBox>
                                 <S.ContainerInputs>
+                                <S.QuebraLinha>
                                     <S.TTitulo>Endereço</S.TTitulo>
+                                    <S.BBarra2/>
+                                </S.QuebraLinha>
                                     <S.InputFlex>
                                         <Input text='Cep'/>
                                         <Input text='Estado'/>
@@ -59,14 +64,20 @@ export default function CadastroEmpresa() {
                                 </S.BigBox>
                                 <S.BigBox>
                                 <S.ContainerInputs>
+                                <S.QuebraLinha>
                                     <S.TTitulo>Acesso</S.TTitulo>
+                                    <S.BBarra3  />
+                                </S.QuebraLinha>
                                     <S.InputFlex>
                                         <Input text='Email'/>
                                         <Input text='Senha'/>
                                     </S.InputFlex>
                                 </S.ContainerInputs>
                                 </S.BigBox>
+                                <S.QuebraLinha>
                                     <S.TTitulo>Matérias</S.TTitulo>
+                                    <S.BBarra4/>
+                                </S.QuebraLinha>
                                     <div>
                                         <S.CheckboxMateriais1>
                                             <li>
@@ -104,43 +115,46 @@ export default function CadastroEmpresa() {
                                             </li>
                                         </S.CheckboxMateriais2>
                                     </div>
+                                <S.QuebraLinha>
                                     <S.TTitulo>Transporte</S.TTitulo>
-                                    <div>
-                                        <S.CheckboxTransporte>
-                                            <S.CheckboxTransporte1>
-                                                <input
-                                                    id="Entrega"
-                                                    type="checkbox"
-                                                />
-                                                <label htmlFor="Entrega">
-                                                    Entrega
-                                                </label>
-                                            </S.CheckboxTransporte1>
-                                            <S.CheckboxTransporte2>
-                                                <input
-                                                    id="Retirada"
-                                                    type="checkbox"
-                                                />
-                                                <label htmlFor="Retirada">
-                                                    Retirada
-                                                </label>
-                                            </S.CheckboxTransporte2>
-                                        </S.CheckboxTransporte>
-                                    </div>
-                                    <ButtonMod
+                                    <S.BBarra2/>
+                                </S.QuebraLinha>
+                            <div>
+                                <S.CheckboxTransporte>
+                                    <S.CheckboxTransporte1>
+                                        <input
+                                            id="Entrega"
+                                            type="checkbox"
+                                        />
+                                        <label htmlFor="Entrega">
+                                            Frete
+                                        </label>
+                                    </S.CheckboxTransporte1>
+                                    <S.CheckboxTransporte2>
+                                        <input
+                                            id="Retirada"
+                                            type="checkbox"
+                                        />
+                                        <label htmlFor="Retirada">
+                                            Retirada
+                                        </label>
+                                    </S.CheckboxTransporte2>
+
+                                </S.CheckboxTransporte>
+                            </div>
+                                    <S.Botao
                                         onClick={handleFechar}
-                                        text="Cadastrar"
                                     >
                                         {" "}
                                         Cadastrar{" "}
-                                    </ButtonMod>
+                                    </S.Botao>
                                     <S.LinkCadastro
                                         onClick={() =>
                                             navigation("/CadastroUsuario")
                                         }
                                         href=""
                                     >
-                                        <p>Não tem cadastro? <span>Entrar</span></p>
+                                        <S.PP>Não tem cadastro? <span>Entrar</span></S.PP>
                                     </S.LinkCadastro>
                             </S.BigBox>
                     </S.Container>
