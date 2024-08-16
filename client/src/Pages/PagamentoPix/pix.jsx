@@ -1,7 +1,6 @@
 import * as S from "./pixStyle.js";
-
-import LogoBranca from "../../assets/LogoBranca.svg";
-import ImgPix from "../../assets/qrcodepix.svg"
+import Imagempadrao from "../../assets/imagem-padrao1.svg";
+import ImgPix from "../../assets/qrcodepix.svg";
 import ButtonMod from "../../Componentes/ButtonModelo/buttonModelo.jsx";
 import { useNavigate } from "react-router-dom";
 import NavBar from "../../Componentes/NavBar/navbar.jsx";
@@ -18,18 +17,16 @@ export default function PaginaLogin() {
     return (
         <>
             <NavBar />
+                            <S.ButtonContainer>
+                                <S.Button onClick={handleFechar}>Voltar</S.Button>
+                            </S.ButtonContainer>
             <S.Caixa>
                 <S.Modal>
                     
                     <S.ModalContainer>
                         <S.Imagem>
-                            <S.ButtonContainer>
-                                <S.Button onClick={handleFechar}>Voltar</S.Button>
-                            </S.ButtonContainer>
-                            <S.Logo src={LogoBranca} alt="" />
-                            <div>
-
-                            </div>
+                            <S.Logo src={Imagempadrao} alt="" />
+                            <div></div>
                         </S.Imagem>
 
                         <S.Form>
