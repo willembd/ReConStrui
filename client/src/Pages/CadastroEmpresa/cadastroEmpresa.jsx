@@ -142,19 +142,21 @@ export default function CadastroEmpresa() {
 
                                 </S.CheckboxTransporte>
                             </div>
+                                <S.Centralizar>
                                     <S.Botao
                                         onClick={handleFechar}
                                     >
                                         {" "}
                                         Cadastrar{" "}
                                     </S.Botao>
+                                </S.Centralizar>
                                     <S.LinkCadastro
                                         onClick={() =>
                                             navigation("/CadastroUsuario")
                                         }
                                         href=""
                                     >
-                                        <S.PP>Não tem cadastro? <span>Entrar</span></S.PP>
+                                        <S.PP>Não tem cadastro? <S.Cor>Entrar</S.Cor></S.PP>
                                     </S.LinkCadastro>
                             </S.BigBox>
                     </S.Container>
