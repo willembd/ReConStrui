@@ -3,9 +3,8 @@ import styled from "styled-components";
 export const Caixa = styled.div`
     display: flex;
     flex-direction: column;
-    background-color: #fff;
+    background-color: #3C3C3C ;
     border-radius: 0.75rem;
-    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.5);
     height: 19.5rem;
     width: 14rem;
     box-sizing: border-box;
@@ -14,7 +13,8 @@ export const Caixa = styled.div`
     
 `
 export const Im = styled.img`
-    width: 14rem;
+    width: 14.1rem;
+    /* height: 20rem; */
     border-radius: 0.75rem 0.75rem 0 0 ;
     
 `
@@ -35,12 +35,13 @@ export const Container = styled.div`
     justify-content: center;
     align-items: center;
     margin-bottom: 2rem;
+    
 `
 export const Linha = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    color:#1C4525 ;
+    color:#fff ;
 `
 export const Carrosel = styled.div`
     height:19.011rem;

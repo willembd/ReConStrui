@@ -1,8 +1,26 @@
 
 import styled from "styled-components";
 
-export const BigBox = styled.div`
+export const Response = styled.div`
      display: flex;
+    flex-direction: column;   
+    justify-content: center; 
+    @media screen and (max-width: 1024px) {
+        gap: 0px;
+    }
+    @media screen and (max-width: 1000px) {
+        gap: 40px;
+    }
+    @media screen and (max-width: 849px) {
+        gap: 18px;
+    }
+    @media screen and (max-width: 830px) {
+        gap: 40px;
+    }
+`
+
+export const BigBox = styled.div`
+    display: flex;
     flex-direction: column;   
     justify-content: center; 
 `
@@ -12,12 +30,12 @@ export const Caixa = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 110rem;
+    min-height: 91.2rem;
 `;
 
 export const Container = styled.div`
-    width: 1000px;
-    height: 1370px;
+    width: 900px;
+    height: 1300px;
     background-color: white;
     padding: 20px;
     border-radius: 10px;
@@ -50,13 +68,13 @@ export const TextoCadastro = styled.h1`
     display: flex;
     margin-bottom: 50px;
     font-weight: bold;
-    font-size: 3rem;
+    font-size: 2.5rem;
 `;
 
 export const ContainerInputs = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 32px;
     padding-bottom: 40px;
 `;
 
@@ -66,7 +84,7 @@ export const InputFlex = styled.div`
 `;
 
 export const TTitulo = styled.h2`
-    font-size: 2rem;
+    font-size: 1.5rem;
     width: auto;
     align-items: end;
 `;
@@ -89,10 +107,10 @@ export const TextoCheckbox = styled.h3`
 
 export const CheckboxMateriais1 = styled.div`
     display: flex;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
     color: #228137;
     list-style-type: none;
-    font-size: 25px;
+    font-size: 20px;
     justify-content: space-around;
     padding-top: 30px;
     padding-bottom: 40px;
@@ -101,10 +119,10 @@ export const CheckboxMateriais1 = styled.div`
 export const CheckboxMateriais2 = styled.div`
     display: flex;
     align-items: center ;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
     color: #228137;
     list-style-type: none ;
-    font-size: 25px;
+    font-size: 20px;
     justify-content: space-around;
     padding-bottom: 30px;
 `;
@@ -114,7 +132,7 @@ export const CheckboxTransporte1 = styled.li`
     align-items: center ;
     color: #228137;
     margin-right: 130px;
-    font-size: 25px;
+    font-size: 20px;
 `;
 
 export const CheckboxTransporte2 = styled.li`
@@ -122,7 +140,7 @@ export const CheckboxTransporte2 = styled.li`
     align-items: center ;
     margin-bottom: 5px;
     color: #228137;
-    font-size: 25px;   
+    font-size: 20px;   
 `;
 
 export const CheckboxTransporte = styled.div`
@@ -140,16 +158,16 @@ export const LinkCadastro = styled.a`
 `;
 
 export const CaixaFundo = styled.div`
-    height: 1760px;
-    width: 1400px;
+    height: 1460px;
+    width: 1300px;
     background:#33603D;
     clip-path: polygon(0% 0%, 100% 0%, 40% 100%, 0% 100%);
     position: absolute;
 `;
 
 export const BarraVertical = styled.div`
-    height: 1760px;
-    width: 1400px;
+    height: 1460px;
+    width: 1300px;
     background: #B7821C;
     clip-path: polygon(100% 0%, 90% 0%, 40% 100%, 100% 0%);
     position: absolute;
@@ -158,59 +176,53 @@ export const BarraVertical = styled.div`
 
 export const BBarra = styled.div`
     height:2px;
-    width: 350px;
+    width: 500px;
     background-color: black;
-    margin-top: 24px;
+    margin-top: 8px;
 `;
 
 export const QuebraLinha = styled.div`
     display: flex;
-    justify-content: space-around   ;
-    gap: 30px; 
+    justify-content: space-around ;
+    align-items: center;
 `;
 
 export const BBarra2 = styled.div`
     height:2px;
-    width: 570px;
+    width: 680px;
     background-color: black;
-    margin-top: 24px;
+    margin-top: 8px;
 
-    
 `;
 export const BBarra3 = styled.div`
     height:2px;
-    width: 570px;
+    width: 710px;
     background-color: black;
-    margin-top: 24px;
-
-    
+    margin-top: 8px;
 `;
 
 export const BBarra4 = styled.div`
     height:2px;
-    width: 570px;
+    width: 700px;
     background-color: black;
-    margin-top: 24px;
-
-    
+    margin-top: 8px;
 `;
 
 export const Botao = styled.div`
     padding: 15px;
-    width: 390px;
+    width: 355px;
     text-align: center;
     background-color: rgba(175, 117, 3, 0.9);
     color: #fff;
     border-radius: 4px;
-    margin-bottom:10px ;
+    margin-bottom:20px ;
     margin-top: 30px;
     font-weight: 600;
-    font-size: 25px;
-    
+    font-size: 20px;
 `;
 
 export const PP = styled.p`
-    font-size: 21px;
+    font-size: 20px;
     display: flex;
     justify-content: center;
 `;
