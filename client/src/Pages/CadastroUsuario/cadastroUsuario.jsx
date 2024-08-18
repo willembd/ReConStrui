@@ -19,7 +19,7 @@ export default function CadastroUsuario() {
     const navigate = useNavigate();
 
     const handleFechar = () => {
-        navigate("/paginalogin");
+        
     };
 
     async function handleCadastrarUser(e) {
@@ -32,6 +32,7 @@ export default function CadastroUsuario() {
             })
             .then((response) => {
                 localStorage.setItem("token", response.data.token);
+                navigate("/paginalogin");
             })
             .catch((error) => {
                 console.log(error);
