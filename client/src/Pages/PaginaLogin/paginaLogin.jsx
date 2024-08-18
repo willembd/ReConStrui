@@ -48,6 +48,7 @@ export default function PaginaLogin() {
     return (
         <>
             <NavBar />
+            <S.Response>
             <S.ButtonContainer>
                 <S.Button onClick={handleFechar}>Voltar</S.Button>
             </S.ButtonContainer>
@@ -95,6 +96,7 @@ export default function PaginaLogin() {
                     </S.ModalContainer>
                 </S.Modal>
             </S.Caixa>
+            </S.Response>
             <Footer />
         </>
     );
