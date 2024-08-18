@@ -1,5 +1,22 @@
 import styled from "styled-components";
 
+export const Response = styled.div`
+    display: flex;
+    flex-direction: column;   
+    justify-content: center; 
+    @media screen and (max-width: 1024px) {
+        gap: 0px;
+    }
+    @media screen and (max-width: 1000px) {
+        gap: 40px;
+    }
+    @media screen and (max-width: 849px) {
+        gap: 18px;
+    }
+    @media screen and (max-width: 830px) {
+        gap: 40px;
+    }
+`;
 export const Caixa = styled.div`
     background-color: white;
     display: flex;
