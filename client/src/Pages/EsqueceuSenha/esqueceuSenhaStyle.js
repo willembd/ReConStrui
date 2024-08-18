@@ -36,18 +36,16 @@ export const Button = styled.button`
     background-color: #228137;
     color: white;
     text-align: center;
-    /* line-height: 30px; */
     border: none;
     cursor: pointer;
 `;
 
 export const ButtonContainer = styled.div`
     width: 100%;
-    margin-top: 10px;
+    margin-top: 20px;
 `;
 
 export const Imagem = styled.div`
-    display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
@@ -66,17 +64,14 @@ export const FormSenha = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content:center;
     width: 50%;
-    /* padding-right: 2rem;
-    margin-top:50px; */
 `;
 
 export const Titulo = styled.h1`
     color: #228137;
     white-space: nowrap;
     font-size: 35px;
-    
 `;
 
 export const Texto = styled.p`
@@ -93,7 +88,6 @@ export const DivInput = styled.div`
     flex-direction: column;
     gap: 40px;
     margin: 0px 0px 20px 0px;
-    /* margin: 50px 0px 20px 0px; */
 `;
 export const EsqueceuETexto = styled.div`
     display: flex;

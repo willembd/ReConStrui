@@ -48,11 +48,10 @@ export const ButtonContainer = styled.div`
 `;
 
 export const Imagem = styled.div`
-    display: flex;
+    
     flex-direction: column;
     justify-content: space-between;
     align-items:center;
-    
     width: 50%;
     height: 540px;
     border-radius: 12px 0px 0px 12px;

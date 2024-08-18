@@ -86,7 +86,7 @@ export const DivInput = styled.div`
     gap: 40px;
     margin: 50px 0px 05px 0px;
 `;
-export const Linksenha = styled.div`
+export const Linksenha = styled.a`
     color: #288137;
     font-size:16px;
 `;

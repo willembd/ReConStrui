@@ -36,9 +36,8 @@ export default function EsqueceuSenha() {
                             <S.EsqueceuETexto>
                                 <S.Titulo>Esqueceu sua senha?</S.Titulo>
                                 <S.Texto>
-                                    Para redefinir sua senha, informe o seu
-                                    e-mail cadastrado e lhe enviaremos um link
-                                    com as instruções.
+                                Para redefinir sua senha,
+                                informe o seu e-mail cadastrado. 
                                 </S.Texto>
                                 <S.DivInput>
                                     <Input text="E-mail" />
