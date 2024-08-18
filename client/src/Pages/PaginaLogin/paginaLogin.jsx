@@ -5,13 +5,45 @@ import ButtonMod from "../../Componentes/ButtonModelo/buttonModelo.jsx";
 import { useNavigate } from "react-router-dom";
 import NavBar from "../../Componentes/NavBar/navbar.jsx";
 import Footer from "../../Componentes/Footer/footer.jsx";
+import { useState } from "react";
+import { api } from "../../service/api.js";
+
 
 export default function PaginaLogin() {
+    const [email, setEmail] = useState("")
+    const [senha, setSenha] = useState("")
+    const [login, setLogin] = useState(null)
+
     const navigate = useNavigate();
 
     const handleFechar = () => {
         navigate("/");
     };
+
+    async function handleLogin(e){
+        if(login === 'usuario'){
+            await api.post('/userlogin', {
+                "email": email, 
+                senha
+            }).then((response) => {
+                localStorage.setItem('token', response.data.token)
+            }).catch((error) => {
+                console.log(error)
+            })
+        }else if(login === 'empresa'){
+            await api.post('/empresalogin', {
+                email, 
+                senha
+            }).then((response) => {
+                localStorage.setItem('token', response.data.token)
+                navigate('/orcamentosempresa')
+            }).catch((error) => {
+                console.log(error)
+            })
+        }else{
+            return alert('Erro')
+        }
+    }
 
     return (
         <>
@@ -31,8 +63,8 @@ export default function PaginaLogin() {
                             <S.Titulo>Entrar</S.Titulo>
                             <S.Organizacao>
                                 <S.DivInput>
-                                    <Input text="E-mail" />
-                                    <Input text="Senha" />
+                                    <Input text="E-mail" onChange={(e) => setEmail(e.target.value)} />
+                                    <Input text="Senha" onChange={(e) => setSenha(e.target.value)} />
                                 </S.DivInput>
 
                                 <S.Linksenha href="/esqueceusenha">
@@ -42,16 +74,16 @@ export default function PaginaLogin() {
                             </S.Organizacao>
                             <S.DivRadio>
                                 <div>
-                                    <input type="radio" value="Usuario" />
+                                    <input type="radio" name="login" onChange={() => setLogin('usuario')} />
                                     <label htmlFor="">Usuário</label>
                                 </div>
                                 <div>
-                                    <input type="radio" value="Empresa" />
+                                    <input type="radio" name="login" onChange={() => setLogin('empresa')}/>
                                     <label htmlFor="">Empresa</label>
                                 </div>
                             </S.DivRadio>
 
-                            <ButtonMod text="Entrar" onClick={handleFechar} />
+                            <ButtonMod text="Entrar" onClick={() => handleLogin()} />
 
                             <S.DivLink>
                                 <p>Não tem Cadastro?</p>

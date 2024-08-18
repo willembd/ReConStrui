@@ -1,9 +1,9 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, Navigate } from "react-router-dom";
 import Home from "../Pages/Home/home";
 import Pedidos from "../Pages/Pedidos/pedidos";
 import PaginaLogin from "../Pages/PaginaLogin/paginaLogin";
 import CadastroEmpresa from "../Pages/CadastroEmpresa/cadastroEmpresa";
-import EsqueceuSenha from "../Pages/EsqueceuSenha/esqueceuSenha"
+import EsqueceuSenha from "../Pages/EsqueceuSenha/esqueceuSenha";
 import Cartao from "../Pages/PagamentoCartao/cartao";
 import CadastroUsuario from "../Pages/CadastroUsuario/cadastroUsuario.jsx";
 import Pix from "../Pages/PagamentoPix/pix";
@@ -14,7 +14,28 @@ import ConfirmacaoEntrega from "../Pages/ConfirmacaoEntrega/confirmacaoEntrega.j
 import EntregasEmpresa from "../Pages/EntregasEmpresa/entregasEmpresa.jsx";
 import RetiradasEmpresa from "../Pages/RetiradasEmpresa/retiradasEmpresa.jsx";
 import FinalizadosEmpresa from "../Pages/FinalizadosEmpresa/finalizadosEmpresa.jsx";
+import { jwtDecode } from "jwt-decode";
 
+function PrivateRoute({ element, allowedTypes }) {
+    const token = localStorage.getItem("token");
+
+    if (!token) {
+        return <Navigate to="/" />;
+    }
+
+    try {
+        const decodedToken = jwtDecode(token);
+
+        if (allowedTypes.includes(decodedToken.type)) {
+            return element;
+        } else {
+            return <Navigate to="/" />;
+        }
+    } catch (error) {
+        console.error("Invalid token", error);
+        return <Navigate to="/" />;
+    }
+}
 
 export const router = createBrowserRouter([
     {
@@ -23,7 +44,9 @@ export const router = createBrowserRouter([
     },
     {
         path: "/pedidos",
-        element: <Pedidos />,
+        element: (
+            <PrivateRoute element={<Pedidos />} allowedTypes={["usuario"]} />
+        ),
     },
     {
         path: "/paginalogin",
@@ -31,53 +54,55 @@ export const router = createBrowserRouter([
     },
     {
         path: "/cadastrousuario",
-        element: <CadastroUsuario />
+        element: <CadastroUsuario />,
     },
     {
-        path: '/cadastroempresa',
-        element: <CadastroEmpresa/>
+        path: "/cadastroempresa",
+        element: <CadastroEmpresa />,
     },
     {
-        path: '/esqueceusenha',
-        element: <EsqueceuSenha/>
+        path: "/esqueceusenha",
+        element: <EsqueceuSenha />,
     },
     {
-        path: '/pagamentocartao',
-        element: <Cartao/>
+        path: "/pagamentocartao",
+        element: <Cartao />,
     },
     {
-        path: '/pagamentopix',
-        element: <Pix/>
+        path: "/pagamentopix",
+        element: <Pix />,
     },
     {
-        path: '/novosOrcamentoEmp',
-        element: <NovosOrcamentoEmp/>
+        path: "/novosOrcamentoEmp",
+        element: <NovosOrcamentoEmp />,
     },
     {
-        path: '/orcamentosempresa',
-        element: <OrcamentosEmpresa/>
-
+        path: "/orcamentosempresa",
+        element: <OrcamentosEmpresa />,
     },
     {
-        path: '/confirmacaoPedidos',
-        element: <Confirmacao/>
+        path: "/confirmacaopedidos",
+        element: <Confirmacao />,
     },
     {
-         path: '/confirmacaoentrega',
-         element: <ConfirmacaoEntrega/>
+        path: "/confirmacaoentrega",
+        element: <ConfirmacaoEntrega />,
     },
     {
-        path: '/entregasEmpresa',
-        element: <EntregasEmpresa/>
+        path: "/entregasempresa",
+        element: (
+            <PrivateRoute
+                element={<EntregasEmpresa />}
+                allowedTypes={["empresa"]}
+            />
+        ),
     },
     {
-        path: '/retiradasEmpresa',
-        element: <RetiradasEmpresa/>
+        path: "/retiradasempresa",
+        element: <RetiradasEmpresa />,
     },
     {
-        path: '/finalizadosEmpresa',
-        element: <FinalizadosEmpresa/>
-    }
-
-
+        path: "/finalizadosempresa",
+        element: <FinalizadosEmpresa />,
+    },
 ]);

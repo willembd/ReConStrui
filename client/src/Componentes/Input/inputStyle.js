@@ -5,7 +5,7 @@ export const InputContainer = styled.div`
     margin: 5px auto;
     width: 300px;
 
-    input[type="text"] {
+    input{
         font-size: 20px;
         width: 100%;
         border: none;
@@ -24,8 +24,8 @@ export const InputContainer = styled.div`
         pointer-events: none;
     }
 
-    input[type="text"]:focus + .label,
-    input[type="text"]:valid + .label {
+    input:focus + .label,
+    input:valid + .label {
         top: -20px;
         font-size: 16px;
         color: #40bd0f;
@@ -41,7 +41,7 @@ export const InputContainer = styled.div`
         transition: all 0.3s ease;
     }
 
-    input[type="text"]:focus ~ .underline {
+    input:focus ~ .underline {
         height: 3px;
     }
 `;

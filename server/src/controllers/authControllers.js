@@ -20,7 +20,8 @@ module.exports = class authControllers {
         }
 
         const token = jwt.sign({
-            id: user.id
+            id: user.id, 
+            type: 'usuario'
         }, 'screet')
 
         response.status(200).json({ token: token })
@@ -42,7 +43,8 @@ module.exports = class authControllers {
         }
 
         const token = jwt.sign({
-            id: empresa.id
+            id: empresa.id,
+            type: 'empresa'
         }, 'screet')
 
         response.status(200).json({ token: token })
