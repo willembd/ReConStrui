@@ -3,8 +3,9 @@ import styled from "styled-components";
 export const Caixa = styled.div`
     display: flex;
     flex-direction: column;
-    background-color: #3C3C3C ;
+    background-color: #fff;
     border-radius: 0.75rem;
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.5);
     height: 19.5rem;
     width: 14rem;
     box-sizing: border-box;
@@ -14,7 +15,7 @@ export const Caixa = styled.div`
 `
 export const Im = styled.img`
     width: 14.1rem;
-    /* height: 20rem; */
+    height: 12.8rem;
     border-radius: 0.75rem 0.75rem 0 0 ;
     
 `
@@ -35,13 +36,13 @@ export const Container = styled.div`
     justify-content: center;
     align-items: center;
     margin-bottom: 2rem;
-    
 `
 export const Linha = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    color:#fff ;
+    gap: 2px;
+    color:#1C4525 ;
 `
 export const Carrosel = styled.div`
     height:19.011rem;
@@ -62,6 +63,7 @@ export const Palavra = styled.p`
     font-size: 0.8rem ;
     font-weight: normal;
     margin: 0.3rem;
+    color: #B7821C;
 `
 export const Bordas = styled.div`
     width: 64%;
