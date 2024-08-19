@@ -25,7 +25,7 @@ export const Borda = styled.div`
     
     border-bottom: 6px #1C4525 solid;
     margin-top: 1rem;
-    margin-bottom: 2.5rem;
+    margin-bottom: 0.5rem;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     
     @media screen and (max-width: 530px) {
