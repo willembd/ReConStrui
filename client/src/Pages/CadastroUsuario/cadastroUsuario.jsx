@@ -19,7 +19,7 @@ export default function CadastroUsuario() {
     const navigate = useNavigate();
 
     const handleFechar = () => {
-        
+        navigate("/paginalogin");
     };
 
     async function handleCadastrarUser(e) {
@@ -35,7 +35,7 @@ export default function CadastroUsuario() {
                 navigate("/paginalogin");
             })
             .catch((error) => {
-                console.log(error);
+                alert(error.response.data.message);
             });
     }
 

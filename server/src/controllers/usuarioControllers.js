@@ -12,6 +12,28 @@ module.exports = class usuarioControllers{
                 senha,
             } = request.body;
 
+            if(!nome){
+                response.status(422).json({ message: 'Nome Obrigatorio!' })
+                return
+            }
+            if(!data_nascimento){
+                response.status(422).json({ message: 'Data de Nascimneto Obrigatoria!' })
+                return
+            }
+            if(!cpf){
+                response.status(422).json({ message: 'CPF Obrigatorio!' })
+                return
+            }
+            if(!email){
+                response.status(422).json({ message: 'E-mail Obrigatorio!' })
+                return
+            }
+            if(!senha){
+                response.status(422).json({ message: 'Senha Obrigatoria!' })
+                return
+            }
+
+
             const salt = await bcrypt.genSalt(12);
             const encryptPass = await bcrypt.hash(senha, parseInt(salt));
             

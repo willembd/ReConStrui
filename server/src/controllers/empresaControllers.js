@@ -21,6 +21,60 @@ module.exports = class empresaControllers {
         transporte,
       } = request.body;
 
+      if(!nome){
+        response.status(422).json({ message: 'Nome Obrigatorio!' })
+        return
+      }
+      if(!razao_social){
+        response.status(422).json({ message: 'Razão Social Obrigatorio!' })
+        return
+      }
+      if(!telefone){
+        response.status(422).json({ message: 'Telefone Obrigatorio!' })
+        return
+      }
+      if(!cnpj){
+        response.status(422).json({ message: 'CNPJ Obrigatorio!' })
+        return
+      }
+      if(!cep){
+        response.status(422).json({ message: 'CEP Obrigatorio!' })
+        return
+      }
+      if(!estado){
+        response.status(422).json({ message: 'Estado Obrigatorio!' })
+        return
+      }
+      if(!cidade){
+        response.status(422).json({ message: 'Cidade Obrigatoria!' })
+        return
+      }
+      if(!bairro){
+        response.status(422).json({ message: 'Bairro Obrigatorio!' })
+        return
+      }
+      if(!endereco){
+        response.status(422).json({ message: 'Endereço Obrigatorio!' })
+        return
+      }
+      if(!numero){
+        response.status(422).json({ message: 'Número Obrigatorio!' })
+        return
+      }
+      if(!email){
+        response.status(422).json({ message: 'E-mail Obrigatorio!' })
+        return
+      }
+      if(!senha){
+          response.status(422).json({ message: 'Senha Obrigatoria!' })
+          return
+      }
+      if(!transporte || transporte.length === 0){
+        response.status(422).json({ message: 'Transporte Obrigatoria!' })
+        return
+      }
+      
+
       const salt = await bcrypt.genSalt(12);
       const encryptPass = await bcrypt.hash(senha, parseInt(salt));
 
