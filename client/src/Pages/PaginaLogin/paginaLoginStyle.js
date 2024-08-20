@@ -1,25 +1,6 @@
 import styled from "styled-components";
 
-export const Response = styled.div`
-    display: flex;
-    flex-direction: column;   
-    justify-content: center; 
-    @media screen and (max-width: 1024px) {
-        gap: 0px;
-    }
-    @media screen and (max-width: 1000px) {
-        gap: 40px;
-    }
-    @media screen and (max-width: 849px) {
-        gap: 18px;
-    }
-    @media screen and (max-width: 830px) {
-        gap: 40px;
-    }
-`;
-
 export const Caixa = styled.div`
-    background-color: white;
     display: flex;
     justify-content: center;
     margin: 100px 0px;
@@ -61,20 +42,16 @@ export const ButtonContainer = styled.div`
 `;
 
 export const Imagem = styled.div`
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
     width: 50%;
     height: 590px;
     border-radius: 12px 0px 0px 12px;
+
     @media screen and (max-width: 500px) {
         display: none;
     }
 `;
 
 export const Logo = styled.img`
-    object-fit: contain;
-    max-width: 135%;
     max-height: 100%;
 `;
 
@@ -84,6 +61,7 @@ export const FormLogin = styled.div`
     align-items: center;
     justify-content: center;
     width: 50%;
+    
     @media screen and (max-width: 500px) {
         width: 0px;
     }

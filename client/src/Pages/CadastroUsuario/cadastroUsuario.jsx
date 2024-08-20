@@ -42,7 +42,7 @@ export default function CadastroUsuario() {
     return (
         <>
             <NavBar />
-            <S.Response>
+           
             <S.ButtonContainer>
                 <S.Button onClick={handleFechar}>Voltar</S.Button>
             </S.ButtonContainer>
@@ -51,7 +51,6 @@ export default function CadastroUsuario() {
                     <S.ModalContainer>
                         <S.Imagem>
                             <S.Logo src={Imagempadrao} alt="" />
-                            <div></div>
                         </S.Imagem>
 
                         <S.FormLogin>
@@ -61,8 +60,9 @@ export default function CadastroUsuario() {
                                     text="Nome Completo"
                                     onChange={(e) => setNome(e.target.value)}
                                 />
+                                <S.TextP>Data de Nascimento</S.TextP>
                                 <Input
-                                    text="Data de Nascimento"
+                                    text=""
                                     type="date"
                                     onChange={(e) =>
                                         setData_nascimento(e.target.value)
@@ -97,7 +97,7 @@ export default function CadastroUsuario() {
                     </S.ModalContainer>
                 </S.Modal>
             </S.Caixa>
-            </S.Response>
+           
             <Footer />
         </>
     );
