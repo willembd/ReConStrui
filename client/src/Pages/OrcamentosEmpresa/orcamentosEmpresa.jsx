@@ -1,53 +1,144 @@
-import * as S from "../ConfirmacaoEntrega/confirmacaoEntregaStyle.js";
-import ButtonMod from "../../Componentes/ButtonModelo/buttonModelo.jsx";
+import * as S from "./orcamentosEmpresaStyle";
+import NavBar from "../../Componentes/NavBar/navbar";
+import Footer from "../../Componentes/Footer/footer";
 import { useNavigate } from "react-router-dom";
-import NavBar from "../../Componentes/NavBar/navbar.jsx";
-import Footer from "../../Componentes/Footer/footer.jsx";
-import CampoDados from "../../Componentes/CampoDados/campoDados.jsx";
-import { Barra } from "../../Componentes/carrosselCards/modalCards/modalCards.js";
-import Input from "../../Componentes/Input/input.jsx";
+import Input from "../../Componentes/Input/input"
 
-export default function ConfirmacaoEntrega() {
-    const navigation = useNavigate();
+
+
+export default function OrçamentosEmpresa() {
+    const navigate = useNavigate();
+
+    const handleFechar = () => {
+        navigate("/");
+    };
+
     return (
         <>
             <NavBar />
-            <S.Caixa>
-                <S.Modal>
-                    <S.ButtonContainer>
-                        <S.Button onClick={() => navigation("/")}>
-                            Voltar
-                        </S.Button>
-                    </S.ButtonContainer>
-                    <S.ModalContainer>
-                        <S.Campos>
-                            <S.Titulo1>
-                                <h4>Dados do Cliente</h4>
-                            </S.Titulo1>
+            <S.Response>
+                <S.CaixaFundo />
+                <S.BarraVertical />
+                <S.BigBox>
+                    <S.Caixa>
+                        <S.Container>
+                            <S.ButtonContainer>
+                                <S.ButtonVoltar onClick={handleFechar}>
+                                    Voltar
+                                </S.ButtonVoltar>
+                            </S.ButtonContainer>
+                            <S.TextoCadastro>Orçamento</S.TextoCadastro>
+                            <S.ContainerInputs>
+                                <S.QuebraLinha>
+                                    <S.TTitulo>Dados do cliente</S.TTitulo>
+                                    <S.BBarra />
+                                </S.QuebraLinha>
+                            
+                                <S.Linha>
+                                    <S.Campo>
+                                        <S.Label>Nome:</S.Label> 
+                                        <S.Valor>
+                                            <S.ValorTexto>Arline Monteiro</S.ValorTexto>
+                                        </S.Valor>
+                                    </S.Campo>
+                                    <S.Campo>
+                                        <S.Label>Email:</S.Label> 
+                                        <S.Valor>
+                                            <S.ValorTexto>Arlinesilva2@gmail.com</S.ValorTexto>
+                                        </S.Valor>
+                                    </S.Campo>
+                                </S.Linha>
+                                <S.Linha>
+                                    <S.Campo>
+                                        <S.Label>Telefone:</S.Label> 
+                                        <S.Valor>
+                                            <S.ValorTexto>(81) 98888-8888</S.ValorTexto>
+                                        </S.Valor>
+                                    </S.Campo>
+                                </S.Linha>
+                            </S.ContainerInputs>
+                          
+                            <S.QuebraLinha>
+                                <S.TTitulo>Endereço</S.TTitulo>
+                                <S.BBarra2 />
+                            </S.QuebraLinha>
 
-                            <CampoDados text="Nome: Rute Cajueiro" />
-                            <CampoDados text="Quantidade: 15 Metros" />
-                            <CampoDados text="Cidade: Olinda" />
-                            <CampoDados text="Bairro: Rio Doce" />
-                            <CampoDados text="CEP:54370-058 " />
-                            <CampoDados text="N°:405" />
-                        </S.Campos>
+                            <S.ContainerInputs>
+                                <S.Linha>
+                                    <S.Campo>
+                                        <S.Label>Cep:</S.Label> 
+                                        <S.Valor>
+                                            <S.ValorTexto>54580000</S.ValorTexto>
+                                        </S.Valor>
+                                    </S.Campo>
+                                    <S.Campo>
+                                        <S.Label>Estado:</S.Label> 
+                                        <S.Valor>
+                                            <S.ValorTexto>Pernambuco</S.ValorTexto>
+                                        </S.Valor>
+                                    </S.Campo>
+                                </S.Linha>
+                                <S.Linha>
+                                    <S.Campo>
+                                        <S.Label>Cidade:</S.Label> 
+                                        <S.Valor>
+                                            <S.ValorTexto>Jaboatão</S.ValorTexto>
+                                        </S.Valor>
+                                    </S.Campo>
+                                    <S.Campo>
+                                        <S.Label>Bairro:</S.Label> 
+                                        <S.Valor>
+                                            <S.ValorTexto>Vila Rica</S.ValorTexto>
+                                        </S.Valor>
+                                    </S.Campo>
+                                </S.Linha>
+                                <S.Linha>
+                                    <S.Campo>
+                                        <S.Label>Endereço:</S.Label> 
+                                        <S.Valor>
+                                            <S.ValorTexto>Rua José Paulo</S.ValorTexto>
+                                        </S.Valor>
+                                    </S.Campo>
+                                    <S.Campo>
+                                        <S.Label>Número:</S.Label> 
+                                        <S.Valor>
+                                            <S.ValorTexto>89</S.ValorTexto>
+                                        </S.Valor>
+                                    </S.Campo>
+                                </S.Linha>
+                            </S.ContainerInputs>
 
-                        <Barra></Barra>
+                            <S.QuebraLinha>
+                                   <S.TTitulo>Orçamento do pedido</S.TTitulo>
+                                    <S.BBarra3 />
+                             </S.QuebraLinha>
 
-                        <S.Dados>
-                            <S.Titulo>
-                                <h4>Orçamento:</h4>
-                            </S.Titulo>
+                            <S.InputFlex>
+                                <S.InputsStyle>
+                                    <Input text="Produtos:" />
+                                    <Input text="Quantidade:" />
+                                </S.InputsStyle>
+                            </S.InputFlex>  
+                                
+                            <S.InputFlex>
+                                <S.InputRight>
+                                    <Input text="Valor do Produto:" />
+                                    <Input text="Valor do Frete:" />
+                                </S.InputRight>
+                            </S.InputFlex> 
 
-                            <Input text="Valor do Material:" />
-                            <Input text="Frete:" />
+                            <S.Centralizar>
+                                <S.Botao onClick={handleFechar}> 
+                                    Enviar Orçamento
+                                </S.Botao>
+                            </S.Centralizar>
 
-                            <ButtonMod text="Enviar" />
-                        </S.Dados>
-                    </S.ModalContainer>
-                </S.Modal>
-            </S.Caixa>
+                           
+                           
+                        </S.Container>
+                    </S.Caixa>
+                </S.BigBox>
+            </S.Response>
             <Footer />
         </>
     );
