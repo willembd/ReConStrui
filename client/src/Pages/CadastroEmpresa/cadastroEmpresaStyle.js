@@ -1,23 +1,6 @@
 
 import styled from "styled-components";
 
-export const Response = styled.div`
-     display: flex;
-    flex-direction: column;   
-    justify-content: center; 
-    @media screen and (max-width: 1024px) {
-        gap: 0px;
-    }
-    @media screen and (max-width: 1000px) {
-        gap: 40px;
-    }
-    @media screen and (max-width: 849px) {
-        gap: 18px;
-    }
-    @media screen and (max-width: 830px) {
-        gap: 40px;
-    }
-`
 
 export const BigBox = styled.div`
     display: flex;
@@ -41,6 +24,12 @@ export const Container = styled.div`
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     position: relative;
+
+    @media screen and (max-width: 500px) {
+        width: 360px;
+        height: 1800px;
+        margin-bottom: 40px;
+    }
 `;
 
 
@@ -69,6 +58,10 @@ export const TextoCadastro = styled.h1`
     margin-bottom: 50px;
     font-weight: bold;
     font-size: 2.5rem;
+
+    @media screen and (max-width: 500px) {
+        font-size: 1.5rem;
+    }
 `;
 
 export const ContainerInputs = styled.div`
@@ -81,12 +74,19 @@ export const ContainerInputs = styled.div`
 export const InputFlex = styled.div`
     display: flex;
 
+    @media screen and (max-width: 500px) {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
 `;
 
 export const TTitulo = styled.h2`
     font-size: 1.5rem;
-    width: auto;
-    align-items: end;
+   
+    @media screen and (max-width: 500px) {
+        font-size: 1rem;
+    }
 `;
 
 export const ContainerCheckbox = styled.div`
@@ -114,6 +114,10 @@ export const CheckboxMateriais1 = styled.div`
     justify-content: space-around;
     padding-top: 30px;
     padding-bottom: 40px;
+
+    @media screen and (max-width: 500px) {
+        font-size: 16px;
+    }
 `;
 
 export const CheckboxMateriais2 = styled.div`
@@ -125,6 +129,10 @@ export const CheckboxMateriais2 = styled.div`
     font-size: 20px;
     justify-content: space-around;
     padding-bottom: 30px;
+
+    @media screen and (max-width: 500px) {
+        font-size: 16px;
+    }
 `;
 
 export const CheckboxTransporte1 = styled.li`
@@ -133,6 +141,11 @@ export const CheckboxTransporte1 = styled.li`
     color: #228137;
     margin-right: 130px;
     font-size: 20px;
+    gap: 8px;
+
+    @media screen and (max-width: 500px) {
+        font-size: 16px;
+    }
 `;
 
 export const CheckboxTransporte2 = styled.li`
@@ -140,7 +153,12 @@ export const CheckboxTransporte2 = styled.li`
     align-items: center ;
     margin-bottom: 5px;
     color: #228137;
-    font-size: 20px;   
+    font-size: 20px;  
+    gap: 8px;
+
+    @media screen and (max-width: 500px) {
+        font-size: 16px;
+    }
 `;
 
 export const CheckboxTransporte = styled.div`
@@ -148,6 +166,10 @@ export const CheckboxTransporte = styled.div`
     justify-content: center;
     gap: 130px;
     padding: 30px; 
+
+    @media screen and (max-width: 500px) {
+        gap: 0px;
+    }
 ` ;
 
 export const LinkCadastro = styled.a`
@@ -163,6 +185,11 @@ export const CaixaFundo = styled.div`
     background:#33603D;
     clip-path: polygon(0% 0%, 100% 0%, 40% 100%, 0% 100%);
     position: absolute;
+
+    @media screen and (max-width: 500px) {
+        width: 350px;
+        height: 1842px;
+    }
 `;
 
 export const BarraVertical = styled.div`
@@ -171,6 +198,11 @@ export const BarraVertical = styled.div`
     background: #B7821C;
     clip-path: polygon(100% 0%, 90% 0%, 40% 100%, 100% 0%);
     position: absolute;
+
+    @media screen and (max-width: 500px) {
+        width: 350px;
+        height: 1842px;
+    }
     
 `;
 
@@ -179,6 +211,10 @@ export const BBarra = styled.div`
     width: 500px;
     background-color: black;
     margin-top: 8px;
+
+    @media screen and (max-width: 500px) {
+        width: 200px;
+    }
 `;
 
 export const QuebraLinha = styled.div`
@@ -193,12 +229,20 @@ export const BBarra2 = styled.div`
     background-color: black;
     margin-top: 8px;
 
+    @media screen and (max-width: 500px) {
+        width: 200px;
+    }
+
 `;
 export const BBarra3 = styled.div`
     height:2px;
     width: 710px;
     background-color: black;
     margin-top: 8px;
+
+    @media screen and (max-width: 500px) {
+        width: 200px;
+    }
 `;
 
 export const BBarra4 = styled.div`
@@ -206,6 +250,10 @@ export const BBarra4 = styled.div`
     width: 700px;
     background-color: black;
     margin-top: 8px;
+
+    @media screen and (max-width: 500px) {
+        width: 200px;
+    }
 `;
 
 export const Botao = styled.div`
@@ -219,6 +267,12 @@ export const Botao = styled.div`
     margin-top: 30px;
     font-weight: 600;
     font-size: 20px;
+
+    @media screen and (max-width: 500px) {
+        padding: 12px;
+        width: 300px;
+    }
+    
 `;
 
 export const PP = styled.p`

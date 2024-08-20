@@ -62,7 +62,7 @@ export default function CadastroEmpresa() {
     return (
         <>
             <NavBar />
-            <S.Response>
+            
                 <S.CaixaFundo></S.CaixaFundo>
                 <S.BarraVertical />
                 <S.BigBox>
@@ -240,7 +240,7 @@ export default function CadastroEmpresa() {
                         </S.Container>
                     </S.Caixa>
                 </S.BigBox>
-            </S.Response>
+            
             <Footer />
         </>
     );
