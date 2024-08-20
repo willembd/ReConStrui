@@ -21,32 +21,27 @@ export const Response = styled.div`
 export const Caixa = styled.div`
     background-color: white;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    width: 100%;
     margin: 100px 0px;
 `;
 
 export const Modal = styled.div`
     background-color: #fcfcfc;
-    color: black;
     width: 1040px;
     height: 590px;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
-    margin-bottom: 40px;
     border-radius: 12px;
     box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.25);
-    overflow: hidden;
+
+    @media screen and (max-width: 500px) {
+        width: 350px;
+        height: 500px;
+        display: flex;
+        justify-content: center;
+    }
 `;
 
 export const ModalContainer = styled.div`
     display: flex;
-    width: 100%;
     justify-content: space-around;
 `;
 
@@ -72,6 +67,9 @@ export const Imagem = styled.div`
     width: 50%;
     height: 590px;
     border-radius: 12px 0px 0px 12px;
+    @media screen and (max-width: 500px) {
+        display: none;
+    }
 `;
 
 export const Logo = styled.img`
@@ -86,11 +84,18 @@ export const FormLogin = styled.div`
     align-items: center;
     justify-content: center;
     width: 50%;
+    @media screen and (max-width: 500px) {
+        width: 0px;
+    }
 `;
 
 export const Titulo = styled.h1`
     color: #228137;
     font-size: 43px;
+
+    @media screen and (max-width: 500px) {
+        font-size: 36px;
+    }
 `;
 
 export const Organizacao = styled.div`
@@ -115,6 +120,11 @@ export const DivRadio = styled.div`
     gap: 40px;
 `;
 
+export const DivRadioOpcoes = styled.div`
+    display: flex;
+    gap: 6px;
+`
+
 export const DivLink = styled.div`
     display: flex;
     align-items: center;
@@ -122,11 +132,22 @@ export const DivLink = styled.div`
     margin-top: 20px;
     color: #288137;
     
+    @media screen and (max-width: 500px) {
+        flex-direction: column;
+    }
 `;
 
+export const TextP = styled.p`
+    font-size: 16px;
+
+`
+
 export const Links = styled.a`
-    text-decoration: none;
     color: #af7503;
     text-decoration: underline;
-    font-size:18px;
+    font-size:16px;
+
+    @media screen and (max-width: 500px) {
+        font-size: 13px;
+    }
 `;

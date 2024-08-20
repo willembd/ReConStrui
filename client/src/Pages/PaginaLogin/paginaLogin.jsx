@@ -48,7 +48,7 @@ export default function PaginaLogin() {
     return (
         <>
             <NavBar />
-            <S.Response>
+            
             <S.ButtonContainer>
                 <S.Button onClick={handleFechar}>Voltar</S.Button>
             </S.ButtonContainer>
@@ -57,7 +57,6 @@ export default function PaginaLogin() {
                     <S.ModalContainer>
                         <S.Imagem>
                             <S.Logo src={Imagempadrao} alt="" />
-                            <div></div>
                         </S.Imagem>
 
                         <S.FormLogin>
@@ -74,20 +73,20 @@ export default function PaginaLogin() {
 
                             </S.Organizacao>
                             <S.DivRadio>
-                                <div>
+                                <S.DivRadioOpcoes>
                                     <input type="radio" name="login" onChange={() => setLogin('usuario')} />
                                     <label htmlFor="">Usuário</label>
-                                </div>
-                                <div>
+                                </S.DivRadioOpcoes>
+                                <S.DivRadioOpcoes>
                                     <input type="radio" name="login" onChange={() => setLogin('empresa')}/>
                                     <label htmlFor="">Empresa</label>
-                                </div>
+                                </S.DivRadioOpcoes>
                             </S.DivRadio>
 
                             <ButtonMod text="Entrar" onClick={() => handleLogin()} />
 
                             <S.DivLink>
-                                <p>Não tem Cadastro?</p>
+                                <S.TextP>Não tem Cadastro?</S.TextP>
                                 <S.Links href="/cadastrousuario">
                                     Cadastre-se
                                 </S.Links>
@@ -96,7 +95,7 @@ export default function PaginaLogin() {
                     </S.ModalContainer>
                 </S.Modal>
             </S.Caixa>
-            </S.Response>
+        
             <Footer />
         </>
     );
