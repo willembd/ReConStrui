@@ -24,6 +24,13 @@ export const Modal = styled.div`
     margin-bottom:40px;
     border-radius:12px;
     box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.25);
+
+    @media screen and (max-width: 500px) {
+        width: 390px;
+        height: 500px;
+        display: flex;
+        justify-content: center;
+    }
 `;
 
 export const ModalContainer = styled.div`
@@ -56,6 +63,10 @@ export const Imagem = styled.div`
     height: 540px;
     border-radius: 12px 0px 0px 12px;
 
+    @media screen and (max-width: 500px) {
+        display: none;
+    }
+
 `;
 
 export const Logo = styled.img`
@@ -70,6 +81,10 @@ export const Form = styled.div`
     align-items: center;
     justify-content: center;
     width: 50%;
+
+    @media screen and (max-width: 500px) {
+        width: 390px;
+    }
     
 `;
 
