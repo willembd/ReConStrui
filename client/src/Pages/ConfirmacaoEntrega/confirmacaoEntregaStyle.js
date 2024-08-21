@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import ImagemFundo from "../../assets/telalogo2.svg"
+import PlanoFundo from "../../assets/planodefundo.svg"
 
 export const Caixa = styled.div`
     background-color: white;
@@ -10,7 +10,7 @@ export const Caixa = styled.div`
     align-items: center;
     width: 100%;
     height: 100vh;
-    background-image: url(${ImagemFundo});
+    background-image: url(${PlanoFundo});
     background-repeat: no-repeat;
 
 `;
@@ -28,6 +28,8 @@ export const Modal = styled.div`
     border-radius: 12px;
     box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.25);
     background-color: white;
+
+   
 `;
 
 export const ModalContainer = styled.div`
@@ -36,9 +38,7 @@ export const ModalContainer = styled.div`
     justify-content: center;
     gap: 50px;
 
-    @media screen and (max-width: 500px) {
-        flex-direction: column;
-    }
+   
 `;
 
 export const Button = styled.button`
@@ -54,6 +54,11 @@ export const Button = styled.button`
 export const ButtonContainer = styled.div`
     width: 100%;
     margin-top: 10px;
+
+    @media screen and (max-width: 500px) {
+        width:35px;
+        flex-direction: column;
+    }
 `;
 
 export const Campos = styled.div`
@@ -64,6 +69,11 @@ export const Campos = styled.div`
     height: 300px;
     border-radius: 12px 0px 0px 12px;
     gap: 10px;
+
+    @media screen and (max-width: 500px) {
+        width: 70px;
+        flex-direction: column;
+    }
 `;
 
 export const Titulo = styled.h1`
@@ -78,6 +88,12 @@ export const Dados = styled.div`
     margin-top: 50px;
     color: #228137;
     align-items: center;
+
+    @media screen and (max-width: 500px) {
+        width:35px;
+        flex-direction: column;
+    }
+
 `;
 
 export const Titulo1 = styled.h1`

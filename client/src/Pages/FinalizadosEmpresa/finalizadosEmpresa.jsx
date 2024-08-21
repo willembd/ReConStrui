@@ -1,82 +1,188 @@
 import * as S from "./finalizadosEmpresaStyles"
+import { useState } from "react";
+import { useNavigate } from "react-router-dom"
+import NavBar from "../../Componentes/NavBar/navbar"
+import Footer from "../../Componentes/Footer/footer"
+import { AAlinhamento, LLinha  } from "../../Componentes/carrosselCards/modalCards/modalCards";
 
-import Brita from "../../../public/brita.png"
-import Areia from "../../../public/areia.png"
+export default function FinalizadoEmpresa (item) {
 
-import Footer from "../../Componentes/Footer/footer";
-import NavBar from "../../Componentes/NavBar/navbar";
-import CampoDados from "../../Componentes/CampoDados/campoDados";
-import ButtonCancelar from "../../Componentes/ButtonCancelar/buttonCancelar";
+    const [isOpenTest, setOpenTest] = useState(false)
 
-export default function FinalizadosEmpresa(){
+
+    const navigate = useNavigate();
+        const handleEntrar = () => {
+            navigate("/");
+        };
+        const handleFechar = () => {
+            navigate("/");
+        };
     return (
+
         <>
-            <NavBar/>
-            
+            <NavBar />
+            <S.CaixaFundo></S.CaixaFundo>
+            <S.BarraVertical />
             <S.Caixa>
-                <S.DivLink>
-                    <a href="">Novos Orçamentos</a>
-                    <a href="">Entregas</a>
-                    <a href=""> Retiradas</a>
-                    <a href="">Finalizados</a>
-                </S.DivLink>
-                
-                <S.Pedido>
-                    <S.DivEmpresa>
-                        <S.Imagem src={Areia} alt="" />
-                        <h1>Aria Reciclada</h1>
-                        <p>AGR Ambiental</p>
-                    </S.DivEmpresa>
-                    <S.Dados>
-                        <h2>Produto</h2>
-                        <CampoDados text="Quantidade: 15 metros"/>
-                        <h2>Informação para Entrega</h2>
-                        <CampoDados text="Cidade: Olinda"/>
-                        <CampoDados text="Bairro: Rio Doce"/>
-                        <CampoDados text="Rua: Joaquim Nabuco"/>
-                        <CampoDados text="N: 405"/>
-                        <CampoDados text="Cep: 53380-058"/>
-                    </S.Dados>
-                    <S.DivResposta>
-                        <h1>Finalizado</h1>
-                        
-                        <S.Progress>
-                            <S.ProgressCampo></S.ProgressCampo>
-                        </S.Progress>
+                <S.Container>
+                    <S.AAlinha>
+                        <S.Pedidos>Meus Pedidos</S.Pedidos>
+                        <S.Barra/>
+                    </S.AAlinha>
+                    <S.TXT>Confira aqui o andamento do seus pedidos</S.TXT>
+                    <S.PP>Filtrar por</S.PP>
+                    <div className="form-group">
+                        <label htmlFor="label"></label>
+                        <select name="label" id="label">
+                            <option value="in progress">Em Andamento</option>
+                            <option value="confirmed">Confirmado</option>
+                            <option value="cancel">Cancelado</option>
+                        </select>
+                    </div>
+                    <S.FlexColomn>
+                        <S.CContainer>
+                            <S.CCaixa>
+                                <S.PLeft>
+                                    <S.PPP>Dados do Pedido</S.PPP>
 
-                    </S.DivResposta>
-                </S.Pedido>    
+                                    <S.PPALAVRA>Pedido Concluído</S.PPALAVRA>
+                                </S.PLeft>
+                                <S.CCaixinha>
+                                    <S.Caixinha>
+                                        <S.Alinha>
+                                            <S.PaLavra>Data da compra: 00/00/0000</S.PaLavra>
+                                            <S.PaLavra>ID do Pedido: 0214830</S.PaLavra>
+                                        </S.Alinha>
+                                    </S.Caixinha>
+                                    <div>
+                                        <S.SobreContainer>
+                                            <div className="box-item">
+                                                    <S.IIIMG
+                                                        src='areia.png'
+                                                    />
+                                                <AAlinhamento>
+                                                    <LLinha
+                                                    >
+                                                        <S.TTTitle>Areia reciclada</S.TTTitle>
+                                                        <S.PPalavra>AGR Ambiental</S.PPalavra>
+                                                    </LLinha>
+                                                </AAlinhamento>
+                                            </div>
+                                            <S.QuebraLinha>
+                                                <S.LETRA>Concluído</S.LETRA>
+                                                <div>
+                                                    <S.BBarraAguardando/>
+                                                    <S.BarraAguardando/>
+                                                </div>
+                                                <S.Flex>
+                                                    
+                                                    <S.BBotao onClick={handleFechar}>Comprar Novamente</S.BBotao>
+                                                </S.Flex>
+                                            </S.QuebraLinha>
+                                        </S.SobreContainer>
+                                    </div>
+                                </S.CCaixinha>
+                            <S.LLinks onChange={handleEntrar}> Veja mais detalhes</S.LLinks>
 
-                <S.Pedido>
-                    <S.DivEmpresa>
-                        <S.Imagem src={Brita} alt="" /> 
-                        <h1>Brita Reciclada</h1>
-                        <p>AGR Ambiental</p>
-                    </S.DivEmpresa>
-                    <S.Dados>
-                        <h2>Produto</h2>
-                        <CampoDados text="Quantidade: 25 metros"/>
-                        <h2>Informação para Entrega</h2>
-                        <CampoDados text="Cidade: Olinda"/>
-                        <CampoDados text="Bairro: Rio Doce"/>
-                        <CampoDados text="Rua: Joaquim Nabuco"/>
-                        <CampoDados text="N: 405"/>
-                        <CampoDados text="Cep: 53380-058"/>
-                    </S.Dados>
-                    <S.DivResposta>
-                        <h1>Finalizado</h1>
+                            </S.CCaixa>
 
-                        <S.Progress>
-                            <S.ProgressCampo></S.ProgressCampo>
-                        </S.Progress>
+                            <S.CContainer>
+                            <S.CCaixa>
+                                <S.PLeft>
+                                    <S.PPP>Dados do pedidos</S.PPP>
 
-                    </S.DivResposta>
-                </S.Pedido> 
+                                    <S.PPALAVRA>Pedido Concluído</S.PPALAVRA>
+                                </S.PLeft>
+                                <S.CCaixinha>
+                                    <S.Caixinha>
+                                        <S.Alinha>
+                                            <S.PaLavra>Data da compra: 00/00/0000</S.PaLavra>
+                                            <S.PaLavra>ID do Pedido: 0214830</S.PaLavra>
+                                        </S.Alinha>
+                                    </S.Caixinha>
+                                    <div>
+                                        <S.SobreContainer>
+                                            <div className="box-item">
+                                                    <S.IIIMG
+                                                        src='pedrisco.png'
+                                                    />
+                                                <AAlinhamento>
+                                                    <LLinha
+                                                    >
+                                                        <S.TTTitle>Pedrisco</S.TTTitle>
+                                                        <S.PPalavra>AGR Ambiental</S.PPalavra>
+                                                    </LLinha>
+                                                </AAlinhamento>
+                                            </div>
+                                            <S.QuebraLinha>
+                                                <S.LETRA>Concluído</S.LETRA>
+                                                <div>
+                                                    <S.BBarraAguardando/>
+                                                    <S.BarraAguardando/>
+                                                </div>
+                                                <S.Flex>
+                                                   
+                                                    <S.BBotao  onClick={handleFechar}>Comprar Novamente</S.BBotao>
+                                                </S.Flex>
+                                            </S.QuebraLinha>
+                                        </S.SobreContainer>
+                                    </div>
+                                </S.CCaixinha>
+                                <S.LLinks onChange={handleEntrar}> Veja mais detalhes</S.LLinks>
 
+                            </S.CCaixa>
+                        </S.CContainer>
+                        <S.CContainer>
+                            <S.CCaixa>
+                                <S.PLeft>
+                                    <S.PPP>Dados do Pedidos</S.PPP>
 
+                                    <S.PPALAVRA>Pedidos Concluído</S.PPALAVRA>
+                                </S.PLeft>
+                                <S.CCaixinha>
+                                    <S.Caixinha>
+                                        <S.Alinha>
+                                            <S.PaLavra>Data da compra: 00/00/0000</S.PaLavra>
+                                            <S.PaLavra>ID do Pedido: 0214830</S.PaLavra>
+                                        </S.Alinha>
+                                    </S.Caixinha>
+                                    <div>
+                                        <S.SobreContainer>
+                                            <div className="box-item">
+                                                    <S.IIIMG
+                                                        src='rachao.png'/>
+                                                <AAlinhamento>
+                                                    <LLinha>
+                                                        <S.TTTitle>Rachão</S.TTTitle>
+                                                        <S.PPalavra>AGR Ambiental</S.PPalavra>
+                                                    </LLinha>
+                                                </AAlinhamento>
+                                            </div>
+                                            <S.QuebraLinha>
+                                                <S.LETRA>Concluído</S.LETRA>
+                                                <div>
+                                                    <S.BBarraAguardando/>
+                                                    <S.BarraAguardando/>
+                                                </div>
+                                                <S.Flex>
+                                                   
+                                                    <S.BBotao  onClick={handleFechar}>Comprar Novamente</S.BBotao>
+                                                </S.Flex>
+                                            </S.QuebraLinha>
+                                        </S.SobreContainer>
+                                    </div>
+                                </S.CCaixinha>
+                                <S.LLinks onClick={handleEntrar}> Veja mais detalhes</S.LLinks>
+
+                            </S.CCaixa>
+                        </S.CContainer>
+                        </S.CContainer>
+                    </S.FlexColomn>
+                </S.Container>
             </S.Caixa>
+
+            <Footer />
         
-            <Footer/>
         </>
 
     )
