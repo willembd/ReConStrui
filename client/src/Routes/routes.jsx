@@ -42,15 +42,19 @@ export const router = createBrowserRouter([
         path: "/",
         element: <Home />,
     },
-    {
-        path: "/pedidos",
-        element: (
-            <PrivateRoute element={<Pedidos />} allowedTypes={["usuario"]} />
-        ),
-    },
+    // {
+    //     path: "/pedidos",
+    //     element: (
+    //         <PrivateRoute element={<Pedidos />} allowedTypes={["usuario"]} />
+    //     ),
+    // },
     {
         path: "/paginalogin",
         element: <PaginaLogin />,
+    },
+    {
+        path: "/pedidos",
+        element: <Pedidos/>,
     },
     {
         path: "/cadastrousuario",
