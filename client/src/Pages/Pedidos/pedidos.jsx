@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom"
 import NavBar from "../../Componentes/NavBar/navbar"
 import Footer from "../../Componentes/Footer/footer"
-import { AAlinhamento, LLinha, PPalavra, TTitle } from "../../Componentes/carrosselCards/modalCards/modalCards";
+import { AAlinhamento, LLinha  } from "../../Componentes/carrosselCards/modalCards/modalCards";
 
 export default function Pedidos (item) {
 
@@ -63,8 +63,8 @@ export default function Pedidos (item) {
                                                 <AAlinhamento>
                                                     <LLinha
                                                     >
-                                                        <TTitle>Areia reciclada</TTitle>
-                                                        <PPalavra>AGR Ambiental</PPalavra>
+                                                        <S.TTTitle>Areia reciclada</S.TTTitle>
+                                                        <S.PPalavra>AGR Ambiental</S.PPalavra>
                                                     </LLinha>
                                                 </AAlinhamento>
                                             </div>
@@ -90,10 +90,9 @@ export default function Pedidos (item) {
                             <S.CCaixa>
                                 <S.PLeft>
                                     <S.PPP>Pedidos em andamento</S.PPP>
-                                </S.PLeft>
-                                <div>
+
                                     <S.PPALAVRA>Dados do Pedido</S.PPALAVRA>
-                                </div>
+                                </S.PLeft>
                                 <S.CCaixinha>
                                     <S.Caixinha>
                                         <S.Alinha>
@@ -110,8 +109,8 @@ export default function Pedidos (item) {
                                                 <AAlinhamento>
                                                     <LLinha
                                                     >
-                                                        <TTitle>Pedrisco</TTitle>
-                                                        <PPalavra>AGR Ambiental</PPalavra>
+                                                        <S.TTTitle>Pedrisco</S.TTTitle>
+                                                        <S.PPalavra>AGR Ambiental</S.PPalavra>
                                                     </LLinha>
                                                 </AAlinhamento>
                                             </div>
@@ -137,10 +136,9 @@ export default function Pedidos (item) {
                             <S.CCaixa>
                                 <S.PLeft>
                                     <S.PPP>Pedidos em andamento</S.PPP>
-                                </S.PLeft>
-                                <div>
+
                                     <S.PPALAVRA>Dados do Pedido</S.PPALAVRA>
-                                </div>
+                                </S.PLeft>
                                 <S.CCaixinha>
                                     <S.Caixinha>
                                         <S.Alinha>
@@ -152,13 +150,11 @@ export default function Pedidos (item) {
                                         <S.SobreContainer>
                                             <div className="box-item">
                                                     <S.IIIMG
-                                                        src='rachao.png'
-                                                    />
+                                                        src='rachao.png'/>
                                                 <AAlinhamento>
-                                                    <LLinha
-                                                    >
-                                                        <TTitle>Rachão</TTitle>
-                                                        <PPalavra>AGR Ambiental</PPalavra>
+                                                    <LLinha>
+                                                        <S.TTTitle>Rachão</S.TTTitle>
+                                                        <S.PPalavra>AGR Ambiental</S.PPalavra>
                                                     </LLinha>
                                                 </AAlinhamento>
                                             </div>

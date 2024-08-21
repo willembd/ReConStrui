@@ -11,7 +11,7 @@ export const Caixa = styled.div`
 
 export const Container = styled.div`
     width: 900px;
-    height: 1370px;
+    height: 1350px;
     background-color: white;
     padding: 20px;
     border-radius: 10px;
@@ -61,7 +61,7 @@ export const CContainer = styled.div`
 
 export const CCaixa = styled.div`
     width: 750px;
-    height: 353px;
+    height: 340px;
     background-color: white;
     padding: 15px;
     border-radius: 10px;
@@ -122,9 +122,10 @@ export const IIIMG = styled.img`
     margin-top: 20px;
 `;
 
-export const TTTitle = styled.img`
-    height: 150px;
-    width: 200px;
+export const TTTitle = styled.p`
+    font-size: 1rem ;
+    font-weight: bold;
+    color: #228137;
 `;
 export const SobreContainer = styled.div`
     display: flex;
@@ -192,4 +193,9 @@ export const Caixinha = styled.div`
 export const LLinks = styled.div`
     border: none;
     color: #228137;
+    padding: 15px;
+`;
+export const PPalavra = styled.div`
+    font-size: 1rem;
+    color: #AF7503;
 `;
