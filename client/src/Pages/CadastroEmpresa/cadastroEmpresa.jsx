@@ -231,10 +231,10 @@ export default function CadastroEmpresa() {
                                     <S.Botao onClick={handleCadastrarEmpresa}> Cadastrar</S.Botao>
                                 </S.Centralizar>
                                 <S.LinkCadastro
-                                    onClick={() => navigate("/CadastroUsuario")}
+                                    onClick={() => navigate("/paginalogin")}
                                     href=""
                                 >
-                                    <S.PP>Não tem cadastro? <S.Cor>Entrar</S.Cor></S.PP>
+                                    <S.PP>já tem cadastro?  <S.Cor>Entrar</S.Cor></S.PP>
                                 </S.LinkCadastro>
                             </S.BigBox>
                         </S.Container>
