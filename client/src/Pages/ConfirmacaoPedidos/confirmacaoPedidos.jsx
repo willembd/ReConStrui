@@ -1,70 +1,65 @@
-import { Container, InputRight, Caixa, InputLeft, ContainerInputs, ContainerCheckbox, ContainerRight, QuebraLinha, Button } from "./confirmacaoPedidosStyle"
-import NavBar from "../../Componentes/NavBar/navbar"
-import Footer from "../../Componentes/Footer/footer"
-import Input from "../../Componentes/Input/input";
+import * as S from "./confirmacaoPedidosStyle";
+import NavBar from "../../Componentes/NavBar/navbar";
+import Footer from "../../Componentes/Footer/footer";
 import ButtonMod from "../../Componentes/ButtonModelo/buttonModelo";
-import { Barra,ContainerModal } from "../../Componentes/carrosselCards/modalCards/modalCards";
-import Cards from "../../Componentes/cards/cards";
 import { useState } from "react";
 import ModalCartãoPix from "../../Componentes/ModalCartãoPix/modalCartãoPix";
+import Imagempadrao from "../../assets/imagem-padrao1.svg";
+import CampoDados from "../../Componentes/CampoDados/campoDados";
+import { useNavigate } from "react-router-dom";
 
+export default function Confirmacao() {
 
-export default function Confirmacao({item}){
+    const navigate = useNavigate();
 
-     const [isOpen, setOpen] = useState(false)
+    const handleFechar = () => {
+        navigate("/pedidos");
+    };
 
-        return(
-            <>
-                <NavBar/>
-                        <Container>
-                            <Caixa>
-                            <ContainerInputs>
-                                <InputLeft>
-                                    <ContainerModal>
-                                        <Cards item />
-                                    </ContainerModal>
-                                </InputLeft>
-                                <ContainerRight>
-                                    <QuebraLinha>
-                                        <InputRight>
-                                            <Input text="15 metros"/>
-                                            <Input text="Rua Joaquim Nabuco"/>
-                                            <Input text="Olinda"/>
-                                            <Input text="Rio Doce"/>
-                                            <QuebraLinha>
-                                                <Input text="405"/>
-                                                <Input text="53370-058"/>
-                                            </QuebraLinha>
-                                        </InputRight>
-                                        <Barra/>
-                                        <InputRight>
-                                            <Input text="Preço: 450.00 R$"/>
-                                            <Input text="Frete: 00,00 R$"/>
-                                            <Input text="Taxa: 10,00 R$"/>
-                                            <Input text="Valor Total: 460,00 R$"/>
-                                            <ContainerCheckbox>    
-                                                <QuebraLinha>
-                                                    <Button>Voltar</Button>
-                                                    <ButtonMod text="Comprar"  onClick={() => setOpen(!isOpen)} />
-                                                    <ModalCartãoPix text="Pagamento" isOpen={isOpen} setOpen={setOpen} />
+    const [isOpen, setOpen] = useState(false);
 
-                                                </QuebraLinha>
-                                            </ContainerCheckbox>
-                                        </InputRight>
-                                    </QuebraLinha>
-                                    
-                                </ContainerRight>
-                            </ContainerInputs>
-                            
-                            </Caixa>
-                        </Container>  
-                <Footer/>
-</>
+    return (
+        <>
+            <NavBar />
 
+            <S.ButtonContainer>
+                <S.Button onClick={handleFechar}>Voltar</S.Button>
+            </S.ButtonContainer>
 
-        )
+            <S.Caixa>
+                <S.Modal>
+                    <S.ModalContainer>
+                        <S.Imagem>
+                            <S.Logo src={Imagempadrao} alt="" />
+                        </S.Imagem>
+
+                        <S.FormConfPedido>
+                            <S.Titulo>Finalizar Compra</S.Titulo>
+                            <S.DivCampo>
+                                <CampoDados text="15 Metros" />
+                                <CampoDados text="Preço: 450,00R$" />
+                                <CampoDados text="Frete: 45,00R$" />
+                                <CampoDados text="Taxa: 10,00R$" />
+                                <CampoDados text="Valor Total: 505,00R$" />
+                            </S.DivCampo>
+
+                            <S.DivButton>
+                                <ButtonMod
+                                    text="Comprar"
+                                    onClick={() => setOpen(!isOpen)}
+                                />
+                                <ModalCartãoPix
+                                    text="Pagamento"
+                                    isOpen={isOpen}
+                                    setOpen={setOpen}
+                                />
+                            </S.DivButton>
+                        </S.FormConfPedido>
+                    </S.ModalContainer>
+                </S.Modal>
+            </S.Caixa>
+
+            <Footer />
+        </>
+    );
 }
-
-
-
-
