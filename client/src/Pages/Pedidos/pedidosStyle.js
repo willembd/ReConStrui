@@ -54,14 +54,14 @@ export const PP = styled.p`
 
 export const CContainer = styled.div`
     display: flex;
-    padding-top: 3rem;
+    padding-top: 2.2rem;
     flex-wrap: wrap;
     justify-content: space-around;
 `;
 
 export const CCaixa = styled.div`
     width: 750px;
-    height: 335px;
+    height: 353px;
     background-color: white;
     padding: 15px;
     border-radius: 10px;
@@ -83,7 +83,7 @@ export const PPALAVRA = styled.p`
 
 export const CCaixinha = styled.div`
     width: 710px;
-    height: 220px;
+    height: 230px;
     background-color: white;
     border: 2px solid #E0E0E0;
     padding: 6px;
@@ -91,7 +91,7 @@ export const CCaixinha = styled.div`
 
 export const PLeft = styled.div`
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-evenly;
 `;
 
 export const Alinha = styled.div`
@@ -181,3 +181,15 @@ export const FlexColomn = styled.div`
     flex-direction: column;
 
 `
+export const Caixinha = styled.div`
+    width: 695px;
+    height: 28px;
+    background-color: white;
+    border: 2px solid #E0E0E0;
+    padding: 4px;
+`;
+
+export const LLinks = styled.div`
+    border: none;
+    color: #228137;
+`;

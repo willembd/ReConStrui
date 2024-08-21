@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom"
 import NavBar from "../../Componentes/NavBar/navbar"
 import Footer from "../../Componentes/Footer/footer"
 import { AAlinhamento, LLinha, PPalavra, TTitle } from "../../Componentes/carrosselCards/modalCards/modalCards";
-import { Link } from "react-router-dom";
+
 export default function Pedidos (item) {
 
     const [isOpenTest, setOpenTest] = useState(false)
@@ -15,7 +15,7 @@ export default function Pedidos (item) {
             navigate("/confirmacaoPedidos");
         };
         const handleFechar = () => {
-            navigate("/");
+            navigate("/confirmacaopedidos");
         };
     return (
 
@@ -43,16 +43,17 @@ export default function Pedidos (item) {
                         <S.CContainer>
                             <S.CCaixa>
                                 <S.PLeft>
-                                    <S.PPP>Pedidos Finalizados</S.PPP>
-                                </S.PLeft>
-                                <div>
+                                    <S.PPP>Pedidos em andamento</S.PPP>
+
                                     <S.PPALAVRA>Dados do Pedido</S.PPALAVRA>
-                                </div>
+                                </S.PLeft>
                                 <S.CCaixinha>
-                                    <S.Alinha>
-                                        <S.PaLavra>Data da compra: 00/00/0000</S.PaLavra>
-                                        <S.PaLavra>ID do Pedido: 0214830</S.PaLavra>
-                                    </S.Alinha>
+                                    <S.Caixinha>
+                                        <S.Alinha>
+                                            <S.PaLavra>Data da compra: 00/00/0000</S.PaLavra>
+                                            <S.PaLavra>ID do Pedido: 0214830</S.PaLavra>
+                                        </S.Alinha>
+                                    </S.Caixinha>
                                     <div>
                                         <S.SobreContainer>
                                             <div className="box-item">
@@ -75,29 +76,31 @@ export default function Pedidos (item) {
                                                 </div>
                                                 <S.Flex>
                                                     <S.BBotao2>Cancelar</S.BBotao2>
-                                                    <S.BBotao>Verificar</S.BBotao>
+                                                    <S.BBotao onClick={handleFechar}>Verificar</S.BBotao>
                                                 </S.Flex>
                                             </S.QuebraLinha>
                                         </S.SobreContainer>
                                     </div>
                                 </S.CCaixinha>
-                            <Link onChange={handleFechar}> Veja mais detalhes</Link>
+                            <S.LLinks onChange={handleEntrar}> Veja mais detalhes</S.LLinks>
 
                             </S.CCaixa>
 
                             <S.CContainer>
                             <S.CCaixa>
                                 <S.PLeft>
-                                    <S.PPP>Pedidos Finalizados</S.PPP>
+                                    <S.PPP>Pedidos em andamento</S.PPP>
                                 </S.PLeft>
                                 <div>
                                     <S.PPALAVRA>Dados do Pedido</S.PPALAVRA>
                                 </div>
                                 <S.CCaixinha>
-                                    <S.Alinha>
-                                        <S.PaLavra>Data da compra: 00/00/0000</S.PaLavra>
-                                        <S.PaLavra>ID do Pedido: 0214830</S.PaLavra>
-                                    </S.Alinha>
+                                    <S.Caixinha>
+                                        <S.Alinha>
+                                            <S.PaLavra>Data da compra: 00/00/0000</S.PaLavra>
+                                            <S.PaLavra>ID do Pedido: 0214830</S.PaLavra>
+                                        </S.Alinha>
+                                    </S.Caixinha>
                                     <div>
                                         <S.SobreContainer>
                                             <div className="box-item">
@@ -120,39 +123,41 @@ export default function Pedidos (item) {
                                                 </div>
                                                 <S.Flex>
                                                     <S.BBotao2>Cancelar</S.BBotao2>
-                                                    <S.BBotao>Verificar</S.BBotao>
+                                                    <S.BBotao  onClick={handleFechar}>Verificar</S.BBotao>
                                                 </S.Flex>
                                             </S.QuebraLinha>
                                         </S.SobreContainer>
                                     </div>
                                 </S.CCaixinha>
-                                <Link onChange={handleFechar}> Veja mais detalhes</Link>
+                                <S.LLinks onChange={handleEntrar}> Veja mais detalhes</S.LLinks>
 
                             </S.CCaixa>
                         </S.CContainer>
                         <S.CContainer>
                             <S.CCaixa>
                                 <S.PLeft>
-                                    <S.PPP>Pedidos Finalizados</S.PPP>
+                                    <S.PPP>Pedidos em andamento</S.PPP>
                                 </S.PLeft>
                                 <div>
                                     <S.PPALAVRA>Dados do Pedido</S.PPALAVRA>
                                 </div>
                                 <S.CCaixinha>
-                                    <S.Alinha>
-                                        <S.PaLavra>Data da compra: 00/00/0000</S.PaLavra>
-                                        <S.PaLavra>ID do Pedido: 0214830</S.PaLavra>
-                                    </S.Alinha>
+                                    <S.Caixinha>
+                                        <S.Alinha>
+                                            <S.PaLavra>Data da compra: 00/00/0000</S.PaLavra>
+                                            <S.PaLavra>ID do Pedido: 0214830</S.PaLavra>
+                                        </S.Alinha>
+                                    </S.Caixinha>
                                     <div>
                                         <S.SobreContainer>
                                             <div className="box-item">
                                                     <S.IIIMG
-                                                        src='areia.png'
+                                                        src='rachao.png'
                                                     />
                                                 <AAlinhamento>
                                                     <LLinha
                                                     >
-                                                        <TTitle>Pedrisco</TTitle>
+                                                        <TTitle>Rachão</TTitle>
                                                         <PPalavra>AGR Ambiental</PPalavra>
                                                     </LLinha>
                                                 </AAlinhamento>
@@ -165,13 +170,13 @@ export default function Pedidos (item) {
                                                 </div>
                                                 <S.Flex>
                                                     <S.BBotao2>Cancelar</S.BBotao2>
-                                                    <S.BBotao>Verificar</S.BBotao>
+                                                    <S.BBotao  onClick={handleFechar}>Verificar</S.BBotao>
                                                 </S.Flex>
                                             </S.QuebraLinha>
                                         </S.SobreContainer>
                                     </div>
                                 </S.CCaixinha>
-                                <Link onChange={handleFechar}> Veja mais detalhes</Link>
+                                <S.LLinks onClick={handleEntrar}> Veja mais detalhes</S.LLinks>
 
                             </S.CCaixa>
                         </S.CContainer>
