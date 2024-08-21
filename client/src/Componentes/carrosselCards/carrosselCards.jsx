@@ -1,11 +1,12 @@
 
     import { Alinhaborda, Alinhamento, Bordas, Botao, Caixa, Carrosel, Container, Im, Linha, Palavra, Texto, Title } from "./carrosselCardsStyle.js";
-    import { Barra,ContainerModal,ContainerDivModal,TituloModal,DivInput,DivRadio,Transporte, QuebraLinha, Th3, PPalavra, PP } from "./modalCards/modalCards.js";
+    import { Barra,ContainerModal,ContainerDivModal,TituloModal,DivInput,DivRadio, QuebraLinha, Th3, PP } from "./modalCards/modalCards.js";
     import "swiper/css";
     import "swiper/css/navigation";
     import "swiper/css/scrollbar";
     import { Navigation, Scrollbar, A11y } from 'swiper/modules';
     import { Swiper, SwiperSlide } from 'swiper/react';
+
     import { useState, useEffect } from "react"; 
     import { useNavigate } from "react-router-dom";
     import Cards from "../cards/cards.jsx"
@@ -86,25 +87,22 @@
                             modules={[Navigation, Scrollbar, A11y]}
                             slidesPerView={slidePerView}
                             navigation
-                            className="cards"
                         >
                             {produtos.map((item) => (
                                 <SwiperSlide key={item.id}>
                                     <Container>
                                         <Caixa>
-                                            <div className="box-item">
-                                                <div className="img">
-                                                    <Im src={item.image} alt="Slide" className='slide-item'/>
-                                                </div>
-                                                <Alinhamento>
-                                                    <Linha>
-                                                        <Title>{item.title}</Title>
-                                                        <Palavra>AGR Ambiental</Palavra>
-                                                        <Botao onClick={() => handleComprar(item.id)}>Comprar</Botao>
-                                                        
-                                                    </Linha>
-                                                </Alinhamento>
+                                            <div>
+                                                <Im src={item.image} alt="Slide" className='slide-item'/>
                                             </div>
+                                            <Alinhamento>
+                                                <Linha>
+                                                    <Title>{item.title}</Title>
+                                                    <Palavra>AGR Ambiental</Palavra>
+                                                    <Botao onClick={() => handleComprar(item.id)}>Comprar</Botao>
+                                                    
+                                                </Linha>
+                                            </Alinhamento>
                                         </Caixa>
 
                                     </Container>

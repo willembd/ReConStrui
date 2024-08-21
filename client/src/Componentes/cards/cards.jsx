@@ -8,18 +8,13 @@ export default function Cards({ item }) {
     return (
         <>
             <Container key={item.id}>
-                <div className="box-item">
-                        <IImagem
-                            src={item.image}
-                        />
+                        <IImagem src={item.image}/>
                     <AAlinhamento>
-                        <LLinha
-                        >
+                        <LLinha>
                             <TTitle>{item.title}</TTitle>
                             <PPalavra>AGR Ambiental</PPalavra>
                         </LLinha>
                     </AAlinhamento>
-                </div>
             </Container>
         </>
     );
