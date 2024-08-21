@@ -1,67 +1,93 @@
 import styled from "styled-components";
 
-export const Caixa = styled.div`
-    box-sizing: border-box;
-    
-    min-height: 80vh;
-    background-color: #F8F8F8;
-`;
-
-export const Container = styled.div`
-    background-color: white;
-    padding-left: 10rem;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-`;
-
-export const ContainerInputs = styled.div`
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 20px;
-    gap: 30px;
-`;
-
-export const InputLeft = styled.div`
-    display: flex;
-`;
-
-export const ContainerRight = styled.div`
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 40%;
-`;
-
-export const InputRight = styled.div`
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    width: 70%;
-`;
-
-export const ContainerCheckbox = styled.div`
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 0px;
-    flex-direction: row;
-    height: 100%;
-    align-items: center;
-    width: 100%;
-`;
-
-export const QuebraLinha = styled.div`
-    display: flex;
-    padding-top: 30px;
-    gap: 20px;
-`
-
 export const Button = styled.button`
-    
-    padding: 10px 70px;
-    background-color: white;
-    color: #228137;
-    border: 2px solid #228137;
+    padding: 12px;
+    background-color: #228137;
+    color: white;
     text-align: center;
+    border: none;
     cursor: pointer;
     border-radius: 0px 4px 4px 0px;
 `;
+
+export const ButtonContainer = styled.div`
+    width: 100%;
+    margin-top: 10px;
+`;
+
+
+export const Caixa = styled.div`
+    display: flex;
+    justify-content: center;
+    margin: 100px 0px;
+
+    @media screen and (max-width: 500px) {
+        margin: 40px 0px;
+    }
+`;
+
+export const Modal = styled.div`
+    background-color: #fcfcfc;
+    width: 1040px;
+    height: 590px;
+    border-radius: 12px;
+    box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.25);
+
+    @media screen and (max-width: 500px) {
+        width: 350px;
+        height: 600px;
+        display: flex;
+        justify-content: center;
+    }
+`;
+
+export const ModalContainer = styled.div`
+    display: flex;
+    justify-content: space-around;
+`;
+
+export const Imagem = styled.div`
+    width: 50%;
+    height: 590px;
+    border-radius: 12px 0px 0px 12px;
+
+    @media screen and (max-width: 500px) {
+        display: none;
+    }
+`;
+
+export const Logo = styled.img`
+    max-height: 100%;
+`;
+
+export const FormConfPedido = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+
+    @media screen and (max-width: 500px) {
+        width: 0px;
+    }
+`;
+export const Titulo = styled.h1`
+    color: #228137;
+
+    @media screen and (max-width: 500px) {
+        font-size: 32px;
+    }
+`;
+
+
+export const DivCampo = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 30px 0px 20px 0px;
+`;
+
+export const DivButton = styled.div`
+    display: flex;
+    gap: 10px;
+`
