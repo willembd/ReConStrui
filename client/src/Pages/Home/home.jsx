@@ -1,4 +1,4 @@
-import Cards2 from "../../Componentes/Cards2/cards2"
+import Cards2 from "../../Componentes/Cards2/carrosselCards2"
 import Carrossel from "../../Componentes/Carrossel/carrossel";
 import CarrosselCards from "../../Componentes/carrosselCards/carrosselCards";
 import Filtro from "../../Componentes/Filtro/filtro";

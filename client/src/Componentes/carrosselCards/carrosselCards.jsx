@@ -1,6 +1,6 @@
 
-    import { Alinhaborda, Alinhamento, Bordas, Botao, Caixa, Carrosel, Container, Im, Linha, Palavra, Texto, Title } from "./carrosselCardsStyle.js";
-    import { Barra,ContainerModal,ContainerDivModal,TituloModal,DivInput,DivRadio, QuebraLinha, Th3, PP } from "./modalCards/modalCards.js";
+    import { Alinhaborda, Alinhamento, Bordas, Botao, Caixa, Carrosel, Container, Im, Linha, Palavra, Texto, Title, Absoluto } from "./carrosselCardsStyle.js";
+    import { Barra,ContainerModal,ContainerDivModal,TituloModal,DivInput,DivRadio, QuebraLinha, Th3, PP, CaixaFundo, BarraVertical, Logo, Organização, FUNDO } from "./modalCards/modalCards.js";
     import "swiper/css";
     import "swiper/css/navigation";
     import "swiper/css/scrollbar";
@@ -14,7 +14,7 @@
     import ModalCards from "./modalCards/modalCards.jsx";
     import Input from "../Input/input";
     import ButtonMod from "../ButtonModelo/buttonModelo.jsx";
-
+    import Imagempadrao from "../../assets/LogoBranca.svg";
 
     export default function CarrosselCards() {
         const [openModal, setOpenModal] = useState(null)
@@ -91,66 +91,69 @@
                             {produtos.map((item) => (
                                 <SwiperSlide key={item.id}>
                                     <Container>
-                                        <Caixa>
-                                            <div>
-                                                <Im src={item.image} alt="Slide" className='slide-item'/>
-                                            </div>
-                                            <Alinhamento>
-                                                <Linha>
-                                                    <Title>{item.title}</Title>
-                                                    <Palavra>AGR Ambiental</Palavra>
-                                                    <Botao onClick={() => handleComprar(item.id)}>Comprar</Botao>
-                                                    
-                                                </Linha>
-                                            </Alinhamento>
-                                        </Caixa>
-
+                                        <Im src={item.image} alt="Slide" className='slide-item'></Im>
+                                        <Absoluto>
+                                            <Caixa>
+                                                <Alinhamento>
+                                                    <Linha>
+                                                        <Title>{item.title}</Title>
+                                                        <Palavra>AGR Ambiental</Palavra>
+                                                        <Botao onClick={() => handleComprar(item.id)}>Comprar</Botao>
+                                                        
+                                                    </Linha>
+                                                </Alinhamento>
+                                            </Caixa>
+                                        </Absoluto>
                                     </Container>
                                 </SwiperSlide>
                             ))}
                         </Swiper>
                     </Carrosel>
                 </Container>
-                
+
                 <ModalCards isOpen={openModal} setModalOpen= {() => setOpenModal(!openModal)}>
-                    <ContainerDivModal>
-                        <>
+                    <Organização>
+                        <CaixaFundo></CaixaFundo>
+                        <BarraVertical />
+                    </Organização>
                         <ContainerModal>
-                            <Cards item = {produtos.find((p) => (p.id===select))}/>
-                        </ContainerModal>
-                        <Barra>
-                        </Barra>
-                        <ContainerModal>
-                        <TituloModal>Orçamento</TituloModal>
-                            <DivInput>
-                                <Input text="Quantidade"/>
-                                <Th3>Informação para Entrega</Th3>
-                                <Input text="Endereço"/>
-                                <Input text="Cidade"/>
-                                <Input text="Bairro"/>
-                                <QuebraLinha>
-                                    <Input text="Número"/>
-                                    <Input text="CEP"/>
-                                </QuebraLinha>
-                                <Th3 className="transorte">Forma de transpote</Th3>
-                                <DivRadio>
-                                    <div>
-                                        <input type="radio" value="Usuario"/>
-                                        <t htmlFor=""><PP>Frete</PP></t>
-                                    </div>
-                                    <div>
-                                        <input type="radio" value="Empresa"/>
-                                        <label htmlFor=""><PP>Transporte próprio</PP></label>
-                                    </div>
-                                </DivRadio>
-                            </DivInput>
-                            <ButtonMod  text="Envia" onClick={handleFechar}></ButtonMod>
-                        </ContainerModal>
-                        <ContainerModal>
-                            
-                        </ContainerModal>
-                        </>
-                    </ContainerDivModal>
+                        <ContainerDivModal>
+                            <Organização>
+                                <ContainerModal>
+                                    <Logo src={Imagempadrao} alt="" />
+                                    <Cards item = {produtos.find((p) => (p.id===select))}/>
+                                </ContainerModal>
+                                <Barra>
+                                </Barra>
+                                <DivInput>
+                                        <TituloModal>Orçamento</TituloModal>
+                                        <FUNDO>
+                                            <Input text="Quantidade"/>
+                                            <Th3>Informação para Entrega</Th3>
+                                            <Input text="Endereço"/>
+                                            <Input text="Cidade"/>
+                                            <Input text="Bairro"/>
+                                            <QuebraLinha>
+                                                <Input text="Número"/>
+                                                <Input text="CEP"/>
+                                            </QuebraLinha>
+                                            <Th3 className="transorte">Forma de transpote</Th3>
+                                            <DivRadio>
+                                                <div>
+                                                    <input type="radio" value="Usuario"/>
+                                                    <t htmlFor=""><PP>Frete</PP></t>
+                                                </div>
+                                                <div>
+                                                    <input type="radio" value="Empresa"/>
+                                                    <label htmlFor=""><PP>Transporte próprio</PP></label>
+                                                </div>
+                                            </DivRadio>
+                                        </FUNDO>
+                                        <ButtonMod  text="Envia" onClick={handleFechar}></ButtonMod>
+                                    </DivInput>
+                                </Organização>
+                            </ContainerDivModal>
+                            </ContainerModal>
                 </ModalCards>
             </> 
         );

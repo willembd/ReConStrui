@@ -1,5 +1,5 @@
-import { Alinhaborda, Alinhamento, Bordas, Botao, Caixa, Carrosel, Container, Im, Linha, Palavra, Texto, Title } from "../Cards2/CardStyle.js";
-import { Barra,ContainerModal,ContainerDivModal,TituloModal,DivInput,DivRadio, QuebraLinha, Th3, PP } from "../Cards2/modalCards2/modalCards2Style.js";
+import * as S from "./CardStyle.js"
+import { Barra,ContainerModal,ContainerDivModal,TituloModal,DivInput,DivRadio, QuebraLinha, Th3, PP } from "./modalCards2/modalCards2Style.js";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/scrollbar";
@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 import Cards from "../cards/cards.jsx"
 import "../cards/cards.css"
 import ModalCards from "../carrosselCards/modalCards/modalCards.jsx";
-import Input from "../Input/input";
+import Input from "../Input/input.jsx";
 import ButtonMod from "../ButtonModelo/buttonModelo.jsx";
 
 
@@ -19,16 +19,16 @@ export default function CarrosselCards() {
     const [select, setSelect] = useState(null)
     const [slidePerView, setSlidePerView] = useState(6)
     const produtos = [
-        { id: '1', image: "/pedrisco1.svg",title:"Pedrisco" },
-        { id: '2', image: "/rachao1.svg",title:"Rachão" },
-        { id: '3', image: "/image36areia.svg" ,title:"Areia reciclada"},
-        { id: '4', image: "/brita1.svg" ,title:"Brita reciclada"},
-        { id: '5', image: "/pedrisco1.svg" ,title:"Pedrisco"},
-        { id: '6', image: "/rachao1.svg" ,title:"Rachão"},
-        { id: '7', image: "/image36areia.svg" ,title:"Areia reciclada"},
-        { id: '8', image: "/brita1.svg" ,title:"Brita reciclada"},
-        { id: '9', image: "/pedrisco1.svg" ,title:"Pedrisco"},
-        { id: '10', image: "/rachao1.svg",title:"Rachão" },
+        { id: '1', image: "/pedrisco.png",title:"Pedrisco" },
+        { id: '2', image: "/rachao.png",title:"Rachão" },
+        { id: '3', image: "/areia.png" ,title:"Areia reciclada"},
+        { id: '4', image: "/brita.png" ,title:"Brita reciclada"},
+        { id: '5', image: "/pedrisco.png" ,title:"Pedrisco"},
+        { id: '6', image: "/rachao.png" ,title:"Rachão"},
+        { id: '7', image: "/areia.png" ,title:"Areia reciclada"},
+        { id: '8', image: "/brita.png" ,title:"Brita reciclada"},
+        { id: '9', image: "/pedrisco.png" ,title:"Pedrisco"},
+        { id: '10', image: "/rachao.png",title:"Rachão" },
     ];
 
     useEffect(() => {
@@ -70,48 +70,44 @@ export default function CarrosselCards() {
     const handleFechar = () => {
         navigate("/pedidos");
     };
-    
+        
 
     return (
        <>
-       <Alinhaborda>
-            <Texto>Recomendações para você</Texto>
-            <Bordas/>
-       </Alinhaborda>
+       <S.Alinhaborda>
+            <S.Texto>Recomendações para você</S.Texto>
+            <S.Bordas/>
+       </S.Alinhaborda>
         
-            <Container>
-                <Carrosel>
+       <S.CContainer>
+                <S.Carrosel>
                     <Swiper 
                         modules={[Navigation, Scrollbar, A11y]}
                         slidesPerView={slidePerView}
                         navigation
-                        className="cards"
                     >
                         {produtos.map((item) => (
                             <SwiperSlide key={item.id}>
-                                <Container>
-                                    <Caixa>
-                                        <div className="box-item">
-                                            <div className="img">
-                                                <Im src={item.image} alt="Slide" className='slide-item'/>
-                                            </div>
-                                            <Alinhamento>
-                                                <Linha>
-                                                    <Title>{item.title}</Title>
-                                                    <Palavra>AGR Ambiental</Palavra>
-                                                    <Botao onClick={() => handleComprar(item.id)}>Comprar</Botao>
+                                <S.CContainer>
+                                    <S.IIm src={item.image} alt="Slide" className='slide-item'></S.IIm>
+                                    <S.AAbsoluto>
+                                        <S.CCaixa>
+                                            <S.AAlinhamento>
+                                                <S.LLinha>
+                                                    <S.TTitle>{item.title}</S.TTitle>
+                                                    <S.PPalavra>AGR Ambiental</S.PPalavra>
+                                                    <S.BBotao onClick={() => handleComprar(item.id)}>Comprar</S.BBotao>
                                                     
-                                                </Linha>
-                                            </Alinhamento>
-                                        </div>
-                                    </Caixa>
-
-                                </Container>
+                                                </S.LLinha>
+                                            </S.AAlinhamento>
+                                        </S.CCaixa>
+                                    </S.AAbsoluto>
+                                </S.CContainer>
                             </SwiperSlide>
                         ))}
                     </Swiper>
-                </Carrosel>
-            </Container>
+                </S.Carrosel>
+            </S.CContainer>
             
             <ModalCards isOpen={openModal} setModalOpen= {() => setOpenModal(!openModal)}>
                 <ContainerDivModal>
