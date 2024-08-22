@@ -14,7 +14,7 @@ import Input from "../Input/input.jsx";
 import ButtonMod from "../ButtonModelo/buttonModelo.jsx";
 
 
-export default function CarrosselCards() {
+export default function CarrosselCards2() {
     const [openModal, setOpenModal] = useState(null)
     const [select, setSelect] = useState(null)
     const [slidePerView, setSlidePerView] = useState(6)
