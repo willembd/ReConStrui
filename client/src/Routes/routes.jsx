@@ -15,6 +15,9 @@ import EntregasEmpresa from "../Pages/EntregasEmpresa/entregasEmpresa.jsx";
 import RetiradasEmpresa from "../Pages/RetiradasEmpresa/retiradasEmpresa.jsx";
 import FinalizadosEmpresa from "../Pages/FinalizadosEmpresa/finalizadosEmpresa.jsx";
 import { jwtDecode } from "jwt-decode";
+import SolicitacaoPedidoEmp from "../Pages/SolicitacaoPedidoEmp/solicitacaoPedidos.jsx";
+import SolicitacaoEntregasRetiradas from "../Pages/SolicitacaoEntregasRetirada/solicitacaoEntregaReti.jsx";
+import HistoricoEmpresa from "../Pages/HistoricoEmpresa/historicoEmpresa.jsx";
 
 function PrivateRoute({ element, allowedTypes }) {
     const token = localStorage.getItem("token");
@@ -109,4 +112,16 @@ export const router = createBrowserRouter([
         path: "/finalizadosempresa",
         element: <FinalizadosEmpresa />,
     },
+    {
+        path: "/solicitacaopedidoemp",
+        element: <SolicitacaoPedidoEmp />
+    },
+    {
+        path: "/solitacaoentregasretirada",
+        element: <SolicitacaoEntregasRetiradas />
+    }
+    {
+        path: "/historicoempresa",
+        element: <HistoricoEmpresa />
+    }
 ]);
