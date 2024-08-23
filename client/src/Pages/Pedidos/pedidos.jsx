@@ -4,8 +4,13 @@ import { useNavigate } from "react-router-dom"
 import NavBar from "../../Componentes/NavBar/navbar"
 import Footer from "../../Componentes/Footer/footer"
 import { AAlinhamento, LLinha  } from "../../Componentes/carrosselCards/modalCards/modalCards";
+import ModalDetalhes from "../../Componentes/ModalDetalhes/modaldestalhes";
 
 export default function Pedidos (item) {
+
+
+    const [isOpen, setOpen] = useState(false);
+
 
     const [isOpenTest, setOpenTest] = useState(false)
 
@@ -82,7 +87,13 @@ export default function Pedidos (item) {
                                         </S.SobreContainer>
                                     </div>
                                 </S.CCaixinha>
-                            <S.LLinks onChange={handleEntrar}> Veja mais detalhes</S.LLinks>
+                            <S.LLinks   onClick={() => setOpen(!isOpen)}> Veja mais detalhes</S.LLinks>
+                            <ModalDetalhes text="DETALHES DO PEDIDO"
+                                    isOpen={isOpen}
+                                    setOpen={setOpen}>
+
+                                      
+                                    </ModalDetalhes>
 
                             </S.CCaixa>
 

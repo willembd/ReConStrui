@@ -194,6 +194,7 @@ export const LLinks = styled.div`
     border: none;
     color: #228137;
     padding: 15px;
+    cursor: pointer;
 `;
 export const PPalavra = styled.div`
     font-size: 1rem;

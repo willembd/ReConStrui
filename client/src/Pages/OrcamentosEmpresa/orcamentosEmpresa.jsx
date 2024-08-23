@@ -16,7 +16,6 @@ export default function OrçamentosEmpresa() {
     return (
         <>
             <NavBar />
-            <S.Response>
                 <S.CaixaFundo />
                 <S.BarraVertical />
                 <S.BigBox>
@@ -138,7 +137,7 @@ export default function OrçamentosEmpresa() {
                         </S.Container>
                     </S.Caixa>
                 </S.BigBox>
-            </S.Response>
+        
             <Footer />
         </>
     );

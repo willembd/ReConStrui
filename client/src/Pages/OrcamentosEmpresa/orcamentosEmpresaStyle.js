@@ -1,24 +1,6 @@
 
 import styled from "styled-components";
 
-export const Response = styled.div`
-     display: flex;
-    flex-direction: column;   
-    justify-content: center; 
-    @media screen and (max-width: 1024px) {
-        gap: 0px;
-    }
-    @media screen and (max-width: 1000px) {
-        gap: 40px;
-    }
-    @media screen and (max-width: 849px) {
-        gap: 18px;
-    }
-    @media screen and (max-width: 830px) {
-        gap: 40px;
-    }
-`
-
 export const BigBox = styled.div`
     display: flex;
     flex-direction: column;   
@@ -42,6 +24,11 @@ export const Container = styled.div`
     box-shadow: 0 0 0.938rem rgba(0, 0, 0, 0.1);
     position: relative;
   
+    @media screen and (max-width: 500px) {
+        width: 360px;
+        height: 1800px;
+        margin-bottom: 40px;
+    }
    
 `;
 
@@ -71,6 +58,10 @@ export const TextoCadastro = styled.h1`
     margin-bottom: 3.125rem;
     font-weight: bold;
     font-size: 2.5rem;
+
+    @media screen and (max-width: 500px) {
+        font-size: 1.5rem;
+    }
 `;
 
 export const ContainerInputs = styled.div`
@@ -79,12 +70,24 @@ export const ContainerInputs = styled.div`
     gap: -0.125rem;
     padding-bottom: 2.5rem;
     margin-left: 0.625rem;
+
+
+    @media screen and (max-width: 500px) {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
 `;
 
 export const InputFlex = styled.div`
     display: flex;
     gap: 12.313rem;
 
+
+    @media screen and (max-width: 500px) {
+        display: flex;
+        gap: 20px;
+    }
 
 `;
 export const BarraInput = styled.div `
@@ -101,6 +104,12 @@ export const Dados = styled.div`
       /* flex-wrap: wrap; */
       /* flex-direction: column; */
       gap: 11.688rem;
+
+      @media screen and (max-width: 500px) {
+      
+        gap: 11.688rem;
+
+    }
      
 `
 
@@ -113,6 +122,12 @@ export const TTitulo = styled.h2`
     font-size: 1.5rem;
     width: auto;
     white-space: nowrap;
+
+    @media screen and (max-width: 500px) {
+        font-size: 1rem;
+        width: auto;
+        white-space: nowrap;
+    }
 
 
 `;
@@ -143,6 +158,11 @@ export const CaixaFundo = styled.div`
     background:#33603D;
     clip-path: polygon(0% 0%, 100% 0%, 40% 100%, 0% 100%);
     position: absolute;
+
+    @media screen and (max-width: 500px) {
+        width: 350px;
+        height: 1842px;
+    }
 `;
 
 export const BarraVertical = styled.div`
@@ -151,6 +171,11 @@ export const BarraVertical = styled.div`
     background: #B7821C;
     clip-path: polygon(100% 0%, 90% 0%, 40% 100%, 100% 0%);
     position: absolute;
+
+    @media screen and (max-width: 500px) {
+        width: 350px;
+        height: 1842px;
+    }
     
 `;
 
@@ -160,6 +185,10 @@ export const BBarra = styled.div`
     background-color: black;
     margin-top: 0.5rem;
     margin-left:2.438rem ;
+
+    @media screen and (max-width: 500px) {
+        width: 200px;
+    }
 
 `;
 
@@ -178,6 +207,11 @@ export const BBarra2 = styled.div`
     background-color: black;
     margin-top: 0.5rem;
     margin-left: 2.438rem;
+
+    @media screen and (max-width: 500px) {
+        width: 200px;
+    }
+
    
 
 `;
@@ -187,6 +221,11 @@ export const BBarra3 = styled.div`
     background-color: black;
     margin-top: 0.5rem;
     margin-left: 2.438rem;
+
+
+    @media screen and (max-width: 500px) {
+        width: 200px;
+    }
 `;
 
 
@@ -202,6 +241,12 @@ export const Botao = styled.div`
     font-weight: 600;
     font-size: 1.3rem;
     cursor: pointer;
+
+
+    @media screen and (max-width: 500px) {
+        padding: 12px;
+        width: 300px;
+    }
 `;
 
 export const PP = styled.p`
@@ -213,6 +258,12 @@ export const InputRight =   styled.div`
   display: flex;
   gap:12.313rem;
 
+  @media screen and (max-width: 500px) {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
 
 `
 
@@ -220,6 +271,12 @@ export const InputsStyle = styled.div`
       display: flex;
       gap: 12.313rem;
       margin-bottom: 2.313rem;
+
+      @media screen and (max-width: 500px) {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
 
 
 `
@@ -235,6 +292,12 @@ export const Linha = styled.div`
   display: flex;
   justify-content: space-between;
   margin-bottom: 1.25rem;
+
+  @media screen and (max-width: 500px) {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
 `;
 
 export const Campo = styled.div`
@@ -242,6 +305,14 @@ export const Campo = styled.div`
   flex-direction: column;
   width: 45%;
   position: relative;
+
+  @media screen and (max-width: 500px) {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+ 
   
 `;
 
@@ -249,6 +320,10 @@ export const Label = styled.label`
   color: #228137;
   margin-bottom: 0.3rem;
   font-size: 1rem;
+
+  @media screen and (max-width: 500px) {
+        font-size: 1rem;
+    }
 `;
 
 export const ValorTexto = styled.span`
@@ -257,6 +332,10 @@ export const ValorTexto = styled.span`
   left: 5.688rem;
   color: #000;
   font-size: 1rem;
+
+  @media screen and (max-width: 500px) {
+        font-size: 1rem;
+    }
   
 `;
 
@@ -266,6 +345,10 @@ export const Valor = styled.div`
   border-radius: 0.13rem;
   margin-top: 0.5rem;
   position: relative;
+
+  @media screen and (max-width: 500px) {
+        font-size: 16px;
+    }
 `;
 
 
@@ -275,15 +358,17 @@ export const Titulo = styled.h1`
   margin-bottom: 3rem;
 `;
 
-export const Section = styled.div`
-  margin-bottom: 3rem;
-`;
+// export const Section = styled.div`
+//   margin-bottom: 3rem;
+// `;
 
-export const SubTitulo = styled.h2`
-  color: #000;
-  margin-bottom: 1.25rem;
-  font-size: 1.2rem;
-  border-bottom: 0.125px solid #000;
-  padding-bottom: 0.313rem;
-`;
+// export const SubTitulo = styled.h2`
+//   color: #000;
+//   margin-bottom: 1.25rem;
+//   font-size: 1.2rem;
+//   border-bottom: 0.125px solid #000;
+//   padding-bottom: 0.313rem;
+
+ 
+// `;
 
