@@ -16,7 +16,7 @@ export default function FormularioDetalhes(items) {
             <M.FlexCaixa1>
             <M.IdDados>
                
-               <M.ColorSpan> Data da Compra: 00/00/0000</M.ColorSpan>
+               <M.ColorSpan> Data da Compra: 12/08/2024</M.ColorSpan>
            </M.IdDados>
             <M.Caixa1>
                 <M.Caixinha1>
@@ -63,22 +63,19 @@ export default function FormularioDetalhes(items) {
                                     <M.Text>Rio Doce</M.Text>
                                 </CampoDados>
 
-                                <CampoDados  fontsize='secondary'  borderbottom='secondary' text="15 Metros:" >   
-                                    <M.Text>Oii</M.Text> 
-                                </CampoDados>
+                               
+                         
 
                         <M.CampoFlex>
                                 <M.FlexN> 
                                     <M.ColorP>Nº:</M.ColorP>
                                     <M.ColorSpan>405</M.ColorSpan>
-                                    {/* <M.CampoPequeno>
-                                    </M.CampoPequeno> */}
+                                  
                                 </M.FlexN>
                                 <M.FlexCep>
                                     <M.ColorP>Cep: </M.ColorP>
                                     <M.ColorSpan> 53370-058</M.ColorSpan>
-                                    {/* <M.CampoPequeno>
-                                    </M.CampoPequeno> */}
+                                    
                                 </M.FlexCep>
                                 <M.CampoMenor>
                                 </M.CampoMenor>
