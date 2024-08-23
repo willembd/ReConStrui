@@ -1,19 +1,17 @@
 import * as S from "./paginaLoginStyle.js";
 import Imagempadrao from "../../assets/imagem-padrao1.svg";
-import Input from "../../Componentes/Input/input";
 import ButtonMod from "../../Componentes/ButtonModelo/buttonModelo.jsx";
 import { useNavigate } from "react-router-dom";
 import NavBar from "../../Componentes/NavBar/navbar.jsx";
 import Footer from "../../Componentes/Footer/footer.jsx";
 import { useState } from "react";
 import { api } from "../../service/api.js";
-import Input2 from "../../Componentes/Input2/input2.jsx";
-
+import InputSecondary from "../../Componentes/InputPrimary/inputPrimary.jsx";
 
 export default function PaginaLogin() {
-    const [email, setEmail] = useState("")
-    const [senha, setSenha] = useState("")
-    const [login, setLogin] = useState(null)
+    const [email, setEmail] = useState("");
+    const [senha, setSenha] = useState("");
+    const [login, setLogin] = useState(null);
 
     const navigate = useNavigate();
 
@@ -21,35 +19,41 @@ export default function PaginaLogin() {
         navigate("/");
     };
 
-    async function handleLogin(e){
-        if(login === 'usuario'){
-            await api.post('/userlogin', {
-                "email": email, 
-                senha
-            }).then((response) => {
-                localStorage.setItem('token', response.data.token)
-            }).catch((error) => {
-                console.log(error)
-            })
-        }else if(login === 'empresa'){
-            await api.post('/empresalogin', {
-                email, 
-                senha
-            }).then((response) => {
-                localStorage.setItem('token', response.data.token)
-                navigate('/orcamentosempresa')
-            }).catch((error) => {
-                console.log(error)
-            })
-        }else{
-            return alert('Erro')
+    async function handleLogin(e) {
+        if (login === "usuario") {
+            await api
+                .post("/userlogin", {
+                    email: email,
+                    senha,
+                })
+                .then((response) => {
+                    localStorage.setItem("token", response.data.token);
+                })
+                .catch((error) => {
+                    console.log(error);
+                });
+        } else if (login === "empresa") {
+            await api
+                .post("/empresalogin", {
+                    email,
+                    senha,
+                })
+                .then((response) => {
+                    localStorage.setItem("token", response.data.token);
+                    navigate("/orcamentosempresa");
+                })
+                .catch((error) => {
+                    console.log(error);
+                });
+        } else {
+            return alert("Erro");
         }
     }
 
     return (
         <>
             <NavBar />
-            
+
             <S.ButtonContainer>
                 <S.Button onClick={handleFechar}>Voltar</S.Button>
             </S.ButtonContainer>
@@ -64,27 +68,48 @@ export default function PaginaLogin() {
                             <S.Titulo>Entrar</S.Titulo>
                             <S.Organizacao>
                                 <S.DivInput>
-                                    <Input2 text="E-mail" onChange={(e) => setEmail(e.target.value)} />
-                                    <Input2 type="password" text="Senha" onChange={(e) => setSenha(e.target.value)} />
+                                    <InputSecondary
+                                        text="E-mail"
+                                        onChange={(e) =>
+                                            setEmail(e.target.value)
+                                        }
+                                    />
+                                    <InputSecondary
+                                        type="password"
+                                        text="Senha"
+                                        onChange={(e) =>
+                                            setSenha(e.target.value)
+                                        }
+                                    />
                                 </S.DivInput>
 
                                 <S.Linksenha href="/esqueceusenha">
                                     Esqueceu a senha?
                                 </S.Linksenha>
-
                             </S.Organizacao>
                             <S.DivRadio>
                                 <S.DivRadioOpcoes>
-                                    <input type="radio" name="login" onChange={() => setLogin('usuario')} />
+                                    <input
+                                        type="radio"
+                                        name="login"
+                                        onChange={() => setLogin("usuario")}
+                                    />
                                     <label htmlFor="">Usuário</label>
                                 </S.DivRadioOpcoes>
                                 <S.DivRadioOpcoes>
-                                    <input type="radio" name="login" onChange={() => setLogin('empresa')}/>
+                                    <input
+                                        type="radio"
+                                        name="login"
+                                        onChange={() => setLogin("empresa")}
+                                    />
                                     <label htmlFor="">Empresa</label>
                                 </S.DivRadioOpcoes>
                             </S.DivRadio>
 
-                            <ButtonMod text="Entrar" onClick={() => handleLogin()} />
+                            <ButtonMod
+                                text="Entrar"
+                                onClick={() => handleLogin()}
+                            />
 
                             <S.DivLink>
                                 <S.TextP>Não tem Cadastro?</S.TextP>
@@ -96,7 +121,7 @@ export default function PaginaLogin() {
                     </S.ModalContainer>
                 </S.Modal>
             </S.Caixa>
-        
+
             <Footer />
         </>
     );

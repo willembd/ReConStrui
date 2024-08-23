@@ -95,8 +95,8 @@ export const Titulo = styled.h1`
 export const DivInput = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    margin: 30px 0px 4px 0px;
+    gap: 10px;
+    margin: 12px 0px 4px 0px;
 `;
 export const FormadePagamento = styled.div`
     display: flex;

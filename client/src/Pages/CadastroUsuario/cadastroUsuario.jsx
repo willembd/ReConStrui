@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import * as S from "./cadastroUsuarioStyle.js";
 import Imagempadrao from "../../assets/imagem-padrao1.svg";
-import Input from "../../Componentes/Input/input.jsx";
 import ButtonMod from "../../Componentes/ButtonModelo/buttonModelo.jsx";
 import { useNavigate } from "react-router-dom";
 import NavBar from "../../Componentes/NavBar/navbar.jsx";
 import Footer from "../../Componentes/Footer/footer.jsx";
 import { api } from "../../service/api.js";
-import Input2 from "../../Componentes/Input2/input2.jsx";
+import InputPrimary from "../../Componentes/InputPrimary/inputPrimary.jsx";
+
 
 
 export default function CadastroUsuario() {
@@ -57,27 +57,27 @@ export default function CadastroUsuario() {
                         <S.FormLogin>
                             <S.Titulo>Cadastro Usuário</S.Titulo>
                             <S.DivInput>
-                                <Input2
+                                <InputPrimary
                                     text="Nome Completo"
                                     onChange={(e) => setNome(e.target.value)}
                                 />
-                                <Input2
+                                <InputPrimary
                                     text="Data de Nascimento"
                                     type="date"
                                     onChange={(e) =>
                                         setData_nascimento(e.target.value)
                                     }
                                 />
-                                <Input2
+                                <InputPrimary
                                     text="CPF"
                                     type="number"
                                     onChange={(e) => setCpf(e.target.value)}
                                 />
-                                <Input2
+                                <InputPrimary
                                     text="E-mail"
                                     onChange={(e) => setEmail(e.target.value)}
                                 />
-                                <Input2
+                                <InputPrimary
                                     text="Senha"
                                     type="password"
                                     onChange={(e) => setSenha(e.target.value)}

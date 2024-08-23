@@ -1,13 +1,14 @@
 import * as S from "./cartaoStyle.js";
 import { useState } from "react";
 import Imagempadrao from "../../assets/imagem-padrao1.svg";
-import Input from "../../Componentes/Input/input";
 import ButtonMod from "../../Componentes/ButtonModelo/buttonModelo.jsx";
 import { useNavigate } from "react-router-dom";
 import NavBar from "../../Componentes/NavBar/navbar.jsx";
 import Footer from "../../Componentes/Footer/footer.jsx";
 import Select from "../../Componentes/Select/select.jsx";
 import ModalVerifiqueEmail from "../../Componentes/ModalVerifiqueEmail/ModalVerifiqueEmail.jsx";
+import InputPrimary from "../../Componentes/InputPrimary/inputPrimary.jsx";
+
 
 export default function PaginaLogin() {
     const [isOpen, setOpen] = useState(false);
@@ -34,11 +35,11 @@ export default function PaginaLogin() {
                         <S.Form>
                             <S.Titulo>Pagamento</S.Titulo>
                             <S.DivInput>
-                                <Input text="Titular" />
-                                <Input text="CPF" />
-                                <Input text="Numero do Cartão" />
-                                <Input text="Validade" />
-                                <Input text="Código" />
+                                <InputPrimary type="text" text="Titular" />
+                                <InputPrimary type="text" text="CPF" />
+                                <InputPrimary type="number" text="Numero do Cartão" />
+                                <InputPrimary type="number" text="Validade" />
+                                <InputPrimary type="text" text="Código" />
                             </S.DivInput>
 
                             <S.FormadePagamento>

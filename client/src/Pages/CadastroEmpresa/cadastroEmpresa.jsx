@@ -1,11 +1,11 @@
 import * as S from "./cadastroEmpresaStyle";
 import NavBar from "../../Componentes/NavBar/navbar";
 import Footer from "../../Componentes/Footer/footer";
-import Input from "../../Componentes/Input/input";
 import { useNavigate } from "react-router-dom";
 import { api } from "../../service/api";
 import { useState } from "react";
-import Input2 from "../../Componentes/Input2/input2";
+import InputPrimary from "../../Componentes/InputPrimary/inputPrimary";
+
 
 export default function CadastroEmpresa() {
     const [nome, setNome] = useState("");
@@ -87,13 +87,13 @@ export default function CadastroEmpresa() {
                                         <S.Linha />
                                     </S.QuebraLinha>
                                     <S.InputFlex>
-                                        <Input2
+                                        <InputPrimary
                                             text="Nome"
                                             onChange={(e) =>
                                                 setNome(e.target.value)
                                             }
                                         />
-                                        <Input2
+                                        <InputPrimary
                                             text="Razão social"
                                             onChange={(e) =>
                                                 setRazao_social(e.target.value)
@@ -101,13 +101,13 @@ export default function CadastroEmpresa() {
                                         />
                                     </S.InputFlex>
                                     <S.InputFlex>
-                                        <Input2
+                                        <InputPrimary
                                             text="Telefone"
                                             onChange={(e) =>
                                                 setTelefone(e.target.value)
                                             }
                                         />
-                                        <Input2
+                                        <InputPrimary
                                             text="CNPJ"
                                             onChange={(e) =>
                                                 setCnpj(e.target.value)
@@ -124,13 +124,13 @@ export default function CadastroEmpresa() {
                                         <S.LinhaE />
                                     </S.QuebraLinha>
                                     <S.InputFlex>
-                                        <Input2
+                                        <InputPrimary
                                             text="Cep"
                                             onChange={(e) =>
                                                 setCep(e.target.value)
                                             }
                                         />
-                                        <Input2
+                                        <InputPrimary
                                             text="Estado"
                                             onChange={(e) =>
                                                 setEstado(e.target.value)
@@ -138,13 +138,13 @@ export default function CadastroEmpresa() {
                                         />
                                     </S.InputFlex>
                                     <S.InputFlex>
-                                        <Input2
+                                        <InputPrimary
                                             text="Cidade"
                                             onChange={(e) =>
                                                 setCidade(e.target.value)
                                             }
                                         />
-                                        <Input2
+                                        <InputPrimary
                                             text="Bairro"
                                             onChange={(e) =>
                                                 setBairro(e.target.value)
@@ -152,13 +152,13 @@ export default function CadastroEmpresa() {
                                         />
                                     </S.InputFlex>
                                     <S.InputFlex>
-                                        <Input2
+                                        <InputPrimary
                                             text="Endereço"
                                             onChange={(e) =>
                                                 setEndereco(e.target.value)
                                             }
                                         />
-                                        <Input2
+                                        <InputPrimary
                                             text="Número"
                                             onChange={(e) =>
                                                 setNumero(e.target.value)
@@ -174,13 +174,13 @@ export default function CadastroEmpresa() {
                                         <S.LinhaE />
                                     </S.QuebraLinha>
                                     <S.InputFlex>
-                                        <Input2
+                                        <InputPrimary
                                             text="E-mail"
                                             onChange={(e) =>
                                                 setEmail(e.target.value)
                                             }
                                         />
-                                        <Input2
+                                        <InputPrimary
                                             text="Senha"
                                             onChange={(e) =>
                                                 setSenha(e.target.value)

@@ -45,6 +45,7 @@ export const Button = styled.button`
     text-align: center;
     border: none;
     cursor: pointer;
+    border-radius: 0px 4px 4px 0px;
 `;
 
 export const ButtonContainer = styled.div`
@@ -75,7 +76,7 @@ export const FormSenha = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content:center;
+    justify-content: center;
     width: 50%;
 
     @media screen and (max-width: 500px) {
@@ -96,7 +97,6 @@ export const Titulo = styled.h1`
 export const Texto = styled.p`
     color: #228137;
     font-size: 15px;
-   
 `;
 
 export const DivInput = styled.div`
@@ -114,10 +114,8 @@ export const EsqueceuETexto = styled.div`
     gap: 20px;
 
     @media screen and (max-width: 500px) {
-       justify-content:center;
-       display:flex;
-       flex-direction:column;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
     }
-
-
 `;
