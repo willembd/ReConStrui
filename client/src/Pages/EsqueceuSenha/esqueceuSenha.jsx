@@ -8,6 +8,7 @@ import { useNavigate } from "react-router-dom";
 import NavBar from "../../Componentes/NavBar/navbar.jsx";
 import Footer from "../../Componentes/Footer/footer.jsx";
 import ModalVerifiqueEmail from "../../Componentes/ModalVerifiqueEmail/ModalVerifiqueEmail.jsx";
+import Input2 from "../../Componentes/Input2/input2.jsx";
 
 export default function EsqueceuSenha() {
     const [isOpen, setOpen] = useState(false);
@@ -36,22 +37,21 @@ export default function EsqueceuSenha() {
                             <S.EsqueceuETexto>
                                 <S.Titulo>Esqueceu sua senha?</S.Titulo>
                                 <S.Texto>
-                                Para redefinir sua senha,
-                                informe o seu e-mail cadastrado. 
+                                    Para redefinir sua senha, informe o seu
+                                    e-mail cadastrado.
                                 </S.Texto>
                                 <S.DivInput>
-                                    <Input text="E-mail" />
-                                    <div>
-                                        <ButtonMod
-                                            text="Enviar"
-                                            onClick={() => setOpen(!isOpen)}
-                                        />
-                                        <ModalVerifiqueEmail
-                                            text="Verifique seu e-mail"
-                                            isOpen={isOpen}
-                                            setOpen={setOpen}
-                                        />
-                                    </div>
+                                    <Input2 text="E-mail" />
+
+                                    <ButtonMod
+                                        text="Enviar"
+                                        onClick={() => setOpen(!isOpen)}
+                                    />
+                                    <ModalVerifiqueEmail
+                                        text="Verifique seu e-mail"
+                                        isOpen={isOpen}
+                                        setOpen={setOpen}
+                                    />
                                 </S.DivInput>
                             </S.EsqueceuETexto>
                         </S.FormSenha>

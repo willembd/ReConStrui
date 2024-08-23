@@ -95,26 +95,23 @@ export const Titulo = styled.h1`
 
 export const Texto = styled.p`
     color: #228137;
-    margin-left: 71px;
-    margin-right: 10px;
     font-size: 15px;
-    margin-bottom: 20px;
-    margin-top: 21px;
+   
 `;
 
 export const DivInput = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 30px;
     margin: 0px 0px 20px 0px;
 `;
 export const EsqueceuETexto = styled.div`
     display: flex;
     justify-content: center;
     flex-direction: column;
-    align-items: center;
     margin-top: 40px;
-    align-items: baseline;
+    align-items: center;
+    gap: 20px;
 
     @media screen and (max-width: 500px) {
        justify-content:center;

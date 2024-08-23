@@ -32,15 +32,15 @@ export const Container = styled.div`
 
 
 export const ButtonVoltar = styled.button`
-    cursor: pointer;
-    padding: 5px;
-    background-color: green;
+    padding: 12px;
+    background-color: #228137;
     color: white;
     text-align: center;
-    line-height: 30px;
     border: none;
+    cursor: pointer;
+    border-radius: 0px 4px 4px 0px;
     position: absolute; 
-    top: 0; 
+    top: 20px; 
     left: 0;
 `;
 
