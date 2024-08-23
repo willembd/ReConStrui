@@ -6,19 +6,29 @@ import Footer from "../../Componentes/Footer/footer"
 import { AAlinhamento, LLinha  } from "../../Componentes/carrosselCards/modalCards/modalCards";
 import ModalDetalhes from "../../Componentes/ModalDetalhes/modaldestalhes";
 
+import FormularioDetalhes from "../FormDetalhes/formDetalhes";''
+
 export default function Pedidos (item) {
 
 
-    const [isOpen, setOpen] = useState(false);
+
+    const [openModalId, setOpenModalId] = useState(null);
+    
 
 
-    const [isOpenTest, setOpenTest] = useState(false)
+
+    const handleOpenModal = (id) => {
+        setOpenModalId(id);
+    };
+
+    const handleCloseModal = () => {
+        setOpenModalId(null);
+    };
 
 
     const navigate = useNavigate();
-        const handleEntrar = () => {
-            navigate("/confirmacaoPedidos");
-        };
+
+    
         const handleFechar = () => {
             navigate("/confirmacaopedidos");
         };
@@ -87,13 +97,15 @@ export default function Pedidos (item) {
                                         </S.SobreContainer>
                                     </div>
                                 </S.CCaixinha>
-                            <S.LLinks   onClick={() => setOpen(!isOpen)}> Veja mais detalhes</S.LLinks>
-                            <ModalDetalhes text="DETALHES DO PEDIDO"
-                                    isOpen={isOpen}
-                                    setOpen={setOpen}>
 
-                                      
-                                    </ModalDetalhes>
+                                <S.LLinks onClick={() => handleOpenModal(1)}> Veja mais detalhes</S.LLinks>
+                                <ModalDetalhes
+                                    text="DETALHES DO PEDIDO"
+                                    isOpen={openModalId === 1}
+                                    setOpen={handleCloseModal}>
+                                    <FormularioDetalhes />
+
+                                </ModalDetalhes>
 
                             </S.CCaixa>
 
@@ -110,7 +122,7 @@ export default function Pedidos (item) {
                                             <S.PaLavra>Data da compra: 00/00/0000</S.PaLavra>
                                             <S.PaLavra>ID do Pedido: 0214830</S.PaLavra>
                                         </S.Alinha>
-                                    </S.Caixinha>
+                                 </S.Caixinha>
                                     <div>
                                         <S.SobreContainer>
                                             <div className="box-item">
@@ -139,10 +151,16 @@ export default function Pedidos (item) {
                                         </S.SobreContainer>
                                     </div>
                                 </S.CCaixinha>
-                                <S.LLinks onChange={handleEntrar}> Veja mais detalhes</S.LLinks>
-
+                                <S.LLinks onClick={() => handleOpenModal(2)}> Veja mais detalhes</S.LLinks>
+                                <ModalDetalhes
+                                    text="DETALHES DO PEDIDO"
+                                    isOpen={openModalId === 2}
+                                    setOpen={handleCloseModal}>
+                                    <FormularioDetalhes />
+                                </ModalDetalhes>
                             </S.CCaixa>
                         </S.CContainer>
+
                         <S.CContainer>
                             <S.CCaixa>
                                 <S.PLeft>
@@ -183,7 +201,13 @@ export default function Pedidos (item) {
                                         </S.SobreContainer>
                                     </div>
                                 </S.CCaixinha>
-                                <S.LLinks onClick={handleEntrar}> Veja mais detalhes</S.LLinks>
+                                <S.LLinks onClick={() => handleOpenModal(3)}> Veja mais detalhes</S.LLinks>
+                                <ModalDetalhes
+                                    text="DETALHES DO PEDIDO"
+                                    isOpen={openModalId === 3}
+                                    setOpen={handleCloseModal}>
+                                    <FormularioDetalhes />
+                                </ModalDetalhes>
 
                             </S.CCaixa>
                         </S.CContainer>
