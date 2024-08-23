@@ -72,10 +72,6 @@ export const FormLogin = styled.div`
     }
 `;
 
-export const TextP = styled.div`
-    color: #228137;
-`
-
 export const Titulo = styled.h1`
     color: #228137;
 

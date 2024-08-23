@@ -20,7 +20,7 @@ export const Campo = styled.div`
         
     }
 
-    input[type="text"].input {
+    .input {
         padding: 11px 10px;
         font-size: 1rem;
         border: 2px #E0E0E0 solid;

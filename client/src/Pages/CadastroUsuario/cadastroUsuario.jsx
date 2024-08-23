@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import NavBar from "../../Componentes/NavBar/navbar.jsx";
 import Footer from "../../Componentes/Footer/footer.jsx";
 import { api } from "../../service/api.js";
+import Input2 from "../../Componentes/Input2/input2.jsx";
 
 
 export default function CadastroUsuario() {
@@ -56,29 +57,29 @@ export default function CadastroUsuario() {
                         <S.FormLogin>
                             <S.Titulo>Cadastro Usuário</S.Titulo>
                             <S.DivInput>
-                                <Input
+                                <Input2
                                     text="Nome Completo"
                                     onChange={(e) => setNome(e.target.value)}
                                 />
-                                <S.TextP>Data de Nascimento</S.TextP>
-                                <Input
-                                    text=""
+                                <Input2
+                                    text="Data de Nascimento"
                                     type="date"
                                     onChange={(e) =>
                                         setData_nascimento(e.target.value)
                                     }
                                 />
-                                <Input
+                                <Input2
                                     text="CPF"
                                     type="number"
                                     onChange={(e) => setCpf(e.target.value)}
                                 />
-                                <Input
+                                <Input2
                                     text="E-mail"
                                     onChange={(e) => setEmail(e.target.value)}
                                 />
-                                <Input
+                                <Input2
                                     text="Senha"
+                                    type="password"
                                     onChange={(e) => setSenha(e.target.value)}
                                 />
                             </S.DivInput>
