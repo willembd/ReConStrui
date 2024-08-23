@@ -1,6 +1,4 @@
-
 import styled from "styled-components";
-
 
 export const BigBox = styled.div`
     display: flex;
@@ -57,7 +55,7 @@ export const TextoCadastro = styled.h1`
     display: flex;
     margin-bottom: 50px;
     font-weight: bold;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
 
     @media screen and (max-width: 500px) {
         font-size: 1.5rem;
@@ -67,12 +65,15 @@ export const TextoCadastro = styled.h1`
 export const ContainerInputs = styled.div`
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 32px;
     padding-bottom: 40px;
 `;
 
 export const InputFlex = styled.div`
     display: flex;
+    justify-content: space-around;
+    gap: 45px;
 
     @media screen and (max-width: 500px) {
         display: flex;
@@ -83,6 +84,7 @@ export const InputFlex = styled.div`
 
 export const TTitulo = styled.h2`
     font-size: 1.5rem;
+    color: #AF7503;
    
     @media screen and (max-width: 500px) {
         font-size: 1rem;
@@ -105,78 +107,54 @@ export const TextoCheckbox = styled.h3`
     color: #228137;
 `;
 
-export const CheckboxMateriais1 = styled.div`
+export const CheckboxMateriais = styled.div`
+    width: 80%;
     display: flex;
-    margin-bottom: 4px;
+    justify-content: space-around;
     color: #228137;
     list-style-type: none;
     font-size: 20px;
-    justify-content: space-around;
-    padding-top: 30px;
-    padding-bottom: 40px;
+    gap: 20px;
 
     @media screen and (max-width: 500px) {
         font-size: 16px;
     }
 `;
 
-export const CheckboxMateriais2 = styled.div`
+export const Material = styled.div`
     display: flex;
-    align-items: center ;
-    margin-bottom: 4px;
-    color: #228137;
-    list-style-type: none ;
-    font-size: 20px;
-    justify-content: space-around;
-    padding-bottom: 30px;
+    gap: 4px;
+`
 
-    @media screen and (max-width: 500px) {
-        font-size: 16px;
-    }
-`;
 
 export const CheckboxTransporte1 = styled.li`
     display: flex;
-    align-items: center ;
+    align-items: center;
     color: #228137;
-    margin-right: 130px;
     font-size: 20px;
-    gap: 8px;
+    gap: 6px;
 
     @media screen and (max-width: 500px) {
         font-size: 16px;
     }
 `;
 
-export const CheckboxTransporte2 = styled.li`
-    display: flex;
-    align-items: center ;
-    margin-bottom: 5px;
-    color: #228137;
-    font-size: 20px;  
-    gap: 8px;
-
-    @media screen and (max-width: 500px) {
-        font-size: 16px;
-    }
-`;
 
 export const CheckboxTransporte = styled.div`
     display: flex;
     justify-content: center;
-    gap: 130px;
-    padding: 30px; 
-
+    justify-content: space-evenly;
+    width: 80%;
     @media screen and (max-width: 500px) {
         gap: 0px;
     }
 ` ;
 
-export const LinkCadastro = styled.a`
-    color: #228137;
-    text-decoration: none;
-    margin-top: 10px;
-    font-size: 16px;
+export const LinkCadastro = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
 `;
 
 export const CaixaFundo = styled.div`
@@ -219,13 +197,26 @@ export const BBarra = styled.div`
 
 export const QuebraLinha = styled.div`
     display: flex;
-    justify-content: space-around ;
     align-items: center;
+    width: 90%;
+    gap: 10px;
+   
 `;
+
+export const Linha = styled.hr`
+    color: black;
+    width: 60%;
+
+`
+export const LinhaE = styled.hr`
+    color: black;
+    width: 100%;
+
+`
 
 export const BBarra2 = styled.div`
     height:2px;
-    width: 680px;
+    width: 600px;
     background-color: black;
     margin-top: 8px;
 
@@ -257,16 +248,16 @@ export const BBarra4 = styled.div`
 `;
 
 export const Botao = styled.div`
-    padding: 15px;
-    width: 355px;
+    padding: 12px;
+    width: 346px;
     text-align: center;
     background-color: rgba(175, 117, 3, 0.9);
     color: #fff;
     border-radius: 4px;
-    margin-bottom:20px ;
-    margin-top: 30px;
+    margin-bottom: 12px ;
     font-weight: 600;
     font-size: 20px;
+    cursor: pointer;
 
     @media screen and (max-width: 500px) {
         padding: 12px;
@@ -277,6 +268,7 @@ export const Botao = styled.div`
 
 export const PP = styled.p`
     font-size: 20px;
+    color: #228137;
     display: flex;
     justify-content: center;
 `;
@@ -285,6 +277,8 @@ export const Centralizar = styled.div`
     display: flex;
     justify-content: center;
 `;
-export const Cor = styled.div`
+export const Link = styled.a`
     color: #B7821C;
+    text-decoration: none;
+    font-size: 20px;
 `;

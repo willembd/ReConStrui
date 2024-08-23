@@ -7,6 +7,7 @@ import NavBar from "../../Componentes/NavBar/navbar.jsx";
 import Footer from "../../Componentes/Footer/footer.jsx";
 import { useState } from "react";
 import { api } from "../../service/api.js";
+import Input2 from "../../Componentes/Input2/input2.jsx";
 
 
 export default function PaginaLogin() {
@@ -63,8 +64,8 @@ export default function PaginaLogin() {
                             <S.Titulo>Entrar</S.Titulo>
                             <S.Organizacao>
                                 <S.DivInput>
-                                    <Input text="E-mail" onChange={(e) => setEmail(e.target.value)} />
-                                    <Input text="Senha" onChange={(e) => setSenha(e.target.value)} />
+                                    <Input2 text="E-mail" onChange={(e) => setEmail(e.target.value)} />
+                                    <Input2 type="password" text="Senha" onChange={(e) => setSenha(e.target.value)} />
                                 </S.DivInput>
 
                                 <S.Linksenha href="/esqueceusenha">
