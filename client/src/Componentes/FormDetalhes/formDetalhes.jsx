@@ -1,9 +1,9 @@
 import CampoDados from "../CampoDados/campoDados"
-import { AAlinhamento, LLinha } from "../carrosselCards/modalCards/modalCards"
+import { AAlinhamento, LLinha } from "../../Componentes/modalCards/modalCards"
 import * as M from "./formDetalhesStyle"
 
 
-export default function FormularioDetalhes(items) {
+export default function FormularioDetalhes() {
     return (
 
 
