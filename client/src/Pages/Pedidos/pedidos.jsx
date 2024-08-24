@@ -7,6 +7,7 @@ import { AAlinhamento, LLinha  } from "../../Componentes/modalCards/modalCards";
 import ModalDetalhes from "../../Componentes/ModalDetalhes/modaldestalhes";
 
 import FormularioDetalhes from "../../Componentes/FormDetalhes/formDetalhes";import ModalCancelar from "../../Componentes/ModalCancelar/modalCancelar";
+import Select from "../../Componentes/Select/select";
 ''
 
 export default function Pedidos (item) {
@@ -53,14 +54,13 @@ export default function Pedidos (item) {
                         <S.Barra/>
                     </S.AAlinha>
                     <S.TXT>Confira aqui o andamento do seus pedidos</S.TXT>
-                    <S.PP>Filtrar por</S.PP>
+                    <S.PP>Filtrar por:</S.PP>
                     <div className="form-group">
-                        <label htmlFor="label"></label>
-                        <select name="label" id="label">
+                        <Select >
                             <option value="in progress">Em Andamento</option>
                             <option value="confirmed">Confirmado</option>
                             <option value="cancel">Cancelado</option>
-                        </select>
+                        </Select>
                     </div>
                     <S.FlexColomn>
                         <S.CContainer>
