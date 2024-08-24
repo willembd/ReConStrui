@@ -10,6 +10,7 @@ export default function Filtro(){
     return(
         <S.ContainerPai>
             <S.ContainerTitulo>Encontre o produto mais próximo a você:</S.ContainerTitulo>
+            <S.TextFiltro>FILTRAR POR: </S.TextFiltro>
             <S.Container>
                 <Estado/>
                 <Cidade/>

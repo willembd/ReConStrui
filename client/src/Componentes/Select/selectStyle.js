@@ -2,18 +2,21 @@ import styled from "styled-components";
 
 export const SelectStyle = styled.select`
     background-color: rgb(255, 255, 255);
-            padding: 0.625rem 2.5rem;
-            border: none;
-            border-bottom: 0.125rem #008d2a solid;
-            color: rgb(0, 158, 92);
-        
-        &:focus{
-            border: none;
-            border-bottom: 0.125rem #008d2a solid;
-            outline: 0;
-        }
-        @media(max-width: 1000px){
-            padding: 0.625rem 1rem;
-        }
+    width: 200px;
+    height: 40px;
+    border: 0.125rem #e0e0e0 solid;
+    border-radius: 4px;
+    color: #2f2f2f;
+    outline-color: #2f2f2f;
 
+
+    @media (max-width: 1000px) {
+        padding: 0.625rem 1rem;
+    }
+`;
+
+export const Container = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
 `

@@ -95,3 +95,4 @@ export const Texto = styled.h2`
     font-weight: bolder;
     color:#1C4525;
 `
+

@@ -19,8 +19,8 @@ export default function Estado(){
       }, []);
 
     return(
-       <Select>
-            <option value="">Selecione um estado</option>
+       <Select text="Estado">
+            <option value="">Selecione</option>
             {
                 estadosNomes.map((nome, index) => (
                     <option key={index} value={nome}>{nome}</option>

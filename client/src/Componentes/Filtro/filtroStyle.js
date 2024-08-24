@@ -6,21 +6,25 @@ export const ContainerPai = styled.div`
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   padding: 10px 0;
+   gap: 20px;
+   margin: 40px 0px;
+
 `
 export const ContainerTitulo = styled.p`
-    font-size: 1.125rem;
-    color: #228137;
+    font-size: 1.525rem;
+    font-weight: bolder;
     padding-bottom: 0.25rem;
     width: 80%;
+`
+export const TextFiltro =styled.p`
+    font-weight: bolder;
+    width: 80%;
+    color: #228137;
 `
 
 export const Container = styled.div`
     display: flex;
-    justify-content: space-around;
-    border: 0.25rem #4C7A56 solid;
-    padding: 0.625rem 2.5rem;
-    border-radius: 0.25rem;
+    gap: 40px;
     width: 80%;
 
     @media(max-width: 1000px){

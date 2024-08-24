@@ -5,6 +5,7 @@ export const Nav = styled.nav`
     justify-content: space-between;
     align-items: center;
     margin: 0 6.25rem;
+    
 
     @media screen and (max-width: 624px) {
         margin: 0 2rem;
@@ -15,6 +16,7 @@ export const Nav = styled.nav`
 export const NavLogo = styled.img`
     width: 100vh;
     max-width: 15.625rem;
+    cursor: pointer;
     
     @media screen and (max-width: 530px) {
         max-width: 7rem;
