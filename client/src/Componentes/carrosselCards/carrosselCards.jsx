@@ -1,6 +1,7 @@
 
-    import { Alinhaborda, Alinhamento, Bordas, Botao, Caixa, Carrosel, Container, Im, Linha, Palavra, Texto, Title, Absoluto } from "./carrosselCardsStyle.js";
-    import { ContainerModal,ContainerDivModal,TituloModal,DivInput,DivRadio, QuebraLinha, Th3, PP, CaixaFundo,  FUNDO,TituloProduto,DivTransporte, Organizacao,Descricao } from "./modalCards/modalCards.js";
+    import { Alinhaborda, Alinhamento, Bordas, Botao, Caixa, Carrosel, Container, Im, Linha, Palavra, Texto, Title, Absoluto ,
+        ContainerModal,ContainerDivModal,TituloModal,DivInput,DivRadio, Th3, PP, CaixaFundo,  FUNDO,TituloProduto,DivTransporte, Organizacao,Descricao
+    } from "./carrosselCardsStyle.js";
     import "swiper/css";
     import "swiper/css/navigation";
     import "swiper/css/scrollbar";
@@ -131,10 +132,7 @@
                                                 <InputPrimary text='Endereço'/>
                                                 <InputPrimary text='Bairro'/>
                                                 <InputPrimary text='Número'/>
-                                                
-                                                <QuebraLinha>
-                                                    
-                                                </QuebraLinha>
+                                        
                                                 <Th3 className="transorte">Forma de transpote</Th3>
                                                 <DivRadio>
                                                     <DivTransporte>

@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import NavBar from "../../Componentes/NavBar/navbar.jsx";
 import Footer from "../../Componentes/Footer/footer.jsx";
 import CampoDados from "../../Componentes/CampoDados/campoDados.jsx";
-import { Barra } from "../../Componentes/carrosselCards/modalCards/modalCards.js";
+import { Barra } from "../../Componentes/carrosselCards/carrosselCardsStyle.js";
 
 export default function ConfirmacaoEntrega() {
     const navigation = useNavigate();

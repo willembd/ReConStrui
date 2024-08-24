@@ -1,5 +1,5 @@
 import CampoDados from "../../Componentes/CampoDados/campoDados"
-import { AAlinhamento, LLinha } from "../../Componentes/carrosselCards/modalCards/modalCards"
+import { AAlinhamento, LLinha } from "../../Componentes/carrosselCards/carrosselCardsStyle"
 import * as M from "./formDetalhesStyle"
 
 

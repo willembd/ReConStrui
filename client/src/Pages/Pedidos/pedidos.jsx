@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom"
 import NavBar from "../../Componentes/NavBar/navbar"
 import Footer from "../../Componentes/Footer/footer"
-import { AAlinhamento, LLinha  } from "../../Componentes/carrosselCards/modalCards/modalCards";
+import { AAlinhamento, LLinha  } from "../../Componentes/carrosselCards/carrosselCardsStyle";
 import ModalDetalhes from "../../Componentes/ModalDetalhes/modaldestalhes";
 
 import FormularioDetalhes from "../FormDetalhes/formDetalhes";''
