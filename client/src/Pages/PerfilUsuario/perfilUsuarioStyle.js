@@ -61,6 +61,7 @@ export const ButtonExcluir = styled.button`
     background: none;
     border: none;
     color: #7B7B7B;
+    cursor: pointer;
     
     &:hover{
         color: red;
