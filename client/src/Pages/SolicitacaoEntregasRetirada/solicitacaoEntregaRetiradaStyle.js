@@ -36,7 +36,7 @@ export const BarraVertical = styled.div`
 `;
 
 export const Pedidos = styled.h1`
-    font-size: 40px;
+    font-size: 25px;
     color: #228137;
     font-weight: bold;
     padding-bottom: 10px;
@@ -60,7 +60,7 @@ export const CContainer = styled.div`
 `;
 
 export const CCaixa = styled.div`
-    width: 750px;
+    width: 740px;
     height: 340px;
     background-color: white;
     padding: 15px;
@@ -69,16 +69,17 @@ export const CCaixa = styled.div`
     position: relative;
 `;
 export const PPP = styled.p`
-    font-size: 22px;
+    font-size: 20px;
     color: #228137;
     font-weight: 600;
+    align-items:center;
 `;
 export const PPALAVRA = styled.p`
-    font-size: 25px;
+    font-size: 20px;
     color: #228137;
     font-weight: 600;
     border: 1px #E1E1E1;
-    padding-bottom: 15px;
+    //padding-bottom: 15px;
 `;
 
 export const CCaixinha = styled.div`
@@ -91,7 +92,7 @@ export const CCaixinha = styled.div`
 
 export const PLeft = styled.div`
     display: flex;
-    justify-content: space-evenly;
+    justify-content:space-around;
 `;
 
 export const Alinha = styled.div`
@@ -106,7 +107,7 @@ export const PaLavra = styled.p`
 `;
 
 export const Barra = styled.div`
-    width: 550px;
+    width: 450px;
     height: 2px;
     background-color: black;
 `;
@@ -120,6 +121,7 @@ export const IIIMG = styled.img`
     height: 110px;
     width: 150px;
     margin-top: 20px;
+   border-radius:10px;
 `;
 
 export const TTTitle = styled.p`
@@ -130,7 +132,7 @@ export const TTTitle = styled.p`
 export const SobreContainer = styled.div`
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
+    align-content: stretch;
 `
 export const BarraAguardando = styled.div`
     width: 200px;
