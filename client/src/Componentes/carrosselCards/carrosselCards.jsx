@@ -1,6 +1,6 @@
 
     import { Alinhaborda, Alinhamento, Bordas, Botao, Caixa, Carrosel, Container, Im, Linha, Palavra, Texto, Title, Absoluto } from "./carrosselCardsStyle.js";
-    import { Barra,ContainerModal,ContainerDivModal,TituloModal,DivInput,DivRadio, QuebraLinha, Th3, PP, CaixaFundo, BarraVertical, Logo, Organização, FUNDO } from "./modalCards/modalCards.js";
+    import { ContainerModal,ContainerDivModal,TituloModal,DivInput,DivRadio, QuebraLinha, Th3, PP, CaixaFundo,  FUNDO,TituloProduto,DivTransporte, Organizacao,Descricao } from "./modalCards/modalCards.js";
     import "swiper/css";
     import "swiper/css/navigation";
     import "swiper/css/scrollbar";
@@ -12,10 +12,8 @@
     import Cards from "../cards/cards.jsx"
     import "../cards/cards.css"
     import ModalCards from "./modalCards/modalCards.jsx";
-    import Input from "../Input/input";
     import ButtonMod from "../ButtonModelo/buttonModelo.jsx";
-    import Imagempadrao from "../../assets/LogoBranca.svg";
-
+    import InputPrimary from "../InputPrimary/inputPrimary.jsx";
     export default function CarrosselCards() {
         const [openModal, setOpenModal] = useState(null)
         const [select, setSelect] = useState(null)
@@ -112,46 +110,46 @@
                 </Container>
 
                 <ModalCards isOpen={openModal} setModalOpen= {() => setOpenModal(!openModal)}>
-                    <Organização>
+                    <Organizacao>
                         <CaixaFundo></CaixaFundo>
-                        <BarraVertical />
-                    </Organização>
+                    </Organizacao>
                         <ContainerModal>
                         <ContainerDivModal>
-                            <Organização>
-                                <ContainerModal>
-                                    <Logo src={Imagempadrao} alt="" />
-                                    <Cards item = {produtos.find((p) => (p.id===select))}/>
-                                </ContainerModal>
-                                <Barra>
-                                </Barra>
-                                <DivInput>
-                                        <TituloModal>Orçamento</TituloModal>
-                                        <FUNDO>
-                                            <Input text="Quantidade"/>
-                                            <Th3>Informação para Entrega</Th3>
-                                            <Input text="Endereço"/>
-                                            <Input text="Cidade"/>
-                                            <Input text="Bairro"/>
-                                            <QuebraLinha>
-                                                <Input text="Número"/>
-                                                <Input text="CEP"/>
-                                            </QuebraLinha>
-                                            <Th3 className="transorte">Forma de transpote</Th3>
-                                            <DivRadio>
-                                                <div>
-                                                    <input type="radio" value="Usuario"/>
-                                                    <t htmlFor=""><PP>Frete</PP></t>
-                                                </div>
-                                                <div>
-                                                    <input type="radio" value="Empresa"/>
-                                                    <label htmlFor=""><PP>Transporte próprio</PP></label>
-                                                </div>
-                                            </DivRadio>
-                                        </FUNDO>
-                                        <ButtonMod  text="Envia" onClick={handleFechar}></ButtonMod>
-                                    </DivInput>
-                                </Organização>
+                            <Organizacao>
+                                    <ContainerModal>
+                                        <TituloProduto>Produto</TituloProduto>
+                                        <Cards item = {produtos.find((p) => (p.id===select))}/>
+                                        <Descricao>Quantidade mínima para solicitação de orçamento de 12 metros</Descricao>
+                                    </ContainerModal>
+                                    <DivInput>
+                                            <TituloModal>Orçamento</TituloModal>
+                                            <FUNDO>
+                                                <InputPrimary text='Quantidade'/>
+                                                <Th3>Informação para Entrega</Th3>
+                                                <InputPrimary text='Cep'/>
+                                                <InputPrimary text='Cidade'/>
+                                                <InputPrimary text='Endereço'/>
+                                                <InputPrimary text='Bairro'/>
+                                                <InputPrimary text='Número'/>
+                                                
+                                                <QuebraLinha>
+                                                    
+                                                </QuebraLinha>
+                                                <Th3 className="transorte">Forma de transpote</Th3>
+                                                <DivRadio>
+                                                    <DivTransporte>
+                                                        <input type="radio" value="Usuario"/>
+                                                        <PP>Frete</PP>
+                                                    </DivTransporte>
+                                                    <DivTransporte>
+                                                        <input type="radio" value="Empresa"/>
+                                                       <PP>Transporte próprio</PP>
+                                                    </DivTransporte>
+                                                </DivRadio>
+                                            </FUNDO>
+                                            <ButtonMod  text="Envia" onClick={handleFechar}></ButtonMod>
+                                        </DivInput>
+                                </Organizacao>
                             </ContainerDivModal>
                             </ContainerModal>
                 </ModalCards>

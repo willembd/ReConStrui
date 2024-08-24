@@ -1,11 +1,11 @@
-import { Container,Alinhamento,Im,Absoluto,Caixa,Linha,Title,Palavra } from "../carrosselCards/modalCards/modalCards"
+import { Container,Alinhamento,Im,Absoluto,Caixa,Linha,Title,Palavra, IMG } from "../carrosselCards/modalCards/modalCards"
 
 export default function Cards({ item }) {
     
     return (
         <>
             <Container key={item.id}>
-                <Im src={item.image}></Im>
+                <IMG src={item.image}></IMG>
                 <Absoluto>
                     <Caixa>
                         <Alinhamento>

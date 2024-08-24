@@ -36,7 +36,7 @@ export const Container = styled.div`
 export const Im = styled.img`
     width: 14.1rem;
     height: 19.5rem;
-    border-radius: 0.75rem 0.75rem 0 0 ;
+    border-radius: 0.75rem 0.75rem 0.75rem 0.75rem;
     box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.5);
     filter: brightness(1.2);   
 `
@@ -47,7 +47,7 @@ export const Caixa = styled.div`
     display: flex;
     flex-direction: column;
     background: linear-gradient(to right, rgba(60, 60, 60, 1) 0%, rgba(60, 60, 60, 0.5) 100%);
-    box-sizing: border-box;
+    border-radius: 0 0 0.75rem 0.75rem;
     filter: brightness(1.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     width: 14.1rem;
@@ -55,7 +55,6 @@ export const Caixa = styled.div`
     justify-content: space-around;
     align-items: center;
     margin-top: 13rem;
-
 `
 export const Alinhamento = styled.div`
     display: flex;
@@ -85,7 +84,4 @@ export const Botao = styled.button`
     padding: 0.5rem 2.5rem;
     border-radius: 4px;
     cursor: pointer;
-`
-export const MoverBox = styled.div`
-    display: flex;
 `
