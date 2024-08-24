@@ -1,6 +1,6 @@
 
     import { Alinhaborda, Alinhamento, Bordas, Botao, Caixa, Carrosel, Container, Im, Linha, Palavra, Texto, Title, Absoluto } from "./carrosselCardsStyle.js";
-    import { ContainerModal,ContainerDivModal,TituloModal,DivInput,DivRadio, QuebraLinha, Th3, PP, CaixaFundo,  FUNDO,TituloProduto,DivTransporte, Organizacao,Descricao } from "./modalCards/modalCards.js";
+    import { ContainerModal,ContainerDivModal,TituloModal,DivInput,DivRadio, QuebraLinha, Th3, PP, CaixaFundo,  FUNDO,TituloProduto,DivTransporte, Organizacao,Descricao } from "../modalCards/modalCards.js";
     import "swiper/css";
     import "swiper/css/navigation";
     import "swiper/css/scrollbar";
@@ -11,7 +11,7 @@
     import { useNavigate } from "react-router-dom";
     import Cards from "../cards/cards.jsx"
     import "../cards/cards.css"
-    import ModalCards from "./modalCards/modalCards.jsx";
+    import ModalCards from "../modalCards/modalCards.jsx";
     import ButtonMod from "../ButtonModelo/buttonModelo.jsx";
     import InputPrimary from "../InputPrimary/inputPrimary.jsx";
     export default function CarrosselCards() {

@@ -2,7 +2,7 @@ import * as S from "./solicitacaoEntregaRetiradaStyle.js";
 import { useNavigate } from "react-router-dom";
 import NavBar from "../../Componentes/NavBar/navbar.jsx";
 import Footer from "../../Componentes/Footer/footer.jsx";
-import {AAlinhamento,LLinha,} from "../../Componentes/carrosselCards/modalCards/modalCards.js";
+import {AAlinhamento,LLinha,} from "../../Componentes/modalCards/modalCards.js";
 
 
 export default function SolicitacaoEntregaRetirada() {

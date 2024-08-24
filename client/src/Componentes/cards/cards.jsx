@@ -1,4 +1,4 @@
-import { Container,Alinhamento,Im,Absoluto,Caixa,Linha,Title,Palavra, IMG } from "../carrosselCards/modalCards/modalCards"
+import { Container,Alinhamento,Absoluto,Caixa,Linha,Title,Palavra, IMG } from "../modalCards/modalCards"
 
 export default function Cards({ item }) {
     

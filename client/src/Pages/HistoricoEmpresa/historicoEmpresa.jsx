@@ -2,7 +2,7 @@ import * as S from "./historicoEmpresa.Style";
 import { useNavigate } from "react-router-dom";
 import NavBar from "../../Componentes/NavBar/navbar";
 import Footer from "../../Componentes/Footer/footer";
-import { AAlinhamento, LLinha  } from "../../Componentes/carrosselCards/modalCards/modalCards";
+import { AAlinhamento, LLinha  } from "../../Componentes/modalCards/modalCards";
 
 
 export default function HistoricoEmpresa () {
@@ -168,10 +168,6 @@ export default function HistoricoEmpresa () {
                                                     <S.BBarraAguardando/>
                                                     <S.BarraAguardando/>
                                                 </div>
-                                                <S.Flex>
-                                                   
-                                                    <S.BBotao  onClick={handleHome}>Comprar Novamente</S.BBotao>
-                                                </S.Flex>
                                             </S.QuebraLinha>
                                         </S.SobreContainer>
                                     </div>

@@ -2,7 +2,7 @@ import * as S from "./solicitacaoPedidosStyle"
 import { useNavigate } from "react-router-dom"
 import NavBar from "../../Componentes/NavBar/navbar"
 import Footer from "../../Componentes/Footer/footer"
-import { AAlinhamento, LLinha  } from "../../Componentes/carrosselCards/modalCards/modalCards";
+import { AAlinhamento, LLinha  } from "../../Componentes/modalCards/modalCards";
 
 export default function SolicitacaoPedidoEmp () {
 
