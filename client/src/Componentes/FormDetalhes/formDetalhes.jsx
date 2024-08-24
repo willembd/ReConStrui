@@ -1,5 +1,5 @@
-import CampoDados from "../../Componentes/CampoDados/campoDados"
-import { AAlinhamento, LLinha } from "../../Componentes/carrosselCards/modalCards/modalCards"
+import CampoDados from "../CampoDados/campoDados"
+import { AAlinhamento, LLinha } from "../carrosselCards/modalCards/modalCards"
 import * as M from "./formDetalhesStyle"
 
 
@@ -8,11 +8,7 @@ export default function FormularioDetalhes(items) {
 
 
       <M.Caixa>
-            {/* <M.IdDados>
-               
-                <M.ColorSpan> Data da Compra: 00/00/0000</M.ColorSpan>
-                <M.ColorSpan>ID do Pedido: 0214830</M.ColorSpan>
-            </M.IdDados> */}
+           
             <M.FlexCaixa1>
             <M.IdDados>
                

@@ -1,7 +1,13 @@
 import styled from "styled-components";
 
 export const Caixa= styled.div`
-        z-index: 9999;  
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(0, 0, 0, 0.7);
+    z-index: 9999;  
         
 `
 export const ModalStyle = styled.div`
@@ -19,32 +25,25 @@ export const ModalStyle = styled.div`
     margin-bottom: 10px;
     padding: 81px;
     justify-content: center;
-
-    
    
-
   `   
 
-
 export const Itens = styled.div`
+    display: flex;
     padding: 10px;
-    gap: 50px;
+    gap: 8px;
     color: #228137;
     align-items: center;
-
-   
-   
+    flex-direction: column;
 
 `
 
-
-
 export const Texto = styled.div`
-         color: #228137;
-         font-size: 16px;
-         white-space: nowrap;
-         display: flex;
-         align-items: center;
+    color: #228137;
+    font-size: 16px;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
          
          
 
@@ -70,6 +69,16 @@ export const Buttons = styled.div`
       justify-content: center
       
 
+
+`
+export const ButtonStyle = styled.button`
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: #AF7503 ;
+    padding: 12px 36px;
+    border: 2px solid #AF7503;
+    color: #FFFFFF;
 
 `
 

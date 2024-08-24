@@ -6,16 +6,24 @@ import Footer from "../../Componentes/Footer/footer"
 import { AAlinhamento, LLinha  } from "../../Componentes/carrosselCards/modalCards/modalCards";
 import ModalDetalhes from "../../Componentes/ModalDetalhes/modaldestalhes";
 
-import FormularioDetalhes from "../FormDetalhes/formDetalhes";''
+import FormularioDetalhes from "../../Componentes/FormDetalhes/formDetalhes";import ModalCancelar from "../../Componentes/ModalCancelar/modalCancelar";
+''
 
 export default function Pedidos (item) {
 
+    const [isOpenTest, setOpenTest] = useState(null);
 
 
     const [openModalId, setOpenModalId] = useState(null);
     
 
+    const handleOpenModalTest = (id) => {
+        setOpenTest(id);
+    };
 
+    const handleCloseModalTest = () => {
+        setOpenTest(null);
+    };
 
     const handleOpenModal = (id) => {
         setOpenModalId(id);
@@ -90,7 +98,12 @@ export default function Pedidos (item) {
                                                     <S.BarraAguardando/>
                                                 </div>
                                                 <S.Flex>
-                                                    <S.BBotao2>Cancelar</S.BBotao2>
+                                                    <S.BBotao2 onClick={() => setOpenTest(1)}>Cancelar</S.BBotao2>
+                                                    <ModalCancelar 
+                                                     text="Tem Certeza que deseja cancelar Orçamento?"
+                                                      isOpenTest={isOpenTest === 1}
+                                                      setOpenTest={handleCloseModalTest}></ModalCancelar>
+
                                                     <S.BBotao onClick={handleFechar}>Verificar</S.BBotao>
                                                 </S.Flex>
                                             </S.QuebraLinha>
@@ -144,7 +157,13 @@ export default function Pedidos (item) {
                                                     <S.BarraAguardando/>
                                                 </div>
                                                 <S.Flex>
-                                                    <S.BBotao2>Cancelar</S.BBotao2>
+                                                    <S.BBotao2 onClick={() => setOpenTest(2)}>Cancelar</S.BBotao2>
+
+                                                    <ModalCancelar 
+                                                     text="Tem Certeza que deseja cancelar Orçamento?"
+                                                      isOpenTest={isOpenTest === 2}
+                                                      setOpenTest={handleCloseModalTest}></ModalCancelar>
+
                                                     <S.BBotao  onClick={handleFechar}>Verificar</S.BBotao>
                                                 </S.Flex>
                                             </S.QuebraLinha>
@@ -194,7 +213,11 @@ export default function Pedidos (item) {
                                                     <S.BarraAguardando/>
                                                 </div>
                                                 <S.Flex>
-                                                    <S.BBotao2>Cancelar</S.BBotao2>
+                                                    <S.BBotao2 onClick={() => setOpenTest(2)}>Cancelar</S.BBotao2>
+                                                    <ModalCancelar 
+                                                     text="Tem Certeza que deseja cancelar Orçamento?"
+                                                      isOpenTest={isOpenTest === 3}
+                                                      setOpenTest={handleCloseModalTest}></ModalCancelar>
                                                     <S.BBotao  onClick={handleFechar}>Verificar</S.BBotao>
                                                 </S.Flex>
                                             </S.QuebraLinha>
