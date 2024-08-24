@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 import Cards from "../cards/cards.jsx"
 import "../cards/cards.css"
 import InputPrimary from "../InputPrimary/inputPrimary.jsx";
-import ModalCards from "../carrosselCards/modalCards/modalCards.jsx";
+import ModalCards from "../modalCards/modalCards.jsx";
 import ButtonMod from "../ButtonModelo/buttonModelo.jsx";
 
 

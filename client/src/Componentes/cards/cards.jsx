@@ -1,22 +1,22 @@
-import { Absoluto, IMG, CCaixa, CContainer, TTitle, PPalavra,AAlinhamento,LLinha } from "../carrosselCards/carrosselCardsStyle"
+import { Container,Alinhamento,Absoluto,Caixa,Linha,Title,Palavra, IMG } from "../modalCards/modalCards"
 
 export default function Cards({ item }) {
     
     return (
         <>
-            <CContainer key={item.id}>
+            <Container key={item.id}>
                 <IMG src={item.image}></IMG>
                 <Absoluto>
-                    <CCaixa>
-                        <AAlinhamento>
-                            <LLinha>
-                                <TTitle>{item.title}</TTitle>
-                                <PPalavra>AGR Ambiental</PPalavra>
-                            </LLinha>
-                        </AAlinhamento>
-                    </CCaixa>
+                    <Caixa>
+                        <Alinhamento>
+                            <Linha>
+                                <Title>{item.title}</Title>
+                                <Palavra>AGR Ambiental</Palavra>
+                            </Linha>
+                        </Alinhamento>
+                    </Caixa>
                 </Absoluto>
-            </CContainer>
+            </Container>
         </>
     );
 }

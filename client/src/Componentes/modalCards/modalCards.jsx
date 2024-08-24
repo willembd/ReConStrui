@@ -1,4 +1,5 @@
-import { BACKGROUND_STYLE, MODAL_STYLE,Button } from '../carrosselCardsStyle.js'
+import { Button } from './modalCards.js'
+import { BACKGROUND_STYLE, MODAL_STYLE } from './modalCards.js'
 
 
 
