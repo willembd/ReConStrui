@@ -60,7 +60,7 @@ export const CContainer = styled.div`
 `;
 
 export const CCaixa = styled.div`
-    width: 750px;
+    width: 740px;
     height: 340px;
     background-color: white;
     padding: 15px;
@@ -74,11 +74,11 @@ export const PPP = styled.p`
     font-weight: 600;
 `;
 export const PPALAVRA = styled.p`
-    font-size: 25px;
+    font-size: 20px;
     color: #228137;
     font-weight: 600;
     border: 1px #E1E1E1;
-    padding-bottom: 15px;
+   
 `;
 
 export const CCaixinha = styled.div`
@@ -91,7 +91,7 @@ export const CCaixinha = styled.div`
 
 export const PLeft = styled.div`
     display: flex;
-    justify-content: space-evenly;
+    justify-content:space-around;
 `;
 
 export const Alinha = styled.div`
@@ -106,7 +106,7 @@ export const PaLavra = styled.p`
 `;
 
 export const Barra = styled.div`
-    width: 550px;
+    width: 665px;
     height: 2px;
     background-color: black;
 `;
@@ -120,6 +120,7 @@ export const IIIMG = styled.img`
     height: 110px;
     width: 150px;
     margin-top: 20px;
+    border-radius:10px;
 `;
 
 export const TTTitle = styled.p`
@@ -139,7 +140,7 @@ export const BarraAguardando = styled.div`
     border-radius:200px;
 `
 export const BBarraAguardando = styled.div`
-    width: 106px;
+    width: 100px;
     height: 13px;
     background-color: #228137;
     position: absolute;

@@ -10,11 +10,16 @@ export default function HistoricoEmpresa () {
 
     const navigate = useNavigate();
         const handleEntrar = () => {
-            navigate("/");
+            navigate("/confirmacaoentrega");
         };
         const handleFechar = () => {
+            navigate("/orcamentosempresa");
+        };
+        const handleHome = () => {
             navigate("/");
         };
+        
+
     return (
 
         <>
@@ -74,7 +79,7 @@ export default function HistoricoEmpresa () {
                                                 </div>
                                                 <S.Flex>
                                                     <S.BBotao2>Cancelar</S.BBotao2>
-                                                    <S.BBotao onClick={handleFechar}>Verificar</S.BBotao>
+                                                    <S.BBotao onClick={handleFechar}>Entregar</S.BBotao>
                                                 </S.Flex>
                                             </S.QuebraLinha>
                                         </S.SobreContainer>
@@ -120,8 +125,8 @@ export default function HistoricoEmpresa () {
                                                     <S.BarraAguardando/>
                                                 </div>
                                                 <S.Flex>
-                                                    <S.BBotao2>Cancelar</S.BBotao2>
-                                                    <S.BBotao  onClick={handleFechar}>Verificar</S.BBotao>
+                                                    
+                                                    <S.BBotao  onClick={handleFechar}>Enviar Orçamento</S.BBotao>
                                                 </S.Flex>
                                             </S.QuebraLinha>
                                         </S.SobreContainer>
@@ -164,8 +169,8 @@ export default function HistoricoEmpresa () {
                                                     <S.BarraAguardando/>
                                                 </div>
                                                 <S.Flex>
-                                                    <S.BBotao2>Cancelar</S.BBotao2>
-                                                    <S.BBotao  onClick={handleFechar}>Verificar</S.BBotao>
+                                                   
+                                                    <S.BBotao  onClick={handleHome}>Comprar Novamente</S.BBotao>
                                                 </S.Flex>
                                             </S.QuebraLinha>
                                         </S.SobreContainer>
