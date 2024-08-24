@@ -1,13 +1,11 @@
 import styled from "styled-components";
 
 export const ButtonCancelar = styled.button`
-
-    background-color: #FFFFFF ;
-    padding: 12px 28px;
-    border: 2px solid #295032;
+    background-color: #ffffff;
+    padding: 10px 16px;
+    border: 1px solid #295032;
     color: #228137;
     border-radius: 4px;
-    font-size: 13px;
+    font-size: 16px;
     cursor: pointer;
-
-`
+`;

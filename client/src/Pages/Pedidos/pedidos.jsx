@@ -3,14 +3,13 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom"
 import NavBar from "../../Componentes/NavBar/navbar"
 import Footer from "../../Componentes/Footer/footer"
-import { AAlinhamento, LLinha  } from "../../Componentes/modalCards/modalCards";
 import ModalDetalhes from "../../Componentes/ModalDetalhes/modaldestalhes";
-
 import FormularioDetalhes from "../../Componentes/FormDetalhes/formDetalhes";import ModalCancelar from "../../Componentes/ModalCancelar/modalCancelar";
 import Select from "../../Componentes/Select/select";
+import ButtonCancelar from "../../Componentes/ButtonCancelar/buttonCancelar";
 ''
 
-export default function Pedidos (item) {
+export default function Pedidos () {
 
     const [isOpenTest, setOpenTest] = useState(null);
 
@@ -66,31 +65,23 @@ export default function Pedidos (item) {
                         <S.CContainer>
                             <S.CCaixa>
                                 <S.PLeft>
-                                    <S.PPP>Pedidos em andamento</S.PPP>
-
                                     <S.PPALAVRA>Dados do Pedido</S.PPALAVRA>
+                                    <S.PPP>Pedido em andamento</S.PPP>
                                 </S.PLeft>
                                 <S.CCaixinha>
                                     <S.Caixinha>
-                                        <S.Alinha>
-                                            <S.PaLavra>Data da compra: 00/00/0000</S.PaLavra>
-                                            <S.PaLavra>ID do Pedido: 0214830</S.PaLavra>
-                                        </S.Alinha>
+                                        <S.PaLavra>Data da compra: 00/00/0000</S.PaLavra>
+                                        <S.PaLavra>ID do Pedido: 0214830</S.PaLavra>
                                     </S.Caixinha>
-                                    <div>
+                                    
                                         <S.SobreContainer>
-                                            <div className="box-item">
-                                                    <S.IIIMG
-                                                        src='areia.png'
-                                                    />
-                                                <AAlinhamento>
-                                                    <LLinha
-                                                    >
-                                                        <S.TTTitle>Areia reciclada</S.TTTitle>
-                                                        <S.PPalavra>AGR Ambiental</S.PPalavra>
-                                                    </LLinha>
-                                                </AAlinhamento>
-                                            </div>
+                                            <S.ContainerImg >
+                                                <S.IIIMG src='areia.png'/>
+                                                
+                                                <S.TTTitle>Areia reciclada</S.TTTitle>
+                                                <S.PPalavra>AGR Ambiental</S.PPalavra> 
+                                            </S.ContainerImg>
+
                                             <S.QuebraLinha>
                                                 <S.LETRA>Aguardando Orçamento</S.LETRA>
                                                 <div>
@@ -98,20 +89,21 @@ export default function Pedidos (item) {
                                                     <S.BarraAguardando/>
                                                 </div>
                                                 <S.Flex>
-                                                    <S.BBotao2 onClick={() => setOpenTest(1)}>Cancelar</S.BBotao2>
+                                                    <ButtonCancelar text="Cancelar" onClick={() => setOpenTest(1)}/>
                                                     <ModalCancelar 
                                                      text="Tem Certeza que deseja cancelar Orçamento?"
                                                       isOpenTest={isOpenTest === 1}
                                                       setOpenTest={handleCloseModalTest}></ModalCancelar>
 
                                                     <S.BBotao onClick={handleFechar}>Verificar</S.BBotao>
+                                                    
                                                 </S.Flex>
                                             </S.QuebraLinha>
                                         </S.SobreContainer>
-                                    </div>
+                
                                 </S.CCaixinha>
 
-                                <S.LLinks onClick={() => handleOpenModal(1)}> Veja mais detalhes</S.LLinks>
+                                <S.LLinks onClick={() => handleOpenModal(1)}>Ver detalhes</S.LLinks>
                                 <ModalDetalhes
                                     text="DETALHES DO PEDIDO"
                                     isOpen={openModalId === 1}
@@ -125,31 +117,25 @@ export default function Pedidos (item) {
                             <S.CContainer>
                             <S.CCaixa>
                                 <S.PLeft>
-                                    <S.PPP>Pedidos em andamento</S.PPP>
-
                                     <S.PPALAVRA>Dados do Pedido</S.PPALAVRA>
+                                    <S.PPP>Pedido em andamento</S.PPP>
                                 </S.PLeft>
                                 <S.CCaixinha>
                                     <S.Caixinha>
-                                        <S.Alinha>
+                                       
                                             <S.PaLavra>Data da compra: 00/00/0000</S.PaLavra>
                                             <S.PaLavra>ID do Pedido: 0214830</S.PaLavra>
-                                        </S.Alinha>
+                                        
                                  </S.Caixinha>
                                     <div>
                                         <S.SobreContainer>
-                                            <div className="box-item">
-                                                    <S.IIIMG
-                                                        src='pedrisco.png'
-                                                    />
-                                                <AAlinhamento>
-                                                    <LLinha
-                                                    >
-                                                        <S.TTTitle>Pedrisco</S.TTTitle>
-                                                        <S.PPalavra>AGR Ambiental</S.PPalavra>
-                                                    </LLinha>
-                                                </AAlinhamento>
-                                            </div>
+                                            <S.ContainerImg>
+                                                <S.IIIMG src='pedrisco.png'/>
+                                                
+                                                <S.TTTitle>Pedrisco</S.TTTitle>
+                                                <S.PPalavra>AGR Ambiental</S.PPalavra>
+                                            </S.ContainerImg>
+
                                             <S.QuebraLinha>
                                                 <S.LETRA>Aguardando Orçamento</S.LETRA>
                                                 <div>
@@ -157,7 +143,7 @@ export default function Pedidos (item) {
                                                     <S.BarraAguardando/>
                                                 </div>
                                                 <S.Flex>
-                                                    <S.BBotao2 onClick={() => setOpenTest(2)}>Cancelar</S.BBotao2>
+                                                <ButtonCancelar text="Cancelar" onClick={() => setOpenTest(2)}/>
 
                                                     <ModalCancelar 
                                                      text="Tem Certeza que deseja cancelar Orçamento?"
@@ -170,7 +156,7 @@ export default function Pedidos (item) {
                                         </S.SobreContainer>
                                     </div>
                                 </S.CCaixinha>
-                                <S.LLinks onClick={() => handleOpenModal(2)}> Veja mais detalhes</S.LLinks>
+                                <S.LLinks onClick={() => handleOpenModal(2)}> Ver detalhes</S.LLinks>
                                 <ModalDetalhes
                                     text="DETALHES DO PEDIDO"
                                     isOpen={openModalId === 2}
@@ -183,29 +169,24 @@ export default function Pedidos (item) {
                         <S.CContainer>
                             <S.CCaixa>
                                 <S.PLeft>
-                                    <S.PPP>Pedidos em andamento</S.PPP>
-
                                     <S.PPALAVRA>Dados do Pedido</S.PPALAVRA>
+                                    <S.PPP>Pedido em andamento</S.PPP>
                                 </S.PLeft>
                                 <S.CCaixinha>
                                     <S.Caixinha>
-                                        <S.Alinha>
-                                            <S.PaLavra>Data da compra: 00/00/0000</S.PaLavra>
-                                            <S.PaLavra>ID do Pedido: 0214830</S.PaLavra>
-                                        </S.Alinha>
+                                       
+                                        <S.PaLavra>Data da compra: 00/00/0000</S.PaLavra>
+                                        <S.PaLavra>ID do Pedido: 0214830</S.PaLavra>
+                                      
                                     </S.Caixinha>
                                     <div>
                                         <S.SobreContainer>
-                                            <div className="box-item">
-                                                    <S.IIIMG
-                                                        src='rachao.png'/>
-                                                <AAlinhamento>
-                                                    <LLinha>
-                                                        <S.TTTitle>Rachão</S.TTTitle>
-                                                        <S.PPalavra>AGR Ambiental</S.PPalavra>
-                                                    </LLinha>
-                                                </AAlinhamento>
-                                            </div>
+                                            <S.ContainerImg>
+                                                <S.IIIMG src='rachao.png'/>
+                                                
+                                                <S.TTTitle>Rachão</S.TTTitle>
+                                                <S.PPalavra>AGR Ambiental</S.PPalavra>
+                                            </S.ContainerImg>
                                             <S.QuebraLinha>
                                                 <S.LETRA>Aguardando Orçamento</S.LETRA>
                                                 <div>
@@ -213,7 +194,7 @@ export default function Pedidos (item) {
                                                     <S.BarraAguardando/>
                                                 </div>
                                                 <S.Flex>
-                                                    <S.BBotao2 onClick={() => setOpenTest(2)}>Cancelar</S.BBotao2>
+                                                <ButtonCancelar text="Cancelar" onClick={() => setOpenTest(3)}/>
                                                     <ModalCancelar 
                                                      text="Tem Certeza que deseja cancelar Orçamento?"
                                                       isOpenTest={isOpenTest === 3}
@@ -224,7 +205,7 @@ export default function Pedidos (item) {
                                         </S.SobreContainer>
                                     </div>
                                 </S.CCaixinha>
-                                <S.LLinks onClick={() => handleOpenModal(3)}> Veja mais detalhes</S.LLinks>
+                                <S.LLinks onClick={() => handleOpenModal(3)}>Ver detalhes</S.LLinks>
                                 <ModalDetalhes
                                     text="DETALHES DO PEDIDO"
                                     isOpen={openModalId === 3}
