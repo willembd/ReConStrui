@@ -64,6 +64,7 @@ export default function CarrosselCards2() {
     const handleComprar = (id) => {
         setOpenModal(true)
         setSelect(id)
+        
     }
 
     const navigate = useNavigate();
@@ -71,6 +72,14 @@ export default function CarrosselCards2() {
         navigate("/pedidos");
     };
         
+   
+
+    const checkCEP = (e) => {
+        const cep = e.target.value.replace(/\D/g, ' ');
+        console.log(cep);
+       
+
+    }
 
     return (
        <>
@@ -119,14 +128,14 @@ export default function CarrosselCards2() {
                                     <ContainerModal>
                                         <TituloProduto>Produto</TituloProduto>
                                         <Cards item = {produtos.find((p) => (p.id===select))}/>
-                                        <Descricao>Quantidade mínima para solicitação de orçamento de 12 metros</Descricao>
+                                        <Descricao>Quantidade mínima para solicitação de orçamento: 12 metros</Descricao>
                                     </ContainerModal>
                                     <DivInput>
                                             <TituloModal>Orçamento</TituloModal>
                                             <FUNDO>
                                                 <InputPrimary text='Quantidade'/>
                                                 <Th3>Informação para Entrega</Th3>
-                                                <InputPrimary text='Cep'/>
+                                                <InputPrimary text='Cep' onBlur={checkCEP}/>
                                                 <InputPrimary text='Cidade'/>
                                                 <InputPrimary text='Endereço'/>
                                                 <InputPrimary text='Bairro'/>
