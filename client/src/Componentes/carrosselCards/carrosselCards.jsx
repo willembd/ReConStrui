@@ -9,8 +9,8 @@
 
     import { useState, useEffect } from "react"; 
     import { useNavigate } from "react-router-dom";
-    import Cards from "../cards/cards.jsx"
-    import "../cards/cards.css"
+    import Cards from "../Cards/cards.jsx"
+    import "../Cards/cards.css"
     import ModalCards from "../modalCards/modalCards.jsx";
     import ButtonMod from "../ButtonModelo/buttonModelo.jsx";
     import InputPrimary from "../InputPrimary/inputPrimary.jsx";
@@ -33,20 +33,16 @@
 
         useEffect(() => {
             function handleResize(){
-                if(window.innerWidth<453){
-                    setSlidePerView(1);
+                if(window.innerWidth<545){
+                    setSlidePerView(3)
                 }else{
-                    if(window.innerWidth<600){
-                        setSlidePerView(2)
+                    if(window.innerWidth<=1135){
+                        setSlidePerView(4)
                     }else{
-                        if(window.innerWidth<710){
-                            setSlidePerView(3)
+                        if(window.innerWidth<=1920){
+                            setSlidePerView(5)
                         }else{
-                            if(window.innerWidth<=1920){
-                                setSlidePerView(5)
-                            }else{
-                                setSlidePerView(6)
-                            }
+                            setSlidePerView(6)
                         }
                     }
                 }
@@ -131,10 +127,7 @@
                                                 <InputPrimary text='Endereço'/>
                                                 <InputPrimary text='Bairro'/>
                                                 <InputPrimary text='Número'/>
-                                                
-                                                <QuebraLinha>
-                                                    
-                                                </QuebraLinha>
+                                            
                                                 <Th3 className="transorte">Forma de transpote</Th3>
                                                 <DivRadio>
                                                     <DivTransporte>

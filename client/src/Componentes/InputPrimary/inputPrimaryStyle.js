@@ -6,6 +6,15 @@ export const Campo = styled.div`
     width: fit-content;
     position: static;
     width: 360px;
+    @media screen  and (max-width: 1100px){
+        width:290px ;
+    }
+    @media screen  and (max-width: 920px){
+        width: 250px;
+    } 
+    @media screen  and (max-width: 775px){
+        width: 220px;
+    }
 
     label.text {
         font-size: 0.75rem;
@@ -17,7 +26,6 @@ export const Campo = styled.div`
         padding: 0 3px;
         background: #fff;
         width: fit-content;
-        
     }
 
     .input {
@@ -27,6 +35,5 @@ export const Campo = styled.div`
         border-radius: 12px;
         background: #fff;
         outline-color: #228137;
-       
     }
 `;

@@ -17,5 +17,11 @@ export const Button = styled.button`
     /* padding: 8px 124px; */
     border-radius: 4px;
     cursor: pointer;
+    @media screen and (max-width:1335px) {
+        padding: 10px 100px;
+    }
+    @media screen and (max-width:1335px) {
+        padding: 10px 70px;
+    }
 `
 

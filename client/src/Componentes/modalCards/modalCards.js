@@ -23,12 +23,30 @@ export const MODAL_STYLE = styled.div`
     border-radius: 8px;
     display: flex;
     align-items: center;
+    @media screen  and (max-width: 920px){
+        height: 600px;
+    } 
 `;
 export const ContainerModal =styled.div`
     display: flex;
     flex-direction: column;
     margin: 3.5rem ;
     align-items: center;
+    @media screen  and (max-width: 1330px){
+        margin: 2.8rem;
+    }
+    @media screen  and (max-width: 1230px){
+            margin: 2rem;
+    }
+    @media screen  and (max-width: 1135px){
+            margin: 1.5rem;
+    }
+    @media screen  and (max-width: 920px){
+        gap: 1rem;
+    } 
+    @media screen  and (max-width: 820px){
+            margin: 0.8rem;
+    }
 ` ;
 export const ContainerDivModal =styled.div`
     display: flex;
@@ -62,7 +80,8 @@ export const DivInput = styled.div`
     flex-direction: column;
     gap: 0.5rem;
     align-items: center;
-    padding-right: 3rem;
+
+
 `;
 export const Container = styled.div`
     position: relative;
@@ -73,6 +92,9 @@ export const Container = styled.div`
     align-items: center;
     margin: 2rem 0;
     flex-wrap: wrap;
+    @media screen  and (max-width: 1151px){
+       width : max-content;
+    }
 `;
 export const Im = styled.img`
     width: 14.1rem;
@@ -86,7 +108,15 @@ export const IMG = styled.img`
     height: 22rem;
     border-radius:0.75rem 0.75rem 0.75rem 0.75rem; 
     box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.5);
-    filter: brightness(1.2);   
+    filter: brightness(1.2); 
+    @media screen  and (max-width: 1151px){
+        width: 14rem;
+        height: 19rem;
+    } 
+    @media screen  and (max-width: 920px){
+        width: 11rem;
+        height: 17rem;
+    } 
 `;
 export const Absoluto = styled.div`
     position: absolute;
@@ -103,6 +133,16 @@ export const Caixa = styled.div`
     justify-content: space-around;
     align-items: center;
     margin-top: 16rem;
+    @media screen  and (max-width: 1151px){
+        width: 14rem;
+        height: 5rem;
+        margin-top: 14.1rem;
+    } 
+    @media screen  and (max-width: 920px){
+        width: 11rem;
+        height: 4.1rem;
+        margin-top: 13rem;
+    } 
 `;
 export const Alinhamento = styled.div`
     display: flex;
@@ -117,12 +157,19 @@ export const Title = styled.h1`
     font-size: 1.2rem ;
     font-weight: 500;
     color:#fff; 
+    @media (max-width:768px) {
+        font-size: 0.9rem;
+    }
 `;
 export const Palavra = styled.p`
     font-size: 0.8rem ;
     font-weight: normal;
     margin: 0.3rem;
     color: #fff;
+    @media screen  and (max-width:768px) {
+        
+    }
+
 `;
 export const Botao = styled.button`
     background-color: rgba(175, 117, 3, 0.9);
@@ -150,6 +197,9 @@ export const Button = styled.button`
 export const TituloModal = styled.h1`
     color: #228137;
     margin: 0.1rem;
+    @media screen and (max-width:920px) {
+        font-size: 1.6rem;
+    }
 `;
 export const CaixaFundo = styled.div`
     width: 1040px;
@@ -158,6 +208,8 @@ export const CaixaFundo = styled.div`
     clip-path: polygon(0% 0%, 50% 0%, 49% 100%, 0% 100%);
     position: absolute;
     z-index: -1;
+    max-width: -webkit-fill-available;
+    max-height:-webkit-fill-available;
 `;
 export const BarraVertical = styled.div`
     width: 1095px;
@@ -172,6 +224,10 @@ export const FUNDO = styled.div`
     flex-direction: column;
     justify-content:center;
     gap: 0.4rem;
+    @media screen and (max-width:1335px) {
+        gap: 0.2rem;
+        width: fit-content;
+    }
 `;
 export const TTitle = styled.div`
     color: #228137;
@@ -194,6 +250,9 @@ export const Th3 = styled.div`
     color: #228137;
     font-weight: bolder;
     font-size: 1.1rem;
+    @media screen  and (max-width: 775px){
+        font-size: 0.8rem;
+    }
 `;
 export const PP = styled.div`
     color: #228137;
@@ -203,6 +262,12 @@ export const Organizacao =styled.div`
     display: flex;
     align-items: center;
     gap: 5rem;
+    @media screen  and (max-width: 1330px){
+        gap: 2rem;
+    }
+    @media screen  and (max-width: 1151px){
+        gap: 1rem;
+    }
 `;
 export const TituloProduto = styled.h1`
     color: white;
@@ -224,4 +289,21 @@ export const Descricao = styled.p`
     text-align: center;
     border-radius: 0.5rem;
     align-items: center;
+    @media screen  and (max-width: 1050px){
+        width: 18rem;
+    }
+    @media screen  and (max-width: 1000px){
+        width: 16.5rem;
+    }
+    @media screen  and (max-width: 950px){
+        width: 15rem;
+    }
+    @media screen  and (max-width: 900px){
+        width: 13.8rem;
+    } 
+    @media screen  and (max-width: 740px){
+        width: 12.5rem;
+        height: 5rem;
+        font-size: 0.6rem ;
+    } 
 `
