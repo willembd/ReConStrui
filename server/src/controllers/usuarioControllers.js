@@ -56,4 +56,17 @@ module.exports = class usuarioControllers{
         const usuario = await Usuario.findAll()
         response.status(200).json({ usuario: usuario })
     }
+
+    static async getOneUsuario(request, response){
+        const { id } = request.params
+
+        const usuario = await Usuario.findByPk(id)
+
+        if(!usuario){
+            response.status(422).json({ message: 'Usuario não encontrado' })
+            return
+        }
+
+        response.status(200).json({ usuario: usuario })
+    }
 }

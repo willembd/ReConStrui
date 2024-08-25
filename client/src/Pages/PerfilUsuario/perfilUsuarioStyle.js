@@ -27,7 +27,7 @@ export const ContainerPrimaty = styled.div`
     border-radius: 12px 0px 0px 12px;
 `
 export const ImgPerfil = styled.img`
-    width: 50%;
+    width: 40%;
 `
 export const TituloNome = styled.h1`
     color: white;
