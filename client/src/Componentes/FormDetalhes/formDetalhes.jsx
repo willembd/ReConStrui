@@ -129,7 +129,6 @@ export default function FormularioDetalhes() {
                                  <M.CampoPequeno>
                                     </M.CampoPequeno>
                             </M.Container4>
-                       
                 </M.Caixa4>
              </M.FlexCaixa4>
 

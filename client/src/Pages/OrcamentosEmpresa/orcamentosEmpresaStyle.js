@@ -50,7 +50,7 @@ export const ButtonContainer = styled.div`
     width: 100%;
 `;
 
-export const TextoCadastro = styled.h1`
+export const Titulo = styled.h1`
     color: #228137;
     margin-top: 0.625rem;
     justify-content: center;
@@ -64,10 +64,8 @@ export const TextoCadastro = styled.h1`
     }
 `;
 
-export const ContainerInputs = styled.div`
-    display: flex;
+export const ContainerCampos = styled.div`
     flex-direction: column;
-    gap: -0.125rem;
     padding-bottom: 2.5rem;
     margin-left: 0.625rem;
 
@@ -79,20 +77,10 @@ export const ContainerInputs = styled.div`
     }
 `;
 
-export const InputFlex = styled.div`
-    display: flex;
-    gap: 12.313rem;
 
 
-    @media screen and (max-width: 500px) {
-        display: flex;
-        gap: 20px;
-    }
-
-`;
 export const BarraInput = styled.div `
         padding: 0.06rem;
-        /* height: 2px; */
         width: 18.875rem;
         background-color: #1C4525;
         margin-top:0.5rem;
@@ -101,8 +89,6 @@ export const BarraInput = styled.div `
 `
 export const Dados = styled.div`
       display: flex;
-      /* flex-wrap: wrap; */
-      /* flex-direction: column; */
       gap: 11.688rem;
 
       @media screen and (max-width: 500px) {
@@ -118,10 +104,12 @@ export const BarraDados = styled.div`
 
 `
 
-export const TTitulo = styled.h2`
+export const SubTitulos = styled.h2`
+    color: #AF7503;
     font-size: 1.5rem;
     width: auto;
     white-space: nowrap;
+    margin-right: 15px;
 
     @media screen and (max-width: 500px) {
         font-size: 1rem;
@@ -149,10 +137,7 @@ export const TextoCheckbox = styled.h3`
 `;
 
 
-
-
-
-export const CaixaFundo = styled.div`
+export const FundoVerde = styled.div`
     height: 91.25rem;
     width: 81.25rem;
     background:#33603D;
@@ -165,7 +150,7 @@ export const CaixaFundo = styled.div`
     }
 `;
 
-export const BarraVertical = styled.div`
+export const BarraAmarela = styled.div`
     height: 91.25rem;
     width: 81.25rem;
     background: #B7821C;
@@ -178,7 +163,16 @@ export const BarraVertical = styled.div`
     }
     
 `;
+export const LinhaA = styled.hr`
+    color: black;
+    width: 100%;
 
+`
+export const LinhaE = styled.hr`
+    color: black;
+    width: 100%;
+
+`
 export const BBarra = styled.div`
     height:0.125rem;
     width: 37.813rem;
@@ -249,14 +243,22 @@ export const Botao = styled.div`
     }
 `;
 
-export const PP = styled.p`
-    font-size: 1.3rem ;
-    display: flex;
-    justify-content: center;
-`;
-export const InputRight =   styled.div`
+
+export const CampoCentralizar = styled.div`
+      display: flex;
+      gap: 5.313rem;
+      margin-bottom: 2.313rem;
+
+      @media screen and (max-width: 500px) {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+`
+export const InputCentralizar =   styled.div`
   display: flex;
-  gap:12.313rem;
+  gap:5.313rem;
 
   @media screen and (max-width: 500px) {
         display: flex;
@@ -267,21 +269,7 @@ export const InputRight =   styled.div`
 
 `
 
-export const InputsStyle = styled.div`
-      display: flex;
-      gap: 12.313rem;
-      margin-bottom: 2.313rem;
-
-      @media screen and (max-width: 500px) {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
-
-
-`
-
-export const Centralizar = styled.div`
+export const CentralizarButton = styled.div`
     display: flex;
     justify-content: center;
     margin-top: 4.5rem;
@@ -304,7 +292,7 @@ export const Campo = styled.div`
   display: flex;
   flex-direction: column;
   width: 45%;
-  position: relative;
+  
 
   @media screen and (max-width: 500px) {
         display: flex;
@@ -312,8 +300,7 @@ export const Campo = styled.div`
         gap: 20px;
     }
 
- 
-  
+
 `;
 
 export const Label = styled.label`
@@ -326,10 +313,78 @@ export const Label = styled.label`
     }
 `;
 
+
+
+
 export const ValorTexto = styled.span`
   position: absolute;
   top: -2rem;
+  left: 4.688rem;
+  color: #000;
+  font-size: 1rem;
+
+  @media screen and (max-width: 500px) {
+        font-size: 1rem;
+    }
+  
+`;
+
+
+export const TextNome = styled.span`
+  position: absolute;
+  top: -2rem;
+  left: 4.688rem;
+  color: #000;
+  font-size: 1rem;
+
+  @media screen and (max-width: 500px) {
+        font-size: 1rem;
+    }
+  
+`;
+export const TextFone = styled.span`
+  position: absolute;
+  top: -2rem;
   left: 5.688rem;
+  color: #000;
+  font-size: 1rem;
+
+  @media screen and (max-width: 500px) {
+        font-size: 1rem;
+    }
+  
+`;
+
+export const TextE = styled.span`
+  position: absolute;
+  top: -2rem;
+  left: 5.688rem;
+  color: #000;
+  font-size: 1rem;
+
+  @media screen and (max-width: 500px) {
+        font-size: 1rem;
+    }
+  
+`;
+
+export const TextCep = styled.span`
+  position: absolute;
+  top: -2rem;
+  left: 3.688rem;
+  color: #000;
+  font-size: 1rem;
+
+  @media screen and (max-width: 500px) {
+        font-size: 1rem;
+    }
+  
+`;
+
+export const TextM = styled.span`
+  position: absolute;
+  top: -2rem;
+  left: 6.688rem;
   color: #000;
   font-size: 1rem;
 
@@ -351,24 +406,4 @@ export const Valor = styled.div`
     }
 `;
 
-
-export const Titulo = styled.h1`
-  color: #228137;
-  text-align: center;
-  margin-bottom: 3rem;
-`;
-
-// export const Section = styled.div`
-//   margin-bottom: 3rem;
-// `;
-
-// export const SubTitulo = styled.h2`
-//   color: #000;
-//   margin-bottom: 1.25rem;
-//   font-size: 1.2rem;
-//   border-bottom: 0.125px solid #000;
-//   padding-bottom: 0.313rem;
-
- 
-// `;
 
