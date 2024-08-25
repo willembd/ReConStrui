@@ -4,30 +4,74 @@ import Footer from "../../Componentes/Footer/footer";
 import NavBar from "../../Componentes/NavBar/navbar";
 import InputPrimary from "../../Componentes/InputPrimary/inputPrimary";
 import ButtonMod from "../../Componentes/ButtonModelo/buttonModelo";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { api } from "../../service/api";
 import { jwtDecode } from "jwt-decode";
 
-
 export default function PerfilUsuario() {
-    const token = localStorage.getItem('token')
+    const [userId, setUserId] = useState(null);
+    const [user, setUser] = useState({});
+    const [nome, setNome] = useState("");
+    const [data_nascimento, setData_nascimento] = useState("");
+    const [cpf, setCpf] = useState("");
+    const [email, setEmail] = useState("");
 
-    if (token) {
-        const decodedToken = jwtDecode(token);
+
+    useEffect(() => {
+        const fetchUserId = async () => {
+            const token = localStorage.getItem("token");
+
+            if (token) {
+                try {
+                    const decodedToken = jwtDecode(token);
+                    const id = decodedToken.id;
+                    setUserId(id);
+                } catch (error) {
+                    console.error("Erro ao decodificar o token:", error);
+                }
+            } else {
+                console.log("No token found");
+            }
+        };
+
+        fetchUserId();
+    }, []);
+
+    useEffect(() => {
+        if (userId) {
+            const fetchUserData = async () => {
+                try {
+                    const response = await api.get(`/usuario/${userId}`);
+                    setUser(response.data.usuario);
+         
+                } catch (error) {
+                    console.error("Erro ao buscar usuário:", error);
+                }
+            };
+
+            setTimeout(() => {
+                fetchUserData();
+            }, 2000);
+        }
+    }, [userId]);
+
+    
+    useEffect(() => {
+        if (user && user.nome) {
+          setNome(user.nome);
+        }
+        if(user && user.data_nascimento){
+            setData_nascimento(user.data_nascimento)
+        }
+        if(user && user.cpf){
+            setCpf(user.cpf)
+        }
+        if(user && user.email){
+            setEmail(user.email)
+        }
+      }, [user]);
+
       
-        const userId = decodedToken.id; 
-      
-        console.log('User ID:', userId);
-      } else {
-        console.log('No token found');
-      }
-
-    /*useEffect(() => {
-        setTimeout(() => {
-            api.get('')
-        }, 2000)
-    }, [])*/
-
     return (
         <>
             <NavBar />
@@ -35,16 +79,33 @@ export default function PerfilUsuario() {
                 <S.Caixa>
                     <S.ContainerPrimaty>
                         <S.ImgPerfil src={ImgPerfil} alt="" />
-                        <S.TituloNome>Maria Eduarda da Silva</S.TituloNome>
+                        <S.TituloNome>{user.nome}</S.TituloNome>
                     </S.ContainerPrimaty>
                     <S.ContainerSecondary>
                         <S.TituloEditar>Editar Dados</S.TituloEditar>
                         <S.ContainerInput>
-                            <InputPrimary text="Nome Completo" />
-                            <InputPrimary text="Data de Nascimento" type="date"/>
-                            <InputPrimary text="CPF" type="number"/>
-                            <InputPrimary text="E-mail" />
-                            <InputPrimary text="Senha" type="password"/>
+                            <InputPrimary
+                                text="Nome Completo"
+                                value={nome}
+                                onChange={(e) => setNome(e.target.value)}
+                            />
+                            <InputPrimary
+                                text="Data de Nascimento"
+                                type="date"
+                                value={data_nascimento}
+                                onChange={(e) => setData_nascimento(e.target.value)}
+                            />
+                            <InputPrimary 
+                                text="CPF" 
+                                type="number"
+                                value={cpf}
+                                onChange={(e) => setCpf(e.target.value)}
+                            />
+                            <InputPrimary 
+                                text="E-mail"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                                />
                         </S.ContainerInput>
                         <ButtonMod text="Salvar" />
 
