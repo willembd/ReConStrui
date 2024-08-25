@@ -22,6 +22,7 @@ import SolicitacaoEntregaRetirada from "../Pages/SolicitacaoEntregasRetirada/sol
 import HistoricoEmpresa from "../Pages/HistoricoEmpresa/historicoEmpresa.jsx";
 import PerfilUsuario from "../Pages/PerfilUsuario/perfilUsuario.jsx";
 import PerfilEmpresa from "../Pages/PerfilEmpresa/perfilEmpresa.jsx";
+import ProdutosEmpresa from "../Pages/ProdutosEmpresa/produtosEmpresa.jsx";
 
 
 function PrivateRoute({ element, allowedTypes }) {
@@ -136,6 +137,10 @@ export const router = createBrowserRouter([
     {
         path: "/perfilempresa",
         element: <PerfilEmpresa />
+    },
+    {
+        path: "/produtosempresa",
+        element: <ProdutosEmpresa/>
     }
 
     ]);
