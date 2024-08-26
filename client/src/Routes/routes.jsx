@@ -15,8 +15,8 @@ import Confirmacao from "../Pages/ConfirmacaoPedidos/confirmacaoPedidos.jsx";
 import OrcamentosEmpresa from "../Pages/OrcamentosEmpresa/orcamentosEmpresa.jsx";
 import ConfirmacaoEntrega from "../Pages/ConfirmacaoEntrega/confirmacaoEntrega.jsx";
 import EntregasEmpresa from "../Pages/EntregasEmpresa/entregasEmpresa.jsx";
-import RetiradasEmpresa from "../Pages/RetiradasEmpresa/retiradasEmpresa.jsx";
-import FinalizadosEmpresa from "../Pages/FinalizadosEmpresa/finalizadosEmpresa.jsx";
+import PedidosCancelados from "../Pages/PedidosCancelados/pedidosCancelados.jsx";
+import PedidosConcluido from "../Pages/PedidosConcluido/pedidosConcluido.jsx";
 import SolicitacaoPedidoEmp from "../Pages/SolicitacaoPedidoEmp/solicitacaoPedidos.jsx";
 import SolicitacaoEntregaRetirada from "../Pages/SolicitacaoEntregasRetirada/solicitacaoEntregaRetirada.jsx";
 import HistoricoEmpresa from "../Pages/HistoricoEmpresa/historicoEmpresa.jsx";
@@ -111,12 +111,12 @@ export const router = createBrowserRouter([
         ),
     },
     {
-        path: "/retiradasempresa",
-        element: <RetiradasEmpresa />,
+        path: "/pedidoscancelados",
+        element: <PedidosCancelados />,
     },
     {
-        path: "/finalizadosempresa",
-        element: <FinalizadosEmpresa />,
+        path: "/pedidosconcluido",
+        element: <PedidosConcluido />,
     },
     {
         path: "/solicitacaopedidoemp",

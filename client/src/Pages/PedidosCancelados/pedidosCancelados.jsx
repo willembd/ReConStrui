@@ -1,11 +1,11 @@
-import * as S from "./finalizadosEmpresaStyles"
+import * as S from "./pedidosCanceladosStyle"
 import { useState } from "react";
 import { useNavigate } from "react-router-dom"
 import NavBar from "../../Componentes/NavBar/navbar"
 import Footer from "../../Componentes/Footer/footer"
 import { AAlinhamento, LLinha  } from "../../Componentes/modalCards/modalCards";
 
-export default function FinalizadoEmpresa (item) {
+export default function PedidosCancelados (item) {
 
     const [isOpenTest, setOpenTest] = useState(false)
 
@@ -45,7 +45,7 @@ export default function FinalizadoEmpresa (item) {
                                 <S.PLeft>
                                     <S.PPP>Dados do Pedido</S.PPP>
 
-                                    <S.PPALAVRA>Pedido Concluído</S.PPALAVRA>
+                                    <S.PPALAVRA>Pedido Cancelado</S.PPALAVRA>
                                 </S.PLeft>
                                 <S.CCaixinha>
                                     <S.Caixinha>
@@ -69,7 +69,7 @@ export default function FinalizadoEmpresa (item) {
                                                 </AAlinhamento>
                                             </div>
                                             <S.QuebraLinha>
-                                                <S.LETRA>Concluído</S.LETRA>
+                                                <S.LETRA>Cancelado</S.LETRA>
                                                 <div>
                                                     <S.BBarraAguardando/>
                                                     <S.BarraAguardando/>
@@ -91,7 +91,7 @@ export default function FinalizadoEmpresa (item) {
                                 <S.PLeft>
                                     <S.PPP>Dados do pedidos</S.PPP>
 
-                                    <S.PPALAVRA>Pedido Concluído</S.PPALAVRA>
+                                    <S.PPALAVRA>Pedido Cancelado</S.PPALAVRA>
                                 </S.PLeft>
                                 <S.CCaixinha>
                                     <S.Caixinha>
@@ -137,7 +137,7 @@ export default function FinalizadoEmpresa (item) {
                                 <S.PLeft>
                                     <S.PPP>Dados do Pedidos</S.PPP>
 
-                                    <S.PPALAVRA>Pedidos Concluído</S.PPALAVRA>
+                                    <S.PPALAVRA>Pedidos Cancelado</S.PPALAVRA>
                                 </S.PLeft>
                                 <S.CCaixinha>
                                     <S.Caixinha>
@@ -159,7 +159,7 @@ export default function FinalizadoEmpresa (item) {
                                                 </AAlinhamento>
                                             </div>
                                             <S.QuebraLinha>
-                                                <S.LETRA>Concluído</S.LETRA>
+                                                <S.LETRA>Cancelado</S.LETRA>
                                                 <div>
                                                     <S.BBarraAguardando/>
                                                     <S.BarraAguardando/>
