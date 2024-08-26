@@ -25,7 +25,7 @@ export const Modal = styled.div`
     box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.25);
 
     @media screen and (max-width: 500px) {
-        width: 390px;
+        width: 330px;
         height: 500px;
         display: flex;
         justify-content: center;

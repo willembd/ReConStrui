@@ -64,7 +64,7 @@ export default function CadastroEmpresa() {
     return (
         <>
             <NavBar />
-
+            
             <S.CaixaFundo></S.CaixaFundo>
             <S.BarraVertical />
             <S.BigBox>
