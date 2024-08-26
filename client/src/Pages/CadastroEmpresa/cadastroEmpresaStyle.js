@@ -117,7 +117,7 @@ export const CheckboxMateriais = styled.div`
     gap: 20px;
 
     @media screen and (max-width: 500px) {
-        font-size: 16px;
+        font-size: 8px;
     }
 `;
 
@@ -261,7 +261,9 @@ export const Botao = styled.div`
 
     @media screen and (max-width: 500px) {
         padding: 12px;
-        width: 300px;
+        width: 200px;
+        height:40px;
+        font-size:15px;
     }
     
 `;
@@ -271,6 +273,11 @@ export const PP = styled.p`
     color: #228137;
     display: flex;
     justify-content: center;
+
+    @media screen {
+        font-size:15px;
+    }
+    
 `;
 
 export const Centralizar = styled.div`
@@ -281,4 +288,8 @@ export const Link = styled.a`
     color: #B7821C;
     text-decoration: none;
     font-size: 20px;
+
+    @media screen {
+        font-size:15px;
+    }
 `;
