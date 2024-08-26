@@ -106,9 +106,7 @@
                 </Container>
 
                 <ModalCards isOpen={openModal} setModalOpen= {() => setOpenModal(!openModal)}>
-                    <Organizacao>
                         <CaixaFundo></CaixaFundo>
-                    </Organizacao>
                         <ContainerModal>
                         <ContainerDivModal>
                             <Organizacao>

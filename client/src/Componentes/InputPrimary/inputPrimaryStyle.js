@@ -6,7 +6,7 @@ export const Campo = styled.div`
     width: fit-content;
     position: static;
     width: 360px;
-    @media screen  and (max-width: 1100px){
+    @media screen  and (max-width: 1190px){
         width:290px ;
     }
     @media screen  and (max-width: 920px){
@@ -15,6 +15,13 @@ export const Campo = styled.div`
     @media screen  and (max-width: 775px){
         width: 220px;
     }
+    @media screen  and (max-width: 745px){
+        width: 200px;
+    }
+    @media screen  and (max-width: 660px){
+        width: 170px;
+    }
+
 
     label.text {
         font-size: 0.75rem;

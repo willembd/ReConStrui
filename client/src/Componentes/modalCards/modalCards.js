@@ -4,9 +4,9 @@ export const BACKGROUND_STYLE = styled.div`
     position: fixed;
     top: 0;
     bottom: 0;
-    left: 0;
-    right: 0;
-    background-color:rgb(0,0,0, 0.7);
+    left: -1px;
+    right: 0px;
+    background-color: rgb(0, 0, 0, 0.7);
     z-index: 1000;
 `;
 export const MODAL_STYLE = styled.div`
@@ -18,14 +18,11 @@ export const MODAL_STYLE = styled.div`
     transform: translate(-50%, -50%);
     background-color: white;
     color: black;
-    width: 970px;
+    width: 1000px;
     height: 700px;
     border-radius: 8px;
     display: flex;
-    align-items: center;
-    @media screen  and (max-width: 920px){
-        height: 600px;
-    } 
+    align-items: center; 
 `;
 export const ContainerModal =styled.div`
     display: flex;
@@ -36,16 +33,17 @@ export const ContainerModal =styled.div`
         margin: 2.8rem;
     }
     @media screen  and (max-width: 1230px){
-            margin: 2rem;
+            margin: 2.5rem;
     }
-    @media screen  and (max-width: 1135px){
-            margin: 1.5rem;
-    }
-    @media screen  and (max-width: 920px){
+    @media screen  and (max-width: 1145px){
         gap: 1rem;
+        margin: 2rem;
     } 
-    @media screen  and (max-width: 820px){
-            margin: 0.8rem;
+    @media screen  and (max-width:1100px){
+        margin: 1rem;
+    }
+    @media screen  and (max-width:565px){
+        margin: 0.5rem;
     }
 ` ;
 export const ContainerDivModal =styled.div`
@@ -68,6 +66,9 @@ export const DivRadio =styled.div`
     display: flex;
     margin-bottom: 1rem;
     gap: 3rem;
+    @media screen and (max-width:626px) {
+        gap: 1rem;
+    }
 `;
 export const Transporte = styled.div`
     display: flex;
@@ -80,8 +81,6 @@ export const DivInput = styled.div`
     flex-direction: column;
     gap: 0.5rem;
     align-items: center;
-
-
 `;
 export const Container = styled.div`
     position: relative;
@@ -117,6 +116,9 @@ export const IMG = styled.img`
         width: 11rem;
         height: 17rem;
     } 
+    @media screen  and (max-width: 660px){
+        width: 10rem;
+    }
 `;
 export const Absoluto = styled.div`
     position: absolute;
@@ -143,6 +145,9 @@ export const Caixa = styled.div`
         height: 4.1rem;
         margin-top: 13rem;
     } 
+    @media screen  and (max-width: 660px){
+        width: 10rem;
+    }
 `;
 export const Alinhamento = styled.div`
     display: flex;
@@ -202,22 +207,17 @@ export const TituloModal = styled.h1`
     }
 `;
 export const CaixaFundo = styled.div`
-    width: 1040px;
-    height: 701px;
+    width: 100%;
+    height: 100.01%;
     background: #33603D;
     clip-path: polygon(0% 0%, 50% 0%, 49% 100%, 0% 100%);
     position: absolute;
     z-index: -1;
-    max-width: -webkit-fill-available;
-    max-height:-webkit-fill-available;
-`;
-export const BarraVertical = styled.div`
-    width: 1095px;
-    height: 701px;
-    background: #B7821C;
-    clip-path: polygon(100% 0%, 53% 0%, 35% 103%, 56% 0%);
-    position: absolute;
-    z-index: -1;
+    border-radius: 0.5rem;
+    
+    @media screen and (max-width:1301px) {
+        margin: -1px;
+    }
 `;
 export const FUNDO = styled.div`
     display: flex;
@@ -261,11 +261,23 @@ export const PP = styled.div`
 export const Organizacao =styled.div`
     display: flex;
     align-items: center;
-    gap: 5rem;
-    @media screen  and (max-width: 1330px){
+    gap: 4rem;
+    @media screen  and (max-width: 1260px){
+        gap: 3px;
+    }
+    @media screen  and (max-width: 1260px){
+        gap: 3px;
+    }
+    @media screen  and (max-width: 1100px){
+        gap: 4rem;
+    }
+    @media screen  and (max-width: 1010px){
         gap: 2rem;
     }
-    @media screen  and (max-width: 1151px){
+    @media screen  and (max-width: 660px){
+        gap: 2rem;
+    }
+    @media screen  and (max-width: 610px){
         gap: 1rem;
     }
 `;
@@ -289,21 +301,31 @@ export const Descricao = styled.p`
     text-align: center;
     border-radius: 0.5rem;
     align-items: center;
-    @media screen  and (max-width: 1050px){
+    @media screen  and (max-width: 1130px){
         width: 18rem;
     }
-    @media screen  and (max-width: 1000px){
-        width: 16.5rem;
+    @media screen  and (max-width: 970px){
+        width: 16rem;
     }
-    @media screen  and (max-width: 950px){
-        width: 15rem;
+    @media screen  and (max-width: 870px){
+        width: 14rem;
     }
-    @media screen  and (max-width: 900px){
-        width: 13.8rem;
-    } 
-    @media screen  and (max-width: 740px){
-        width: 12.5rem;
+    @media screen  and (max-width: 780px){
+        width: 13rem;
+    }
+    @media screen  and (max-width: 720px){
+        width: 12rem;
         height: 5rem;
-        font-size: 0.6rem ;
-    } 
+    }
+    @media screen  and (max-width: 720px){
+        width: 11rem;
+    }
+    @media screen  and (max-width: 720px){
+        width: 10rem;
+        height: 6rem;
+    }
+    @media screen  and (max-width: 590px){
+        width: 8rem;
+        height: 6rem;
+    }
 `
