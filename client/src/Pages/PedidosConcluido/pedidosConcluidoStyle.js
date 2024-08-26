@@ -17,6 +17,12 @@ export const Container = styled.div`
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     position: relative;
+
+    @media screen and (max-width: 500px) {
+        width: 420px;
+        height: 280px;
+        margin-bottom: 15px;
+    }
 `;
 export const CaixaFundo = styled.div`
     height: 1587px;
@@ -57,6 +63,12 @@ export const CContainer = styled.div`
     padding-top: 2.2rem;
     flex-wrap: wrap;
     justify-content: space-around;
+
+    @media screen and (max-width: 500px) {
+        width: 390px;
+        height:400px;
+        
+    }
 `;
 
 export const CCaixa = styled.div`
@@ -67,42 +79,44 @@ export const CCaixa = styled.div`
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     position: relative;
+
+    @media screen and (max-width: 500px) {
+        width: 900px;
+        height: 1000px;
+        padding-bottom:5px;
+        
+    }
 `;
 export const PPP = styled.p`
-    font-size: 22px;
+    font-size: 16px;
     color: #228137;
-    font-weight: 600;
+    font-weight: bolder;
 `;
 export const PPALAVRA = styled.p`
-    font-size: 25px;
+    font-size: 24px;
     color: #228137;
-    font-weight: 600;
-    border: 1px #E1E1E1;
-    padding-bottom: 15px;
+    font-weight: bold;
 `;
 
 export const CCaixinha = styled.div`
-    width: 710px;
+    width: 100%;
     height: 230px;
     background-color: white;
     border: 2px solid #E0E0E0;
-    padding: 6px;
+  
 `;
 
 export const PLeft = styled.div`
     display: flex;
-    justify-content: space-evenly;
-`;
-
-export const Alinha = styled.div`
-    display: flex;
-    justify-content: space-around;
-    gap: 80px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 6px;
 `;
 
 export const PaLavra = styled.p`
-    font-size: 16px;
-    font-weight: medium;
+    font-size: 12px;
+    font-weight: bold;
 `;
 
 export const Barra = styled.div`
@@ -120,6 +134,7 @@ export const IIIMG = styled.img`
     height: 110px;
     width: 150px;
     margin-top: 20px;
+    border-radius: 4px;
 `;
 
 export const TTTitle = styled.p`
@@ -129,21 +144,41 @@ export const TTTitle = styled.p`
 `;
 export const SobreContainer = styled.div`
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
+    padding: 0px 10px;
 `
+
+export const ContainerImg = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+`
+
 export const BarraAguardando = styled.div`
-    width: 200px;
-    height: 13px;
+    width: 210px;
+    height: 12px;
     background-color: #AAAAAA;
     border-radius:200px;
+
+    @media screen and (max-width: 500px) {
+        width: 130px;
+        height: 12px;
+        
+    }
 `
 export const BBarraAguardando = styled.div`
-    width: 200px;
-    height: 13px;
+    width: 210px;
+    height: 12px;
     background-color: #228137;
     position: absolute;
     border-radius:200px;
+
+    @media screen and (max-width: 500px) {
+        width: 210px;
+        height: 16px;
+        
+    }
 `
 export const BBotao = styled.button`
     background-color: rgba(175, 117, 3, 0.9);
@@ -153,16 +188,15 @@ export const BBotao = styled.button`
     padding: 0.6rem 1.1rem;
     border-radius: 4px;
     cursor: pointer;
+
+    @media screen and (max-width: 500px) {
+      font-size:12px;
+      padding:10px;
+      border-radius:0px;
+
+    }   
 `
-export const BBotao2 = styled.button`
-    background-color: white;
-    color: #228137;
-    font-size: 16px;
-    border: 1px solid #295032;
-    padding: 0.6rem 1.1rem;
-    border-radius: 4px;
-    cursor: pointer;
-`
+
 export const LETRA = styled.p`
     font-size: 16px;
     color: #228137;
@@ -170,7 +204,8 @@ export const LETRA = styled.p`
 export const QuebraLinha = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    align-items: center;
+    gap: 20px;
 `
 
 export const Flex = styled.div`
@@ -183,19 +218,24 @@ export const FlexColomn = styled.div`
 
 `
 export const Caixinha = styled.div`
-    width: 695px;
+    width: 100%;
     height: 28px;
     background-color: white;
-    border: 2px solid #E0E0E0;
-    padding: 4px;
+    border-bottom: 2px solid #E0E0E0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
 `;
 
-export const LLinks = styled.div`
-    border: none;
+export const LLinks = styled.p`
+    font-size: 14px;
     color: #228137;
-    padding: 15px;
+    padding: 12px;
+    cursor: pointer;
 `;
 export const PPalavra = styled.div`
-    font-size: 1rem;
+    font-size: 0.8rem;
+    font-weight: bolder;
     color: #AF7503;
 `;

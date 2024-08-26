@@ -57,7 +57,7 @@ export default function Pedidos () {
                     <div className="form-group">
                         <Select >
                             <option value="in progress">Em Andamento</option>
-                            <option value="confirmed">Confirmado</option>
+                            <option value="confirmed">Concluído</option>
                             <option value="cancel">Cancelado</option>
                         </Select>
                     </div>
