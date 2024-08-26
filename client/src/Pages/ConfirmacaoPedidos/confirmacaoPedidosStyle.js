@@ -15,7 +15,6 @@ export const ButtonContainer = styled.div`
     margin-top: 10px;
 `;
 
-
 export const Caixa = styled.div`
     display: flex;
     justify-content: center;
@@ -75,7 +74,12 @@ export const Titulo = styled.h1`
     color: #228137;
 
     @media screen and (max-width: 500px) {
-        font-size: 32px;
+        font-size: 25px;
+        gap:10px;
+        display:flex;
+        align-items:center;
+        margin-top:40px;
+        white-space: nowrap;
     }
 `;
 
@@ -85,9 +89,18 @@ export const DivCampo = styled.div`
     flex-direction: column;
     gap: 15px;
     margin: 30px 0px 20px 0px;
+
+    @media screen and (max-width: 500px) {
+        padding: 80px;
+    }
 `;
 
 export const DivButton = styled.div`
     display: flex;
     gap: 10px;
+
+    @media screen and (max-width: 500px) {
+       margin-bottom:40px;
+       
+    }
 `
