@@ -97,6 +97,10 @@ export const Titulo = styled.h1`
 export const Texto = styled.p`
     color: #228137;
     font-size: 15px;
+
+    @media screen and (max-width: 500px) {
+        font-size: 10px;
+    }
 `;
 
 export const DivInput = styled.div`
