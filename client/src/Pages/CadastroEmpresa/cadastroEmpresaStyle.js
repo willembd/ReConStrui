@@ -117,7 +117,8 @@ export const CheckboxMateriais = styled.div`
     gap: 20px;
 
     @media screen and (max-width: 500px) {
-        font-size: 8px;
+        font-size: 15px;
+        flex-direction:column;
     }
 `;
 
