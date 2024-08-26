@@ -21,7 +21,12 @@ export const Campo = styled.div`
     @media screen  and (max-width: 660px){
         width: 170px;
     }
-
+    @media screen  and (max-height: 606px){
+        height: 50px;
+    }
+    @media screen  and (max-height: 530px){
+        height: 44px;
+    }
 
     label.text {
         font-size: 0.75rem;
@@ -42,5 +47,14 @@ export const Campo = styled.div`
         border-radius: 12px;
         background: #fff;
         outline-color: #228137;
+        @media screen  and (max-height: 606px){
+            padding: 9px 10px;
+        }
+        @media screen  and (max-height: 606px){
+            padding:7px 10px ;
+        }
+        @media screen  and (max-height: 606px){
+            padding:6px 10px ;
+        }
     }
 `;

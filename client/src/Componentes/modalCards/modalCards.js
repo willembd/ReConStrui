@@ -45,6 +45,9 @@ export const ContainerModal =styled.div`
     @media screen  and (max-width:565px){
         margin: 0.5rem;
     }
+    @media screen  and (max-height: 530px){
+        gap: 0;
+    }
 ` ;
 export const ContainerDivModal =styled.div`
     display: flex;
@@ -81,6 +84,9 @@ export const DivInput = styled.div`
     flex-direction: column;
     gap: 0.5rem;
     align-items: center;
+    @media screen  and (max-height: 530px){
+        gap: 0;
+    }
 `;
 export const Container = styled.div`
     position: relative;
@@ -119,6 +125,9 @@ export const IMG = styled.img`
     @media screen  and (max-width: 660px){
         width: 10rem;
     }
+    @media screen and (max-height:476px) {
+        height: 16rem;
+    }
 `;
 export const Absoluto = styled.div`
     position: absolute;
@@ -147,6 +156,10 @@ export const Caixa = styled.div`
     } 
     @media screen  and (max-width: 660px){
         width: 10rem;
+    }
+    @media screen and (max-height:476px) {
+        height: 4rem;
+        margin-top: 12rem;
     }
 `;
 export const Alinhamento = styled.div`
@@ -202,8 +215,12 @@ export const Button = styled.button`
 export const TituloModal = styled.h1`
     color: #228137;
     margin: 0.1rem;
+    font-size: 2rem;
     @media screen and (max-width:920px) {
         font-size: 1.6rem;
+    }
+    @media screen and (max-height:475px) {
+        font-size: 1.5rem;
     }
 `;
 export const CaixaFundo = styled.div`
@@ -253,6 +270,9 @@ export const Th3 = styled.div`
     @media screen  and (max-width: 775px){
         font-size: 0.8rem;
     }
+    @media screen  and (max-height: 475px){
+            font-size: 0.8rem;
+        }
 `;
 export const PP = styled.div`
     color: #228137;
@@ -327,5 +347,9 @@ export const Descricao = styled.p`
     @media screen  and (max-width: 590px){
         width: 8rem;
         height: 6rem;
+    }
+    @media screen and (max-height:510px) {
+        height: 2rem;
+        font-size: 0.7rem ;
     }
 `
