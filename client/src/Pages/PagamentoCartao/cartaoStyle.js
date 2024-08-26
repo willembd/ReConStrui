@@ -8,11 +8,10 @@ export const Caixa = styled.div`
     align-items: center;
     width: 100%;
     margin: 100px 0px;
-    
 `;
 
 export const Modal = styled.div`
-    background-color: #FCFCFC;
+    background-color: #fcfcfc;
     color: black;
     width: 1040px;
     height: 540px;
@@ -21,12 +20,12 @@ export const Modal = styled.div`
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
-    margin-bottom:40px;
-    border-radius:12px;
+    margin-bottom: 40px;
+    border-radius: 12px;
     box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.25);
 
     @media screen and (max-width: 500px) {
-        width: 390px;
+        width: 480px;
         height: 500px;
         display: flex;
         justify-content: center;
@@ -52,13 +51,15 @@ export const Button = styled.button`
 export const ButtonContainer = styled.div`
     width: 100%;
     margin-top: 10px;
+
 `;
 
+
+
 export const Imagem = styled.div`
-    
     flex-direction: column;
     justify-content: space-between;
-    align-items:center;
+    align-items: center;
     width: 50%;
     height: 540px;
     border-radius: 12px 0px 0px 12px;
@@ -66,7 +67,6 @@ export const Imagem = styled.div`
     @media screen and (max-width: 500px) {
         display: none;
     }
-
 `;
 
 export const Logo = styled.img`
@@ -85,7 +85,6 @@ export const Form = styled.div`
     @media screen and (max-width: 500px) {
         width: 390px;
     }
-    
 `;
 
 export const Titulo = styled.h1`
@@ -103,7 +102,6 @@ export const FormadePagamento = styled.div`
     align-items: center;
     margin-bottom: 4px;
     gap: 16px;
-
 `;
 
 export const DivRadio = styled.div`
@@ -111,17 +109,14 @@ export const DivRadio = styled.div`
     align-items: center;
     gap: 2px;
 
-    label{
+    label {
         font-size: 12px;
     }
-`
-
+`;
 
 export const DivSelect = styled.div`
     margin-bottom: 20px;
-`
-
-
-
-
-
+    @media screen and (max-width: 500px) {
+        width: 220px;
+    }
+`;
