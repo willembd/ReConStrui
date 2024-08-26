@@ -1,6 +1,6 @@
 
     import { Alinhaborda, Alinhamento, Bordas, Botao, Caixa, Carrosel, Container, Im, Linha, Palavra, Texto, Title, Absoluto } from "./carrosselCardsStyle.js";
-    import { ContainerModal,ContainerDivModal,TituloModal,DivInput,DivRadio, QuebraLinha, Th3, PP, CaixaFundo,  FUNDO,TituloProduto,DivTransporte, Organizacao,Descricao } from "../modalCards/modalCards.js";
+    import { ContainerModal,ContainerDivModal,TituloModal,DivInput,DivRadio, Th3, PP, CaixaFundo,  FUNDO,TituloProduto,DivTransporte, Organizacao,Descricao } from "../modalCards/modalCards.js";
     import "swiper/css";
     import "swiper/css/navigation";
     import "swiper/css/scrollbar";

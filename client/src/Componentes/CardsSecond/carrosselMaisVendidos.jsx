@@ -6,7 +6,7 @@ import { Navigation, Scrollbar, A11y } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { useState, useEffect } from "react"; 
 import { useNavigate } from "react-router-dom";
-import Cards from "../Cards/cards.jsx"
+import Cards from "../Cards/cards.jsx";
 import "../Cards/cards.css"
 import InputPrimary from "../InputPrimary/inputPrimary.jsx";
 import ModalCards from "../modalCards/modalCards.jsx";
