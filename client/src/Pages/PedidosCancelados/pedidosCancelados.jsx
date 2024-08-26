@@ -6,24 +6,18 @@ import Footer from "../../Componentes/Footer/footer"
 import ModalDetalhes from "../../Componentes/ModalDetalhes/modaldestalhes";
 import FormularioDetalhes from "../../Componentes/FormDetalhes/formDetalhes";import ModalCancelar from "../../Componentes/ModalCancelar/modalCancelar";
 import Select from "../../Componentes/Select/select";
-import ButtonCancelar from "../../Componentes/ButtonCancelar/buttonCancelar";
+
 ''
 
 export default function PedidosCancelados () {
 
-    const [isOpenTest, setOpenTest] = useState(null);
+    
 
 
     const [openModalId, setOpenModalId] = useState(null);
     
 
-    const handleOpenModalTest = (id) => {
-        setOpenTest(id);
-    };
-
-    const handleCloseModalTest = () => {
-        setOpenTest(null);
-    };
+    
 
     const handleOpenModal = (id) => {
         setOpenModalId(id);
@@ -38,7 +32,7 @@ export default function PedidosCancelados () {
 
     
         const handleFechar = () => {
-            navigate("/confirmacaopedidos");
+            navigate("/");
         };
     return (
 
