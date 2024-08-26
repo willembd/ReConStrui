@@ -8,4 +8,11 @@ export const ButtonCancelar = styled.button`
     border-radius: 4px;
     font-size: 16px;
     cursor: pointer;
+
+    transition: transform 0.3s ease; 
+
+    &:hover {
+    transform: scale(1.1); 
+    }
+
 `;

@@ -72,14 +72,24 @@ export const Buttons = styled.div`
 
 `
 export const ButtonStyle = styled.button`
+    background-color:#AF7503 ;
+    padding: 10px 25px;
+    border: 1px solid #AF7503;
+    color: #fff;
     border-radius: 4px;
-    font-size: 14px;
+    font-size: 16px;
     cursor: pointer;
-    background-color: #AF7503 ;
-    padding: 12px 36px;
-    border: 2px solid #AF7503;
-    color: #FFFFFF;
 
+
+    transition: background-color 0.3s ease;
+    transition: transform 0.3s ease;
+
+  &:hover {
+    background-color: red; 
+    transform: scale(1.1); 
+
+}
+ 
 `
 
 

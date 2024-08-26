@@ -4,6 +4,9 @@ import Footer from "../../Componentes/Footer/footer";
 import { useNavigate } from "react-router-dom";
 import InputPrimary from "../../Componentes/InputPrimary/inputPrimary";
 import ImgPerfil from "../../assets/imagem perfil.svg";
+import { useState } from "react";
+import ModalCancelar from "../../Componentes/ModalCancelar/modalCancelar";
+
 
 export default function PerfilEmpresa() {
     const navigate = useNavigate();
@@ -11,6 +14,8 @@ export default function PerfilEmpresa() {
     const handleFechar = () => {
         navigate("/paginalogin");
     };
+
+    const [isOpenTest, setOpenTest] = useState(false);
 
     return (
         <>
@@ -164,7 +169,12 @@ export default function PerfilEmpresa() {
                                 <S.Botao>Salvar Alteração</S.Botao>
                             </S.Centralizar>
 
-                            <S.ButaoConta>Excluir Conta</S.ButaoConta>
+                            <S.ButaoConta  onClick={() => setOpenTest(!isOpenTest)}>Excluir Conta</S.ButaoConta>
+                            <ModalCancelar 
+                            textbutton="Excluir"
+                            text="Certeza que deseja excluir conta?"
+                            isOpenTest={isOpenTest}
+                            setOpenTest={setOpenTest} />
                         </S.BigBox>
                     </S.Container>
                 </S.Caixa>

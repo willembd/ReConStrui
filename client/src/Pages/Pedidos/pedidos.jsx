@@ -91,6 +91,7 @@ export default function Pedidos () {
                                                 <S.Flex>
                                                     <ButtonCancelar text="Cancelar" onClick={() => setOpenTest(1)}/>
                                                     <ModalCancelar 
+                                                     textbutton="Voltar"
                                                      text="Tem Certeza que deseja cancelar Orçamento?"
                                                       isOpenTest={isOpenTest === 1}
                                                       setOpenTest={handleCloseModalTest}></ModalCancelar>
@@ -146,7 +147,8 @@ export default function Pedidos () {
                                                 <ButtonCancelar text="Cancelar" onClick={() => setOpenTest(2)}/>
 
                                                     <ModalCancelar 
-                                                     text="Tem Certeza que deseja cancelar Orçamento?"
+                                                      textbutton="Voltar" 
+                                                      text="Tem Certeza que deseja cancelar Orçamento?"
                                                       isOpenTest={isOpenTest === 2}
                                                       setOpenTest={handleCloseModalTest}></ModalCancelar>
 
@@ -196,6 +198,7 @@ export default function Pedidos () {
                                                 <S.Flex>
                                                 <ButtonCancelar text="Cancelar" onClick={() => setOpenTest(3)}/>
                                                     <ModalCancelar 
+                                                     textbutton="Voltar"
                                                      text="Tem Certeza que deseja cancelar Orçamento?"
                                                       isOpenTest={isOpenTest === 3}
                                                       setOpenTest={handleCloseModalTest}></ModalCancelar>

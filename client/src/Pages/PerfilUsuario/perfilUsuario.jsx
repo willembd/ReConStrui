@@ -7,6 +7,7 @@ import ButtonMod from "../../Componentes/ButtonModelo/buttonModelo";
 import { useEffect, useState } from "react";
 import { api } from "../../service/api";
 import { jwtDecode } from "jwt-decode";
+import ModalCancelar from "../../Componentes/ModalCancelar/modalCancelar";
 
 export default function PerfilUsuario() {
     const [userId, setUserId] = useState(null);
@@ -71,7 +72,8 @@ export default function PerfilUsuario() {
         }
       }, [user]);
 
-      
+      const [isOpenTest, setOpenTest] = useState(false);
+
     return (
         <>
             <NavBar />
@@ -110,7 +112,14 @@ export default function PerfilUsuario() {
                         <ButtonMod text="Salvar" />
 
                         <S.ContainerButton>
-                            <S.ButtonExcluir>Excluir Conta</S.ButtonExcluir>
+                            <S.ButtonExcluir  onClick={() => setOpenTest(!isOpenTest)}>Excluir Conta </S.ButtonExcluir>
+                           
+                            <ModalCancelar 
+                            textbutton="Excluir"
+                            text="Certeza que deseja excluir sua conta?"
+                            isOpenTest={isOpenTest}
+                            setOpenTest={setOpenTest} />
+
                         </S.ContainerButton>
                     </S.ContainerSecondary>
                 </S.Caixa>

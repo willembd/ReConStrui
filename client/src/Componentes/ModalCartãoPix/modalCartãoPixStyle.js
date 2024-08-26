@@ -75,11 +75,23 @@ export const ButtonCartão = styled.div`
     cursor: pointer;
     padding: 10px;
 
-    ;
 
+    transition: transform 0.3s ease; 
+
+  &:hover {
+    transform: scale(1.1); 
+  }
+;
 `
 
-export const ButtonPix = styled.div` 
+export const ButtonPix = styled.div`
+
+        transition: transform 0.3s ease; 
+
+        &:hover {
+        transform: scale(1.1); 
+        }
+            
      background-color: #1C4525;
      color: #fff;
      border-radius: 4px;
@@ -89,12 +101,15 @@ export const ButtonPix = styled.div`
      display: flex;
      justify-content: center
 
-
-       
-`
+   
+    
+`;
 export const StyleButtons = styled.div`
      display: flex;
      align-items: center;
      gap: 54px;
+
+
+     
 
 `
