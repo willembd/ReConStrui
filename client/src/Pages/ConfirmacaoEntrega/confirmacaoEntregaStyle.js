@@ -38,6 +38,11 @@ export const ModalContainer = styled.div`
     justify-content: center;
     gap: 50px;
 
+    @media screen {
+        width:95%;
+       
+    }
+
    
 `;
 
@@ -71,8 +76,9 @@ export const Campos = styled.div`
     gap: 10px;
 
     @media screen and (max-width: 500px) {
-        width: 70px;
+        width: 120px;
         flex-direction: column;
+        height:200px;
     }
 `;
 

@@ -265,8 +265,6 @@ export const InputCentralizar =   styled.div`
         flex-direction: column;
         gap: 20px;
     }
-
-
 `
 
 export const CentralizarButton = styled.div`
@@ -298,6 +296,7 @@ export const Campo = styled.div`
         display: flex;
         flex-direction: column;
         gap: 20px;
+        width:100%;
     }
 
 
