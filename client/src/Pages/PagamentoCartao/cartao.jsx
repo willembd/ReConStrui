@@ -15,7 +15,7 @@ export default function PaginaLogin() {
     const navigate = useNavigate();
 
     const handleFechar = () => {
-        navigate("/");
+        navigate("/pedidos");
     };
 
     return (
