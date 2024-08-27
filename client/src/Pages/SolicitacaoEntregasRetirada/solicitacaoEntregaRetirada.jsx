@@ -1,20 +1,47 @@
-import * as S from "./solicitacaoEntregaRetiradaStyle.js";
-import { useNavigate } from "react-router-dom";
-import NavBar from "../../Componentes/NavBar/navbar.jsx";
-import Footer from "../../Componentes/Footer/footer.jsx";
-import {AAlinhamento,LLinha,} from "../../Componentes/modalCards/modalCards.js";
+import * as S from "./solicitacaoEntregaRetiradaStyle"
+import { useState } from "react";
+import { useNavigate } from "react-router-dom"
+import NavBar from "../../Componentes/NavBar/navbar"
+import Footer from "../../Componentes/Footer/footer"
+import ModalDetalhes from "../../Componentes/ModalDetalhes/modaldestalhes";
+import FormularioDetalhes from "../../Componentes/FormDetalhes/formDetalhes";import ModalCancelar from "../../Componentes/ModalCancelar/modalCancelar";
+import Select from "../../Componentes/Select/select";
+import ButtonCancelar from "../../Componentes/ButtonCancelar/buttonCancelar";
+''
+
+export default function SolicitacaoEntregaRetirada () {
+
+    const [isOpenTest, setOpenTest] = useState(null);
 
 
-export default function SolicitacaoEntregaRetirada() {
+    const [openModalId, setOpenModalId] = useState(null);
     
+
+    const handleOpenModalTest = (id) => {
+        setOpenTest(id);
+    };
+
+    const handleCloseModalTest = () => {
+        setOpenTest(null);
+    };
+
+    const handleOpenModal = (id) => {
+        setOpenModalId(id);
+    };
+
+    const handleCloseModal = () => {
+        setOpenModalId(null);
+    };
+
+
     const navigate = useNavigate();
-    const handleEntrar = () => {
-        navigate("/confirmacaoentrega");
-    };
-    const handleFechar = () => {
-        navigate("/confirmacaoentrega");
-    };
+
+    
+        const handleFechar = () => {
+            navigate("/confirmacaoentrega");
+        };
     return (
+
         <>
             <NavBar />
             <S.CaixaFundo></S.CaixaFundo>
@@ -22,164 +49,183 @@ export default function SolicitacaoEntregaRetirada() {
             <S.Caixa>
                 <S.Container>
                     <S.AAlinha>
-                        <S.Pedidos>Solicitações Entregas E Retirada</S.Pedidos>
-                        <S.Barra />
+                        <S.Pedidos>Solicitações de Entrega e Retirada</S.Pedidos>
+                        <S.Barra/>
                     </S.AAlinha>
                     <S.TXT>Confira aqui o andamento do seus pedidos</S.TXT>
-
-                    <S.PP>Filtrar por</S.PP>
+                    <S.PP>Filtrar por:</S.PP>
                     <div className="form-group">
-                        <label htmlFor="label"></label>
-                        <select name="label" id="label">
-                            <option value="in progress">Orçamento Solicitados</option>
-                            <option value="confirmed">Entregas/Retirada</option>
+                        <Select >
+                            <option value="in progress">Solicitação  Pedidos</option>
+                            <option value="confirmed">Solicitações Entrega/Retirada</option>
                             <option value="cancel">Histórico</option>
-                        </select>
+                        </Select>
                     </div>
                     <S.FlexColomn>
                         <S.CContainer>
                             <S.CCaixa>
                                 <S.PLeft>
-                                    <S.PPP>Dados do Pedido</S.PPP>
-
-                                    <S.PPALAVRA>Pedido para Entrega</S.PPALAVRA>
+                                    <S.PPALAVRA>Dados do Pedido</S.PPALAVRA>
+                                    <S.PPP>Pedido Para Entrega</S.PPP>
                                 </S.PLeft>
                                 <S.CCaixinha>
                                     <S.Caixinha>
-                                        <S.Alinha>
-                                            <S.PaLavra>
-                                                Data da compra: 00/00/0000
-                                            </S.PaLavra>
-                                            <S.PaLavra>
-                                                ID do Pedido: 0214830
-                                            </S.PaLavra>
-                                        </S.Alinha>
+                                        <S.PaLavra>Data da compra: 00/00/0000</S.PaLavra>
+                                        <S.PaLavra>ID do Pedido: 0214830</S.PaLavra>
                                     </S.Caixinha>
-                                    <div>
+                                    
                                         <S.SobreContainer>
-                                            <div className="box-item">
-                                                <S.IIIMG src="areia.png" />
-                                                <AAlinhamento>
-                                                    <LLinha>
-                                                        <S.TTTitle>
-                                                            Areia reciclada
-                                                        </S.TTTitle>
-                                                        <S.PPalavra>
-                                                            AGR Ambiental
-                                                        </S.PPalavra>
-                                                    </LLinha>
-                                                </AAlinhamento>
-                                            </div>
+                                            <S.ContainerImg >
+                                                <S.IIIMG src='areia.png'/>
+                                                
+                                                <S.TTTitle>Areia reciclada</S.TTTitle>
+                                                <S.PPalavra>AGR Ambiental</S.PPalavra> 
+                                            </S.ContainerImg>
+
                                             <S.QuebraLinha>
-                                                <S.LETRA>Em andamento</S.LETRA>
+                                                <S.LETRA>Em Andamento</S.LETRA>
                                                 <div>
-                                                    <S.BBarraAguardando />
-                                                    <S.BarraAguardando />
+                                                    <S.BBarraAguardando/>
+                                                    <S.BarraAguardando/>
                                                 </div>
                                                 <S.Flex>
-                                                    <S.BBotao2>Cancelar</S.BBotao2>
+                                                    <ButtonCancelar text="Cancelar" onClick={() => setOpenTest(1)}/>
+                                                    <ModalCancelar 
+                                                     textbutton="Voltar"
+                                                     text="Tem Certeza que deseja cancelar Orçamento?"
+                                                      isOpenTest={isOpenTest === 1}
+                                                      setOpenTest={handleCloseModalTest}></ModalCancelar>
+
                                                     <S.BBotao onClick={handleFechar}>Entregar</S.BBotao>
+                                                    
+                                                </S.Flex>
+                                            </S.QuebraLinha>
+                                        </S.SobreContainer>
+                
+                                </S.CCaixinha>
+
+                                <S.LLinks onClick={() => handleOpenModal(1)}>Ver detalhes</S.LLinks>
+                                <ModalDetalhes
+                                    text="DETALHES DO PEDIDO"
+                                    isOpen={openModalId === 1}
+                                    setOpen={handleCloseModal}>
+                                    <FormularioDetalhes />
+
+                                </ModalDetalhes>
+
+                            </S.CCaixa>
+
+                            <S.CContainer>
+                            <S.CCaixa>
+                                <S.PLeft>
+                                    <S.PPALAVRA>Dados do Pedido</S.PPALAVRA>
+                                    <S.PPP>Pedido Para Retirada</S.PPP>
+                                </S.PLeft>
+                                <S.CCaixinha>
+                                    <S.Caixinha>
+                                       
+                                            <S.PaLavra>Data da compra: 00/00/0000</S.PaLavra>
+                                            <S.PaLavra>ID do Pedido: 0214830</S.PaLavra>
+                                        
+                                 </S.Caixinha>
+                                    <div>
+                                        <S.SobreContainer>
+                                            <S.ContainerImg>
+                                                <S.IIIMG src='pedrisco.png'/>
+                                                
+                                                <S.TTTitle>Pedrisco</S.TTTitle>
+                                                <S.PPalavra>AGR Ambiental</S.PPalavra>
+                                            </S.ContainerImg>
+
+                                            <S.QuebraLinha>
+                                                <S.LETRA>Aguardando Retirada</S.LETRA>
+                                                <div>
+                                                    <S.BBarraAguardando/>
+                                                    <S.BarraAguardando/>
+                                                </div>
+                                                <S.Flex>
+                                                <ButtonCancelar text="Cancelar" onClick={() => setOpenTest(2)}/>
+
+                                                    <ModalCancelar 
+                                                      textbutton="Voltar" 
+                                                      text="Tem Certeza que deseja cancelar Orçamento?"
+                                                      isOpenTest={isOpenTest === 2}
+                                                      setOpenTest={handleCloseModalTest}></ModalCancelar>
+
+                                                    <S.BBotao  onClick={handleFechar}>Retirada</S.BBotao>
                                                 </S.Flex>
                                             </S.QuebraLinha>
                                         </S.SobreContainer>
                                     </div>
                                 </S.CCaixinha>
-                                <S.LLinks onChange={handleEntrar}>{" "}Veja mais detalhes</S.LLinks>
-                                </S.CCaixa>
+                                <S.LLinks onClick={() => handleOpenModal(2)}> Ver detalhes</S.LLinks>
+                                <ModalDetalhes
+                                    text="DETALHES DO PEDIDO"
+                                    isOpen={openModalId === 2}
+                                    setOpen={handleCloseModal}>
+                                    <FormularioDetalhes />
+                                </ModalDetalhes>
+                            </S.CCaixa>
+                        </S.CContainer>
 
-                            <S.CContainer>
-                                <S.CCaixa>
-                                    <S.PLeft>
-                                        <S.PPP>Dados do Pedido</S.PPP>
-
-                                        <S.PPALAVRA>Pedidos para entrega</S.PPALAVRA>
-                                    </S.PLeft>
-                                    <S.CCaixinha>
-                                        <S.Caixinha>
-                                            <S.Alinha>
-                                                <S.PaLavra> Data da compra: 00/00/000</S.PaLavra>
-                                                <S.PaLavra>ID do Pedido: 0214830</S.PaLavra>
-                                            </S.Alinha>
-                                        </S.Caixinha>
-                                        <div>
-                                            <S.SobreContainer>
-                                                <div className="box-item">
-                                                    <S.IIIMG src="pedrisco.png" />
-                                                    <AAlinhamento>
-                                                        <LLinha>
-                                                            <S.TTTitle> Pedrisc</S.TTTitle>
-                                                            <S.PPalavra> AGR Ambiental</S.PPalavra>
-                                                        </LLinha>
-                                                    </AAlinhamento>
+                        <S.CContainer>
+                            <S.CCaixa>
+                                <S.PLeft>
+                                    <S.PPALAVRA>Dados do Pedido</S.PPALAVRA>
+                                    <S.PPP>Pedido Para Entrega</S.PPP>
+                                </S.PLeft>
+                                <S.CCaixinha>
+                                    <S.Caixinha>
+                                       
+                                        <S.PaLavra>Data da compra: 00/00/0000</S.PaLavra>
+                                        <S.PaLavra>ID do Pedido: 0214830</S.PaLavra>
+                                      
+                                    </S.Caixinha>
+                                    <div>
+                                        <S.SobreContainer>
+                                            <S.ContainerImg>
+                                                <S.IIIMG src='rachao.png'/>
+                                                
+                                                <S.TTTitle>Rachão</S.TTTitle>
+                                                <S.PPalavra>AGR Ambiental</S.PPalavra>
+                                            </S.ContainerImg>
+                                            <S.QuebraLinha>
+                                                <S.LETRA>Em Andamento</S.LETRA>
+                                                <div>
+                                                    <S.BBarraAguardando/>
+                                                    <S.BarraAguardando/>
                                                 </div>
-                                                <S.QuebraLinha>
-                                                    <S.LETRA>Em andamento</S.LETRA>
-                                                    <div>
-                                                        <S.BBarraAguardando />
-                                                        <S.BarraAguardando />
-                                                    </div>
-                                                    <S.Flex>
-                                                        <S.BBotao2>Cancelar</S.BBotao2>
-                                                        <S.BBotao onClick={handleFechar }>Entregar</S.BBotao>
-                                                    </S.Flex>
-                                                </S.QuebraLinha>
-                                            </S.SobreContainer>
-                                        </div>
-                                    </S.CCaixinha>
-                                    <S.LLinks onChange={handleEntrar}>{" "}Veja mais detalhes</S.LLinks>
-                                </S.CCaixa>
-                            </S.CContainer>
-                            
-                            <S.CContainer>
-                                <S.CCaixa>
-                                    <S.PLeft>
-                                        <S.PPP>Dados do Pedido</S.PPP>
+                                                <S.Flex>
+                                                <ButtonCancelar text="Cancelar" onClick={() => setOpenTest(3)}/>
+                                                    <ModalCancelar 
+                                                     textbutton="Voltar"
+                                                     text="Tem Certeza que deseja cancelar Orçamento?"
+                                                      isOpenTest={isOpenTest === 3}
+                                                      setOpenTest={handleCloseModalTest}></ModalCancelar>
+                                                    <S.BBotao  onClick={handleFechar}>Entregar</S.BBotao>
+                                                </S.Flex>
+                                            </S.QuebraLinha>
+                                        </S.SobreContainer>
+                                    </div>
+                                </S.CCaixinha>
+                                <S.LLinks onClick={() => handleOpenModal(3)}>Ver detalhes</S.LLinks>
+                                <ModalDetalhes
+                                    text="DETALHES DO PEDIDO"
+                                    isOpen={openModalId === 3}
+                                    setOpen={handleCloseModal}>
+                                    <FormularioDetalhes />
+                                </ModalDetalhes>
 
-                                        <S.PPALAVRA>Pedido para Retirada</S.PPALAVRA>
-                                    </S.PLeft>
-                                    <S.CCaixinha>
-                                        <S.Caixinha>
-                                            <S.Alinha>
-                                                <S.PaLavra>Data da compra: 00/00/0000</S.PaLavra>
-                                                <S.PaLavra>ID do Pedido: 0214830</S.PaLavra>
-                                            </S.Alinha>
-                                        </S.Caixinha>
-                                        <div>
-                                            <S.SobreContainer>
-                                                <div className="box-item">
-                                                    <S.IIIMG src="rachao.png" />
-                                                    <AAlinhamento>
-                                                        <LLinha>
-                                                            <S.TTTitle>
-                                                                Rachão
-                                                            </S.TTTitle>
-                                                            <S.PPalavra>AGR Ambiental</S.PPalavra>
-                                                        </LLinha>
-                                                    </AAlinhamento>
-                                                </div>
-                                                <S.QuebraLinha>
-                                                    <S.LETRA>Pedido Pronto para retirada</S.LETRA>
-                                                    <div>
-                                                        <S.BBarraAguardando />
-                                                        <S.BarraAguardando />
-                                                    </div>
-                                                    <S.Flex>
-                                                        <S.BBotao2>Cancelar</S.BBotao2>
-                                                        <S.BBotao onClick={handleFechar }>Verificar</S.BBotao>
-                                                    </S.Flex>
-                                                </S.QuebraLinha>
-                                            </S.SobreContainer>
-                                        </div>
-                                    </S.CCaixinha>
-                                    <S.LLinks onClick={handleEntrar}>{" "}Veja mais detalhes</S.LLinks>
-                                </S.CCaixa>
-                            </S.CContainer>
+                            </S.CCaixa>
+                        </S.CContainer>
                         </S.CContainer>
                     </S.FlexColomn>
                 </S.Container>
             </S.Caixa>
 
             <Footer />
+        
         </>
-    );
+
+    )
 }

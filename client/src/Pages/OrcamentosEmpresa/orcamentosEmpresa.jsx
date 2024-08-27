@@ -11,7 +11,7 @@ export default function OrçamentosEmpresa() {
     const navigate = useNavigate();
 
     const handleFechar = () => {
-        navigate("/solicitacaopedido");
+        navigate("/solicitacaopedidoemp");
     };
 
     return (

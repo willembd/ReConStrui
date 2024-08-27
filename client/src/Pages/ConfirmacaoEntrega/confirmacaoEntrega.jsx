@@ -14,7 +14,7 @@ export default function ConfirmacaoEntrega() {
             <S.Caixa>
                 <S.Modal>
                     <S.ButtonContainer>
-                        <S.Button onClick={() => navigation("/")}>
+                        <S.Button onClick={() => navigation("/solicitacaoentregaretirada")}>
                             Voltar
                         </S.Button>
                     </S.ButtonContainer>
