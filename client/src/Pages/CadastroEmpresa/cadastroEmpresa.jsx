@@ -5,6 +5,8 @@ import { useNavigate } from "react-router-dom";
 import { api } from "../../service/api";
 import { useState } from "react";
 import InputPrimary from "../../Componentes/InputPrimary/inputPrimary";
+import {useForm} from "react-hook-form"
+import InputPrimaryAddress from "../../Componentes/InputPrimaryAddress/inputPrimaryAddress";
 
 
 export default function CadastroEmpresa() {
@@ -12,17 +14,12 @@ export default function CadastroEmpresa() {
     const [razao_social, setRazao_social] = useState("");
     const [telefone, setTelefone] = useState("");
     const [cnpj, setCnpj] = useState("");
-    const [cep, setCep] = useState("");
-    const [estado, setEstado] = useState("");
-    const [cidade, setCidade] = useState("");
-    const [bairro, setBairro] = useState("");
-    const [endereco, setEndereco] = useState("");
-    const [numero, setNumero] = useState("");
     const [email, setEmail] = useState("");
     const [senha, setSenha] = useState("");
     const [transporte, setTransporte] = useState([]);
 
     const navigate = useNavigate();
+    const {register, setValue, getValues, setFocus} = useForm();
 
     const handleFechar = () => {
         navigate("/paginalogin");
@@ -37,18 +34,20 @@ export default function CadastroEmpresa() {
     };
 
     async function handleCadastrarEmpresa() {
+        console.log(getValues("endereco"))
+
         await api
             .post("/empresa/create", {
                 nome,
                 razao_social,
                 telefone,
                 cnpj,
-                cep,
-                estado,
-                cidade,
-                bairro,
-                endereco,
-                numero,
+                cep: getValues("cep"),
+                estado: getValues("uf"),
+                cidade: getValues("cidade"),
+                bairro: getValues("bairro"),
+                endereco: getValues("endereco"),
+                numero: getValues("numero"),
                 email,
                 senha,
                 transporte,
@@ -61,10 +60,30 @@ export default function CadastroEmpresa() {
             });
     }
 
+
+
+    const checkCEP = (e) => {
+      const cep = e.target.value.replace(/\D/g, '');
+      fetch(`https://viacep.com.br/ws/${cep}/json/`)
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            setValue("endereco", data.logradouro);
+            setValue("bairro", data.bairro);
+            setValue("cidade", data.localidade);
+            setValue("uf", data.uf);
+            setFocus('numero');
+        })
+        .catch(e => {
+            console.error(e);
+        })
+
+    }
+
     return (
         <>
             <NavBar />
-            
+
             <S.CaixaFundo></S.CaixaFundo>
             <S.BarraVertical />
             <S.BigBox>
@@ -87,12 +106,14 @@ export default function CadastroEmpresa() {
                                         <S.Linha />
                                     </S.QuebraLinha>
                                     <S.InputFlex>
+                                        
                                         <InputPrimary
                                             text="Nome"
                                             onChange={(e) =>
                                                 setNome(e.target.value)
                                             }
                                         />
+
                                         <InputPrimary
                                             text="Razão social"
                                             onChange={(e) =>
@@ -126,44 +147,50 @@ export default function CadastroEmpresa() {
                                     <S.InputFlex>
                                         <InputPrimary
                                             text="Cep"
-                                            onChange={(e) =>
-                                                setCep(e.target.value)
-                                            }
+                                            {...register("cep")}
+                                            onBlur={checkCEP} 
                                         />
-                                        <InputPrimary
-                                            text="Estado"
-                                            onChange={(e) =>
-                                                setEstado(e.target.value)
-                                            }
-                                        />
+                                         
+                                        <InputPrimaryAddress>
+
+                                            <label className="text" > Estado </label>
+                                            <input {...register("uf")} className="input" type="text" required />
+                                        
+                                        </InputPrimaryAddress>
                                     </S.InputFlex>
                                     <S.InputFlex>
-                                        <InputPrimary
-                                            text="Cidade"
-                                            onChange={(e) =>
-                                                setCidade(e.target.value)
-                                            }
-                                        />
-                                        <InputPrimary
-                                            text="Bairro"
-                                            onChange={(e) =>
-                                                setBairro(e.target.value)
-                                            }
-                                        />
+                                        <InputPrimaryAddress>
+
+                                            <label className="text" > Cidade </label>
+                                            <input {...register("cidade")} className="input" type="text" required />
+
+                                        </InputPrimaryAddress>
+                                        
+                                        <InputPrimaryAddress>
+
+                                            <label className="text" > Bairro </label>
+                                            <input {...register("bairro")} className="input" type="text" required />
+
+                                        </InputPrimaryAddress>
+
+
                                     </S.InputFlex>
                                     <S.InputFlex>
-                                        <InputPrimary
-                                            text="Endereço"
-                                            onChange={(e) =>
-                                                setEndereco(e.target.value)
-                                            }
-                                        />
-                                        <InputPrimary
-                                            text="Número"
-                                            onChange={(e) =>
-                                                setNumero(e.target.value)
-                                            }
-                                        />
+                                        <InputPrimaryAddress>
+
+                                            <label className="text"> Endereço </label>
+                                            <input {...register("endereco")} className="input" type="text" required />
+
+                                        </InputPrimaryAddress>
+
+                                        <InputPrimaryAddress>
+
+                                           <label className="text"> Número </label>
+                                           <input {...register("numero")} className="input" type="text" required />
+
+                                        </InputPrimaryAddress>
+
+                                       
                                     </S.InputFlex>
                                 </S.ContainerInputs>
                             </S.BigBox>
