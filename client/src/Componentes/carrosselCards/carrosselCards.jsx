@@ -19,16 +19,16 @@
         const [select, setSelect] = useState(null)
         const [slidePerView, setSlidePerView] = useState(6)
         const produtos = [
-            { id: '1', image: "/pedrisco.png",title:"Pedrisco" },
-            { id: '2', image: "/rachao.png",title:"Rachão" },
-            { id: '3', image: "/areia.png" ,title:"Areia reciclada"},
-            { id: '4', image: "/brita.png" ,title:"Brita reciclada"},
-            { id: '5', image: "/pedrisco.png" ,title:"Pedrisco"},
-            { id: '6', image: "/rachao.png" ,title:"Rachão"},
-            { id: '7', image: "/areia.png" ,title:"Areia reciclada"},
-            { id: '8', image: "/brita.png" ,title:"Brita reciclada"},
-            { id: '9', image: "/pedrisco.png" ,title:"Pedrisco"},
-            { id: '10', image: "/rachao.png",title:"Rachão" },
+            { id: '1', image: "/PEDRISCO.svg",title:"Pedrisco" },
+            { id: '2', image: "/RACHAO.svg",title:"Rachão" },
+            { id: '3', image: "/AREIA.svg" ,title:"Areia reciclada"},
+            { id: '4', image: "/BRITA.svg" ,title:"Brita reciclada"},
+            { id: '5', image: "/PEDRISCO.svg" ,title:"Pedrisco"},
+            { id: '6', image: "/RACHAO.svg" ,title:"Rachão"},
+            { id: '7', image: "/AREIA.svg" ,title:"Areia reciclada"},
+            { id: '8', image: "/BRITA.svg" ,title:"Brita reciclada"},
+            { id: '9', image: "/PEDRISCO.svg" ,title:"Pedrisco"},
+            { id: '10', image: "/RACHAO.svg",title:"Rachão" },
         ];
 
         useEffect(() => {
