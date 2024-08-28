@@ -33,16 +33,24 @@
 
         useEffect(() => {
             function handleResize(){
-                if(window.innerWidth<545){
-                    setSlidePerView(3)
+                if(window.innerWidth<410){
+                    setSlidePerView(1)
                 }else{
-                    if(window.innerWidth<=1135){
-                        setSlidePerView(4)
+                    if(window.innerWidth<676){
+                        setSlidePerView(2)
                     }else{
-                        if(window.innerWidth<=1920){
-                            setSlidePerView(5)
+                        if(window.innerWidth<906){
+                            setSlidePerView(3)
                         }else{
-                            setSlidePerView(6)
+                            if(window.innerWidth<1135){
+                                setSlidePerView(4)
+                            }else{
+                                if(window.innerWidth<=1920){
+                                    setSlidePerView(5)
+                                }else{
+                                    setSlidePerView(6)
+                                }
+                            }
                         }
                     }
                 }
@@ -107,7 +115,6 @@
 
                 <ModalCards isOpen={openModal} setModalOpen= {() => setOpenModal(!openModal)}>
                         <CaixaFundo></CaixaFundo>
-                        <ContainerModal>
                         <ContainerDivModal>
                             <Organizacao>
                                     <ContainerModal>
@@ -142,7 +149,6 @@
                                         </DivInput>
                                 </Organizacao>
                             </ContainerDivModal>
-                            </ContainerModal>
                 </ModalCards>
             </> 
         );

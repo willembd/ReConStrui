@@ -39,24 +39,7 @@ export const Im = styled.img`
     border-radius: 0.75rem 0.75rem 0.75rem 0.75rem;
     box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.5);
     filter: brightness(1.2); 
-    @media screen and (max-width:910px) {
-        width: 11.5rem;
-        height: 18rem;
-    }  
-    @media screen and (max-width:750px) {
-        width: 10.5rem;
-    }
-    @media screen and (max-width:750px) {
-        width: 9.5rem;
-        height: 17rem;
-    }
-    @media screen and (max-width:610px) {
-        width: 8.5rem;
-    }
-    @media screen and (max-width:410px) {
-        width: 6.5rem;
-        height: 16rem;
-    }
+
 `
 export const Absoluto = styled.div`
     position: absolute;
@@ -73,27 +56,6 @@ export const Caixa = styled.div`
     justify-content: space-around;
     align-items: center;
     margin-top: 13rem;
-    @media screen and (max-width:910px) {
-        width: 11.5rem;
-    }
-    @media screen and (max-width:870) {
-        width: 11.5rem;
-        height: 5rem;
-    }
-    @media screen and (max-width:750px) {
-        width: 10.5rem;
-    }
-    @media screen and (max-width:750px) {
-        width: 9.5rem;
-        height: 4rem;
-    }
-    @media screen and (max-width:610px) {
-        width: 8.5rem;
-    }
-    @media screen and (max-width:410px) {
-        width: 6.5rem;
-        height: 3.5rem;
-    }
 `
 export const Alinhamento = styled.div`
     display: flex;
@@ -108,30 +70,12 @@ export const Title = styled.h1`
     font-size: 1.2rem ;
     font-weight: 500;
     color:#fff; 
-    @media screen and (max-width:810px ) {
-        font-size: 1rem;
-    }
-    @media screen and (max-width:750px) {
-        font-size:0.8rem ;
-    }
-    @media screen and (max-width:410px) {
-        font-size: 0.6rem;
-    }
 `
 export const Palavra = styled.p`
     font-size: 0.8rem ;
     font-weight: normal;
     margin: 0.3rem;
     color: #fff;
-    @media screen and (max-width:810px ) {
-        font-size: 0.6rem;
-    }
-    @media screen and (max-width:750px) {
-        font-size:0.5rem ;
-    }
-    @media screen and (max-width:410px) {
-        font-size: 0.3rem;
-    }
 `
 export const Botao = styled.button`
     background-color: rgba(175, 117, 3, 0.9);
@@ -141,12 +85,4 @@ export const Botao = styled.button`
     padding: 0.5rem 2.5rem;
     border-radius: 4px;
     cursor: pointer;
-    @media screen and (max-width:810px ) {
-        padding: 0.5rem 2rem ;
-        font-size: 0.8rem;
-    }
-    @media screen and (max-width:750px) {
-        padding: 0.2rem 2rem ;
-        font-size: 0.5rem;
-    }
 `

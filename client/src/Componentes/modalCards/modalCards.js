@@ -23,6 +23,10 @@ export const MODAL_STYLE = styled.div`
     border-radius: 8px;
     display: flex;
     align-items: center; 
+    @media screen and (max-width:376px) {
+    display: flex;
+    flex-direction: column;
+}
 `;
 export const ContainerModal =styled.div`
     display: flex;
@@ -44,6 +48,11 @@ export const ContainerModal =styled.div`
     }
     @media screen  and (max-width:565px){
         margin: 0.5rem;
+    }
+    @media screen and (max-width:376px) {
+        margin: 0;
+        gap: 0px;
+        height: 25rem;
     }
     @media screen  and (max-height: 530px){
         gap: 0;
@@ -128,6 +137,9 @@ export const IMG = styled.img`
     @media screen and (max-height:476px) {
         height: 16rem;
     }
+    @media screen and (max-width:376px) {
+        
+}
 `;
 export const Absoluto = styled.div`
     position: absolute;
@@ -161,6 +173,10 @@ export const Caixa = styled.div`
         height: 4rem;
         margin-top: 12rem;
     }
+    @media screen and (max-width:376px) {
+        margin-top: 10rem; 
+        border-radius: 0;
+}
 `;
 export const Alinhamento = styled.div`
     display: flex;
@@ -300,10 +316,17 @@ export const Organizacao =styled.div`
     @media screen  and (max-width: 610px){
         gap: 1rem;
     }
+    @media screen and (max-width:406px){
+        flex-direction: column;
+    }
 `;
 export const TituloProduto = styled.h1`
     color: white;
     margin: 0.1rem;
+    @media screen and (max-width:376px){
+        color: rgba(175, 117, 3, 0.9);
+        font-size: 1.5rem;
+    }
 `;
 export const DivTransporte = styled.div`
     display: flex;
@@ -345,8 +368,10 @@ export const Descricao = styled.p`
         height: 6rem;
     }
     @media screen  and (max-width: 590px){
-        width: 8rem;
-        height: 6rem;
+        width: 15rem;
+        box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.5);
+        height: 2rem;
+        font-size: 0.8rem;
     }
     @media screen and (max-height:510px) {
         height: 2rem;
