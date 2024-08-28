@@ -29,8 +29,7 @@ export default function SolicitacaoPedidoEmp () {
 
         <>
             <NavBar />
-            <S.CaixaFundo></S.CaixaFundo>
-            <S.BarraVertical />
+           
             <S.Caixa>
                 <S.Container>
                     <S.AAlinha>

@@ -4,10 +4,9 @@ import { useNavigate } from "react-router-dom";
 import NavBar from "../../Componentes/NavBar/navbar";
 import Footer from "../../Componentes/Footer/footer";
 import ModalDetalhes from "../../Componentes/ModalDetalhes/modaldestalhes";
-import FormularioDetalhes from "../../Componentes/FormDetalhes/formDetalhes";import ModalCancelar from "../../Componentes/ModalCancelar/modalCancelar";
+import FormularioDetalhes from "../../Componentes/FormDetalhes/formDetalhes";
 import Select from "../../Componentes/Select/select";
-import ButtonCancelar from "../../Componentes/ButtonCancelar/buttonCancelar";
-''
+
 
 export default function HistoricoEmpresa () {
 
@@ -88,15 +87,8 @@ export default function HistoricoEmpresa () {
                                                     <S.BarraAguardando/>
                                                 </div>
                                                 <S.Flex>
-                                                    <ButtonCancelar text="Cancelar" onClick={() => setOpenTest(1)}/>
-                                                    <ModalCancelar 
-                                                     textbutton="Voltar"
-                                                     text="Tem Certeza que deseja cancelar Orçamento?"
-                                                      isOpenTest={isOpenTest === 1}
-                                                      setOpenTest={handleCloseModalTest}></ModalCancelar>
-
-                                                    <S.BBotao onClick={handleFechar}>Verificar</S.BBotao>
-                                                    
+                                                   
+                                                   
                                                 </S.Flex>
                                             </S.QuebraLinha>
                                         </S.SobreContainer>
@@ -143,15 +135,8 @@ export default function HistoricoEmpresa () {
                                                     <S.BarraAguardando/>
                                                 </div>
                                                 <S.Flex>
-                                                <ButtonCancelar text="Cancelar" onClick={() => setOpenTest(2)}/>
-
-                                                    <ModalCancelar 
-                                                      textbutton="Voltar" 
-                                                      text="Tem Certeza que deseja cancelar Orçamento?"
-                                                      isOpenTest={isOpenTest === 2}
-                                                      setOpenTest={handleCloseModalTest}></ModalCancelar>
-
-                                                    <S.BBotao  onClick={handleFechar}>verificar</S.BBotao>
+                                               
+                                                   
                                                 </S.Flex>
                                             </S.QuebraLinha>
                                         </S.SobreContainer>
@@ -195,14 +180,7 @@ export default function HistoricoEmpresa () {
                                                     <S.BarraAguardandoC/>
                                                 </div>
                                                 <S.Flex>
-                                                <ButtonCancelar text="Cancelar" onClick={() => setOpenTest(3)}/>
-                                                    
-                                                    <ModalCancelar 
-                                                     textbutton="Voltar"
-                                                     text="Tem Certeza que deseja cancelar Orçamento?"
-                                                      isOpenTest={isOpenTest === 3}
-                                                      setOpenTest={handleCloseModalTest}></ModalCancelar>
-                                                    <S.BBotao  onClick={handleFechar}>Verificar</S.BBotao>
+                                                
                                                 </S.Flex>
                                             </S.QuebraLinha>
                                         </S.SobreContainer>

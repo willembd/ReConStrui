@@ -44,8 +44,7 @@ export default function PedidosConcluido () {
 
         <>
             <NavBar />
-            <S.CaixaFundo></S.CaixaFundo>
-            <S.BarraVertical />
+           
             <S.Caixa>
                 <S.Container>
                     <S.AAlinha>
