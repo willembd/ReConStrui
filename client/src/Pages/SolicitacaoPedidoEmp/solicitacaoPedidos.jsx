@@ -1,8 +1,8 @@
 import * as S from "./solicitacaoPedidosStyle"
 import { useState } from "react";
-import { useNavigate } from "react-router-dom"
-import NavBar from "../../Componentes/NavBar/navbar"
-import Footer from "../../Componentes/Footer/footer"
+import { useNavigate } from "react-router-dom";
+import NavBar from "../../Componentes/NavBar/navbar";
+import Footer from "../../Componentes/Footer/footer";
 import ModalDetalhes from "../../Componentes/ModalDetalhes/modaldestalhes";
 import FormularioDetalhes from "../../Componentes/FormDetalhes/formDetalhes";import ModalCancelar from "../../Componentes/ModalCancelar/modalCancelar";
 import Select from "../../Componentes/Select/select";
@@ -12,33 +12,18 @@ import ButtonCancelar from "../../Componentes/ButtonCancelar/buttonCancelar";
 export default function SolicitacaoPedidoEmp () {
 
     const [isOpenTest, setOpenTest] = useState(null);
-
-
-    const [openModalId, setOpenModalId] = useState(null);
     
-
-    const handleOpenModalTest = (id) => {
-        setOpenTest(id);
-    };
 
     const handleCloseModalTest = () => {
         setOpenTest(null);
     };
 
-    const handleOpenModal = (id) => {
-        setOpenModalId(id);
-    };
-
-    const handleCloseModal = () => {
-        setOpenModalId(null);
-    };
-
-
+    
     const navigate = useNavigate();
 
     
         const handleFechar = () => {
-            navigate("/confirmacaopedidos");
+            navigate("/orcamentosempresa");
         };
     return (
 
@@ -144,7 +129,7 @@ export default function SolicitacaoPedidoEmp () {
                                                       isOpenTest={isOpenTest === 2}
                                                       setOpenTest={handleCloseModalTest}></ModalCancelar>
 
-                                                    <S.BBotao  onClick={handleFechar}>Verificar</S.BBotao>
+                                                    <S.BBotao  onClick={handleFechar}>Enviar Orçamento</S.BBotao>
                                                 </S.Flex>
                                             </S.QuebraLinha>
                                         </S.SobreContainer>

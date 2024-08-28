@@ -44,8 +44,7 @@ export default function HistoricoEmpresa () {
 
         <>
             <NavBar />
-            <S.CaixaFundo></S.CaixaFundo>
-            <S.BarraVertical />
+           
             <S.Caixa>
                 <S.Container>
                     <S.AAlinha>
@@ -66,7 +65,7 @@ export default function HistoricoEmpresa () {
                             <S.CCaixa>
                                 <S.PLeft>
                                     <S.PPALAVRA>Dados do Pedido</S.PPALAVRA>
-                                    <S.PPP>Pedido Para Entrega</S.PPP>
+                                    <S.PPP>Pedido Concluído</S.PPP>
                                 </S.PLeft>
                                 <S.CCaixinha>
                                     <S.Caixinha>
@@ -83,7 +82,7 @@ export default function HistoricoEmpresa () {
                                             </S.ContainerImg>
 
                                             <S.QuebraLinha>
-                                                <S.LETRA>Em andamento</S.LETRA>
+                                                <S.LETRA>Concluído</S.LETRA>
                                                 <div>
                                                     <S.BBarraAguardando/>
                                                     <S.BarraAguardando/>
@@ -96,7 +95,7 @@ export default function HistoricoEmpresa () {
                                                       isOpenTest={isOpenTest === 1}
                                                       setOpenTest={handleCloseModalTest}></ModalCancelar>
 
-                                                    <S.BBotao onClick={handleFechar}>Entregar</S.BBotao>
+                                                    <S.BBotao onClick={handleFechar}>Verificar</S.BBotao>
                                                     
                                                 </S.Flex>
                                             </S.QuebraLinha>
@@ -115,11 +114,11 @@ export default function HistoricoEmpresa () {
 
                             </S.CCaixa>
 
-                            <S.CContainer>
+                            
                             <S.CCaixa>
                                 <S.PLeft>
                                     <S.PPALAVRA>Dados do Pedido</S.PPALAVRA>
-                                    <S.PPP>Solicitação de Orçamento</S.PPP>
+                                    <S.PPP>Pedido Concluído</S.PPP>
                                 </S.PLeft>
                                 <S.CCaixinha>
                                     <S.Caixinha>
@@ -138,7 +137,7 @@ export default function HistoricoEmpresa () {
                                             </S.ContainerImg>
 
                                             <S.QuebraLinha>
-                                                <S.LETRA>Aguardando Envio de Orçamento</S.LETRA>
+                                                <S.LETRA>Concluído</S.LETRA>
                                                 <div>
                                                     <S.BBarraAguardando/>
                                                     <S.BarraAguardando/>
@@ -152,7 +151,7 @@ export default function HistoricoEmpresa () {
                                                       isOpenTest={isOpenTest === 2}
                                                       setOpenTest={handleCloseModalTest}></ModalCancelar>
 
-                                                    <S.BBotao  onClick={handleFechar}>Enviar Orçamento</S.BBotao>
+                                                    <S.BBotao  onClick={handleFechar}>verificar</S.BBotao>
                                                 </S.Flex>
                                             </S.QuebraLinha>
                                         </S.SobreContainer>
@@ -166,13 +165,13 @@ export default function HistoricoEmpresa () {
                                     <FormularioDetalhes />
                                 </ModalDetalhes>
                             </S.CCaixa>
-                        </S.CContainer>
+                       
 
-                        <S.CContainer>
+                       
                             <S.CCaixa>
                                 <S.PLeft>
                                     <S.PPALAVRA>Dados do Pedido</S.PPALAVRA>
-                                    <S.PPP>Pedido Concluído</S.PPP>
+                                    <S.PPP>Pedido Cancelado</S.PPP>
                                 </S.PLeft>
                                 <S.CCaixinha>
                                     <S.Caixinha>
@@ -190,13 +189,14 @@ export default function HistoricoEmpresa () {
                                                 <S.PPalavra>AGR Ambiental</S.PPalavra>
                                             </S.ContainerImg>
                                             <S.QuebraLinha>
-                                                <S.LETRA>Concluído</S.LETRA>
+                                                <S.LETRA>Cancelado</S.LETRA>
                                                 <div>
-                                                    <S.BBarraAguardando/>
+                                                    <S.BBarraAguardandoT/>
                                                     <S.BarraAguardandoC/>
                                                 </div>
                                                 <S.Flex>
                                                 <ButtonCancelar text="Cancelar" onClick={() => setOpenTest(3)}/>
+                                                    
                                                     <ModalCancelar 
                                                      textbutton="Voltar"
                                                      text="Tem Certeza que deseja cancelar Orçamento?"
@@ -217,7 +217,7 @@ export default function HistoricoEmpresa () {
                                 </ModalDetalhes>
 
                             </S.CCaixa>
-                        </S.CContainer>
+                        
                         </S.CContainer>
                     </S.FlexColomn>
                 </S.Container>
