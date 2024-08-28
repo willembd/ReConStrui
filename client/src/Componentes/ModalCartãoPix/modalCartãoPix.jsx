@@ -21,11 +21,12 @@ export default function ModalCartãoPix({ isOpen, setOpen, text }){
                         <S.Itens>
                            
                              <S.Texto> {text} </S.Texto>
-                             <S.X onClick={setOpenModal}>x</S.X>
+                             <S.X onClick={setOpenModal}>X</S.X>
 
                              <S.StyleButtons>
-                             <S.ButtonCartão  onClick={() => navigation('/pagamentocartao')} >CARTÃO</S.ButtonCartão>
-                             <S.ButtonPix onClick={() => navigation('/pagamentopix')} >PIX</S.ButtonPix>
+                             <S.ButtonCartão onClick={() => navigation('/pagamentocartao')}> Cartão</S.ButtonCartão>
+                             <S.ButtonPix onClick={() => navigation('/pagamentopix')}> Pix</S.ButtonPix>
+                           
                              </S.StyleButtons>
                         </S.Itens>
                         

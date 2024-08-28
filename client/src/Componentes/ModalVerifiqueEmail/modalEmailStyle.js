@@ -22,9 +22,13 @@ export const ModalStyle = styled.div`
     border-radius: 8px;
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
-    padding: 20px;
-    justify-content: space-around
+    justify-content: space-around;
+
+    @media screen and (max-width: 500px) {
+        width: 270px;
+        height: 68px;
+}
+
    
 
   `   
@@ -43,10 +47,13 @@ export const Itens = styled.div`
 
 export const Texto = styled.div`
          color: #228137;
+         font-size: 20px ;
          
-         
+    @media screen and (max-width: 500px) {
+        font-size: 13px ;
 
-`
+    }
+    `
 
 export const X = styled.div`
     

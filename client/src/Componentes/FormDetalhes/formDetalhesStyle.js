@@ -15,7 +15,16 @@ export const Caixa = styled.div`
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     display: flex;
-    justify-content: center
+    justify-content: center;
+
+
+    @media screen and (max-width: 500px) {
+        width:347px;
+        height: 1073px;
+        display: flex;
+        flex-direction: column;
+}
+
 
 `;
 export const PPALAVRA = styled.p`
@@ -47,17 +56,31 @@ export const Caixa1 = styled.div`
     background-color: white;
     border: 1px solid #E0E0E0;
     
+
+    @media screen and (max-width: 500px) {
+        width:293px;
+        height: 243px;
+        
+}
  
 `;
 
 export const Caixa2 = styled.div`
-    /* width:208px; */
     height: 290px;
     background-color: white;
     margin-top: 18px;
     border-bottom: 1px solid #E0E0E0;
     border-top: 1px solid #E0E0E0;
     border-right: 1px solid #E0E0E0;
+
+
+    @media screen and (max-width: 500px) {
+        width:295px;
+        height: 293px;
+ 
+}
+ 
+ 
   
 
 `
@@ -69,6 +92,13 @@ export const Caixa3 = styled.div`
     border-top: 1px solid #E0E0E0;
     border-bottom: 1px solid #E0E0E0;
     margin-top: 18px;
+
+    @media screen and (max-width: 500px) {
+        width:295px;
+        height: 293px;
+        /* margin-top:   236px; */
+}
+ 
   
 
 `
@@ -78,6 +108,12 @@ export const Caixa4 = styled.div`
     background-color: white;
     border: 1px solid #E0E0E0;
     
+    @media screen and (max-width: 500px) {
+        width:307px;
+        height: 293px;
+        /* margin-top:   236px; */
+}
+ 
 `;
 
 export const IdDados = styled.div`
@@ -182,6 +218,10 @@ export const Caixinha1 = styled.div`
     background-color: white;
     border-bottom:  1px solid #E0E0E0;
    
+    @media screen and (max-width: 500px) {
+        width:289px;
+       
+}
    
     
 `;
@@ -192,7 +232,11 @@ export const Caixinha2 = styled.div`
     background-color: white;
     border-bottom: 1px solid #E0E0E0;
    
-   
+      
+    @media screen and (max-width: 500px) {
+        width:291px;
+       
+}
 `;
 export const Caixinha3 = styled.div`
     width: 238px;
@@ -200,6 +244,11 @@ export const Caixinha3 = styled.div`
     background-color: white;
     border-bottom:  1px solid #E0E0E0;
  
+       
+    @media screen and (max-width: 500px) {
+        width:289px;
+       
+}
    
 `;
 
@@ -209,7 +258,11 @@ export const Caixinha4 = styled.div`
     background-color: white;
     border-bottom:  1px solid #E0E0E0;
 
-    
+       
+    @media screen and (max-width: 500px) {
+        width:289px;
+       
+}
 `;
 
 

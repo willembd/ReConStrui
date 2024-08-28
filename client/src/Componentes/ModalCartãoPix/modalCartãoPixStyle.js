@@ -23,12 +23,15 @@ export const ModalStyle = styled.div`
     border-radius: 8px;
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
-    padding: 20px;
-    justify-content: space-around
+    justify-content: space-around;
    
+    @media screen and (max-width: 500px) {
+        width: 264px;
+        height: 147px;
 
-  `   
+
+    }
+  ` ;  
 
 
 export const Itens = styled.div`
@@ -40,42 +43,64 @@ export const Itens = styled.div`
     flex-direction: column;
      
    
-   
 
 `
-
-
 
 export const Texto = styled.div`
      color: #228137;
-     font-size: 19px;
+     font-size: 23px;
      margin-left: 22px;
      margin-bottom: 10px;
      font-weight: bold; 
+
+     @media screen and (max-width: 500px) {
+      font-size: 17px;
+
+
+    }
          
          
 
 `
 
-export const X = styled.div`
+export const X = styled.button`
     
     cursor: pointer;
-    position: absolute; /* Posiciona o 'X' em relação ao modal */
-    top: 0px;
+    position: absolute; 
+    top: 8px;
     right: 10px;
-    font-size: 30px;
+    font-size: 26px;
     font-weight: bold;
     color: #555;
+    background-color: #fff ;
+    border: none;
+
+    @media screen and (max-width: 500px) {
+    
+   
+      font-size: 17px;
+}
 
 ` 
-export const ButtonCartão = styled.div`
+export const ButtonCartão = styled.button`
+    background-color: #295032;
+    padding: 10px 17px;
+    border: 1px solid #295032;
     color: #fff;
-    background-color: #1C4525;
     border-radius: 4px;
+    font-size: 16px;
     cursor: pointer;
-    padding: 10px;
+   
 
+    @media screen and (max-width: 500px) {
+    
+        padding: 8px 11px;
+        font-size:12px;
 
+    }
+         
+
+ 
     transition: transform 0.3s ease; 
 
   &:hover {
@@ -84,7 +109,7 @@ export const ButtonCartão = styled.div`
 ;
 `
 
-export const ButtonPix = styled.div`
+export const ButtonPix = styled.button`
 
         transition: transform 0.3s ease; 
 
@@ -92,17 +117,27 @@ export const ButtonPix = styled.div`
         transform: scale(1.1); 
         }
             
-     background-color: #1C4525;
-     color: #fff;
-     border-radius: 4px;
-     cursor: pointer;
-     padding: 10px;
-     width: 87px;
-     display: flex;
-     justify-content: center
+    background-color: #295032;
+    padding: 10px 32px;
+    border: 1px solid #295032;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
 
-   
+    transition: transform 0.3s ease; 
+
+    &:hover {
+    transform: scale(1.1); 
+    }
     
+    @media screen and (max-width: 500px) {
+    padding: 8px 22px;
+    font-size:12px;
+
+
+}
+
 `;
 export const StyleButtons = styled.div`
      display: flex;

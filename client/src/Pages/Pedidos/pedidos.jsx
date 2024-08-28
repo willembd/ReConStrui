@@ -91,6 +91,7 @@ export default function Pedidos () {
                                                 <S.Flex>
                                                     <ButtonCancelar text="Cancelar" onClick={() => setOpenTest(1)}/>
                                                     <ModalCancelar 
+                                                     cancelTransition={true}  
                                                      textbutton="Voltar"
                                                      text="Tem Certeza que deseja cancelar Orçamento?"
                                                       isOpenTest={isOpenTest === 1}
@@ -147,6 +148,7 @@ export default function Pedidos () {
                                                 <ButtonCancelar text="Cancelar" onClick={() => setOpenTest(2)}/>
 
                                                     <ModalCancelar 
+                                                      cancelTransition={true}  
                                                       textbutton="Voltar" 
                                                       text="Tem Certeza que deseja cancelar Orçamento?"
                                                       isOpenTest={isOpenTest === 2}
@@ -198,11 +200,14 @@ export default function Pedidos () {
                                                 <S.Flex>
                                                 <ButtonCancelar text="Cancelar" onClick={() => setOpenTest(3)}/>
                                                     <ModalCancelar 
-                                                     textbutton="Voltar"
-                                                     text="Tem Certeza que deseja cancelar Orçamento?"
-                                                      isOpenTest={isOpenTest === 3}
-                                                      setOpenTest={handleCloseModalTest}></ModalCancelar>
+                                                        cancelTransition={true}                                        
+                                                        textbutton="Voltar"
+                                                        text="Tem Certeza que deseja cancelar Orçamento?"
+                                                        isOpenTest={isOpenTest === 3}
+                                                        setOpenTest={handleCloseModalTest}/>
+
                                                     <S.BBotao  onClick={handleFechar}>Verificar</S.BBotao>
+
                                                 </S.Flex>
                                             </S.QuebraLinha>
                                         </S.SobreContainer>

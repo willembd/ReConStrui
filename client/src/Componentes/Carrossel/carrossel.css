@@ -9,7 +9,10 @@
 }
 
 .swiper-pagination-bullet {
-  background-color: #fff;
+  background-color:rgba(175, 117, 3, 0.9);
+  top: 20px;
+  width: 11px;
+  height: 12px;
 }
 
 
@@ -21,4 +24,8 @@
       font-size: 1rem;
       
   }
+}
+
+.swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{
+    bottom: 66px;
 }

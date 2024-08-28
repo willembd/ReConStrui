@@ -21,11 +21,21 @@ export const ModalStyle = styled.div`
     height: 500px;
     border-radius: 8px;
     display: flex;
-  
     padding: 20px;
     justify-content: space-around;
     flex-direction: column;
-    
+
+    @media screen and (max-width: 1310px) {
+        width:799px;
+        height: 500px;
+}
+
+    @media screen and (max-width: 500px) {
+        width:392px;
+        height: 1299px;
+}
+
+
   `   
 
 export const Itens = styled.div`

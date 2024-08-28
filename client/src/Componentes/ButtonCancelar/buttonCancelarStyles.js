@@ -13,6 +13,10 @@ export const ButtonCancelar = styled.button`
 
     &:hover {
     transform: scale(1.1); 
-    }
+  
 
+
+    background-color: ${props => 
+            props.withTransition ? 'red' : '##ffffff'}; 
+    }
 `;

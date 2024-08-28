@@ -115,6 +115,7 @@ export default function PerfilUsuario() {
                             <S.ButtonExcluir  onClick={() => setOpenTest(!isOpenTest)}>Excluir Conta </S.ButtonExcluir>
                            
                             <ModalCancelar 
+                            actionTransition={true}
                             textbutton="Excluir"
                             text="Certeza que deseja excluir sua conta?"
                             isOpenTest={isOpenTest}

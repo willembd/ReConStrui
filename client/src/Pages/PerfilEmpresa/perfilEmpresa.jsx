@@ -171,6 +171,7 @@ export default function PerfilEmpresa() {
 
                             <S.ButaoConta  onClick={() => setOpenTest(!isOpenTest)}>Excluir Conta</S.ButaoConta>
                             <ModalCancelar 
+                            actionTransition={true}
                             textbutton="Excluir"
                             text="Certeza que deseja excluir conta?"
                             isOpenTest={isOpenTest}

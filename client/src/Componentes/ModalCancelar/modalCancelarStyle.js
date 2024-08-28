@@ -72,7 +72,7 @@ export const Buttons = styled.div`
 
 `
 export const ButtonStyle = styled.button`
-    background-color:#AF7503 ;
+    background-color: #AF7503;
     padding: 10px 25px;
     border: 1px solid #AF7503;
     color: #fff;
@@ -80,16 +80,20 @@ export const ButtonStyle = styled.button`
     font-size: 16px;
     cursor: pointer;
 
-
-    transition: background-color 0.3s ease;
     transition: transform 0.3s ease;
 
-  &:hover {
-    background-color: red; 
-    transform: scale(1.1); 
+    &:hover {
+        transform: scale(1.1);
+        
+       
+        background-color: ${props => 
+            props.withTransition ? 'red' : '#AF7503'}; 
+    }
+`;
 
-}
- 
-`
+
+  
+
+
 
 
