@@ -25,10 +25,10 @@ export const ModalStyle = styled.div`
     justify-content: space-around;
     flex-direction: column;
 
-    @media screen and (max-width: 1310px) {
+    /* @media screen and (max-width: 1310px) {
         width:799px;
         height: 500px;
-}
+} */
 
     @media screen and (max-width: 500px) {
         width:392px;

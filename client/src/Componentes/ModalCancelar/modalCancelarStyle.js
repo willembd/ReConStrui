@@ -25,6 +25,14 @@ export const ModalStyle = styled.div`
     margin-bottom: 10px;
     padding: 81px;
     justify-content: center;
+
+
+    @media screen and (max-width: 500px) {
+        width: 465px;
+        height: 90px;
+
+
+}
    
   `   
 
@@ -89,6 +97,9 @@ export const ButtonStyle = styled.button`
         background-color: ${props => 
             props.withTransition ? 'red' : '#AF7503'}; 
     }
+
+
+    
 `;
 
 

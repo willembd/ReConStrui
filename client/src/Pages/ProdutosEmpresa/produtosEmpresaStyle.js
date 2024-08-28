@@ -43,11 +43,10 @@ export const Title = styled.h1`
 
 export const Container = styled.div`
     flex-direction: column;
-    gap: 52px;
+    gap: 24px;
     width: 900px;
     height: 1350px;
     background-color: white;
-    padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     position: relative;
@@ -173,13 +172,6 @@ export const ContainerImg = styled.div`
  
     
 `
-export const IIIMG = styled.img`
-    height: 87px;
-    width: 124px;
-    margin-top: 17px;
- 
-`;
-
 export const TTTitle = styled.p`
     font-size: 1rem ;
     font-weight: bold;
@@ -191,6 +183,10 @@ export const PPalavra = styled.div`
     color: #AF7503;
 `;
 
+export const Logo = styled.img`
+    height: 144px;
+    width: 151px;
+    margin-top: 11px; 
 
-
+`
 
