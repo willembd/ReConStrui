@@ -33,14 +33,6 @@ export const Campo = styled.div`
         border-radius: 12px;
         background: #fff;
         outline-color: #228137;
-        @media screen  and (max-height: 606px){
-            padding: 9px 10px;
-        }
-        @media screen  and (max-height: 606px){
-            padding:7px 10px ;
-        }
-        @media screen  and (max-height: 606px){
-            padding:6px 10px ;
-        }
+       
     }
 `;
