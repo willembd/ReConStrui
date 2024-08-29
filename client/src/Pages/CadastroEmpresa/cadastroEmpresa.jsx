@@ -67,7 +67,7 @@ export default function CadastroEmpresa() {
       fetch(`https://viacep.com.br/ws/${cep}/json/`)
         .then(res => res.json())
         .then(data => {
-            console.log(data);
+            console.log(data, "data");
             setValue("endereco", data.logradouro);
             setValue("bairro", data.bairro);
             setValue("cidade", data.localidade);
@@ -145,11 +145,11 @@ export default function CadastroEmpresa() {
                                         <S.LinhaE />
                                     </S.QuebraLinha>
                                     <S.InputFlex>
-                                        <InputPrimary
-                                            text="Cep"
-                                            {...register("cep")}
-                                            onBlur={checkCEP} 
-                                        />
+
+                                        <InputPrimaryAddress>
+                                            <label className="text" > CEP </label>
+                                            <input {...register("cep")} onBlur={checkCEP} className="input" type="text" required />
+                                        </InputPrimaryAddress>
                                          
                                         <InputPrimaryAddress>
 

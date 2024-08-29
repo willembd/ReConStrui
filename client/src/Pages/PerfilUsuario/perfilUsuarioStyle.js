@@ -16,7 +16,7 @@ export const Caixa = styled.div`
     margin: 20px;
 
     @media screen and (max-width: 500px) {
-        margin: 40px 0px;
+        width: 80%;
     }
 `;
 
