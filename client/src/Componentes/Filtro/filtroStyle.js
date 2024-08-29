@@ -15,11 +15,19 @@ export const ContainerTitulo = styled.p`
     font-weight: bolder;
     padding-bottom: 0.25rem;
     width: 80%;
+
+    @media(max-width: 1000px){
+        font-size: 1.25rem;
+    }
 `
 export const TextFiltro =styled.p`
     font-weight: bolder;
     width: 80%;
     color: #228137;
+
+    @media(max-width: 1000px){
+        font-size: 0.9rem;
+    }
 `
 
 export const Container = styled.div`
@@ -30,5 +38,6 @@ export const Container = styled.div`
     @media(max-width: 1000px){
         display: flex;
         flex-direction: column;
+        gap: 20px;
     }
 `
