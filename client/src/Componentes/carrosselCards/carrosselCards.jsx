@@ -162,6 +162,17 @@
                                                 <Input text='Endereço'/>
                                                 <Input text='Bairro'/>
                                                 <Input text='Número'/>
+                                                <Th3 className="transorte">Forma de transpote</Th3>
+                                                <DivRadio>
+                                                    <DivTransporte>
+                                                        <input type="radio" value="Usuario"/>
+                                                        <PP>Frete</PP>
+                                                    </DivTransporte>
+                                                    <DivTransporte>
+                                                        <input type="radio" value="Empresa"/>
+                                                        <PP>Transporte próprio</PP>
+                                                    </DivTransporte>
+                                                </DivRadio>
                                                 <ButtonMod  text="Envia" onClick={() => setOpenMo(!isOpenMo)}/>
                                             </FUNDO>
 

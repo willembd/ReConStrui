@@ -23,6 +23,7 @@ export const MODAL_STYLE = styled.div`
     border-radius: 8px;
     display: flex;
     align-items: center; 
+    justify-content: center;
     @media screen and (max-width:550px) {
     display: flex;
     flex-direction: column;
@@ -271,8 +272,8 @@ export const FUNDO = styled.div`
     flex-direction: column;
     justify-content:center;
     gap: 0.4rem;
-    @media screen and (max-width:1335px) {
-        gap: 1rem;
+    @media screen and (max-width:1535px) {
+        gap: 0.6rem;
     }
     @media screen and (max-width: 546px){
         gap: 0.3rem;
@@ -317,8 +318,8 @@ export const Organizacao =styled.div`
     display: flex;
     align-items: center;
     gap: 4rem;
-    @media screen  and (max-width: 1260px){
-        gap: 3.5rem;
+    @media screen  and (max-width: 1500px){
+        gap: 5.5rem;
     }
     @media screen  and (max-width: 1100px){
         gap: 4rem;
