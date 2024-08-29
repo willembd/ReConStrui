@@ -41,7 +41,7 @@ export default function PaginaLogin() {
                 })
                 .then((response) => {
                     localStorage.setItem("token", response.data.token);
-                    navigate("/orcamentosempresa");
+                    navigate("/solicitacaopedidoemp");
                 })
                 .catch((error) => {
                     console.log(error);
