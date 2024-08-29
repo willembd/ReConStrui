@@ -14,6 +14,9 @@ export const Caixa = styled.div`
     background-image: url(${PlanoFundo});
     background-repeat: no-repeat;
     width: 100%;
+
+
+   
 `;
 
 
@@ -25,8 +28,11 @@ export const Title = styled.h1`
     margin-top: 35px;
     padding-bottom: 10px;
     display: flex;
-    justify-content: center
+    justify-content: center;
    
+    @media screen and (max-width: 500px) {
+        font-size: 30px;
+    }
 
 `
 
@@ -46,6 +52,11 @@ export const Container = styled.div`
         width: 86%;
         height:3500px;
     }
+
+    @media screen and (max-width: 500px) {
+        margin-top: 20px;
+    }
+
 
 `;
 
@@ -160,7 +171,7 @@ export const Switch = styled.label`
 
     @media screen and (max-width: 599px) {
       
-      margin-right: 390px;
+      margin-right: 417px;
    
 
   }   
@@ -184,13 +195,13 @@ export const TextPausar = styled.p`
       
       margin-right: 241px;
 
-
+    }
     @media screen and (max-width: 599px) {
       
-      margin-right: 390px;
+      margin-right:  417px;
+      font-size: 12px;
    
 
-  }   
 
   }   
 
@@ -231,6 +242,7 @@ export const Slider = styled.span`
     width: 14px;
     left: 7px;
     bottom: 3px;
+ 
 
     }    
   }
@@ -244,7 +256,7 @@ export const Slider = styled.span`
   }
 
   
-
+ 
    
 `;
 
@@ -256,16 +268,24 @@ export const ContainerImg = styled.div`
  
     
 `
-export const TTTitle = styled.p`
+export const TextProdutos = styled.p`
     font-size: 1rem ;
     font-weight: bold;
     color: #228137;
+
+
 `;
 
-export const PPalavra = styled.div`
+export const NameEmpresa = styled.div`
     font-size: 1rem;
     color: #AF7503;
+
+    @media screen and (max-width: 500px) {
+        white-space: nowrap;
+    }
+
 `;
+
 
 export const Logo = styled.img`
     height: 144px;

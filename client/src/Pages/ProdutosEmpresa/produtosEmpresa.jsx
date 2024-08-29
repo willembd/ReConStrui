@@ -45,8 +45,8 @@ export default function ProdutosEmpresa() {
                                     <S.ContainerImg>
                                         <div className="box-item">
                                                     <S.Logo src={RachaoImg}  alt="rachaoimg" />
-                                                    <S.TTTitle>Rachão</S.TTTitle>
-                                                    <S.PPalavra>AGR Ambiental</S.PPalavra>
+                                                    <S.TextProdutos>Rachão</S.TextProdutos>
+                                                    <S.NameEmpresa> AGR Ambiental </S.NameEmpresa>
                                         </div> 
                                     </S.ContainerImg>
 
@@ -71,8 +71,9 @@ export default function ProdutosEmpresa() {
                                 <S.ContainerImg>
                                         <div className="box-item">
                                                 <S.Logo src={AreiaImg}  alt="rachaoimg" />
-                                                    <S.TTTitle>Areia reciclada</S.TTTitle>
-                                                    <S.PPalavra>AGR Ambiental</S.PPalavra>
+                                                    <S.TextProdutos>Areia reciclada</S.TextProdutos>
+                                                    <S.NameEmpresa> AGR Ambiental </S.NameEmpresa>
+                                                  
                                         </div>
                                 </S.ContainerImg>
                             <S.FlexTextChek>
@@ -95,8 +96,8 @@ export default function ProdutosEmpresa() {
                                 <S.ContainerImg>
                                         <div className="box-item">
                                                 <S.Logo src={PedriscoImg}  alt="Pedrisco" />
-                                                    <S.TTTitle>Pedrisco</S.TTTitle>
-                                                    <S.PPalavra>AGR Ambiental</S.PPalavra>
+                                                    <S.TextProdutos>Pedrisco</S.TextProdutos>
+                                                    <S.NameEmpresa> AGR Ambiental </S.NameEmpresa>
                                         </div>
                                         
                                 </S.ContainerImg>
@@ -120,8 +121,8 @@ export default function ProdutosEmpresa() {
                                 <S.ContainerImg>
                                         <div className="box-item">
                                                 <S.Logo src={BritaImg}  alt="Brita" />
-                                                    <S.TTTitle>Brita</S.TTTitle>
-                                                    <S.PPalavra>AGR Ambiental</S.PPalavra>
+                                                    <S.TextProdutos>Brita</S.TextProdutos>
+                                                    <S.NameEmpresa> AGR Ambiental </S.NameEmpresa>
                                         </div>
                                         
                                 </S.ContainerImg>
@@ -140,6 +141,8 @@ export default function ProdutosEmpresa() {
                         </S.FlexCaixa>
                     </S.ContainerSmall>
                      <ButtonMod
+                             tamanhotext='secondary'
+                             tamanhobutton='secondary'
                              text="+Produtos"
                              onClick={() => setOpen(!isOpen)}
                                     /> 

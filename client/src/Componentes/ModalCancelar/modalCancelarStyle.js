@@ -28,7 +28,7 @@ export const ModalStyle = styled.div`
 
 
     @media screen and (max-width: 500px) {
-        width: 465px;
+        width: 312px;
         height: 90px;
 
 
@@ -54,7 +54,9 @@ export const Texto = styled.div`
     align-items: center;
          
          
-
+ @media screen and (max-width: 500px) {
+      font-size: 13px;
+}
 `
 
 export const X = styled.div`
@@ -74,9 +76,12 @@ export const Buttons = styled.div`
       display: flex;
       align-items: center;
       gap: 65px;
-      justify-content: center
+      justify-content: center;
       
+        @media screen and (max-width: 500px) {
+            gap: 37px;
 
+        }
 
 `
 export const ButtonStyle = styled.button`
@@ -98,7 +103,11 @@ export const ButtonStyle = styled.button`
             props.withTransition ? 'red' : '#AF7503'}; 
     }
 
+    @media screen and (max-width: 500px) {
+        padding: 10px 25px;
 
+
+}
     
 `;
 
