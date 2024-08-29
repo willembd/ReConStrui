@@ -12,7 +12,7 @@ export const Campo = styled.div`
     @media screen  and (max-width: 920px){
         width: 250px;
     } 
-    @media screen  and (max-width: 775px){
+    @media screen  and (max-width: 830px){
         width: 220px;
     }
     @media screen  and (max-width: 745px){
@@ -21,10 +21,16 @@ export const Campo = styled.div`
     @media screen  and (max-width: 660px){
         width: 170px;
     }
+    @media screen  and (max-width: 510px){
+        width: 140px;
+    }
+    @media screen  and (max-width: 420px){
+        width: 120px;
+    }
     @media screen  and (max-height: 606px){
         height: 50px;
     }
-    @media screen  and (max-height: 530px){
+    @media screen  and (max-height: 590px){
         height: 44px;
     }
 
@@ -55,6 +61,9 @@ export const Campo = styled.div`
         }
         @media screen  and (max-height: 606px){
             padding:6px 10px ;
+        }
+        @media screen  and (max-width:546px){
+            padding:4px 6px ;
         }
     }
 `;

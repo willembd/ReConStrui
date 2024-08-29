@@ -26,6 +26,9 @@ export const Button = styled.button`
     @media screen and (max-width:626px) {
         padding: 10px 50px;
     }
+    @media screen and (max-width:546px) {
+        padding: 3px 50px;
+    }
     @media screen and (max-height:630px) {
         padding: 5px 50px;
     }

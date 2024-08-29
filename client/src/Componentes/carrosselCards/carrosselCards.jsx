@@ -1,6 +1,6 @@
 
     import { Alinhaborda, Alinhamento, Bordas, Botao, Caixa, Carrosel, Container, Im, Linha, Palavra, Texto, Title, Absoluto } from "./carrosselCardsStyle.js";
-    import { ContainerModal,ContainerDivModal,TituloModal,DivInput,DivRadio, Th3, PP, CaixaFundo,  FUNDO,TituloProduto,DivTransporte, Organizacao,Descricao } from "../modalCards/modalCards.js";
+    import { ContainerModal,ContainerDivModal,TituloModal,DivInput,DivRadio, Th3, PP, CaixaFundo,  FUNDO,TituloProduto,DivTransporte, Organizacao,Descricao, MoverBox, Left } from "../modalCards/modalCards.js";
     import "swiper/css";
     import "swiper/css/navigation";
     import "swiper/css/scrollbar";
@@ -19,7 +19,7 @@
         const [select, setSelect] = useState(null)
         const [slidePerView, setSlidePerView] = useState(6)
         const produtos = [
-            { id: '1', image: "/PEDRISCO.svg",title:"Pedrisco" },
+            { id: '1', image: "/PEDRISCO.svg",title:"Pedrisco", },
             { id: '2', image: "/RACHAO.svg",title:"Rachão" },
             { id: '3', image: "/AREIA.svg" ,title:"Areia reciclada"},
             { id: '4', image: "/BRITA.svg" ,title:"Brita reciclada"},
@@ -119,21 +119,27 @@
                             <Organizacao>
                                     <ContainerModal>
                                         <TituloProduto>Produto</TituloProduto>
-                                        <Cards item = {produtos.find((p) => (p.id===select))}/>
-                                        <Descricao>Quantidade mínima para solicitação de orçamento de 12 metros</Descricao>
+                                        <Left>
+                                            <Cards item = {produtos.find((p) => (p.id===select))}/>
+                                            <Descricao>Quantidade mínima para solicitação de orçamento de 12 metros</Descricao>
+                                        </Left>
                                     </ContainerModal>
                                     <DivInput>
                                             <TituloModal>Orçamento</TituloModal>
                                             <FUNDO>
                                                 <InputPrimary text='Quantidade'/>
                                                 <Th3>Informação para Entrega</Th3>
-                                                <InputPrimary text='Cep'/>
-                                                <InputPrimary text='Cidade'/>
-                                                <InputPrimary text='Endereço'/>
-                                                <InputPrimary text='Bairro'/>
+                                                <MoverBox>
+                                                    <InputPrimary text='Cep'/>
+                                                    <InputPrimary text='Cidade'/>
+                                                </MoverBox>
+                                                <MoverBox>
+                                                    <InputPrimary text='Endereço'/>
+                                                    <InputPrimary text='Bairro'/>
+                                                </MoverBox>
                                                 <InputPrimary text='Número'/>
-                                            
-                                                <Th3 className="transorte">Forma de transpote</Th3>
+                                            </FUNDO>
+                                            <Th3 className="transorte">Forma de transpote</Th3>
                                                 <DivRadio>
                                                     <DivTransporte>
                                                         <input type="radio" value="Usuario"/>
@@ -141,10 +147,9 @@
                                                     </DivTransporte>
                                                     <DivTransporte>
                                                         <input type="radio" value="Empresa"/>
-                                                       <PP>Transporte próprio</PP>
+                                                    <PP>Transporte próprio</PP>
                                                     </DivTransporte>
                                                 </DivRadio>
-                                            </FUNDO>
                                             <ButtonMod  text="Envia" onClick={handleFechar}></ButtonMod>
                                         </DivInput>
                                 </Organizacao>

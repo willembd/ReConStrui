@@ -23,9 +23,10 @@ export const MODAL_STYLE = styled.div`
     border-radius: 8px;
     display: flex;
     align-items: center; 
-    @media screen and (max-width:376px) {
+    @media screen and (max-width:550px) {
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 `;
 export const ContainerModal =styled.div`
@@ -49,10 +50,11 @@ export const ContainerModal =styled.div`
     @media screen  and (max-width:565px){
         margin: 0.5rem;
     }
-    @media screen and (max-width:376px) {
+    @media screen and (max-width:546px) {
         margin: 0;
         gap: 0px;
-        height: 25rem;
+        width: auto;
+        
     }
     @media screen  and (max-height: 530px){
         gap: 0;
@@ -63,6 +65,7 @@ export const ContainerDivModal =styled.div`
     justify-content: center;
     align-items: center;
     gap: 2rem;  
+
 ` ;
 export const QuebraLinha = styled.div`
     display: flex;
@@ -93,8 +96,12 @@ export const DivInput = styled.div`
     flex-direction: column;
     gap: 0.5rem;
     align-items: center;
-    @media screen  and (max-height: 530px){
-        gap: 0;
+    width: 100%;
+    @media screen  and (max-width: 546px){
+        gap: 0px;
+    }
+    @media screen  and (max-height: 546px){
+        gap: 1px;
     }
 `;
 export const Container = styled.div`
@@ -127,19 +134,25 @@ export const IMG = styled.img`
         width: 14rem;
         height: 19rem;
     } 
-    @media screen  and (max-width: 920px){
+    @media screen  and (max-width: 970px){
         width: 11rem;
-        height: 17rem;
+        height: 15rem;
     } 
     @media screen  and (max-width: 660px){
         width: 10rem;
+        height: 14rem;
     }
-    @media screen and (max-height:476px) {
+    @media screen and (max-width:546px) {
+        width: 8rem;
+        height: 11rem;
+    }
+    @media screen and (max-width:426px ){
+        width: 7rem;
+        height: 9.8rem;
+    }
+    @media screen and (max-height:535px) {
         height: 16rem;
     }
-    @media screen and (max-width:376px) {
-        
-}
 `;
 export const Absoluto = styled.div`
     position: absolute;
@@ -161,22 +174,27 @@ export const Caixa = styled.div`
         height: 5rem;
         margin-top: 14.1rem;
     } 
-    @media screen  and (max-width: 920px){
+    @media screen  and (max-width: 970px){
         width: 11rem;
         height: 4.1rem;
-        margin-top: 13rem;
+        margin-top: 11rem;
     } 
     @media screen  and (max-width: 660px){
         width: 10rem;
+        height: 3.1rem;
+    }
+    @media screen and (max-width:546px) {
+        margin-top: 8rem; 
+        width: 8rem;
+}
+    @media screen and (max-width:426px ){
+        width: 7rem;
+        margin-top: 7rem;
     }
     @media screen and (max-height:476px) {
         height: 4rem;
         margin-top: 12rem;
     }
-    @media screen and (max-width:376px) {
-        margin-top: 10rem; 
-        border-radius: 0;
-}
 `;
 export const Alinhamento = styled.div`
     display: flex;
@@ -200,10 +218,6 @@ export const Palavra = styled.p`
     font-weight: normal;
     margin: 0.3rem;
     color: #fff;
-    @media screen  and (max-width:768px) {
-        
-    }
-
 `;
 export const Botao = styled.button`
     background-color: rgba(175, 117, 3, 0.9);
@@ -215,7 +229,10 @@ export const Botao = styled.button`
     cursor: pointer;
 `;
 export const MoverBox = styled.div`
-    display: flex;
+    @media screen and (max-width:546px){
+        display: flex;
+        gap:0.5rem
+    }
 `;
 export const Button = styled.button`
     cursor: pointer;
@@ -234,6 +251,15 @@ export const TituloModal = styled.h1`
     font-size: 2rem;
     @media screen and (max-width:920px) {
         font-size: 1.6rem;
+    }
+    @media screen and (max-width:6750px) {
+        font-size: 1.3rem;
+    }
+    @media screen and (max-width:590px) {
+        font-size: 1rem;
+    }
+    @media screen and (max-width:546px){
+        color: rgba(175, 117, 3, 0.9);
     }
     @media screen and (max-height:475px) {
         font-size: 1.5rem;
@@ -261,6 +287,10 @@ export const FUNDO = styled.div`
         gap: 0.2rem;
         width: fit-content;
     }
+    @media screen and (max-width:1335px) {
+        gap: 1px;
+        width: fit-content;
+    }
 `;
 export const TTitle = styled.div`
     color: #228137;
@@ -286,6 +316,10 @@ export const Th3 = styled.div`
     @media screen  and (max-width: 775px){
         font-size: 0.8rem;
     }
+    @media screen and (max-width:546px){
+        color: rgba(175, 117, 3, 0.9);
+        font-size: 0.7rem;
+    }
     @media screen  and (max-height: 475px){
             font-size: 0.8rem;
         }
@@ -299,16 +333,13 @@ export const Organizacao =styled.div`
     align-items: center;
     gap: 4rem;
     @media screen  and (max-width: 1260px){
-        gap: 3px;
-    }
-    @media screen  and (max-width: 1260px){
-        gap: 3px;
+        gap: 3.5rem;
     }
     @media screen  and (max-width: 1100px){
         gap: 4rem;
     }
     @media screen  and (max-width: 1010px){
-        gap: 2rem;
+        gap: 3rem;
     }
     @media screen  and (max-width: 660px){
         gap: 2rem;
@@ -316,16 +347,18 @@ export const Organizacao =styled.div`
     @media screen  and (max-width: 610px){
         gap: 1rem;
     }
-    @media screen and (max-width:406px){
+    @media screen and (max-width:546px){
         flex-direction: column;
+        gap: 0px;
     }
 `;
 export const TituloProduto = styled.h1`
     color: white;
     margin: 0.1rem;
-    @media screen and (max-width:376px){
+    @media screen and (max-width:546px){
         color: rgba(175, 117, 3, 0.9);
         font-size: 1.5rem;
+        margin: 0px;
     }
 `;
 export const DivTransporte = styled.div`
@@ -367,14 +400,25 @@ export const Descricao = styled.p`
         width: 10rem;
         height: 6rem;
     }
-    @media screen  and (max-width: 590px){
-        width: 15rem;
+    @media screen  and (max-width: 546px){
+        width: 8rem;
+        height: 5rem;
         box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.5);
-        height: 2rem;
-        font-size: 0.8rem;
+        font-size: 0.8rem ;
     }
-    @media screen and (max-height:510px) {
-        height: 2rem;
-        font-size: 0.7rem ;
+    @media screen and (max-width:426px ){
+        width: 6rem;
+        height: 6rem;
     }
 `
+export const Left = styled.div`
+    @media screen and (max-width:546px ){
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    }
+    @media screen and (max-width:426px ){
+        gap: 1rem;
+    }
+`;
