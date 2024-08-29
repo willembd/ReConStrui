@@ -41,6 +41,8 @@ export const ButtonVoltar = styled.button`
     position: absolute;
     top: 20px;
     left: 0;
+
+   
 `;
 
 export const ButtonContainer = styled.div`
@@ -57,7 +59,7 @@ export const TextoCadastro = styled.h1`
     font-size: 2.2rem;
 
     @media screen and (max-width: 500px) {
-        font-size: 1.5rem;
+        font-size:20px;
     }
 `;
 
@@ -95,6 +97,10 @@ export const Subtitulo = styled.div`
     color: #228137;
     text-align: center;
     margin-bottom: 25px;
+
+    @media screen and (max-width: 500px) {
+        font-size: 20px;
+    }
 `;
 
 export const ContainerCheckbox = styled.div`
@@ -310,4 +316,12 @@ export const ParteSuperior = styled.div`
     align-items: center;
     gap: 30px;
     margin-left: 45px;
+
+    @media screen and (max-width: 360px) {
+        gap: 5px;
+        margin-left: 20px;
+        display:flex;
+        flex-direction:column;
+
+    }
 `;

@@ -14,6 +14,10 @@ export const Caixa = styled.div`
     border-radius: 12px;
     box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.25);
     margin: 20px;
+
+    @media screen and (max-width: 500px) {
+        margin: 40px 0px;
+    }
 `;
 
 export const ContainerPrimaty = styled.div`
@@ -25,9 +29,17 @@ export const ContainerPrimaty = styled.div`
     width: 50%;
     gap: 20px;
     border-radius: 12px 0px 0px 12px;
+
+    @media screen and (max-width: 500px) {
+        display: none;
+    }
 `
 export const ImgPerfil = styled.img`
     width: 40%;
+
+    @media screen and (max-width: 500px) {
+        display: none;
+    }
 `
 export const TituloNome = styled.h1`
     color: white;
@@ -39,10 +51,19 @@ export const ContainerSecondary = styled.div`
     align-items: center;
     width: 50%;
     gap: 20px;
+
+    @media screen and (max-width: 500px) {
+       width: 100%;
+    }
 `
 export const TituloEditar = styled.h1`
     color: #228137;
     margin-top: 20px;
+
+    @media screen and (max-width: 500px) {
+       width: 100%;
+    }
+
 `
 export const ContainerInput = styled.div`
     display: flex;
@@ -65,5 +86,11 @@ export const ButtonExcluir = styled.button`
     
     &:hover{
         color: red;
+        
+    }
+
+    @media screen and (max-width: 500px) {
+       display:flex;
+       flex-direction:column;
     }
 `
