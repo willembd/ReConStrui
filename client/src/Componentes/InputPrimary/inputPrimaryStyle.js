@@ -7,6 +7,9 @@ export const Campo = styled.div`
     position: static;
     width: 360px;
 
+    @media screen  and (max-width: 920px){
+        width: 250px;
+    } 
 
     label.text {
         font-size: 0.75rem;

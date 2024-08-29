@@ -12,21 +12,7 @@ export const Campo = styled.div`
     @media screen  and (max-width: 920px){
         width: 250px;
     } 
-    @media screen  and (max-width: 775px){
-        width: 220px;
-    }
-    @media screen  and (max-width: 745px){
-        width: 200px;
-    }
-    @media screen  and (max-width: 660px){
-        width: 170px;
-    }
-    @media screen  and (max-height: 606px){
-        height: 50px;
-    }
-    @media screen  and (max-height: 530px){
-        height: 44px;
-    }
+    
 
     label.text {
         font-size: 0.75rem;
