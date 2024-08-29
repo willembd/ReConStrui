@@ -18,15 +18,6 @@ export const Campo = styled.div`
     @media screen  and (max-width: 745px){
         width: 200px;
     }
-    @media screen  and (max-width: 660px){
-        width: 170px;
-    }
-    @media screen  and (max-width: 510px){
-        width: 140px;
-    }
-    @media screen  and (max-width: 420px){
-        width: 120px;
-    }
     @media screen  and (max-height: 606px){
         height: 50px;
     }

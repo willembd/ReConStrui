@@ -27,6 +27,8 @@ export const MODAL_STYLE = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    max-height: 95%;
+    max-width: 85%;
 }
 `;
 export const ContainerModal =styled.div`
@@ -143,12 +145,8 @@ export const IMG = styled.img`
         height: 14rem;
     }
     @media screen and (max-width:546px) {
-        width: 8rem;
-        height: 11rem;
-    }
-    @media screen and (max-width:426px ){
-        width: 7rem;
-        height: 9.8rem;
+        width: 5rem;
+        height: 7rem;
     }
     @media screen and (max-height:535px) {
         height: 16rem;
@@ -184,12 +182,9 @@ export const Caixa = styled.div`
         height: 3.1rem;
     }
     @media screen and (max-width:546px) {
-        margin-top: 8rem; 
-        width: 8rem;
-}
-    @media screen and (max-width:426px ){
-        width: 7rem;
-        margin-top: 7rem;
+        margin-top: 4.2rem; 
+        width: 5rem;
+        height: 2.8rem;
     }
     @media screen and (max-height:476px) {
         height: 4rem;
@@ -212,12 +207,18 @@ export const Title = styled.h1`
     @media (max-width:768px) {
         font-size: 0.9rem;
     }
+    @media (max-width:530px) {
+        font-size: 0.7rem;
+    }
 `;
 export const Palavra = styled.p`
     font-size: 0.8rem ;
     font-weight: normal;
     margin: 0.3rem;
     color: #fff;
+    @media (max-width:530px) {
+        font-size: 0.5rem;
+    }
 `;
 export const Botao = styled.button`
     background-color: rgba(175, 117, 3, 0.9);
@@ -229,10 +230,10 @@ export const Botao = styled.button`
     cursor: pointer;
 `;
 export const MoverBox = styled.div`
-    @media screen and (max-width:546px){
+    /* @media screen and (max-width:546px){
         display: flex;
         gap:0.5rem
-    }
+    } */
 `;
 export const Button = styled.button`
     cursor: pointer;
@@ -258,9 +259,6 @@ export const TituloModal = styled.h1`
     @media screen and (max-width:590px) {
         font-size: 1rem;
     }
-    @media screen and (max-width:546px){
-        color: rgba(175, 117, 3, 0.9);
-    }
     @media screen and (max-height:475px) {
         font-size: 1.5rem;
     }
@@ -277,6 +275,9 @@ export const CaixaFundo = styled.div`
     @media screen and (max-width:1301px) {
         margin: -1px;
     }
+    @media screen and (max-width:546px) {
+        background-color: #fff;
+    }
 `;
 export const FUNDO = styled.div`
     display: flex;
@@ -291,6 +292,9 @@ export const FUNDO = styled.div`
         gap: 1px;
         width: fit-content;
     }
+    @media screen and (max-width: 546px){
+        gap: 0.3rem;
+    } 
 `;
 export const TTitle = styled.div`
     color: #228137;
@@ -317,7 +321,6 @@ export const Th3 = styled.div`
         font-size: 0.8rem;
     }
     @media screen and (max-width:546px){
-        color: rgba(175, 117, 3, 0.9);
         font-size: 0.7rem;
     }
     @media screen  and (max-height: 475px){
@@ -358,7 +361,7 @@ export const TituloProduto = styled.h1`
     @media screen and (max-width:546px){
         color: rgba(175, 117, 3, 0.9);
         font-size: 1.5rem;
-        margin: 0px;
+        margin-bottom: 1rem;
     }
 `;
 export const DivTransporte = styled.div`
@@ -417,6 +420,7 @@ export const Left = styled.div`
     flex-direction: row;
     align-items: center;
     gap: 2rem;
+    height: 8rem;
     }
     @media screen and (max-width:426px ){
         gap: 1rem;

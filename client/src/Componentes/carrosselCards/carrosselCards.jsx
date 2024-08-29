@@ -17,8 +17,30 @@
 
     import Modal from "../Modal/modal.jsx";
 
+    import { api } from "../../service/api.js";
+    import { useForm } from "react-hook-form";
+
     
     export default function CarrosselCards() {
+
+        const {register, setValue, getValues, setFocus} = useForm();
+        const checkCEP = (e) => {
+            const cep = e.target.value.replace(/\D/g, '');
+            fetch(`https://viacep.com.br/ws/${cep}/json/`)
+              .then(res => res.json())
+              .then(data => {
+                  console.log(data, "data");
+                  setValue("endereco", data.logradouro);
+                  setValue("bairro", data.bairro);
+                  setValue("cidade", data.localidade);
+                  setValue("uf", data.uf);
+                  setFocus('numero');
+              })
+              .catch(e => {
+                  console.error(e);
+              })
+      
+          }
 
         const [isOpenMo, setOpenMo] = useState(false)
         const [openModal, setOpenModal] = useState(null)
@@ -144,8 +166,7 @@
                                                     <InputPrimary text='Bairro'/>
                                                 </MoverBox>
                                                 <InputPrimary text='Número'/>
-                                            </FUNDO>
-                                            <Th3 className="transorte">Forma de transpote</Th3>
+                                                <Th3 className="transorte">Forma de transpote</Th3>
                                                 <DivRadio>
                                                     <DivTransporte>
                                                         <input type="radio" value="Usuario"/>
@@ -156,6 +177,7 @@
                                                     <PP>Transporte próprio</PP>
                                                     </DivTransporte>
                                                 </DivRadio>
+                                            </FUNDO>
 
                                                 <ButtonMod  text="Envia" onClick={() => setOpenMo(!isOpenMo)}/>
 
