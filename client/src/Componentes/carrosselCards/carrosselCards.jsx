@@ -14,7 +14,13 @@
     import ModalCards from "../modalCards/modalCards.jsx";
     import ButtonMod from "../ButtonModelo/buttonModelo.jsx";
     import InputPrimary from "../InputPrimary/inputPrimary.jsx";
+
+    import Modal from "../Modal/modal.jsx";
+
+    
     export default function CarrosselCards() {
+
+        const [isOpenMo, setOpenMo] = useState(false)
         const [openModal, setOpenModal] = useState(null)
         const [select, setSelect] = useState(null)
         const [slidePerView, setSlidePerView] = useState(6)
@@ -150,7 +156,20 @@
                                                     <PP>Transporte próprio</PP>
                                                     </DivTransporte>
                                                 </DivRadio>
-                                            <ButtonMod  text="Envia" onClick={handleFechar}></ButtonMod>
+
+                                                <ButtonMod  text="Envia" onClick={() => setOpenMo(!isOpenMo)}/>
+
+                                                <Modal text="A empresa tem 5 dias úteis para retornar uma resposta. "
+                                                      isOpenMo={isOpenMo}
+                                                      setOpenMo={setOpenMo}> 
+
+                                                       <ButtonMod 
+                                                        onClick={handleFechar}
+                                                         padding= 'secondary'
+                                                         text= 'Entendi'/>
+                                                </Modal>
+
+                                  
                                         </DivInput>
                                 </Organizacao>
                             </ContainerDivModal>

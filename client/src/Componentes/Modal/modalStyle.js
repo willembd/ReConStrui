@@ -24,9 +24,13 @@ export const ModalStyle = styled.div`
     align-items: center;
     margin-bottom: 10px;
     padding: 20px;
-    justify-content: space-around
-   
+    justify-content: space-around;
+    
+    @media screen and (max-width: 500px) {
+               width: 297px;
+    }
 
+  
   `   
 
 
@@ -39,30 +43,31 @@ export const Itens = styled.div`
     flex-direction: column;
     
     
-   
-   
 
 `
 
-
-
-export const Texto = styled.div`
+export const Texto = styled.h1`
          color: #228137;
          font-size: 19px;
          margin-left: 22px;
          
-         
+         @media screen and (max-width: 500px) {
+            font-size: 14px;
+    }
+
+
 
 `
 
-export const X = styled.div`
+export const X = styled.button`
     
     cursor: pointer;
-    position: absolute; /* Posiciona o 'X' em relação ao modal */
+    position: absolute;
     top: 0px;
     right: 10px;
     font-size: 30px;
     font-weight: bold;
     color: #555;
-
+    background-color: #fff;
+    border: none;
 ` 
