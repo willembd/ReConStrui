@@ -93,7 +93,7 @@ export const DivInput = styled.div`
     align-items: center;
     width: 100%;
     @media screen  and (max-width: 546px){
-        gap: 1px;
+        gap: 0.3rem;
     }
     @media screen  and (max-height: 546px){
         gap: 1px;
@@ -272,12 +272,7 @@ export const FUNDO = styled.div`
     justify-content:center;
     gap: 0.4rem;
     @media screen and (max-width:1335px) {
-        gap: 0.2rem;
-        width: fit-content;
-    }
-    @media screen and (max-width:1335px) {
-        gap: 1px;
-        width: fit-content;
+        gap: 1rem;
     }
     @media screen and (max-width: 546px){
         gap: 0.3rem;
