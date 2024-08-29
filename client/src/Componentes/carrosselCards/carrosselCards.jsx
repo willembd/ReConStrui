@@ -1,6 +1,6 @@
 
     import { Alinhaborda, Alinhamento, Bordas, Botao, Caixa, Carrosel, Container, Im, Linha, Palavra, Texto, Title, Absoluto } from "./carrosselCardsStyle.js";
-    import { ContainerModal,ContainerDivModal,TituloModal,DivInput,DivRadio, Th3, PP, CaixaFundo,  FUNDO,TituloProduto,DivTransporte, Organizacao,Descricao, MoverBox, Left } from "../modalCards/modalCards.js";
+    import { ContainerModal,ContainerDivModal,TituloModal,DivInput,DivRadio, Th3, PP, CaixaFundo,  FUNDO,TituloProduto,DivTransporte, Organizacao,Descricao, Left } from "../modalCards/modalCards.js";
     import "swiper/css";
     import "swiper/css/navigation";
     import "swiper/css/scrollbar";
@@ -140,9 +140,10 @@
                     </Carrosel>
                 </Container>
 
+                {/* Modal Cards */}
+
                 <ModalCards isOpen={openModal} setModalOpen= {() => setOpenModal(!openModal)}>
                         <CaixaFundo></CaixaFundo>
-                        <ContainerDivModal>
                             <Organizacao>
                                     <ContainerModal>
                                         <TituloProduto>Produto</TituloProduto>
@@ -156,14 +157,10 @@
                                             <FUNDO>
                                                 <Input text='Quantidade'/>
                                                 <Th3>Informação para Entrega</Th3>
-                                                <MoverBox>
-                                                    <Input text='Cep'/>
-                                                    <Input text='Cidade'/>
-                                                </MoverBox>
-                                                <MoverBox>
-                                                    <Input text='Endereço'/>
-                                                    <Input text='Bairro'/>
-                                                </MoverBox>
+                                                <Input text='Cep'/>
+                                                <Input text='Cidade'/>
+                                                <Input text='Endereço'/>
+                                                <Input text='Bairro'/>
                                                 <Input text='Número'/>
                                                 
                                             </FUNDO>
@@ -183,7 +180,6 @@
                                   
                                         </DivInput>
                                 </Organizacao>
-                            </ContainerDivModal>
                 </ModalCards>
             </> 
         );

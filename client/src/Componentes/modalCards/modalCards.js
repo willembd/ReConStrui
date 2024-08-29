@@ -62,13 +62,6 @@ export const ContainerModal =styled.div`
         gap: 0;
     }
 ` ;
-export const ContainerDivModal =styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;  
-
-` ;
 export const QuebraLinha = styled.div`
     display: flex;
     flex-direction: row;
@@ -100,7 +93,7 @@ export const DivInput = styled.div`
     align-items: center;
     width: 100%;
     @media screen  and (max-width: 546px){
-        gap: 0px;
+        gap: 1px;
     }
     @media screen  and (max-height: 546px){
         gap: 1px;
@@ -228,12 +221,6 @@ export const Botao = styled.button`
     padding: 0.5rem 4rem;
     border-radius: 4px;
     cursor: pointer;
-`;
-export const MoverBox = styled.div`
-    /* @media screen and (max-width:546px){
-        display: flex;
-        gap:0.5rem
-    } */
 `;
 export const Button = styled.button`
     cursor: pointer;
