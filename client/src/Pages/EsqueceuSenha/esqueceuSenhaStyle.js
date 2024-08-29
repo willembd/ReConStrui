@@ -25,7 +25,7 @@ export const Modal = styled.div`
     box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.25);
 
     @media screen and (max-width: 500px) {
-        width: 390px;
+        width: 350px;
         height: 500px;
         display: flex;
         justify-content: center;
@@ -99,7 +99,7 @@ export const Texto = styled.p`
     font-size: 15px;
 
     @media screen and (max-width: 500px) {
-        font-size: 9px;
+        font-size: 11px;
     }
 `;
 
