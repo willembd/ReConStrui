@@ -1,6 +1,8 @@
 
 import styled from "styled-components";
 
+import PlanoFundo from "../../assets/planodefundo.svg";
+
 export const BigBox = styled.div`
     display: flex;
     flex-direction: column;   
@@ -13,6 +15,8 @@ export const Caixa = styled.div`
     align-items: center;
     justify-content: center;
     min-height: 91.2rem;
+    background-image: url(${PlanoFundo});
+    background-repeat: no-repeat;
 `;
 
 export const Container = styled.div`
@@ -26,7 +30,7 @@ export const Container = styled.div`
   
     @media screen and (max-width: 500px) {
         width: 360px;
-        height: 1800px;
+        height: 1450px;
         margin-bottom: 40px;
     }
    
@@ -133,7 +137,7 @@ export const ContainerCheckbox = styled.div`
 export const TextoCheckbox = styled.h3`
     color: #228137;
     margin-bottom: 0.6rem;
-    color: #228137;
+   
 `;
 
 
@@ -206,8 +210,6 @@ export const BBarra2 = styled.div`
         width: 200px;
     }
 
-   
-
 `;
 export const BBarra3 = styled.div`
     height:0.13rem;
@@ -239,7 +241,9 @@ export const Botao = styled.div`
 
     @media screen and (max-width: 500px) {
         padding: 12px;
-        width: 300px;
+        width: 200px;
+        height:40px;
+        font-size:15px;
     }
 `;
 
@@ -295,7 +299,7 @@ export const Campo = styled.div`
   @media screen and (max-width: 500px) {
         display: flex;
         flex-direction: column;
-        gap: 20px;
+       // gap: 20px;
         width:100%;
     }
 
@@ -303,7 +307,7 @@ export const Campo = styled.div`
 `;
 
 export const Label = styled.label`
-  color: #228137;
+ color: #228137;
   margin-bottom: 0.3rem;
   font-size: 1rem;
 

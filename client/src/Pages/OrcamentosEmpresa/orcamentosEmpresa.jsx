@@ -17,8 +17,7 @@ export default function OrçamentosEmpresa() {
     return (
         <>
             <NavBar />
-                <S.FundoVerde />
-                <S.BarraAmarela />
+                
                     <S.BigBox>
                         <S.Caixa>
                             <S.Container>

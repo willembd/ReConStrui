@@ -1,5 +1,8 @@
 import styled from "styled-components";
 
+import PlanoFundo from "../../assets/planodefundo.svg";
+
+
 export const BigBox = styled.div`
     display: flex;
     flex-direction: column;   
@@ -12,6 +15,9 @@ export const Caixa = styled.div`
     align-items: center;
     justify-content: center;
     min-height: 91.2rem;
+    background-image: url(${PlanoFundo});
+    background-repeat: no-repeat;
+
 `;
 
 export const Container = styled.div`

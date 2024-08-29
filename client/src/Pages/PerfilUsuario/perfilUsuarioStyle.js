@@ -92,5 +92,6 @@ export const ButtonExcluir = styled.button`
     @media screen and (max-width: 500px) {
        display:flex;
        flex-direction:column;
+       
     }
 `

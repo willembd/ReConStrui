@@ -21,8 +21,7 @@ export default function PerfilEmpresa() {
         <>
             <NavBar />
 
-            <S.CaixaFundo></S.CaixaFundo>
-            <S.BarraVertical />
+            
             <S.BigBox>
                 <S.Caixa>
                     <S.Container>
