@@ -1,47 +1,60 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-export const InputContainer = styled.div`
-    position: relative;
-    margin: 5px auto;
-    width: 300px;
-
-    input{
-        font-size: 20px;
-        width: 100%;
-        border: none;
-        border-bottom: 2px solid #1C4525;
-        padding: 5px 0;
-        background-color: transparent;
-        outline: none;
+export const Campo = styled.div`
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    position: static;
+    width: 360px;
+    @media screen  and (max-width: 1190px){
+        width:290px ;
+    }
+    @media screen  and (max-width: 920px){
+        width: 250px;
+    } 
+    @media screen  and (max-width: 830px){
+        width: 220px;
+    }
+    @media screen  and (max-width: 745px){
+        width: 200px;
+    }
+    @media screen  and (max-height: 606px){
+        height: 50px;
+    }
+    @media screen  and (max-height: 590px){
+        height: 44px;
     }
 
-    .label {
-        position: absolute;
-        top: 5px;
-        left: 0;
+    label.text {
+        font-size: 0.75rem;
         color: #228137;
-        transition: all 0.3s ease;
-        pointer-events: none;
+        font-weight: 700;
+        position: relative;
+        top: 0.5rem;
+        margin: 0 0 0 16px;
+        padding: 0 3px;
+        background: #fff;
+        width: fit-content;
     }
 
-    input:focus + .label,
-    input:valid + .label {
-        top: -20px;
-        font-size: 16px;
-        color: #40bd0f;
-    }
-
-    .underline {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        height: 2px;
-        width: 100%;
-        background-color: rgba(28, 69, 37, 0.94);
-        transition: all 0.3s ease;
-    }
-
-    input:focus ~ .underline {
-        height: 3px;
+    .input {
+        padding: 11px 10px;
+        font-size: 1rem;
+        border: 2px #E0E0E0 solid;
+        border-radius: 12px;
+        background: #fff;
+        outline-color: #228137;
+        @media screen  and (max-height: 606px){
+            padding: 9px 10px;
+        }
+        @media screen  and (max-height: 606px){
+            padding:7px 10px ;
+        }
+        @media screen  and (max-height: 606px){
+            padding:6px 10px ;
+        }
+        @media screen  and (max-width:546px){
+            padding:4px 6px ;
+        }
     }
 `;

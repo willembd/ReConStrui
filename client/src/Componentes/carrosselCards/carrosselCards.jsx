@@ -13,8 +13,7 @@
     import "../Cards/cards.css"
     import ModalCards from "../modalCards/modalCards.jsx";
     import ButtonMod from "../ButtonModelo/buttonModelo.jsx";
-    import InputPrimary from "../InputPrimary/inputPrimary.jsx";
-
+    import Input from "../Input/input.jsx";
     import Modal from "../Modal/modal.jsx";
 
     import { api } from "../../service/api.js";
@@ -155,28 +154,18 @@
                                     <DivInput>
                                             <TituloModal>Orçamento</TituloModal>
                                             <FUNDO>
-                                                <InputPrimary text='Quantidade'/>
+                                                <Input text='Quantidade'/>
                                                 <Th3>Informação para Entrega</Th3>
                                                 <MoverBox>
-                                                    <InputPrimary text='Cep'/>
-                                                    <InputPrimary text='Cidade'/>
+                                                    <Input text='Cep'/>
+                                                    <Input text='Cidade'/>
                                                 </MoverBox>
                                                 <MoverBox>
-                                                    <InputPrimary text='Endereço'/>
-                                                    <InputPrimary text='Bairro'/>
+                                                    <Input text='Endereço'/>
+                                                    <Input text='Bairro'/>
                                                 </MoverBox>
-                                                <InputPrimary text='Número'/>
-                                                <Th3 className="transorte">Forma de transpote</Th3>
-                                                <DivRadio>
-                                                    <DivTransporte>
-                                                        <input type="radio" value="Usuario"/>
-                                                        <PP>Frete</PP>
-                                                    </DivTransporte>
-                                                    <DivTransporte>
-                                                        <input type="radio" value="Empresa"/>
-                                                    <PP>Transporte próprio</PP>
-                                                    </DivTransporte>
-                                                </DivRadio>
+                                                <Input text='Número'/>
+                                                
                                             </FUNDO>
 
                                                 <ButtonMod  text="Envia" onClick={() => setOpenMo(!isOpenMo)}/>
