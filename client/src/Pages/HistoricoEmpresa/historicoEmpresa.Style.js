@@ -177,7 +177,7 @@ export const SobreContainer = styled.div`
 
     @media screen and (max-width: 466px) {
         flex-direction:column;
-        height:400px;
+        gap: 10px;
     }
 `;
 
@@ -238,11 +238,6 @@ export const QuebraLinha = styled.div`
     align-items: center;
     gap: 20px;
 
-    @media screen and (max-width: 444px) {
-        width: 312px;
-        height:400px;
-        flex-direction:column;
-    }
 `;
 
 export const Flex = styled.div`
