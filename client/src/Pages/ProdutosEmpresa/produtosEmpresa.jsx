@@ -7,16 +7,22 @@ import RachaoImg from "../../../public/rachao.png"
 import PedriscoImg from "../../../public/pedrisco.png"
 import AreiaImg from "../../../public/areia.png"
 import BritaImg from "../../../public/brita.png"
+import ButtonMod from "../../Componentes/ButtonModelo/buttonModelo.jsx";
+import ModalCadastroProdutos from "../../Componentes/ModalCadastroProdutos/modalCadastroProdutos.jsx"
+
+
 
 
 export default function ProdutosEmpresa() {
-
+  
+    const [isOpen, setOpen] = useState(false);
    
     
         const [checkboxes, setCheckboxes] = useState({
             1: false,
             2: false,
-            3: false
+            3: false,
+            4: false 
         });
     
         const handleChange = (id) => {
@@ -29,8 +35,6 @@ export default function ProdutosEmpresa() {
     return (
         <>
  <NavBar />
-    <S.FundoVerde />
-         <S.BarraAmarela />
             <S.Caixa>
                 <S.Container>
                     <S.Title>Meus Produtos</S.Title>
@@ -135,6 +139,18 @@ export default function ProdutosEmpresa() {
                             </S.Caixa1>
                         </S.FlexCaixa>
                     </S.ContainerSmall>
+                     <ButtonMod
+                             text="+Produtos"
+                             onClick={() => setOpen(!isOpen)}
+                                    /> 
+ 
+
+                      <ModalCadastroProdutos 
+                        text="Cadastro de Produto  "
+                        isOpen={isOpen}
+                       setOpen={setOpen}
+                       />
+                    
                 </S.Container>
             </S.Caixa>
             <Footer />

@@ -1,32 +1,22 @@
 import styled from "styled-components";
 
 
-export const FundoVerde = styled.div`
-    height: 1587px;
-    width: 1300px;
-    background:#33603D;
-    clip-path: polygon(0% 0%, 100% 0%, 40% 100%, 0% 100%);
-    position: absolute;
-`;
 
-export const BarraAmarela = styled.div`
-    height: 1590px;
-    width: 1300px;
-    background: #B7821C;
-    clip-path: polygon(100% 0%, 90% 0%, 40% 100%, 100% 0%);
-    position: absolute;
-    
-`;
+
+import PlanoFundo from "../../assets/planodefundo.svg";
 
 export const Caixa = styled.div`
-    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 99.2rem;
-   
+    height: 99.1rem;
+    background-image: url(${PlanoFundo});
+    background-repeat: no-repeat;
+    width: 100%;
 `;
+
+
 
 export const Title = styled.h1`
     font-size: 40px;
@@ -43,16 +33,19 @@ export const Title = styled.h1`
 
 export const Container = styled.div`
     flex-direction: column;
-    gap: 24px;
+    gap: 35px;
     width: 900px;
-    height: 1350px;
+    height: 1456px;
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    position: relative;
     display: flex;
-    align-items: center
-    
+    align-items: center;
+   
+    @media screen and (max-width: 900px) {
+        width: 86%;
+        height:3500px;
+    }
 
 `;
 
@@ -64,14 +57,27 @@ export const ContainerSmall = styled.div`
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     display: flex;
-    justify-content: center
+    justify-content: center;
 
+
+    @media screen and (max-width: 882px) {
+        width: 85%;
+        gap:20px;
+        height:289px;
+        
+    }
+   
 `;
 
 export const FlexCaixa = styled.div`
      justify-content: center;
      display: flex;
-     flex-direction: column
+     flex-direction: column;
+
+     @media screen and (max-width: 882px) {
+        width: 99%;
+        gap:261px;
+     }
      
 `
 
@@ -85,6 +91,21 @@ export const Caixa1 = styled.div`
     display: flex;
   
     
+    @media screen and (max-width: 882px) {
+        width: 99%;
+        gap:261px;
+     
+
+    }    
+
+    @media screen and (max-width: 473px) {
+        width: 99%;
+        gap:229px;
+        height: 213px;
+     
+
+    }    
+ 
  
 `;
 
@@ -94,6 +115,21 @@ export const FlexTextChek = styled.div`
        align-items: center;
        gap: 10px;
     
+
+       @media screen and (max-width: 882px) {
+        width: 99%;
+        gap:-11%;
+        margin-right: 10px;
+     
+
+    }    
+
+    @media screen and (max-width: 790px) {
+        width: 9%;
+        margin-right: 10px;
+     
+
+    }   
 
 `
 
@@ -115,12 +151,48 @@ export const Switch = styled.label`
   display: flex;
   align-items: flex-end;
 
+  @media screen and (max-width: 790px) {
+      
+        margin-right: 241px;
+     
 
+    }   
+
+    @media screen and (max-width: 599px) {
+      
+      margin-right: 390px;
+   
+
+  }   
+
+  @media screen and (max-width: 473px) {
+        width: 188%;
+        height: 22px;
+     
+
+    }    
+
+  
 `;
 
 export const TextPausar = styled.p`
           color: green;
           margin-right: 35px;
+
+
+    @media screen and (max-width: 790px) {
+      
+      margin-right: 241px;
+
+
+    @media screen and (max-width: 599px) {
+      
+      margin-right: 390px;
+   
+
+  }   
+
+  }   
 
 
 `
@@ -141,8 +213,7 @@ export const Slider = styled.span`
   background-color: #228137;
   transition: .4s;
   border-radius: 34px;
-  
-
+   
   &:before {
     position: absolute;
     content: "";
@@ -153,6 +224,15 @@ export const Slider = styled.span`
     background-color: white;
     transition: .4s;
     border-radius: 50%;
+
+
+    @media screen and (max-width: 473px) {
+    height: 15px;
+    width: 14px;
+    left: 7px;
+    bottom: 3px;
+
+    }    
   }
 
   ${Checkbox}:checked + & {
@@ -162,6 +242,10 @@ export const Slider = styled.span`
   ${Checkbox}:checked + &:before {
     transform: translateX(26px);
   }
+
+  
+
+   
 `;
 
 export const ContainerImg = styled.div`
@@ -187,6 +271,20 @@ export const Logo = styled.img`
     height: 144px;
     width: 151px;
     margin-top: 11px; 
+
+
+    @media screen and (max-width: 882px) {
+        height: 99px;
+        width: 151px;     
+
+    }    
+
+    @media screen and (max-width: 479px) {
+        height: 99px;
+        width: 114px;     
+
+    }    
+
 
 `
 
