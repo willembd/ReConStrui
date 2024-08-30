@@ -169,6 +169,7 @@ export const TTTitle = styled.p`
     font-weight: bold;
     color: #228137;
 `;
+
 export const SobreContainer = styled.div`
     display: flex;
     justify-content: space-between;
@@ -176,10 +177,11 @@ export const SobreContainer = styled.div`
     padding: 0px 10px;
 
     @media screen and (max-width: 466px) {
-        flex-direction:column;
-        height:400px;
+        flex-direction: column;
+        gap: 10px;
     }
 `;
+
 
 export const ContainerImg = styled.div`
     display: flex;
@@ -224,7 +226,6 @@ export const BBotao = styled.button`
         font-size: 15px;
     }
 
-   
 `;
 
 export const LETRA = styled.p`
@@ -237,12 +238,6 @@ export const QuebraLinha = styled.div`
     flex-direction: column;
     align-items: center;
     gap: 20px;
-
-    @media screen and (max-width: 444px) {
-        width: 312px;
-        height:400px;
-        flex-direction:column;
-    }
 `;
 
 export const Flex = styled.div`

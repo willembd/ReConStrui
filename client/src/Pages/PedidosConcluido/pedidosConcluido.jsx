@@ -4,9 +4,9 @@ import { useNavigate } from "react-router-dom"
 import NavBar from "../../Componentes/NavBar/navbar"
 import Footer from "../../Componentes/Footer/footer"
 import ModalDetalhes from "../../Componentes/ModalDetalhes/modaldestalhes";
-import FormularioDetalhes from "../../Componentes/FormDetalhes/formDetalhes";
+import FormularioDetalhes from "../../Componentes/FormDetalhes/formDetalhes";import ModalCancelar from "../../Componentes/ModalCancelar/modalCancelar";
 import Select from "../../Componentes/Select/select";
-
+import ButtonCancelar from "../../Componentes/ButtonCancelar/buttonCancelar";
 ''
 
 export default function PedidosConcluido () {
@@ -38,13 +38,13 @@ export default function PedidosConcluido () {
 
     
         const handleFechar = () => {
-            navigate("/confirmacaopedidos");
+            navigate("/");
         };
     return (
 
         <>
             <NavBar />
-           
+            
             <S.Caixa>
                 <S.Container>
                     <S.AAlinha>
@@ -109,7 +109,7 @@ export default function PedidosConcluido () {
 
                             </S.CCaixa>
 
-                            <S.CContainer>
+            
                             <S.CCaixa>
                                 <S.PLeft>
                                     <S.PPALAVRA>Dados do Pedido</S.PPALAVRA>
@@ -140,8 +140,6 @@ export default function PedidosConcluido () {
                                                 <S.Flex>
                                                 
 
-                                                   
-
                                                     <S.BBotao  onClick={handleFechar}>Comprar Novamente</S.BBotao>
                                                 </S.Flex>
                                             </S.QuebraLinha>
@@ -156,9 +154,8 @@ export default function PedidosConcluido () {
                                     <FormularioDetalhes />
                                 </ModalDetalhes>
                             </S.CCaixa>
-                        </S.CContainer>
 
-                        <S.CContainer>
+
                             <S.CCaixa>
                                 <S.PLeft>
                                     <S.PPALAVRA>Dados do Pedido</S.PPALAVRA>
@@ -186,8 +183,10 @@ export default function PedidosConcluido () {
                                                     <S.BarraAguardando/>
                                                 </div>
                                                 <S.Flex>
-                                               
+                                                
+
                                                     <S.BBotao  onClick={handleFechar}>Comprar Novamente</S.BBotao>
+
                                                 </S.Flex>
                                             </S.QuebraLinha>
                                         </S.SobreContainer>
@@ -203,7 +202,8 @@ export default function PedidosConcluido () {
 
                             </S.CCaixa>
                         </S.CContainer>
-                        </S.CContainer>
+
+                      
                     </S.FlexColomn>
                 </S.Container>
             </S.Caixa>
