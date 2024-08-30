@@ -1,10 +1,10 @@
 import * as S from "./selectStyle";
 
-export default function Select({ text, children }) {
+export default function Select({ text, children, onChange }) {
     return (
         <S.Container>
             <label>{text}</label>
-            <S.SelectStyle>{children}</S.SelectStyle>
+            <S.SelectStyle onChange={onChange}>{children}</S.SelectStyle>
         </S.Container>
     );
 }
