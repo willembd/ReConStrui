@@ -6,22 +6,38 @@ import { useNavigate } from "react-router-dom"
 
 
 export default function NavBar(){
+    const token = localStorage.getItem("token")
+    const navigation = useNavigate()   
 
- const navigation = useNavigate()   
+    function handleLogout(){
+        localStorage.removeItem("token")
+        navigation("/")
+    }
 
     return(
         <>
-            <S.Nav>
+            {token ? (
+                <S.Nav>
+                    <S.NavLogo src={ImgLogoNav} alt="" onClick={() => navigation('/')}/>
+                    <S.ContainerButton>
+                        <S.ButtonPrimary onClick={() => navigation('/perfilusuario') }>Perfil</S.ButtonPrimary>
+                        <ButtonNav text="Sair" onClick={() => handleLogout()} />
+                    </S.ContainerButton>
+                </S.Nav>
+            
+
+            ) : (
+                <S.Nav>
                 <S.NavLogo src={ImgLogoNav} alt="" onClick={() => navigation('/')}/>
                 <S.ContainerButton>
-                    <S.ButtonPrimary onClick={() => navigation('/perfilusuario') }>Perfil</S.ButtonPrimary>
                     <ButtonNav text="Entrar" onClick={() => navigation('/paginalogin')} />
                 </S.ContainerButton>
                 
                 
             </S.Nav>
+           
+            )}
             <S.Borda/>
-
         </>
         
     )
