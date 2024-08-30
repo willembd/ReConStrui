@@ -25,16 +25,30 @@ export const ModalStyle = styled.div`
     justify-content: space-around;
     flex-direction: column;
 
-    /* @media screen and (max-width: 1310px) {
-        width:799px;
+
+ @media screen and (max-width: 891px) {
+        width:794px;
         height: 500px;
-} */
+ }
+ @media screen and (max-width: 828px) {
+          width:703px;
+       
+ }
 
+ @media screen and (max-width: 729px) {
+          width:90%;
+       
+ }
     @media screen and (max-width: 500px) {
-        width:392px;
-        height: 1299px;
+        width:362px;
+        height: 524px;
+        overflow: auto;
 }
-
+@media screen and (max-width: 375px) {
+        width:294px;
+        height: 556px;
+        overflow: auto;
+}
 
   `   
 

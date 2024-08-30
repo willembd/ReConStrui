@@ -26,8 +26,17 @@ export const Campo = styled.p`
  
   };
 
-    @media screen and (max-width: 1080px) {
-        padding: 0px 30px 2px 2px;
-        font-size: 14px;
-    }
+  
+
+    @media screen and (max-width: 990px) {
+          font-size:10px ;
+          padding: 0px 30px 2px 2px;
+ }
+
+
+ @media screen and (max-width: 500px) {
+          font-size: 10px ;
+          padding: 0px 30px 2px 2px;
+ }
+
 `

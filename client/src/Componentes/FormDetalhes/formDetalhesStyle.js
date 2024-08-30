@@ -18,13 +18,31 @@ export const Caixa = styled.div`
     justify-content: center;
 
 
-    @media screen and (max-width: 500px) {
-        width:347px;
-        height: 1073px;
+
+    @media screen and (max-width: 828px) {
+        width: 632px;
+        display: flex;
+ }
+
+ @media screen and (max-width: 729px) {
+          width:106%;
+       
+ }
+
+ @media screen and (max-width: 500px) {
+        width: 281px;
+        height: 758px;
         display: flex;
         flex-direction: column;
+        align-items: center;
+        overflow: auto;
+ }
+ 
+ @media screen and (max-width: 375px) {
+        width:239px;
+    
+      
 }
-
 
 `;
 export const PPALAVRA = styled.p`
@@ -37,17 +55,33 @@ export const PPALAVRA = styled.p`
 export const FlexCaixa1 = styled.div`
      justify-content: center;
      display: flex;
-     flex-direction: column
-     
+     flex-direction: column;
+     width: 44%;
+
+     @media screen and (max-width: 828px) {
+
+}
+     @media screen and (max-width: 500px) {
+        width:  191px;
+    
+    
+}  
 `
 
 export const FlexCaixa4 = styled.div`
      justify-content: center;
      align-items: flex-end;
      display: flex;
-     flex-direction: column
+     flex-direction: column;
     
-
+     @media screen and (max-width: 828px) {
+      
+      height: 317px;
+  
+}
+     @media screen and (max-width: 500px) {
+        
+}
 ` 
 
 export const Caixa1 = styled.div`
@@ -56,13 +90,22 @@ export const Caixa1 = styled.div`
     background-color: white;
     border: 1px solid #E0E0E0;
     
+    @media screen and (max-width: 828px) {
+         width: 132px;
+          
+}
+@media screen and (max-width: 729px) {
+          width: 111px;
+          
+       
+ }
 
-    @media screen and (max-width: 500px) {
-        width:293px;
-        height: 243px;
+@media screen and (max-width: 500px) {
+        width:192px;
+        height: 153px;
         
 }
- 
+
 `;
 
 export const Caixa2 = styled.div`
@@ -73,15 +116,18 @@ export const Caixa2 = styled.div`
     border-top: 1px solid #E0E0E0;
     border-right: 1px solid #E0E0E0;
 
+    @media screen and (max-width: 828px) {
+        width: 187px;
+        height:290px;
+       
+ }
 
-    @media screen and (max-width: 500px) {
-        width:295px;
-        height: 293px;
- 
-}
- 
- 
-  
+ @media screen and (max-width: 500px) {
+
+        height: 179px;
+       
+ }
+
 
 `
 
@@ -93,14 +139,17 @@ export const Caixa3 = styled.div`
     border-bottom: 1px solid #E0E0E0;
     margin-top: 18px;
 
-    @media screen and (max-width: 500px) {
-        width:295px;
-        height: 293px;
-        /* margin-top:   236px; */
-}
- 
-  
 
+    @media screen and (max-width: 828px) {
+        width: 188px;
+        height:290px;
+ }
+
+ @media screen and (max-width: 500px) {
+      
+        height:161px;
+ }
+   
 `
 export const Caixa4 = styled.div`
     width: 138px;
@@ -108,11 +157,16 @@ export const Caixa4 = styled.div`
     background-color: white;
     border: 1px solid #E0E0E0;
     
-    @media screen and (max-width: 500px) {
-        width:307px;
-        height: 293px;
-        /* margin-top:   236px; */
-}
+    @media screen and (max-width: 828px) {
+        width:96px;
+        height:290px;
+ }
+
+ @media screen and (max-width: 500px) {
+         width: 187px;
+        height: 171px;
+ }
+ 
  
 `;
 
@@ -128,11 +182,17 @@ export const Alinha = styled.div`
     display: flex;
     justify-content: space-around;
     gap: 80px;
+
+  
 `;
 
-export const PaLavra = styled.p`
+export const TextBox = styled.p`
     font-size: 15px;
     margin-top: 6px;
+
+    @media screen and (max-width: 828px) {
+         font-size: 12px;
+    }
 `;
 
 export const Linha = styled.div`
@@ -146,22 +206,39 @@ export const Linha = styled.div`
 
 ` 
 
-export const IIIMG = styled.img`
+export const Img= styled.img`
     height: 87px;
     width: 124px;
     margin-top: 53px;
+
+    @media screen and (max-width: 828px) {
+        height: 70px;
+         width: 98px;
+       
+}
  
+@media screen and (max-width: 500px) {
+         height: 70px;
+         width: 98px;
+         margin-top: 14px;
+}
 `;
 
-export const TTTitle = styled.p`
+export const TextProduto = styled.p`
     font-size: 1rem ;
     font-weight: bold;
     color: #228137;
+
+ @media screen and (max-width: 828px) {
+        font-size: 11px ;
+}
 `;
 export const ContainerImg = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+
+    
     
 `
 export const Container2 = styled.div`
@@ -170,6 +247,12 @@ export const Container2 = styled.div`
     flex-direction: column;
     gap: 7px;
     margin-top: 60px;
+
+
+    @media screen and (max-width: 500px) {
+        margin-top: 15px;
+
+    }
 `
 export const Container3 = styled.div`
     margin: 18px;
@@ -177,15 +260,24 @@ export const Container3 = styled.div`
     flex-direction: column;
     gap: 15px;
     margin-top: 74px;
+
+
+    @media screen and (max-width: 500px) {
+        margin-top: 15px;
+
+    }
 `
 export const Container4= styled.div`
     align-items: center;
     flex-direction: column;
     margin-top: 10px;
-    display: flex;
-    justify-content: space-between
+    display: flex;       
+    justify-content: space-between;
   
- 
+    @media screen and (max-width: 500px) {
+        margin-top: -52px;
+
+    }
 `
 export const BarraAguardando = styled.div`
     width: 200px;
@@ -212,63 +304,76 @@ export const QuebraLinha = styled.div`
 `
 
 
-export const Caixinha1 = styled.div`
+export const LabelProduto = styled.div`
     width: 148px;
     height: 28px;
     background-color: white;
     border-bottom:  1px solid #E0E0E0;
    
-    @media screen and (max-width: 500px) {
-        width:289px;
+    @media screen and (max-width: 828px) {
+        width: 130px;
+
+    @media screen and (max-width: 779px) {
+         width: 129px;
+          
+       
+ }
        
 }
    
     
 `;
 
-export const Caixinha2 = styled.div`
+export const LabelEndereço = styled.div`
     width: 204px;
     height: 28px;
     background-color: white;
     border-bottom: 1px solid #E0E0E0;
    
       
-    @media screen and (max-width: 500px) {
-        width:291px;
+    @media screen and (max-width: 828px) {
+        width:186px;
        
 }
 `;
-export const Caixinha3 = styled.div`
+export const LabelCliente = styled.div`
     width: 238px;
     height: 28px;
     background-color: white;
     border-bottom:  1px solid #E0E0E0;
  
        
-    @media screen and (max-width: 500px) {
-        width:289px;
+    @media screen and (max-width: 828px) {
+        width:188px;
        
 }
    
 `;
 
-export const Caixinha4 = styled.div`
+export const LabelQuantidade = styled.div`
     width: 133px;
     height: 28px;
     background-color: white;
     border-bottom:  1px solid #E0E0E0;
 
+    @media screen and (max-width: 828px) {
+        width:95px;
        
+}
     @media screen and (max-width: 500px) {
-        width:289px;
+        width:185px;
        
 }
 `;
 
 
-export const PPalavra = styled.div`
+export const NameUsina = styled.div`
     font-size: 1rem;
     color: #AF7503;
+
+    @media screen and (max-width: 828px) {
+        font-size: 12px ;
+}
 `;
 
 export const Text = styled.div`
@@ -276,6 +381,10 @@ export const Text = styled.div`
     white-space: nowrap;
     margin-left: 10px;
     font-size: 11px;
+
+    @media screen and (max-width: 828px) {
+        font-size: 10px;
+ }
 
 `
 export const CampoPequeno = styled.div`
@@ -285,13 +394,27 @@ export const CampoPequeno = styled.div`
      width: 84px;
         
 
+     
+     @media screen and (max-width: 500px) {
+     
+        width: 129px;
+   
+     }
 `
 
 export const CampoMenor = styled.div` 
      display: flex;
      border-bottom: 2px solid #1C4525;
      height: 10px;
-     width: 55px;
+     width: 77px;
+
+  @media screen and (max-width: 840px) {
+     
+        width: 69px;
+   
+     }
+
+    
  
 `
 
@@ -331,6 +454,18 @@ export const ColorP = styled.p`
 export const ColorSpan = styled.span`
       color: black;
       font-size: 10px;
+
+      
+      @media screen and (max-width: 828px) {
+        white-space: nowrap;
+        font-size: 8px;
+      
+      
+      }
+      @media screen and (max-width: 500px) {
+      
+       
+      }
 `
 export const FlexM = styled.div`
         display: flex;
@@ -340,3 +475,12 @@ export const FlexM = styled.div`
        
 `
 
+ export const FlexContainerPrimeiro = styled.div`
+            display: flex;
+           
+
+            @media screen and (max-width: 500px) {
+                  display: flex;
+       
+}
+ `

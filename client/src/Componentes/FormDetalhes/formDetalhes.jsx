@@ -10,41 +10,44 @@ export default function FormularioDetalhes() {
       <M.Caixa>
            
             <M.FlexCaixa1>
-            <M.IdDados>
-               
-               <M.ColorSpan> Data da Compra: 12/08/2024</M.ColorSpan>
-           </M.IdDados>
+                <M.IdDados>
+                
+                    <M.ColorSpan> Data da Compra: 12/08/2024</M.ColorSpan>
+                </M.IdDados>
+              <M.FlexContainerPrimeiro>
             <M.Caixa1>
-                <M.Caixinha1>
+                <M.LabelProduto>
                     <M.Alinha>
-                        <M.PaLavra>Produto</M.PaLavra>
+                        <M.TextBox>Produto</M.TextBox>
                     
                     </M.Alinha>
-                </M.Caixinha1>
-          
+                
+                </M.LabelProduto>
+         
                  <M.ContainerImg>
                         <div className="box-item">
-                                <M.IIIMG
+                                <M.Img
                                     src='areia.png'
                                 />
                             <AAlinhamento>
                                 <LLinha
                                 >
-                                    <M.TTTitle>Areia reciclada</M.TTTitle>
-                                    <M.PPalavra>AGR Ambiental</M.PPalavra>
+                                    <M.TextProduto>Areia reciclada</M.TextProduto>
+                                    <M.NameUsina>AGR Ambiental</M.NameUsina>
                                 </LLinha>
                             </AAlinhamento>
                         </div>
                  </M.ContainerImg>
             </M.Caixa1>
+            </M.FlexContainerPrimeiro>
             </M.FlexCaixa1>
             <M.Caixa2>
-                         <M.Caixinha2>
+                         <M.LabelEndereço>
                                 <M.Alinha>
-                                    <M.PaLavra>Informações De Endereço</M.PaLavra>
+                                    <M.TextBox>Informações De Endereço</M.TextBox>
                                     
                                 </M.Alinha>
-                         </M.Caixinha2>
+                         </M.LabelEndereço>
                     <M.Container2>
 
                                 <CampoDados padding='secondary' fontsize='secondary' borderbottom='secondary'  text="Rua:" >   
@@ -75,8 +78,8 @@ export default function FormularioDetalhes() {
                                 </M.FlexCep>
                                 <M.CampoMenor>
                                 </M.CampoMenor>
-                                <M.CampoPequeno>
-                                </M.CampoPequeno>
+                                <M.CampoMenor>
+                                </M.CampoMenor>
                             
                         </M.CampoFlex>
                             
@@ -84,12 +87,12 @@ export default function FormularioDetalhes() {
                 
             </M.Caixa2>
             <M.Caixa3>
-                        <M.Caixinha3>
+                        <M.LabelCliente>
                             <M.Alinha>
-                                <M.PaLavra>Informações Do Cliente</M.PaLavra>
+                                <M.TextBox>Informações Do Cliente</M.TextBox>
                         
                             </M.Alinha>
-                        </M.Caixinha3>
+                        </M.LabelCliente>
                         <div>
                             <M.Container3>
                                     <CampoDados padding='secondary' fontsize='secondary' borderbottom='secondary'  text="Nome:" >   
@@ -109,14 +112,14 @@ export default function FormularioDetalhes() {
 
              <M.FlexCaixa4>
              <M.ColorSpan>ID do Pedido: 0214830</M.ColorSpan>
-
+            <M.FlexContainerPrimeiro>
                  <M.Caixa4>
-                        <M.Caixinha4>
+                        <M.LabelQuantidade>
                             <M.Alinha>
-                                <M.PaLavra>Quantidade</M.PaLavra>
+                                <M.TextBox>Quantidade</M.TextBox>
                             
                             </M.Alinha>
-                        </M.Caixinha4>
+                        </M.LabelQuantidade>
                     
                             <M.Container4>
                                  <M.FlexM>
@@ -126,10 +129,11 @@ export default function FormularioDetalhes() {
                                    
                                  </M.FlexM>
                                  
-                                 <M.CampoPequeno>
+                                    <M.CampoPequeno>
                                     </M.CampoPequeno>
                             </M.Container4>
                 </M.Caixa4>
+             </M.FlexContainerPrimeiro>
              </M.FlexCaixa4>
 
          </M.Caixa>
