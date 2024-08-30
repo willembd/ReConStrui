@@ -15,7 +15,6 @@ import Confirmacao from "../Pages/ConfirmacaoPedidos/confirmacaoPedidos.jsx";
 import OrcamentosEmpresa from "../Pages/OrcamentosEmpresa/orcamentosEmpresa.jsx";
 import ConfirmacaoEntrega from "../Pages/ConfirmacaoEntrega/confirmacaoEntrega.jsx";
 import EntregasEmpresa from "../Pages/EntregasEmpresa/entregasEmpresa.jsx";
-import PedidosCancelados from "../Pages/PedidosCancelados/pedidosCancelados.jsx";
 import SolicitacaoPedidoEmp from "../Pages/SolicitacaoPedidoEmp/solicitacaoPedidos.jsx";
 import SolicitacaoEntregaRetirada from "../Pages/SolicitacaoEntregasRetirada/solicitacaoEntregaRetirada.jsx";
 import HistoricoEmpresa from "../Pages/HistoricoEmpresa/historicoEmpresa.jsx";
@@ -23,6 +22,7 @@ import PerfilUsuario from "../Pages/PerfilUsuario/perfilUsuario.jsx";
 import PerfilEmpresa from "../Pages/PerfilEmpresa/perfilEmpresa.jsx";
 import ProdutosEmpresa from "../Pages/ProdutosEmpresa/produtosEmpresa.jsx";
 import HistoricoUsuario from "../Pages/HistoricoUsuario/historicoUsuario.jsx";
+import PedidosOrcamentoUsuario from "../Pages/PedidosOrcamentoUsuario/pedidosOrcamentoUsuario.jsx";
 
 
 function PrivateRoute({ element, allowedTypes }) {
@@ -111,8 +111,8 @@ export const router = createBrowserRouter([
         ),
     },
     {
-        path: "/pedidoscancelados",
-        element: <PedidosCancelados />,
+        path: "/pedidosorcamentousuario",
+        element: <PedidosOrcamentoUsuario />,
     },
     {
         path: "/historicousuario",

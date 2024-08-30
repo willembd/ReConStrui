@@ -1,15 +1,16 @@
-import * as S from "./pedidosCanceladosStyle"
+import * as S from "./pedidosOrcamentoUsuarioStyle"
 import { useState } from "react";
 import { useNavigate } from "react-router-dom"
 import NavBar from "../../Componentes/NavBar/navbar"
 import Footer from "../../Componentes/Footer/footer"
 import ModalDetalhes from "../../Componentes/ModalDetalhes/modaldestalhes";
-import FormularioDetalhes from "../../Componentes/FormDetalhes/formDetalhes";import ModalCancelar from "../../Componentes/ModalCancelar/modalCancelar";
+import FormularioDetalhes from "../../Componentes/FormDetalhes/formDetalhes";
+import ModalCancelar from "../../Componentes/ModalCancelar/modalCancelar";
 import Select from "../../Componentes/Select/select";
 import ButtonCancelar from "../../Componentes/ButtonCancelar/buttonCancelar";
-''
 
-export default function PedidosCancelados () {
+
+export default function PedidosOrcamentoUsuario() {
 
     const [isOpenTest, setOpenTest] = useState(null);
 
@@ -56,8 +57,8 @@ export default function PedidosCancelados () {
                     <div className="form-group">
                         <Select >
                             <option value="in progress">Em Andamento</option>
-                            <option value="confirmed">Concluído</option>
-                            <option value="cancel">Cancelado</option>
+                            <option value="confirmed">Orçamento Recebido</option>
+                            <option value="cancel">Histórico</option>
                         </Select>
                     </div>
                     <S.FlexColomn>
@@ -65,7 +66,7 @@ export default function PedidosCancelados () {
                             <S.CCaixa>
                                 <S.PLeft>
                                     <S.PPALAVRA>Dados do Pedido</S.PPALAVRA>
-                                    <S.PPP>Pedido Cancelado</S.PPP>
+                                    <S.PPP>Orçamento Recebido</S.PPP>
                                 </S.PLeft>
                                 <S.CCaixinha>
                                     <S.Caixinha>
@@ -82,15 +83,21 @@ export default function PedidosCancelados () {
                                             </S.ContainerImg>
 
                                             <S.QuebraLinha>
-                                                <S.LETRA>Cancelado</S.LETRA>
+                                                <S.LETRA>Orçamento Recebido</S.LETRA>
                                                 <div>
                                                     <S.BBarraAguardando/>
                                                     <S.BarraAguardando/>
                                                 </div>
                                                 <S.Flex>
-                                                   
+                                                    <ButtonCancelar text="Cancelar" onClick={() => setOpenTest(1)}/>
+                                                    <ModalCancelar 
+                                                     cancelTransition={true}  
+                                                     textbutton="Voltar"
+                                                     text="Tem Certeza que deseja cancelar Orçamento?"
+                                                      isOpenTest={isOpenTest === 1}
+                                                      setOpenTest={handleCloseModalTest}></ModalCancelar>
 
-                                                    <S.BBotao onClick={handleFechar}>Comprar Novamente</S.BBotao>
+                                                    <S.BBotao onClick={handleFechar}>Verificar</S.BBotao>
                                                     
                                                 </S.Flex>
                                             </S.QuebraLinha>
@@ -113,7 +120,7 @@ export default function PedidosCancelados () {
                             <S.CCaixa>
                                 <S.PLeft>
                                     <S.PPALAVRA>Dados do Pedido</S.PPALAVRA>
-                                    <S.PPP>Pedido Cancelado</S.PPP>
+                                    <S.PPP>Orçamento Recebido</S.PPP>
                                 </S.PLeft>
                                 <S.CCaixinha>
                                     <S.Caixinha>
@@ -132,14 +139,22 @@ export default function PedidosCancelados () {
                                             </S.ContainerImg>
 
                                             <S.QuebraLinha>
-                                                <S.LETRA>Cancelado</S.LETRA>
+                                                <S.LETRA>Orçamento Recebido</S.LETRA>
                                                 <div>
                                                     <S.BBarraAguardando/>
                                                     <S.BarraAguardando/>
                                                 </div>
                                                 <S.Flex>
-                                                
-                                                    <S.BBotao  onClick={handleFechar}>Comprar Novamente</S.BBotao>
+                                                <ButtonCancelar text="Cancelar" onClick={() => setOpenTest(2)}/>
+
+                                                    <ModalCancelar 
+                                                      cancelTransition={true}  
+                                                      textbutton="Voltar" 
+                                                      text="Tem Certeza que deseja cancelar Orçamento?"
+                                                      isOpenTest={isOpenTest === 2}
+                                                      setOpenTest={handleCloseModalTest}></ModalCancelar>
+
+                                                    <S.BBotao  onClick={handleFechar}>Verificar</S.BBotao>
                                                 </S.Flex>
                                             </S.QuebraLinha>
                                         </S.SobreContainer>
@@ -158,7 +173,7 @@ export default function PedidosCancelados () {
                             <S.CCaixa>
                                 <S.PLeft>
                                     <S.PPALAVRA>Dados do Pedido</S.PPALAVRA>
-                                    <S.PPP>Pedido Cancelado</S.PPP>
+                                    <S.PPP>Orçamento Recebido</S.PPP>
                                 </S.PLeft>
                                 <S.CCaixinha>
                                     <S.Caixinha>
@@ -176,15 +191,21 @@ export default function PedidosCancelados () {
                                                 <S.PPalavra>AGR Ambiental</S.PPalavra>
                                             </S.ContainerImg>
                                             <S.QuebraLinha>
-                                                <S.LETRA>Cancelado</S.LETRA>
+                                                <S.LETRA>Orçamento Recebido</S.LETRA>
                                                 <div>
                                                     <S.BBarraAguardando/>
                                                     <S.BarraAguardando/>
                                                 </div>
                                                 <S.Flex>
-                                              
+                                                <ButtonCancelar text="Cancelar" onClick={() => setOpenTest(3)}/>
+                                                    <ModalCancelar 
+                                                        cancelTransition={true}                                        
+                                                        textbutton="Voltar"
+                                                        text="Tem Certeza que deseja cancelar Orçamento?"
+                                                        isOpenTest={isOpenTest === 3}
+                                                        setOpenTest={handleCloseModalTest}/>
 
-                                                    <S.BBotao  onClick={handleFechar}>Comprar Novamente</S.BBotao>
+                                                    <S.BBotao  onClick={handleFechar}>Verificar</S.BBotao>
 
                                                 </S.Flex>
                                             </S.QuebraLinha>

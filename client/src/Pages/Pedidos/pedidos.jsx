@@ -4,7 +4,8 @@ import { useNavigate } from "react-router-dom"
 import NavBar from "../../Componentes/NavBar/navbar"
 import Footer from "../../Componentes/Footer/footer"
 import ModalDetalhes from "../../Componentes/ModalDetalhes/modaldestalhes";
-import FormularioDetalhes from "../../Componentes/FormDetalhes/formDetalhes";import ModalCancelar from "../../Componentes/ModalCancelar/modalCancelar";
+import FormularioDetalhes from "../../Componentes/FormDetalhes/formDetalhes";
+import ModalCancelar from "../../Componentes/ModalCancelar/modalCancelar";
 import Select from "../../Componentes/Select/select";
 import ButtonCancelar from "../../Componentes/ButtonCancelar/buttonCancelar";
 ''
