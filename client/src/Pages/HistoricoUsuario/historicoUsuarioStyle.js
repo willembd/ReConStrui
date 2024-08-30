@@ -36,7 +36,6 @@ export const Pedidos = styled.h1`
         font-size:20px;
         white-space:nowrap;
         
-        
     }
 
 `;
@@ -153,8 +152,6 @@ export const AAlinha = styled.div`
     justify-content: space-between;
     align-items: center;
 
-  
-
 `;
 
 export const IIIMG = styled.img`
@@ -237,7 +234,7 @@ export const QuebraLinha = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
 `;
 
 export const Flex = styled.div`
@@ -283,9 +280,7 @@ export const BarraAguardandoC = styled.div`
 
     @media screen and (max-width: 444px) {
         width: 110px;
-        
     }
-
 `;
 export const BBarraAguardandoT = styled.div`
     width: 210px;
@@ -294,7 +289,6 @@ export const BBarraAguardandoT = styled.div`
 
     @media screen and (max-width: 444px) {
         width: 110px;
-        
     }
 `;
 

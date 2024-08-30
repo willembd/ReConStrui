@@ -1,4 +1,4 @@
-import * as S from "./pedidosConcluidoStyle"
+import * as S from "./historicoUsuarioStyle"
 import { useState } from "react";
 import { useNavigate } from "react-router-dom"
 import NavBar from "../../Componentes/NavBar/navbar"
@@ -9,7 +9,7 @@ import Select from "../../Componentes/Select/select";
 import ButtonCancelar from "../../Componentes/ButtonCancelar/buttonCancelar";
 ''
 
-export default function PedidosConcluido () {
+export default function HistoricoUsuario () {
 
     const [isOpenTest, setOpenTest] = useState(null);
 
@@ -56,8 +56,8 @@ export default function PedidosConcluido () {
                     <div className="form-group">
                         <Select >
                             <option value="in progress">Em Andamento</option>
-                            <option value="confirmed">Concluído</option>
-                            <option value="cancel">Cancelado</option>
+                            <option value="confirmed">Orçamento Recebido</option>
+                            <option value="cancel">Histórico</option>
                         </Select>
                     </div>
                     <S.FlexColomn>
@@ -159,7 +159,7 @@ export default function PedidosConcluido () {
                             <S.CCaixa>
                                 <S.PLeft>
                                     <S.PPALAVRA>Dados do Pedido</S.PPALAVRA>
-                                    <S.PPP>Pedido Concluído</S.PPP>
+                                    <S.PPP>Pedido Cancelado</S.PPP>
                                 </S.PLeft>
                                 <S.CCaixinha>
                                     <S.Caixinha>
@@ -177,10 +177,10 @@ export default function PedidosConcluido () {
                                                 <S.PPalavra>AGR Ambiental</S.PPalavra>
                                             </S.ContainerImg>
                                             <S.QuebraLinha>
-                                                <S.LETRA>Concluído</S.LETRA>
+                                                <S.LETRA>Cancelado</S.LETRA>
                                                 <div>
-                                                    <S.BBarraAguardando/>
-                                                    <S.BarraAguardando/>
+                                                    <S.BBarraAguardandoT/>
+                                                    <S.BarraAguardandoC/>
                                                 </div>
                                                 <S.Flex>
                                                 
