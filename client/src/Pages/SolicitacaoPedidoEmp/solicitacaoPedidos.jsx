@@ -41,6 +41,22 @@ export default function SolicitacaoPedido () {
         const handleFechar = () => {
             navigate("/orcamentosempresa");
         };
+
+        const handleSelectChange = (event) => {
+            const selectedValue = event.target.value;
+    
+            if (selectedValue === "andamento") {
+                navigate("/solicitacaopedidoemp");
+            } else if (selectedValue === "recebido") {
+                navigate("/solicitacaoentregaretirada");
+            } else if (selectedValue === "historico") {
+                navigate("/historicousuario");
+            }else {
+                console.warn("Opção não reconhecida: ", selectedValue);
+            }
+        };
+
+
     return (
 
         <>
@@ -55,10 +71,10 @@ export default function SolicitacaoPedido () {
                     <S.TXT>Confira aqui o andamento do seus pedidos</S.TXT>
                     <S.PP>Filtrar por:</S.PP>
                     <div className="form-group">
-                        <Select >
-                            <option value="in progress">Minhas Solicitações</option>
-                            <option value="confirmed">Solicitação Entrega/Retirada</option>
-                            <option value="cancel">Histórico</option>
+                        <Select onChange={handleSelectChange}>
+                            <option value="andamento">Minhas Solicitações</option>
+                            <option value="recebido">Solicitação Entrega/Retirada</option>
+                            <option value="historico">Histórico</option>
                         </Select>
                     </div>
                     <S.FlexColomn>
