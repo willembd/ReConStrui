@@ -82,9 +82,8 @@ export const CCaixa = styled.div`
 
     @media screen and (max-width: 882px) {
         width: 100%;
-        gap:20px;
-        height:420px;
-        
+        gap: 20px;
+        height: 420px;
     }
 `;
 export const PPP = styled.p`
@@ -177,7 +176,7 @@ export const SobreContainer = styled.div`
 
     @media screen and (max-width: 466px) {
         flex-direction:column;
-        height:400px;
+        gap: 10px;
     }
 `;
 
@@ -222,9 +221,7 @@ export const BBotao = styled.button`
 
     @media screen and (max-width: 882px) {
         font-size: 15px;
-    }
-
-   
+    } 
 `;
 
 export const LETRA = styled.p`
@@ -238,11 +235,6 @@ export const QuebraLinha = styled.div`
     align-items: center;
     gap: 20px;
 
-    @media screen and (max-width: 444px) {
-        width: 312px;
-        height:400px;
-        flex-direction:column;
-    }
 `;
 
 export const Flex = styled.div`
