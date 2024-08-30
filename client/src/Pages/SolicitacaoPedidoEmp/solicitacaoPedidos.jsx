@@ -1,24 +1,40 @@
-import * as S from "./solicitacaoPedidosStyle"
+import * as S from "./solicitacaoPedidosStyle";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import NavBar from "../../Componentes/NavBar/navbar";
 import Footer from "../../Componentes/Footer/footer";
 import ModalDetalhes from "../../Componentes/ModalDetalhes/modaldestalhes";
-import FormularioDetalhes from "../../Componentes/FormDetalhes/formDetalhes";import ModalCancelar from "../../Componentes/ModalCancelar/modalCancelar";
+import FormularioDetalhes from "../../Componentes/FormDetalhes/formDetalhes";
+import ModalCancelar from "../../Componentes/ModalCancelar/modalCancelar";
 import Select from "../../Componentes/Select/select";
 import ButtonCancelar from "../../Componentes/ButtonCancelar/buttonCancelar";
 ''
 
-export default function SolicitacaoPedidoEmp () {
+export default function SolicitacaoPedido () {
 
     const [isOpenTest, setOpenTest] = useState(null);
+
+
+    const [openModalId, setOpenModalId] = useState(null);
     
+
+    const handleOpenModalTest = (id) => {
+        setOpenTest(id);
+    };
 
     const handleCloseModalTest = () => {
         setOpenTest(null);
     };
 
-    
+    const handleOpenModal = (id) => {
+        setOpenModalId(id);
+    };
+
+    const handleCloseModal = () => {
+        setOpenModalId(null);
+    };
+
+
     const navigate = useNavigate();
 
     
@@ -29,7 +45,7 @@ export default function SolicitacaoPedidoEmp () {
 
         <>
             <NavBar />
-           
+            
             <S.Caixa>
                 <S.Container>
                     <S.AAlinha>
@@ -40,8 +56,8 @@ export default function SolicitacaoPedidoEmp () {
                     <S.PP>Filtrar por:</S.PP>
                     <div className="form-group">
                         <Select >
-                            <option value="in progress">Solicitação Pedidos</option>
-                            <option value="confirmed">Solicitação entrega/Retirada</option>
+                            <option value="in progress">Minhas Solicitações</option>
+                            <option value="confirmed">Solicitação Entrega/Retirada</option>
                             <option value="cancel">Histórico</option>
                         </Select>
                     </div>
@@ -75,6 +91,7 @@ export default function SolicitacaoPedidoEmp () {
                                                 <S.Flex>
                                                     <ButtonCancelar text="Cancelar" onClick={() => setOpenTest(1)}/>
                                                     <ModalCancelar 
+                                                     cancelTransition={true}  
                                                      textbutton="Voltar"
                                                      text="Tem Certeza que deseja cancelar Orçamento?"
                                                       isOpenTest={isOpenTest === 1}
@@ -88,10 +105,18 @@ export default function SolicitacaoPedidoEmp () {
                 
                                 </S.CCaixinha>
 
-                                
+                                <S.LLinks onClick={() => handleOpenModal(1)}>Ver detalhes</S.LLinks>
+                                <ModalDetalhes
+                                    text="DETALHES DO PEDIDO"
+                                    isOpen={openModalId === 1}
+                                    setOpen={handleCloseModal}>
+                                    <FormularioDetalhes />
+
+                                </ModalDetalhes>
+
                             </S.CCaixa>
 
-                            <S.CContainer>
+            
                             <S.CCaixa>
                                 <S.PLeft>
                                     <S.PPALAVRA>Dados do Pedido</S.PPALAVRA>
@@ -123,6 +148,7 @@ export default function SolicitacaoPedidoEmp () {
                                                 <ButtonCancelar text="Cancelar" onClick={() => setOpenTest(2)}/>
 
                                                     <ModalCancelar 
+                                                      cancelTransition={true}  
                                                       textbutton="Voltar" 
                                                       text="Tem Certeza que deseja cancelar Orçamento?"
                                                       isOpenTest={isOpenTest === 2}
@@ -134,11 +160,16 @@ export default function SolicitacaoPedidoEmp () {
                                         </S.SobreContainer>
                                     </div>
                                 </S.CCaixinha>
-                                
+                                <S.LLinks onClick={() => handleOpenModal(2)}> Ver detalhes</S.LLinks>
+                                <ModalDetalhes
+                                    text="DETALHES DO PEDIDO"
+                                    isOpen={openModalId === 2}
+                                    setOpen={handleCloseModal}>
+                                    <FormularioDetalhes />
+                                </ModalDetalhes>
                             </S.CCaixa>
-                        </S.CContainer>
 
-                        <S.CContainer>
+
                             <S.CCaixa>
                                 <S.PLeft>
                                     <S.PPALAVRA>Dados do Pedido</S.PPALAVRA>
@@ -168,20 +199,31 @@ export default function SolicitacaoPedidoEmp () {
                                                 <S.Flex>
                                                 <ButtonCancelar text="Cancelar" onClick={() => setOpenTest(3)}/>
                                                     <ModalCancelar 
-                                                     textbutton="Voltar"
-                                                     text="Tem Certeza que deseja cancelar Orçamento?"
-                                                      isOpenTest={isOpenTest === 3}
-                                                      setOpenTest={handleCloseModalTest}></ModalCancelar>
+                                                        cancelTransition={true}                                        
+                                                        textbutton="Voltar"
+                                                        text="Tem Certeza que deseja cancelar Orçamento?"
+                                                        isOpenTest={isOpenTest === 3}
+                                                        setOpenTest={handleCloseModalTest}/>
+
                                                     <S.BBotao  onClick={handleFechar}>Enviar Orçamento</S.BBotao>
+
                                                 </S.Flex>
                                             </S.QuebraLinha>
                                         </S.SobreContainer>
                                     </div>
                                 </S.CCaixinha>
-                                
+                                <S.LLinks onClick={() => handleOpenModal(3)}>Ver detalhes</S.LLinks>
+                                <ModalDetalhes
+                                    text="DETALHES DO PEDIDO"
+                                    isOpen={openModalId === 3}
+                                    setOpen={handleCloseModal}>
+                                    <FormularioDetalhes />
+                                </ModalDetalhes>
+
                             </S.CCaixa>
                         </S.CContainer>
-                        </S.CContainer>
+
+                      
                     </S.FlexColomn>
                 </S.Container>
             </S.Caixa>
