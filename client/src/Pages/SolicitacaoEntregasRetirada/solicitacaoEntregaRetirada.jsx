@@ -1,10 +1,11 @@
-import * as S from "./solicitacaoEntregaRetiradaStyle"
+import * as S from "./solicitacaoEntregaRetiradaStyle";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom"
-import NavBar from "../../Componentes/NavBar/navbar"
-import Footer from "../../Componentes/Footer/footer"
+import { useNavigate } from "react-router-dom";
+import NavBar from "../../Componentes/NavBar/navbar";
+import Footer from "../../Componentes/Footer/footer";
 import ModalDetalhes from "../../Componentes/ModalDetalhes/modaldestalhes";
-import FormularioDetalhes from "../../Componentes/FormDetalhes/formDetalhes";import ModalCancelar from "../../Componentes/ModalCancelar/modalCancelar";
+import FormularioDetalhes from "../../Componentes/FormDetalhes/formDetalhes";
+import ModalCancelar from "../../Componentes/ModalCancelar/modalCancelar";
 import Select from "../../Componentes/Select/select";
 import ButtonCancelar from "../../Componentes/ButtonCancelar/buttonCancelar";
 ''
@@ -17,9 +18,7 @@ export default function SolicitacaoEntregaRetirada () {
     const [openModalId, setOpenModalId] = useState(null);
     
 
-    const handleOpenModalTest = (id) => {
-        setOpenTest(id);
-    };
+   
 
     const handleCloseModalTest = () => {
         setOpenTest(null);
@@ -40,6 +39,21 @@ export default function SolicitacaoEntregaRetirada () {
         const handleFechar = () => {
             navigate("/confirmacaoentrega");
         };
+
+        const handleSelectChange = (event) => {
+            const selectedValue = event.target.value;
+    
+            if (selectedValue === "andamento") {
+                navigate("/pedidos");
+            } else if (selectedValue === "recebido") {
+                navigate("/pedidosorcamentousuario");
+            } else if (selectedValue === "historico") {
+                navigate("/historicousuario");
+            }else {
+                console.warn("Opção não reconhecida: ", selectedValue);
+            }
+        };
+
     return (
 
         <>
@@ -48,16 +62,16 @@ export default function SolicitacaoEntregaRetirada () {
             <S.Caixa>
                 <S.Container>
                     <S.AAlinha>
-                        <S.Pedidos>Solicitações de Entrega e Retirada</S.Pedidos>
+                        <S.Pedidos>Solicitações Entregas e Retirada</S.Pedidos>
                         <S.Barra/>
                     </S.AAlinha>
                     <S.TXT>Confira aqui o andamento do seus pedidos</S.TXT>
                     <S.PP>Filtrar por:</S.PP>
                     <div className="form-group">
-                        <Select >
-                            <option value="in progress">Solicitação  Pedidos</option>
-                            <option value="confirmed">Solicitações Entrega/Retirada</option>
-                            <option value="cancel">Histórico</option>
+                        <Select onChange={handleSelectChange}>
+                            <option value="andamento">Minhas Solicitações</option>
+                            <option value="recebido">Solicitações Entrega/Retirada</option>
+                            <option value="historico">Histórico</option>
                         </Select>
                     </div>
                     <S.FlexColomn>
@@ -90,8 +104,9 @@ export default function SolicitacaoEntregaRetirada () {
                                                 <S.Flex>
                                                     <ButtonCancelar text="Cancelar" onClick={() => setOpenTest(1)}/>
                                                     <ModalCancelar 
+                                                     cancelTransition={true}  
                                                      textbutton="Voltar"
-                                                     text="Tem Certeza que deseja cancelar Orçamento?"
+                                                     text="Tem Certeza que deseja cancelar Entrega?"
                                                       isOpenTest={isOpenTest === 1}
                                                       setOpenTest={handleCloseModalTest}></ModalCancelar>
 
@@ -114,7 +129,7 @@ export default function SolicitacaoEntregaRetirada () {
 
                             </S.CCaixa>
 
-                            <S.CContainer>
+            
                             <S.CCaixa>
                                 <S.PLeft>
                                     <S.PPALAVRA>Dados do Pedido</S.PPALAVRA>
@@ -146,8 +161,9 @@ export default function SolicitacaoEntregaRetirada () {
                                                 <ButtonCancelar text="Cancelar" onClick={() => setOpenTest(2)}/>
 
                                                     <ModalCancelar 
+                                                      cancelTransition={true}  
                                                       textbutton="Voltar" 
-                                                      text="Tem Certeza que deseja cancelar Orçamento?"
+                                                      text="Tem Certeza que deseja cancelar Retirada?"
                                                       isOpenTest={isOpenTest === 2}
                                                       setOpenTest={handleCloseModalTest}></ModalCancelar>
 
@@ -165,9 +181,8 @@ export default function SolicitacaoEntregaRetirada () {
                                     <FormularioDetalhes />
                                 </ModalDetalhes>
                             </S.CCaixa>
-                        </S.CContainer>
 
-                        <S.CContainer>
+
                             <S.CCaixa>
                                 <S.PLeft>
                                     <S.PPALAVRA>Dados do Pedido</S.PPALAVRA>
@@ -197,11 +212,14 @@ export default function SolicitacaoEntregaRetirada () {
                                                 <S.Flex>
                                                 <ButtonCancelar text="Cancelar" onClick={() => setOpenTest(3)}/>
                                                     <ModalCancelar 
-                                                     textbutton="Voltar"
-                                                     text="Tem Certeza que deseja cancelar Orçamento?"
-                                                      isOpenTest={isOpenTest === 3}
-                                                      setOpenTest={handleCloseModalTest}></ModalCancelar>
+                                                        cancelTransition={true}                                        
+                                                        textbutton="Voltar"
+                                                        text="Tem Certeza que deseja cancelar Entrega?"
+                                                        isOpenTest={isOpenTest === 3}
+                                                        setOpenTest={handleCloseModalTest}/>
+
                                                     <S.BBotao  onClick={handleFechar}>Entregar</S.BBotao>
+
                                                 </S.Flex>
                                             </S.QuebraLinha>
                                         </S.SobreContainer>
@@ -217,7 +235,8 @@ export default function SolicitacaoEntregaRetirada () {
 
                             </S.CCaixa>
                         </S.CContainer>
-                        </S.CContainer>
+
+                      
                     </S.FlexColomn>
                 </S.Container>
             </S.Caixa>
@@ -228,3 +247,4 @@ export default function SolicitacaoEntregaRetirada () {
 
     )
 }
+
