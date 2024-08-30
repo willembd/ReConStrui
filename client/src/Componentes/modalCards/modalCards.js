@@ -118,7 +118,7 @@ export const Im = styled.img`
     filter: brightness(1.2);   
 `;
 export const IMG = styled.img`
-    width: 19rem;
+    width: 16rem;
     height: 22rem;
     border-radius:0.75rem 0.75rem 0.75rem 0.75rem; 
     box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.5);
@@ -153,7 +153,7 @@ export const Caixa = styled.div`
     border-radius: 0 0 0.75rem 0.75rem; 
     filter: brightness(1.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 19rem;
+    width: 16rem;
     height: 6rem;
     justify-content: space-around;
     align-items: center;
