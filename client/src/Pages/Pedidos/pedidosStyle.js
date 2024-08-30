@@ -206,7 +206,7 @@ export const BBarraAguardando = styled.div`
     border-radius: 200px;
 
     @media screen and (max-width: 444px) {
-        width: 110px;
+        width: 37px;
         
     }
 `;
@@ -272,33 +272,4 @@ export const PPalavra = styled.div`
     }
     
 `;
-export const BarraAguardandoC = styled.div`
-    width: 210px;
-    height: 12px;
-    background-color: red;
-    border-radius: 200px;
-
-    @media screen and (max-width: 444px) {
-        width: 110px;
-        
-    }
-
-`;
-export const BBarraAguardandoT = styled.div`
-    width: 210px;
-    height: 12px;
-    border-radius: 200px;
-
-    @media screen and (max-width: 444px) {
-        width: 110px;
-        
-    }
-`;
-
-
-
-
-
-
-
 

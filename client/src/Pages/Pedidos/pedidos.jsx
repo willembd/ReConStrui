@@ -56,8 +56,8 @@ export default function Pedidos () {
                     <div className="form-group">
                         <Select >
                             <option value="in progress">Em Andamento</option>
-                            <option value="confirmed">Concluído</option>
-                            <option value="cancel">Cancelado</option>
+                            <option value="confirmed">Orçamento Recebido</option>
+                            <option value="cancel">Histórico</option>
                         </Select>
                     </div>
                     <S.FlexColomn>
