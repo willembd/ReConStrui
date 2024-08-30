@@ -1,12 +1,12 @@
-import * as S from "./modalEmailStyle"
+import * as S from "./modalInformationStyle"
 
 
-export default function ModalVerifiqueEmail({ isOpen, setOpen, text }){
+
+export default function ModalInformation({ isOpen, setOpen, text, children }){
    
-    const setOpenModal = () => {
-        setOpen(false);  
-    }   
 
+    
+    
     
     if(isOpen){
         return(
@@ -15,7 +15,7 @@ export default function ModalVerifiqueEmail({ isOpen, setOpen, text }){
                         <S.Itens>
                            
                              <S.Texto> {text} </S.Texto>
-                             <S.X onClick={setOpenModal}>x</S.X>
+                                {children}
                         </S.Itens>
                         
                 </S.ModalStyle>        

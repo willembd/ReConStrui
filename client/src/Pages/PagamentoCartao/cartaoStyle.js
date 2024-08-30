@@ -120,3 +120,16 @@ export const DivSelect = styled.div`
         width: 220px;
     }
 `;
+export const X = styled.button`
+    
+    cursor: pointer;
+    position: absolute; 
+    top: 0px;
+    right: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #555;
+    border: none;
+    background-color: #fff;
+
+` 

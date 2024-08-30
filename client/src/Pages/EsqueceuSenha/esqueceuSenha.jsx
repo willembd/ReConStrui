@@ -6,7 +6,7 @@ import ButtonMod from "../../Componentes/ButtonModelo/buttonModelo.jsx";
 import { useNavigate } from "react-router-dom";
 import NavBar from "../../Componentes/NavBar/navbar.jsx";
 import Footer from "../../Componentes/Footer/footer.jsx";
-import ModalVerifiqueEmail from "../../Componentes/ModalVerifiqueEmail/ModalVerifiqueEmail.jsx";
+import ModalInformation from "../../Componentes/ModalInformation/modalInformation.jsx";
 import InputPrimary from "../../Componentes/InputPrimary/inputPrimary.jsx";
 
 
@@ -47,11 +47,13 @@ export default function EsqueceuSenha() {
                                         text="Enviar"
                                         onClick={() => setOpen(!isOpen)}
                                     />
-                                    <ModalVerifiqueEmail
+                                    <ModalInformation
                                         text="Verifique seu e-mail"
                                         isOpen={isOpen}
-                                        setOpen={setOpen}
-                                    />
+                                        setOpen={setOpen}>   <S.X onClick={handleFechar}> x </S.X> 
+
+                                     </ModalInformation>
+                            
                                 </S.DivInput>
                             </S.EsqueceuETexto>
                         </S.FormSenha>

@@ -123,3 +123,16 @@ export const EsqueceuETexto = styled.div`
         flex-direction: column;
     }
 `;
+
+export const X = styled.button`
+    background-color: #fff;
+    cursor: pointer;
+    position: absolute; 
+    top: 0px;
+    right: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #555;
+    border: none;
+
+` 

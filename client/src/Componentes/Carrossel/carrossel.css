@@ -13,6 +13,16 @@
   top: 20px;
   width: 11px;
   height: 12px;
+
+    @media screen and (max-width: 500px) {
+          width: 9px;
+          height: 8px;
+    } 
+
+    @media screen and (max-width: 380px) {
+      width: 6px;
+      height: 5px;
+} 
 }
 
 
@@ -28,4 +38,22 @@
 
 .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{
     bottom: 66px;
+
+
+     @media screen and (max-width: 1000px) {
+              bottom: 74px;
+              position: relative;
+     }   
+
+     @media screen and (max-width: 1000px) {
+            bottom: 50px;
+            position: relative;
+     }   
+           
+     @media screen and (max-width: 872px) {
+                bottom: 50px;
+                position: relative;
+    }   
+
+     
 }

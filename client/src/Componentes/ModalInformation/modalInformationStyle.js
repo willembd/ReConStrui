@@ -55,8 +55,8 @@ export const Texto = styled.div`
     }
     `
 
-export const X = styled.div`
-    
+export const X = styled.button`
+    background-color: #fff;
     cursor: pointer;
     position: absolute; /* Posiciona o 'X' em relação ao modal */
     top: 0px;
@@ -64,5 +64,6 @@ export const X = styled.div`
     font-size: 30px;
     font-weight: bold;
     color: #555;
+    border: none;
 
 ` 

@@ -6,12 +6,14 @@ import { useNavigate } from "react-router-dom";
 import NavBar from "../../Componentes/NavBar/navbar.jsx";
 import Footer from "../../Componentes/Footer/footer.jsx";
 import Select from "../../Componentes/Select/select.jsx";
-import ModalVerifiqueEmail from "../../Componentes/ModalVerifiqueEmail/ModalVerifiqueEmail.jsx";
+import ModalInformation from "../../Componentes/ModalInformation/modalInformation.jsx";
 import InputPrimary from "../../Componentes/InputPrimary/inputPrimary.jsx";
+
 
 
 export default function PaginaLogin() {
     const [isOpen, setOpen] = useState(false);
+
     const navigate = useNavigate();
 
     const handleFechar = () => {
@@ -64,11 +66,13 @@ export default function PaginaLogin() {
                                 text="Finalizar"
                                 onClick={() => setOpen(!isOpen)}
                             />
-                            <ModalVerifiqueEmail
+
+                            <ModalInformation
                                 text="Compra Finalizada!"
                                 isOpen={isOpen}
-                                setOpen={setOpen}
-                            />
+                                setOpen={setOpen}>  <S.X onClick={handleFechar}> x </S.X>  
+                            </ModalInformation>
+
                         </S.Form>
                     </S.ModalContainer>
                 </S.Modal>
