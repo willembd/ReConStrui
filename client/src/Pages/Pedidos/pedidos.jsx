@@ -52,7 +52,6 @@ export default function Pedidos () {
             } else if (selectedValue === "historico") {
                 navigate("/historicousuario");
             }else {
-                // Código para tratar casos inesperados
                 console.warn("Opção não reconhecida: ", selectedValue);
             }
         };
