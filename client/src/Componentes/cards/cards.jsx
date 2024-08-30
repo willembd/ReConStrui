@@ -10,8 +10,8 @@ export default function Cards({ item }) {
                     <Caixa>
                         <Alinhamento>
                             <Linha>
-                                <Title>{item.title}</Title>
-                                <Palavra>AGR Ambiental</Palavra>
+                                <Title>{item.titleProduto}</Title>
+                                <Palavra>{item.titleEmpresa}</Palavra>
                             </Linha>
                         </Alinhamento>
                     </Caixa>

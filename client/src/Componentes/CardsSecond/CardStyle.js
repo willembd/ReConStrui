@@ -7,7 +7,7 @@ export const Alinhaborda = styled.div`
     gap:2rem ;
     margin: 1rem 0;
 `
-export const TTexto = styled.h2`
+export const Texto = styled.h2`
     font-size: 1.3rem ;
     font-weight: bolder;
     color:#1C4525;
@@ -39,6 +39,7 @@ export const IIm = styled.img`
     border-radius: 0.75rem 0.75rem 0.75rem 0.75rem;
     box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.5);
     filter: brightness(1.2); 
+
 `
 export const AAbsoluto = styled.div`
     position: absolute;
@@ -55,28 +56,28 @@ export const CCaixa = styled.div`
     justify-content: space-around;
     align-items: center;
     margin-top: 13rem;
-    `
-export const AAlinhamento = styled.div`
+`
+export const Alinha = styled.div`
     display: flex;
     flex-direction: column;
 `
-export const LLinha = styled.div`
+export const Linhado = styled.div`
     display: flex;
     flex-direction: column;
     gap: 2px;
 `
-export const TTitle = styled.h1`
+export const Text = styled.h1`
     font-size: 1.2rem ;
     font-weight: 500;
     color:#fff; 
 `
-export const PPalavra = styled.p`
+export const PAlavra = styled.p`
     font-size: 0.8rem ;
     font-weight: normal;
     margin: 0.3rem;
     color: #fff;
 `
-export const BBotao = styled.button`
+export const Butao = styled.button`
     background-color: rgba(175, 117, 3, 0.9);
     color: #fff;
     font-size: 16px;
@@ -85,23 +86,15 @@ export const BBotao = styled.button`
     border-radius: 4px;
     cursor: pointer;
 `
-export const MMoverBox = styled.div`
-    display: flex;
-`
-export const Texto = styled.h2`
-    font-size: 1.3rem ;
-    font-weight: bolder;
-    color:#1C4525;
-`
 // Modal Cards
 
 export const BACKGROUND_STYLE = styled.div`
     position: fixed;
     top: 0;
     bottom: 0;
-    left: 0;
-    right: 0;
-    background-color:rgb(0,0,0, 0.7);
+    left: -1px;
+    right: 0px;
+    background-color: rgb(0, 0, 0, 0.7);
     z-index: 1000;
 `;
 export const MODAL_STYLE = styled.div`
@@ -113,24 +106,57 @@ export const MODAL_STYLE = styled.div`
     transform: translate(-50%, -50%);
     background-color: white;
     color: black;
-    width: 970px;
+    width: 1000px;
     height: 700px;
     border-radius: 8px;
     display: flex;
-    align-items: center;
+    align-items: center; 
+    justify-content: center;
+    @media screen and (max-width:550px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-height: 95%;
+    max-width: 85%;
+}
 `;
 export const ContainerModal =styled.div`
     display: flex;
     flex-direction: column;
     margin: 3.5rem ;
     align-items: center;
+    @media screen  and (max-width: 1330px){
+        margin: 2.8rem;
+    }
+    @media screen  and (max-width: 1230px){
+            margin: 2.5rem;
+    }
+    @media screen  and (max-width: 1145px){
+        gap: 1rem;
+        margin: 2rem;
+    } 
+    @media screen  and (max-width:1100px){
+        margin: 1rem;
+    }
+    @media screen  and (max-width:565px){
+        margin: 0.5rem;
+    }
+    @media screen and (max-width:546px) {
+        margin: 0;
+        gap: 0px;
+        width: auto;
+        
+    }
+    @media screen  and (max-height: 530px){
+        gap: 0;
+    }
 ` ;
-export const ContainerDivModal =styled.div`
+export const QuebraLinha = styled.div`
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;  
-` ;
+    flex-direction: row;
+    gap: 1rem;
+    width: 19rem;
+`;
 export const Barra = styled.div`
     padding: 230px 1px;
     background-color: rgba(28, 69, 37, 0.94);
@@ -139,6 +165,9 @@ export const DivRadio =styled.div`
     display: flex;
     margin-bottom: 1rem;
     gap: 3rem;
+    @media screen and (max-width:626px) {
+        gap: 1rem;
+    }
 `;
 export const Transporte = styled.div`
     display: flex;
@@ -151,7 +180,13 @@ export const DivInput = styled.div`
     flex-direction: column;
     gap: 0.5rem;
     align-items: center;
-    padding-right: 3rem;
+    width: 100%;
+    @media screen  and (max-width: 546px){
+        gap: 0rem;
+    }
+    @media screen  and (max-height: 546px){
+        gap: 1px;
+    }
 `;
 export const Container = styled.div`
     position: relative;
@@ -175,7 +210,26 @@ export const IMG = styled.img`
     height: 22rem;
     border-radius:0.75rem 0.75rem 0.75rem 0.75rem; 
     box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.5);
-    filter: brightness(1.2);   
+    filter: brightness(1.2); 
+    @media screen  and (max-width: 1151px){
+        width: 14rem;
+        height: 19rem;
+    } 
+    @media screen  and (max-width: 970px){
+        width: 11rem;
+        height: 15rem;
+    } 
+    @media screen  and (max-width: 660px){
+        width: 10rem;
+        height: 14rem;
+    }
+    @media screen and (max-width:546px) {
+        width: 5rem;
+        height: 7rem;
+    }
+    @media screen and (max-height:535px) {
+        height: 16rem;
+    }
 `;
 export const Absoluto = styled.div`
     position: absolute;
@@ -192,6 +246,29 @@ export const Caixa = styled.div`
     justify-content: space-around;
     align-items: center;
     margin-top: 16rem;
+    @media screen  and (max-width: 1151px){
+        width: 14rem;
+        height: 5rem;
+        margin-top: 14.1rem;
+    } 
+    @media screen  and (max-width: 970px){
+        width: 11rem;
+        height: 4.1rem;
+        margin-top: 11rem;
+    } 
+    @media screen  and (max-width: 660px){
+        width: 10rem;
+        height: 3.1rem;
+    }
+    @media screen and (max-width:546px) {
+        margin-top: 4.2rem; 
+        width: 5rem;
+        height: 2.8rem;
+    }
+    @media screen and (max-height:476px) {
+        height: 4rem;
+        margin-top: 12rem;
+    }
 `;
 export const Alinhamento = styled.div`
     display: flex;
@@ -206,12 +283,21 @@ export const Title = styled.h1`
     font-size: 1.2rem ;
     font-weight: 500;
     color:#fff; 
+    @media (max-width:768px) {
+        font-size: 0.9rem;
+    }
+    @media (max-width:546px) {
+        font-size: 0.6rem;
+    }
 `;
 export const Palavra = styled.p`
     font-size: 0.8rem ;
     font-weight: normal;
     margin: 0.3rem;
     color: #fff;
+    @media (max-width:546px) {
+        font-size: 0.5rem;
+    }
 `;
 export const Botao = styled.button`
     background-color: rgba(175, 117, 3, 0.9);
@@ -221,9 +307,6 @@ export const Botao = styled.button`
     padding: 0.5rem 4rem;
     border-radius: 4px;
     cursor: pointer;
-`;
-export const MoverBox = styled.div`
-    display: flex;
 `;
 export const Button = styled.button`
     cursor: pointer;
@@ -239,43 +322,62 @@ export const Button = styled.button`
 export const TituloModal = styled.h1`
     color: #228137;
     margin: 0.1rem;
+    font-size: 2rem;
+    @media screen and (max-width:920px) {
+        font-size: 1.6rem;
+    }
+    @media screen and (max-width:6750px) {
+        font-size: 1.3rem;
+    }
+    @media screen and (max-width:590px) {
+        font-size: 1rem;
+    }
+    @media screen and (max-height:475px) {
+        font-size: 1.5rem;
+    }
 `;
 export const CaixaFundo = styled.div`
-    width: 1040px;
-    height: 701px;
+    width: 100%;
+    height: 100.01%;
     background: #33603D;
     clip-path: polygon(0% 0%, 50% 0%, 49% 100%, 0% 100%);
     position: absolute;
     z-index: -1;
-`;
-export const BarraVertical = styled.div`
-    width: 1095px;
-    height: 701px;
-    background: #B7821C;
-    clip-path: polygon(100% 0%, 53% 0%, 35% 103%, 56% 0%);
-    position: absolute;
-    z-index: -1;
+    border-radius: 0.5rem;
+    
+    @media screen and (max-width:1301px) {
+        margin: -1px;
+    }
+    @media screen and (max-width:546px) {
+        background-color: #fff;
+    }
 `;
 export const FUNDO = styled.div`
     display: flex;
     flex-direction: column;
     justify-content:center;
     gap: 0.4rem;
+    @media screen and (max-width:1535px) {
+        gap: 0.6rem;
+    }
+    @media screen and (max-width: 546px){
+        gap: 0px;
+    } 
 `;
-export const TextCard = styled.div`
+export const TTitle = styled.div`
     color: #228137;
     font-weight: 600;
     font-size: 2rem;
 `;
-export const PalavraCard = styled.p`
+export const PPalavra = styled.p`
     font-size: 1rem;
     color: #AF7503;
 `;
-export const AlinhaCard = styled.div`
+export const AAlinhamento = styled.div`
     display: flex;
     flex-direction: row;
 `;
-export const LinhaCard = styled.div`
+export const LLinha = styled.div`
     display: flex;
     flex-direction: column;
 `;
@@ -283,6 +385,15 @@ export const Th3 = styled.div`
     color: #228137;
     font-weight: bolder;
     font-size: 1.1rem;
+    @media screen  and (max-width: 775px){
+        font-size: 0.8rem;
+    }
+    @media screen and (max-width:546px){
+        font-size: 0.7rem;
+    }
+    @media screen  and (max-height: 475px){
+            font-size: 0.8rem;
+        }
 `;
 export const PP = styled.div`
     color: #228137;
@@ -291,11 +402,37 @@ export const PP = styled.div`
 export const Organizacao =styled.div`
     display: flex;
     align-items: center;
-    gap: 5rem;
+    gap: 4rem;
+    @media screen  and (max-width: 1500px){
+        gap: 5.5rem;
+    }
+    @media screen  and (max-width: 1100px){
+        gap: 4rem;
+    }
+    @media screen  and (max-width: 1010px){
+        gap: 3rem;
+    }
+    @media screen  and (max-width: 660px){
+        gap: 2rem;
+    }
+    @media screen  and (max-width: 610px){
+        gap: 1rem;
+    }
+    @media screen and (max-width:546px){
+        flex-direction: column;
+        gap: 0px;
+    }
 `;
 export const TituloProduto = styled.h1`
     color: white;
     margin: 0.1rem;
+    @media screen and (max-width:546px){
+        color: rgba(175, 117, 3, 0.9);
+        font-size: 1.5rem;
+    }
+    @media screen and (max-height:605px){
+        font-size: 1rem;
+    }
 `;
 export const DivTransporte = styled.div`
     display: flex;
@@ -313,5 +450,48 @@ export const Descricao = styled.p`
     text-align: center;
     border-radius: 0.5rem;
     align-items: center;
+    @media screen  and (max-width: 1130px){
+        width: 18rem;
+    }
+    @media screen  and (max-width: 970px){
+        width: 16rem;
+    }
+    @media screen  and (max-width: 870px){
+        width: 14rem;
+    }
+    @media screen  and (max-width: 780px){
+        width: 13rem;
+    }
+    @media screen  and (max-width: 720px){
+        width: 12rem;
+        height: 5rem;
+    }
+    @media screen  and (max-width: 720px){
+        width: 11rem;
+    }
+    @media screen  and (max-width: 720px){
+        width: 10rem;
+        height: 6rem;
+    }
+    @media screen  and (max-width: 546px){
+        width: 9rem;
+        height: 6rem;
+        box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.5);
+        font-size: 0.7rem ;
+    }
 `
-
+export const Left = styled.div`
+    @media screen and (max-width:546px ){
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    height: 8rem;
+    }
+    @media screen and (max-width:426px ){
+        gap: 1rem;
+    }
+`;
+export const ContainerBotton = styled.div`
+    text-align: center;
+    `

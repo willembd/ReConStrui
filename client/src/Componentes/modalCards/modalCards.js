@@ -199,7 +199,7 @@ export const Title = styled.h1`
         font-size: 0.9rem;
     }
     @media (max-width:546px) {
-        font-size: 0.7rem;
+        font-size: 0.6rem;
     }
 `;
 export const Palavra = styled.p`
