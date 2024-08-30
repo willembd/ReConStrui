@@ -69,11 +69,9 @@ export default function PedidosOrcamentoUsuario() {
                     <S.TXT>Confira aqui o andamento do seus pedidos</S.TXT>
                     <S.PP>Filtrar por:</S.PP>
                     <div className="form-group">
-                    
                         <Select onChange={handleSelectChange}>
-
-                            <option value="andamento" >Em Andamento</option>
                             <option value="recebido" >Orçamento Recebido</option>
+                            <option value="andamento" >Em Andamento</option>
                             <option value="historico" >Histórico</option>
                         </Select>
                     </div>

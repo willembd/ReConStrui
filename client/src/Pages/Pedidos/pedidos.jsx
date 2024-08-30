@@ -41,6 +41,22 @@ export default function Pedidos () {
         const handleFechar = () => {
             navigate("/confirmacaopedidos");
         };
+
+        const handleSelectChange = (event) => {
+            const selectedValue = event.target.value;
+    
+            if (selectedValue === "andamento") {
+                navigate("/pedidos");
+            } else if (selectedValue === "recebido") {
+                navigate("/pedidosorcamentousuario");
+            } else if (selectedValue === "historico") {
+                navigate("/historicousuario");
+            }else {
+                // Código para tratar casos inesperados
+                console.warn("Opção não reconhecida: ", selectedValue);
+            }
+        };
+
     return (
 
         <>
@@ -55,10 +71,10 @@ export default function Pedidos () {
                     <S.TXT>Confira aqui o andamento do seus pedidos</S.TXT>
                     <S.PP>Filtrar por:</S.PP>
                     <div className="form-group">
-                        <Select >
-                            <option value="in progress">Em Andamento</option>
-                            <option value="confirmed">Orçamento Recebido</option>
-                            <option value="cancel">Histórico</option>
+                        <Select onChange={handleSelectChange}>
+                            <option value="andamento">Em Andamento</option>
+                            <option value="recebido">Orçamento Recebido</option>
+                            <option value="historico">Histórico</option>
                         </Select>
                     </div>
                     <S.FlexColomn>
