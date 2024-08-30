@@ -94,7 +94,7 @@ export const DivInput = styled.div`
     align-items: center;
     width: 100%;
     @media screen  and (max-width: 546px){
-        gap: 0.3rem;
+        gap: 0rem;
     }
     @media screen  and (max-height: 546px){
         gap: 1px;
@@ -109,9 +109,6 @@ export const Container = styled.div`
     align-items: center;
     margin: 2rem 0;
     flex-wrap: wrap;
-    @media screen  and (max-width: 1151px){
-       width : max-content;
-    }
 `;
 export const Im = styled.img`
     width: 14.1rem;
@@ -201,7 +198,7 @@ export const Title = styled.h1`
     @media (max-width:768px) {
         font-size: 0.9rem;
     }
-    @media (max-width:530px) {
+    @media (max-width:546px) {
         font-size: 0.7rem;
     }
 `;
@@ -210,7 +207,7 @@ export const Palavra = styled.p`
     font-weight: normal;
     margin: 0.3rem;
     color: #fff;
-    @media (max-width:530px) {
+    @media (max-width:546px) {
         font-size: 0.5rem;
     }
 `;
@@ -276,7 +273,7 @@ export const FUNDO = styled.div`
         gap: 0.6rem;
     }
     @media screen and (max-width: 546px){
-        gap: 0.3rem;
+        gap: 0px;
     } 
 `;
 export const TTitle = styled.div`
@@ -344,7 +341,9 @@ export const TituloProduto = styled.h1`
     @media screen and (max-width:546px){
         color: rgba(175, 117, 3, 0.9);
         font-size: 1.5rem;
-        margin-bottom: 1rem;
+    }
+    @media screen and (max-height:605px){
+        font-size: 1rem;
     }
 `;
 export const DivTransporte = styled.div`
@@ -387,14 +386,10 @@ export const Descricao = styled.p`
         height: 6rem;
     }
     @media screen  and (max-width: 546px){
-        width: 8rem;
-        height: 5rem;
-        box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.5);
-        font-size: 0.8rem ;
-    }
-    @media screen and (max-width:426px ){
-        width: 6rem;
+        width: 9rem;
         height: 6rem;
+        box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.5);
+        font-size: 0.7rem ;
     }
 `
 export const Left = styled.div`
@@ -409,3 +404,6 @@ export const Left = styled.div`
         gap: 1rem;
     }
 `;
+export const ContainerBotton = styled.div`
+    text-align: center;
+    `

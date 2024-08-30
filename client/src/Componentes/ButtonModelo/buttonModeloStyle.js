@@ -24,13 +24,13 @@ export const Button = styled.button`
         padding: 10px 70px;
     }
     @media screen and (max-width:626px) {
-        padding: 10px 50px;
+        padding: 10px 60px;
     }
     @media screen and (max-width:546px) {
-        padding: 3px 50px;
+        padding: 2px 50px;
     }
     @media screen and (max-height:630px) {
-        padding: 5px 50px;
+        padding: 4px 70px;
     }
     @media screen and (max-height:475px) {
         padding: 3px 50px;

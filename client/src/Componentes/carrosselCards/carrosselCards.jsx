@@ -1,6 +1,6 @@
 
     import { Alinhaborda, Alinhamento, Bordas, Botao, Caixa, Carrosel, Container, Im, Linha, Palavra, Texto, Title, Absoluto } from "./carrosselCardsStyle.js";
-    import { ContainerModal,TituloModal,DivInput,DivRadio, Th3, PP, CaixaFundo,  FUNDO,TituloProduto,DivTransporte, Organizacao,Descricao, Left } from "../modalCards/modalCards.js";
+    import { ContainerModal,TituloModal,DivInput,DivRadio, Th3, PP, CaixaFundo,  FUNDO,TituloProduto,DivTransporte, Organizacao,Descricao, Left, ContainerBotton } from "../modalCards/modalCards.js";
     import "swiper/css";
     import "swiper/css/navigation";
     import "swiper/css/scrollbar";
@@ -173,7 +173,9 @@
                                                         <PP>Transporte próprio</PP>
                                                     </DivTransporte>
                                                 </DivRadio>
-                                                <ButtonMod  text="Envia" onClick={() => setOpenMo(!isOpenMo)}/>
+                                                <ContainerBotton>
+                                                    <ButtonMod  text="Envia" onClick={() => setOpenMo(!isOpenMo)}/>
+                                                </ContainerBotton>
                                             </FUNDO>
 
                         
