@@ -159,8 +159,8 @@
                                                 <Th3>Informação para Entrega</Th3>
                                                 <Input text='Cep'/>
                                                 <Input text='Cidade'/>
-                                                <Input text='Endereço'/>
                                                 <Input text='Bairro'/>
+                                                <Input text='Endereço'/>
                                                 <Input text='Número'/>
                                                 <Th3 className="transorte">Forma de transpote</Th3>
                                                 <DivRadio>

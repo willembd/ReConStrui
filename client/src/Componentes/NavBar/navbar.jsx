@@ -20,6 +20,7 @@ export default function NavBar(){
                 <S.Nav>
                     <S.NavLogo src={ImgLogoNav} alt="" onClick={() => navigation('/')}/>
                     <S.ContainerButton>
+                        <S.ButtonPrimary onClick={() => navigation('/pedidos') }>Pedidos</S.ButtonPrimary>
                         <S.ButtonPrimary onClick={() => navigation('/perfilusuario') }>Perfil</S.ButtonPrimary>
                         <ButtonNav text="Sair" onClick={() => handleLogout()} />
                     </S.ContainerButton>
