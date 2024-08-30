@@ -13,8 +13,12 @@ export default function NavBar(){
         <>
             <S.Nav>
                 <S.NavLogo src={ImgLogoNav} alt="" onClick={() => navigation('/')}/>
-                <ButtonNav text="Entrar" onClick={() => navigation('/paginalogin')} />
-   
+                <S.ContainerButton>
+                    <S.ButtonPrimary onClick={() => navigation('/perfilusuario') }>Perfil</S.ButtonPrimary>
+                    <ButtonNav text="Entrar" onClick={() => navigation('/paginalogin')} />
+                </S.ContainerButton>
+                
+                
             </S.Nav>
             <S.Borda/>
 

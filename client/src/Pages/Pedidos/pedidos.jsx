@@ -115,7 +115,7 @@ export default function Pedidos () {
 
                             </S.CCaixa>
 
-                            <S.CContainer>
+            
                             <S.CCaixa>
                                 <S.PLeft>
                                     <S.PPALAVRA>Dados do Pedido</S.PPALAVRA>
@@ -167,9 +167,8 @@ export default function Pedidos () {
                                     <FormularioDetalhes />
                                 </ModalDetalhes>
                             </S.CCaixa>
-                        </S.CContainer>
 
-                        <S.CContainer>
+
                             <S.CCaixa>
                                 <S.PLeft>
                                     <S.PPALAVRA>Dados do Pedido</S.PPALAVRA>
@@ -222,7 +221,8 @@ export default function Pedidos () {
 
                             </S.CCaixa>
                         </S.CContainer>
-                        </S.CContainer>
+
+                      
                     </S.FlexColomn>
                 </S.Container>
             </S.Caixa>

@@ -23,6 +23,30 @@ export const NavLogo = styled.img`
     }
 `
 
+export const ContainerButton = styled.div`
+    display: flex;
+    gap: 80px;
+
+    @media screen and (max-width: 500px) {
+        gap: 20px;
+    }
+`
+
+export const ButtonPrimary = styled.button`
+    padding: 0.25rem;
+    border: none;
+    background-color: #FFFFFF;
+    color: #228137;
+    font-size: 1.5rem;
+    cursor: pointer;
+    
+
+    @media screen and (max-width: 500px) {
+        padding: 0.15rem;
+        font-size: 1rem;
+    }
+` 
+
 export const Borda = styled.div`
     
     border-bottom: 6px #1C4525 solid;

@@ -2,7 +2,7 @@ import ButtonCancelar from "../ButtonCancelar/buttonCancelar";
 import * as S from "./modalCancelarStyle"
 
 
-export default function ModalCancelar({ isOpenTest, setOpenTest, text, textbutton, actionTransition, cancelTransition }){
+export default function ModalCancelar({ isOpenTest, setOpenTest, text, textbutton, actionTransition, cancelTransition, onConfirm }){
    
     const setOpenModalTest = () => {
         setOpenTest(false);  
@@ -18,7 +18,7 @@ export default function ModalCancelar({ isOpenTest, setOpenTest, text, textbutto
                              <S.Texto> {text} </S.Texto>
                              <S.Buttons>
                                <ButtonCancelar withTransition={cancelTransition} onClick={setOpenModalTest} text='Cancelar'/>
-                               <S.ButtonStyle  withTransition={actionTransition} onClick={setOpenModalTest}> {textbutton}</S.ButtonStyle>
+                               <S.ButtonStyle  withTransition={actionTransition} onClick={() => { setOpenModalTest(); onConfirm(); }}> {textbutton}</S.ButtonStyle>
                               
                              </S.Buttons>
                              <S.X onClick={setOpenModalTest}>x</S.X>

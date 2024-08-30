@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import { api } from "../../service/api";
 import { jwtDecode } from "jwt-decode";
 import ModalCancelar from "../../Componentes/ModalCancelar/modalCancelar";
+import { useNavigate } from "react-router-dom";
 
 export default function PerfilUsuario() {
     const [userId, setUserId] = useState(null);
@@ -16,6 +17,8 @@ export default function PerfilUsuario() {
     const [data_nascimento, setData_nascimento] = useState("");
     const [cpf, setCpf] = useState("");
     const [email, setEmail] = useState("");
+
+    const navigastion = useNavigate()
 
 
     useEffect(() => {
@@ -74,6 +77,17 @@ export default function PerfilUsuario() {
 
       const [isOpenTest, setOpenTest] = useState(false);
 
+    async function handleDelete(){
+        await api.delete(`/usuario/${userId}`).then((response) => {
+            console.log('Usuario deletado com sucesso')
+            setOpenTest(!isOpenTest)
+            localStorage.removeItem("token")
+            navigastion("/")
+        }).catch((error) => {
+            console.log(error)
+        })
+    }
+
     return (
         <>
             <NavBar />
@@ -113,14 +127,14 @@ export default function PerfilUsuario() {
 
                         <S.ContainerButton>
                             <S.ButtonExcluir  onClick={() => setOpenTest(!isOpenTest)}>Excluir Conta </S.ButtonExcluir>
-                           
                             <ModalCancelar 
                             actionTransition={true}
                             textbutton="Excluir"
                             text="Certeza que deseja excluir sua conta?"
                             isOpenTest={isOpenTest}
-                            setOpenTest={setOpenTest} />
-
+                            setOpenTest={setOpenTest} 
+                            onConfirm={handleDelete}
+                            />
                         </S.ContainerButton>
                     </S.ContainerSecondary>
                 </S.Caixa>

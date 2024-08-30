@@ -10,6 +10,7 @@ router.get('/empresa', empresaControllers.getAllEmpresa)
 router.post('/usuario/create',usuarioControllers.creatUsuario)
 router.get('/usuario', usuarioControllers.getAllUsuario)
 router.get('/usuario/:id', usuarioControllers.getOneUsuario)
+router.delete('/usuario/:id', usuarioControllers.deleteUsuario)
 
 router.post('/userlogin', authControllers.userLogin)
 router.post('/empresalogin', authControllers.empresaLogin)
