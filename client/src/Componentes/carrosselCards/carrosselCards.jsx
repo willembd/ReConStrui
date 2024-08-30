@@ -46,21 +46,21 @@
         const [select, setSelect] = useState(null)
         const [slidePerView, setSlidePerView] = useState(6)
         const produtos = [
-            { id: '1', image: "/PEDRISCO.svg",title:"Pedrisco", },
-            { id: '2', image: "/RACHAO.svg",title:"Rachão" },
-            { id: '3', image: "/AREIA.svg" ,title:"Areia reciclada"},
-            { id: '4', image: "/BRITA.svg" ,title:"Brita reciclada"},
-            { id: '5', image: "/PEDRISCO.svg" ,title:"Pedrisco"},
-            { id: '6', image: "/RACHAO.svg" ,title:"Rachão"},
-            { id: '7', image: "/AREIA.svg" ,title:"Areia reciclada"},
-            { id: '8', image: "/BRITA.svg" ,title:"Brita reciclada"},
-            { id: '9', image: "/PEDRISCO.svg" ,title:"Pedrisco"},
-            { id: '10', image: "/RACHAO.svg",title:"Rachão" },
+            { id: '1', image: "/PEDRISCO.svg",titleProduto:"Pedrisco",titleEmpresa:"Usina Ecocycle" },
+            { id: '2', image: "/RACHAO.svg",titleProduto:"Rachão",titleEmpresa:"Ciclo Ambiental" },
+            { id: '3', image: "/AREIA.svg" ,titleProduto:"Areia reciclada",titleEmpresa:"Magalhães Ambiental"},
+            { id: '4', image: "/BRITA.svg" ,titleProduto:"Brita reciclada",titleEmpresa:"Cator Ambiental"},
+            { id: '5', image: "/PEDRISCO.svg" ,titleProduto:"Pedrisco",titleEmpresa:"Martins Ambiental"},
+            { id: '6', image: "/RACHAO.svg" ,titleProduto:"Rachão",titleEmpresa:"Usina Ecocycle"},
+            { id: '7', image: "/AREIA.svg" ,titleProduto:"Areia reciclada",titleEmpresa:"Magalhães Ambiental"},
+            { id: '8', image: "/BRITA.svg" ,titleProduto:"Brita reciclada",titleEmpresa:"Cator Ambiental"},
+            { id: '9', image: "/PEDRISCO.svg" ,titleProduto:"Pedrisco",titleEmpresa:"Martins Ambiental"},
+            { id: '10', image: "/RACHAO.svg",titleProduto:"Rachão",titleEmpresa:"Ciclo Ambiental" },
         ];
 
         useEffect(() => {
             function handleResize(){
-                if(window.innerWidth<410){
+                if(window.innerWidth<490){
                     setSlidePerView(1)
                 }else{
                     if(window.innerWidth<676){
@@ -125,8 +125,8 @@
                                             <Caixa>
                                                 <Alinhamento>
                                                     <Linha>
-                                                        <Title>{item.title}</Title>
-                                                        <Palavra>AGR Ambiental</Palavra>
+                                                        <Title>{item.titleProduto}</Title>
+                                                        <Palavra>{item.titleEmpresa}</Palavra>
                                                         <Botao onClick={() => handleComprar(item.id)}>Comprar</Botao>
                                                         
                                                     </Linha>
