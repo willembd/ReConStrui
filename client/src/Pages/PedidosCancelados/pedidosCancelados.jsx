@@ -6,18 +6,24 @@ import Footer from "../../Componentes/Footer/footer"
 import ModalDetalhes from "../../Componentes/ModalDetalhes/modaldestalhes";
 import FormularioDetalhes from "../../Componentes/FormDetalhes/formDetalhes";import ModalCancelar from "../../Componentes/ModalCancelar/modalCancelar";
 import Select from "../../Componentes/Select/select";
-
+import ButtonCancelar from "../../Componentes/ButtonCancelar/buttonCancelar";
 ''
 
 export default function PedidosCancelados () {
 
-    
+    const [isOpenTest, setOpenTest] = useState(null);
 
 
     const [openModalId, setOpenModalId] = useState(null);
     
 
-    
+    const handleOpenModalTest = (id) => {
+        setOpenTest(id);
+    };
+
+    const handleCloseModalTest = () => {
+        setOpenTest(null);
+    };
 
     const handleOpenModal = (id) => {
         setOpenModalId(id);
@@ -32,7 +38,7 @@ export default function PedidosCancelados () {
 
     
         const handleFechar = () => {
-            navigate("/");
+            navigate("/confirmacaopedidos");
         };
     return (
 
@@ -103,7 +109,7 @@ export default function PedidosCancelados () {
 
                             </S.CCaixa>
 
-                            <S.CContainer>
+            
                             <S.CCaixa>
                                 <S.PLeft>
                                     <S.PPALAVRA>Dados do Pedido</S.PPALAVRA>
@@ -132,15 +138,14 @@ export default function PedidosCancelados () {
                                                     <S.BarraAguardando/>
                                                 </div>
                                                 <S.Flex>
-                                               
-
+                                                
                                                     <S.BBotao  onClick={handleFechar}>Comprar Novamente</S.BBotao>
                                                 </S.Flex>
                                             </S.QuebraLinha>
                                         </S.SobreContainer>
                                     </div>
                                 </S.CCaixinha>
-                                <S.LLinks onClick={() => handleOpenModal(2)}>Ver detalhes</S.LLinks>
+                                <S.LLinks onClick={() => handleOpenModal(2)}> Ver detalhes</S.LLinks>
                                 <ModalDetalhes
                                     text="DETALHES DO PEDIDO"
                                     isOpen={openModalId === 2}
@@ -148,9 +153,8 @@ export default function PedidosCancelados () {
                                     <FormularioDetalhes />
                                 </ModalDetalhes>
                             </S.CCaixa>
-                        </S.CContainer>
 
-                        <S.CContainer>
+
                             <S.CCaixa>
                                 <S.PLeft>
                                     <S.PPALAVRA>Dados do Pedido</S.PPALAVRA>
@@ -178,8 +182,10 @@ export default function PedidosCancelados () {
                                                     <S.BarraAguardando/>
                                                 </div>
                                                 <S.Flex>
-                                               
+                                              
+
                                                     <S.BBotao  onClick={handleFechar}>Comprar Novamente</S.BBotao>
+
                                                 </S.Flex>
                                             </S.QuebraLinha>
                                         </S.SobreContainer>
@@ -195,7 +201,8 @@ export default function PedidosCancelados () {
 
                             </S.CCaixa>
                         </S.CContainer>
-                        </S.CContainer>
+
+                      
                     </S.FlexColomn>
                 </S.Container>
             </S.Caixa>

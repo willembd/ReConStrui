@@ -22,7 +22,7 @@ export const Container = styled.div`
 
     @media screen and (max-width: 882px) {
         width: 100%;
-        height:3500px;
+        height: 3500px;
     }
 `;
 
@@ -33,12 +33,9 @@ export const Pedidos = styled.h1`
     padding-bottom: 10px;
 
     @media screen and (max-width: 882px) {
-        font-size:20px;
-        white-space:nowrap;
-        
-        
+        font-size: 20px;
+        white-space: nowrap;
     }
-
 `;
 export const TXT = styled.p`
     font-size: 24px;
@@ -46,10 +43,8 @@ export const TXT = styled.p`
     padding-bottom: 15px;
 
     @media screen and (max-width: 882px) {
-        font-size:13px;
-        
+        font-size: 13px;
     }
-
 `;
 export const PP = styled.p`
     font-size: 16px;
@@ -67,7 +62,7 @@ export const CContainer = styled.div`
     @media screen and (max-width: 882px) {
         width: 100%;
         padding-bottom: 30px;
-        height:400px;
+        height: 400px;
     }
 `;
 
@@ -82,9 +77,8 @@ export const CCaixa = styled.div`
 
     @media screen and (max-width: 882px) {
         width: 100%;
-        gap:20px;
-        height:420px;
-        
+        gap: 20px;
+        height: 420px;
     }
 `;
 export const PPP = styled.p`
@@ -93,7 +87,7 @@ export const PPP = styled.p`
     font-weight: bolder;
 
     @media screen and (max-width: 444px) {
-       font-size:15px;
+        font-size: 15px;
     }
 `;
 export const PPALAVRA = styled.p`
@@ -102,8 +96,7 @@ export const PPALAVRA = styled.p`
     font-weight: bold;
 
     @media screen and (max-width: 444px) {
-       font-size:15px;
-     
+        font-size: 15px;
     }
 `;
 
@@ -115,7 +108,7 @@ export const CCaixinha = styled.div`
 
     @media screen and (max-width: 444px) {
         width: 100%;
-        height:330px; 
+        height: 330px;
     }
 `;
 
@@ -127,9 +120,8 @@ export const PLeft = styled.div`
     padding-bottom: 6px;
 
     @media screen and (max-width: 444px) {
-        font-size:16px;
+        font-size: 16px;
     }
-
 `;
 
 export const PaLavra = styled.p`
@@ -137,8 +129,7 @@ export const PaLavra = styled.p`
     font-weight: bold;
 
     @media screen and (max-width: 444px) {
-        font-size:9px;
-     
+        font-size: 9px;
     }
 `;
 
@@ -146,15 +137,11 @@ export const Barra = styled.div`
     width: 425px;
     height: 2px;
     background-color: black;
-
 `;
 export const AAlinha = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-  
-
 `;
 
 export const IIIMG = styled.img`
@@ -176,8 +163,8 @@ export const SobreContainer = styled.div`
     padding: 0px 10px;
 
     @media screen and (max-width: 466px) {
-        flex-direction:column;
-        height:400px;
+        flex-direction: column;
+        gap: 10px;
     }
 `;
 
@@ -195,9 +182,7 @@ export const BarraAguardando = styled.div`
 
     @media screen and (max-width: 444px) {
         width: 110px;
-        
     }
-   
 `;
 export const BBarraAguardando = styled.div`
     width: 210px;
@@ -208,7 +193,6 @@ export const BBarraAguardando = styled.div`
 
     @media screen and (max-width: 444px) {
         width: 110px;
-        
     }
 `;
 export const BBotao = styled.button`
@@ -223,8 +207,6 @@ export const BBotao = styled.button`
     @media screen and (max-width: 882px) {
         font-size: 15px;
     }
-
-   
 `;
 
 export const LETRA = styled.p`
@@ -237,13 +219,8 @@ export const QuebraLinha = styled.div`
     flex-direction: column;
     align-items: center;
     gap: 20px;
-
-    @media screen and (max-width: 444px) {
-        width: 312px;
-        height:400px;
-        flex-direction:column;
-    }
 `;
+
 
 export const Flex = styled.div`
     display: flex;
@@ -276,9 +253,8 @@ export const PPalavra = styled.div`
     color: #af7503;
 
     @media screen and (max-width: 444px) {
-       font-size:10px;
+        font-size: 10px;
     }
-    
 `;
 export const BarraAguardandoC = styled.div`
     width: 210px;
@@ -288,9 +264,7 @@ export const BarraAguardandoC = styled.div`
 
     @media screen and (max-width: 444px) {
         width: 110px;
-        
     }
-
 `;
 export const BBarraAguardandoT = styled.div`
     width: 210px;
@@ -299,14 +273,5 @@ export const BBarraAguardandoT = styled.div`
 
     @media screen and (max-width: 444px) {
         width: 110px;
-        
     }
 `;
-
-
-
-
-
-
-
-
