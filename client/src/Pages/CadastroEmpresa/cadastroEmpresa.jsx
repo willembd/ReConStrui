@@ -54,6 +54,7 @@ export default function CadastroEmpresa() {
             })
             .then((response) => {
                 localStorage.setItem("token", response.data.token);
+                localStorage.removeItem("token")
             })
             .catch((error) => {
                 alert(error.response.data.message);
@@ -213,13 +214,6 @@ export default function CadastroEmpresa() {
                                             }
                                         />
                                     </S.InputFlex>
-                                </S.ContainerInputs>
-                            </S.BigBox>
-
-                            <S.BigBox>
-                                <S.ContainerInputs>
-                                    
-                                
                                 </S.ContainerInputs>
                             </S.BigBox>
 

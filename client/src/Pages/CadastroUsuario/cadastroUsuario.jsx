@@ -34,6 +34,7 @@ export default function CadastroUsuario() {
             .then((response) => {
                 localStorage.setItem("token", response.data.token);
                 navigate("/paginalogin");
+                localStorage.removeItem("token")
             })
             .catch((error) => {
                 alert(error.response.data.message);
