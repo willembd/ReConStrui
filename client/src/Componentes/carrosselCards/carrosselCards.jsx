@@ -15,14 +15,13 @@
     import ButtonMod from "../ButtonModelo/buttonModelo.jsx";
     import Input from "../Input/input.jsx";
     import Modal from "../Modal/modal.jsx";
-
-    import { api } from "../../service/api.js";
     import { useForm } from "react-hook-form";
+    import InputPrimaryAddress from "../InputPrimaryAddress/inputPrimaryAddress.jsx";
 
     
     export default function CarrosselCards() {
 
-        const {register, setValue, getValues, setFocus} = useForm();
+        const {register, setValue, setFocus} = useForm();
         const checkCEP = (e) => {
             const cep = e.target.value.replace(/\D/g, '');
             fetch(`https://viacep.com.br/ws/${cep}/json/`)
@@ -155,13 +154,48 @@
                                     <DivInput>
                                             <TituloModal>Orçamento</TituloModal>
                                             <FUNDO>
-                                                <Input text='Quantidade'/>
+                                                <Input>
+                                                    <label className="text">Quantidade</label>
+                                                    <input className="input" type="text" required />
+                                                </Input>
                                                 <Th3>Informação para Entrega</Th3>
-                                                <Input text='Cep'/>
-                                                <Input text='Cidade'/>
-                                                <Input text='Bairro'/>
-                                                <Input text='Endereço'/>
-                                                <Input text='Número'/>
+                                                <Input>
+                                                    <label className="text" > CEP </label>
+                                                    <input {...register("cep")} onBlur={checkCEP} className="input" type="text" required />
+                                                </Input>
+                                                
+                                                <Input>
+
+                                                    <label className="text" > Estado </label>
+                                                    <input {...register("uf")} className="input" type="text" required />
+                                                
+                                                </Input>
+                                                <Input>
+
+                                                    <label className="text" > Cidade </label>
+                                                    <input {...register("cidade")} className="input" type="text" required />
+
+                                                </Input>
+                                                
+                                                <Input>
+
+                                                    <label className="text" > Bairro </label>
+                                                    <input {...register("bairro")} className="input" type="text" required />
+
+                                                </Input>
+                                                <Input>
+
+                                                    <label className="text"> Endereço </label>
+                                                    <input {...register("endereco")} className="input" type="text" required />
+
+                                                </Input>
+
+                                                <Input>
+
+                                                    <label className="text"> Número </label>
+                                                    <input {...register("numero")} className="input" type="text" required />
+
+                                                </Input>
                                                 <Th3 className="transorte">Forma de transpote</Th3>
                                                 <DivRadio>
                                                     <DivTransporte>

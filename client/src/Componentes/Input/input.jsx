@@ -1,11 +1,11 @@
 
-import * as S from './inputStyle';
+import * as S from "./inputStyle" 
 
-export default function Input({ text, ...rest }) {
-  return (
-    <S.Campo>
-        <label className="text" > {text} </label>
-        <input className="input" type="text"  required {...rest}/>
-    </S.Campo>
-  );
+
+export default function Input({ text, children }) {
+    return (
+        <S.Campo>
+            {children}
+        </S.Campo>
+    );
 }
