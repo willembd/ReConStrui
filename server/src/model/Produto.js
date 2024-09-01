@@ -28,10 +28,6 @@ const Produto = db.define("produtos", {
   
   timestamps: false,
 
-  createdAt: false,
-
-  updatedAt: false,
-
 }
 );
 

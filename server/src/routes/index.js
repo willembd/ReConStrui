@@ -4,7 +4,6 @@ const authControllers = require('../controllers/authControllers')
 const empresaControllers = require('../controllers/empresaControllers')
 const usuarioControllers = require('../controllers/usuarioControllers')
 const produtoControllers = require('../controllers/produtoControllers')
-const produtoControllersinstance = new produtoControllers()
 
 router.post('/empresa/create', empresaControllers.creatEmpresa)
 router.get('/empresa', empresaControllers.getAllEmpresa)
@@ -19,8 +18,8 @@ router.delete('/usuario/:id', usuarioControllers.deleteUsuario)
 router.post('/userlogin', authControllers.userLogin)
 router.post('/empresalogin', authControllers.empresaLogin)
 
-router.post('/produtos/create', produtoControllersinstance.creatProduto)
-router.get('/produtos', (req, res) => produtoControllersinstance.getAllProduto(req, res))
+router.post('/produtos/create', produtoControllers.creatProduto)
+router.get('/produtos', produtoControllers.getAllProduto)
 
 
 

@@ -2,7 +2,7 @@
 const Produto = require("../model/Produto")
 
 module.exports = class produtoControllers{
-    async creatProduto(request, response){
+    static async creatProduto(request, response){
         try {
             const{
                 nome,
@@ -47,7 +47,7 @@ module.exports = class produtoControllers{
         }
     }
 
-    async getAllProduto( request, response){
+    static async getAllProduto( request, response){
         const produtos = await Produto.findAll();
         response.status(200).json({ produto: produtos });
     }
