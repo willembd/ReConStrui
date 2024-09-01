@@ -19,7 +19,6 @@ export default function ModalCancelar({ isOpenTest, setOpenTest, text, textbutto
                              <S.Buttons>
                                <ButtonCancelar withTransition={cancelTransition} onClick={setOpenModalTest} text='Cancelar'/>
                                <S.ButtonStyle  withTransition={actionTransition} onClick={() => { setOpenModalTest(); onConfirm(); }}> {textbutton}</S.ButtonStyle>
-                              
                              </S.Buttons>
                              <S.X onClick={setOpenModalTest}>x</S.X>
                         </S.Itens>

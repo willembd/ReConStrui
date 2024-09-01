@@ -26,17 +26,15 @@ export default function ModalMaisProdutos({ isOpen, setOpen, text}){
                                     <S.Linha />
                                 </S.ContainerTextLinha>
                             <S.ContainerInputs>
-                                        <S.ContainerInputFlex>
-                                            <InputPrimary text='Quantidade mínima '/>
-                                            <InputPrimary text='Categoria '/>
-                                           
+                                    <S.ContainerInputFlex>
+                                        <InputPrimary text='Nome do Produto'/>
+                                        <InputPrimary text='Categoria '/>
 
                                     </S.ContainerInputFlex>
 
                                     <S.ContainerInputFlex>
-                                            <InputPrimary text='Nome do Produto'/>
-                                            <InputPrimary text='Quantidade  Máxima'/>
-                                          
+                                        <InputPrimary text='Quantidade mínima '/>
+                                        <InputPrimary text='Quantidade  Máxima'/>
                                     </S.ContainerInputFlex>
                              </S.ContainerInputs>
                              <S.ContainerButtons>  
