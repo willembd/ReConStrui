@@ -108,4 +108,46 @@ module.exports = class empresaControllers {
     response.status(200).json({ empresa: empresas })
 
   }
+
+  static async getOneEmpresa(request, response) {
+    const { id } = request.params;
+
+    const empresa = await Empresa.findByPk(id);
+
+    if (!empresa) {
+      response.status(422).json({ message: "Empresa não encontrado" });
+      return;
+    }
+
+    response.status(200).json({ empresa : empresa });
+  }
+
+
+  static async deleteEmpresa(request, response){
+    try {
+      const { id } = request.params;
+
+      const empresa = await Empresa.findByPk(id);
+
+      if (!empresa) {
+        response.status(422).json({ message: "Empresa não encontrada" });
+        return;
+      }
+
+      await Empresa.destroy({ where: { id } });
+
+      return response
+        .status(200)
+        .json({ message: "Empresa deletada com sucesso!" });
+    } catch (error) {
+        console.log(error)
+
+        return response.status(500).json({ message: "Erro ao deletar empresa", error })
+    }
+  }
 };
+
+
+
+
+

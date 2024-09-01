@@ -61,10 +61,6 @@ export const router = createBrowserRouter([
         path: "/paginalogin",
         element: <PaginaLogin />,
     },
-    //{
-    //    path: "/pedidos",
-    //    element: <Pedidos/>,
-    //},
     {
         path: "/cadastrousuario",
         element: <CadastroUsuario />,
