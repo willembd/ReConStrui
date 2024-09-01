@@ -220,48 +220,7 @@ export default function PerfilEmpresa() {
                                 </S.ContainerInputs>
                             </S.BigBox>
 
-                            <S.BigBox>
-                                <S.ContainerInputs>
-                                    <S.QuebraLinha>
-                                        <S.TTitulo>Matérias</S.TTitulo>
-                                        <S.LinhaE />
-                                    </S.QuebraLinha>
-
-                                    <S.CheckboxMateriais>
-                                        <S.Material>
-                                            <input id="Areia" type="checkbox" />
-                                            <label htmlFor="Areia">
-                                                Areia Reciclada
-                                            </label>
-                                        </S.Material>
-
-                                        <S.Material>
-                                            <input id="Brita" type="checkbox" />
-                                            <label htmlFor="Brita">
-                                                Brita Reciclada
-                                            </label>
-                                        </S.Material>
-                                        <S.Material>
-                                            <input
-                                                id="Pedrisco"
-                                                type="checkbox"
-                                            />
-                                            <label htmlFor="Pedrisco">
-                                                Pedrisco
-                                            </label>
-                                        </S.Material>
-                                        <S.Material>
-                                            <input
-                                                id="Rachao"
-                                                type="checkbox"
-                                            />
-                                            <label htmlFor="Rachao">
-                                                Rachão
-                                            </label>
-                                        </S.Material>
-                                    </S.CheckboxMateriais>
-                                </S.ContainerInputs>
-                            </S.BigBox>
+                          
 
                             <S.BigBox>
                                 <S.ContainerInputs>
