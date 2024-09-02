@@ -3,27 +3,48 @@ import * as S from "./modalCadastroProdutos"
 import ButtonCancelar from "../ButtonCancelar/buttonCancelar";
 import ButtonMod from "../../Componentes/ButtonModelo/buttonModelo.jsx";
 import { api } from "../../service/api.js";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { jwtDecode } from "jwt-decode";
 
 
 export default function ModalMaisProdutos({ isOpen, setOpen, text}){
     const [nome, setNome] = useState("");
+    const [id_empresa, setId_empresa] = useState("");
     const [categoria, setCategoria] = useState("");
     const [q_minima, setQ_minima] = useState("");
     const [q_maxima, setQ_maxima] = useState("");
+
+    const token = localStorage.getItem("token")
 
     const setOpenModal = () => {
         setOpen(false);  
     }   
 
+    
+    useEffect(() => {
+        if(token){
+            try {
+                const decodedToken = jwtDecode(token);
+                const typeDecode = decodedToken.id
+                setId_empresa(typeDecode)
+            } catch (error) {
+                console.log(error)
+            }
+        }
+    },[])
+
     async function handleCadastraProduto(e) {
-        await api.post('/produto/create', {
+        console.log(id_empresa)
+        await api.post('/produtos/create', {
             nome,
+            "id_empresa": id_empresa,
             categoria,
             q_minima,
             q_maxima
         })
     }
+
+
 
     if(isOpen){
         return(
@@ -69,7 +90,7 @@ export default function ModalMaisProdutos({ isOpen, setOpen, text}){
                                     <ButtonMod
                                         padding='terciário'
                                         text="Adicionar produto"
-                                        onClick={() => {}} 
+                                        onClick={() => handleCadastraProduto()} 
                                     />
                                  
                               </S.ContainerButtons>  
@@ -79,6 +100,5 @@ export default function ModalMaisProdutos({ isOpen, setOpen, text}){
             </S.CaixaModal>
         )
     }
-
     
 }

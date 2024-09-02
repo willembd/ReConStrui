@@ -15,7 +15,7 @@ const Produto = db.define("produtos", {
     allowNull: false,
   },
   categoria: {
-    type: DataTypes.STRING,
+    type: DataTypes.JSON,
   },
   q_minima: {
     type: DataTypes.STRING,

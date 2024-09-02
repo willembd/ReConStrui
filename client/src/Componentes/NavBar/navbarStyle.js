@@ -27,6 +27,10 @@ export const ContainerButton = styled.div`
     display: flex;
     gap: 80px;
 
+    @media screen and (max-width: 1000px) {
+        gap: 40px;
+    }
+
     @media screen and (max-width: 500px) {
         gap: 20px;
     }

@@ -5,17 +5,14 @@ module.exports = class produtoControllers{
     static async creatProduto(request, response){
         try {
             const{
-                nome,
                 id_empresa,
+                nome,
                 categoria,
                 q_minima,
                 q_maxima,
-            } = request.boby;
+            } = request.body;
+            
             if(!nome){
-                response.status(422).json({ message: 'Nome Obrigatorio!' })
-                return
-            }
-            if(!id_empresa){
                 response.status(422).json({ message: 'Nome Obrigatorio!' })
                 return
             }
@@ -34,8 +31,8 @@ module.exports = class produtoControllers{
 
 
             const produto = await Produto.create({
-                nome,
                 id_empresa,
+                nome,
                 categoria,
                 q_minima,
                 q_maxima
