@@ -22,7 +22,7 @@ export default function ModalMaisProdutos({ isOpen, setOpen, text}){
             categoria,
             q_minima,
             q_maxima
-        });
+        })
     }
 
     if(isOpen){

@@ -44,11 +44,11 @@ export default function SolicitacaoEntregaRetirada () {
             const selectedValue = event.target.value;
     
             if (selectedValue === "andamento") {
-                navigate("/pedidos");
+                navigate("/solicitacaopedidoemp");
             } else if (selectedValue === "recebido") {
-                navigate("/pedidosorcamentousuario");
+                navigate("/solicitacaoentregaretirada");
             } else if (selectedValue === "historico") {
-                navigate("/historicousuario");
+                navigate("/historicoempresa");
             }else {
                 console.warn("Opção não reconhecida: ", selectedValue);
             }
@@ -69,8 +69,8 @@ export default function SolicitacaoEntregaRetirada () {
                     <S.PP>Filtrar por:</S.PP>
                     <div className="form-group">
                         <Select onChange={handleSelectChange}>
-                            <option value="andamento">Minhas Solicitações</option>
                             <option value="recebido">Solicitações Entrega/Retirada</option>
+                            <option value="andamento">Minhas Solicitações</option>
                             <option value="historico">Histórico</option>
                         </Select>
                     </div>

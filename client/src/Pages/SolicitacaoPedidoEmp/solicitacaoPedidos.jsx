@@ -50,7 +50,7 @@ export default function SolicitacaoPedido () {
             } else if (selectedValue === "recebido") {
                 navigate("/solicitacaoentregaretirada");
             } else if (selectedValue === "historico") {
-                navigate("/historicousuario");
+                navigate("/historicoempresa");
             }else {
                 console.warn("Opção não reconhecida: ", selectedValue);
             }
