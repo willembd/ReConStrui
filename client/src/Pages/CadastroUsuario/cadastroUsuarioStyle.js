@@ -76,14 +76,17 @@ export const Titulo = styled.h1`
     color: #228137;
 
     @media screen and (max-width: 500px) {
-        font-size: 32px;
+        font-size: 2rem;
+    }
+    @media screen and (max-width: 400px) {
+        font-size: 1rem;
     }
 `;
 
 export const DivInput = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 0.8rem;
     margin: 30px 0px 20px 0px;
 `;
 

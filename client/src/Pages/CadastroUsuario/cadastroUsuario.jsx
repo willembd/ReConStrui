@@ -10,7 +10,6 @@ import InputPrimary from "../../Componentes/InputPrimary/inputPrimary.jsx";
 import ModalDetalhes from "../../Componentes/ModalDetalhes/modaldestalhes.jsx";
 
 
-
 export default function CadastroUsuario() {
     const [nome, setNome] = useState("");
     const [data_nascimento, setData_nascimento] = useState("");
