@@ -300,3 +300,106 @@ export const Link = styled.a`
         font-size:15px;
     }
 `;
+
+export const CheckBoxTermo = styled.div`
+     display: flex;
+     justify-content: center;
+     gap: 10px;
+     margin-bottom: 17px;
+`
+export const ContainerTermo = styled.div`
+    gap: 14px;
+    display: flex;
+    flex-direction: column
+
+`
+export const ContainerTextTermo = styled.div`
+     width: 772px;
+     height: 287px;
+     overflow-y: scroll;
+     border: 1px solid #ccc;
+     scrollbar-color: #228137 #ECECEC !important; 
+
+
+     @media screen and (max-width: 837px) {
+        width: 644px;
+        height: 287px;
+ }
+
+    @media screen and (max-width: 730px) {
+        width: 589px;
+        height: 287px;
+ }
+
+    @media screen and (max-width: 500px) {
+        width: 313px;
+        height: 311px;
+ }
+
+   @media screen and (max-width: 394px) {
+        width: 244px;
+        height: 311px;
+}
+ 
+`;
+
+export const TittleTermo = styled.h1`
+     color: #228137;
+      
+
+`
+export const FlexText = styled.div`
+     display: flex;
+     flex-direction: column;
+     margin: 19px;
+`
+export const SubTittleTermo = styled.h2`
+     margin-top: 10px;
+     margin-bottom: 10px;
+     color: black;
+     font-size: 22px;
+         
+`
+
+export const TextTermo = styled.p`
+      color: black;
+`
+
+export const TextP = styled.p`
+        margin-bottom: 12px;
+`
+
+export const ButtonTermo = styled.button`
+    margin-left: 644px;
+    background-color: #fff;
+    padding: 5px 34px;
+    border: 1px solid #228137;
+    color: #228137;
+    border-radius: 4px;
+    font-size: 20px;
+    cursor: pointer;
+
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    @media screen and (max-width: 837px) {
+        margin-left: 518px;
+    }
+    @media screen and (max-width: 730px) {
+         margin-left: 461px;
+    }      
+
+    @media screen and (max-width: 500px) {
+        margin-left: 217px;
+        padding: 3px 22px;
+        font-size: 18px ;
+    }
+    @media screen and (max-width: 394px) {
+        margin-left: 146px;
+       
+    }
+ 
+`
