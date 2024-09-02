@@ -8,9 +8,15 @@ import FormularioDetalhes from "../../Componentes/FormDetalhes/formDetalhes";
 import ModalCancelar from "../../Componentes/ModalCancelar/modalCancelar";
 import Select from "../../Componentes/Select/select";
 import ButtonCancelar from "../../Componentes/ButtonCancelar/buttonCancelar";
-''
+import Modal from "../../Componentes/Modal//modal";
+import ButtonMod from "../../Componentes/ButtonModelo/buttonModelo";
+
+
+
 
 export default function SolicitacaoEntregaRetirada () {
+
+    const [isOpenMo, setOpenMo] = useState(false)
 
     const [isOpenTest, setOpenTest] = useState(null);
 
@@ -44,11 +50,11 @@ export default function SolicitacaoEntregaRetirada () {
             const selectedValue = event.target.value;
     
             if (selectedValue === "andamento") {
-                navigate("/solicitacaopedidoemp");
+                navigate("/pedidos");
             } else if (selectedValue === "recebido") {
-                navigate("/solicitacaoentregaretirada");
+                navigate("/pedidosorcamentousuario");
             } else if (selectedValue === "historico") {
-                navigate("/historicoempresa");
+                navigate("/historicousuario");
             }else {
                 console.warn("Opção não reconhecida: ", selectedValue);
             }
@@ -69,8 +75,8 @@ export default function SolicitacaoEntregaRetirada () {
                     <S.PP>Filtrar por:</S.PP>
                     <div className="form-group">
                         <Select onChange={handleSelectChange}>
-                            <option value="recebido">Solicitações Entrega/Retirada</option>
                             <option value="andamento">Minhas Solicitações</option>
+                            <option value="recebido">Solicitações Entrega/Retirada</option>
                             <option value="historico">Histórico</option>
                         </Select>
                     </div>
@@ -167,8 +173,22 @@ export default function SolicitacaoEntregaRetirada () {
                                                       isOpenTest={isOpenTest === 2}
                                                       setOpenTest={handleCloseModalTest}></ModalCancelar>
 
-                                                    <S.BBotao  onClick={handleFechar}>Retirada</S.BBotao>
-                                                </S.Flex>
+                                                    <S.BBotao  onClick={() => setOpenMo(!isOpenMo)}>Retirada</S.BBotao>
+
+                                                            
+                                                    <Modal 
+                                                      isOpenMo={isOpenMo}
+                                                      setOpenMo={setOpenMo}> 
+                                                                     <S.TittleModal>Tem certeza que esse produto estar pronto para retirada?</S.TittleModal>
+                                                                <S.ContainerModal>
+                                                                    
+                                                                    <ButtonCancelar withTransition = 'false' onClick={() => setOpenMo(!isOpenMo)} padding= 'secondary' text='Não'/>
+                                                                     <S.ButtonSim onClick={() => setOpenMo(!isOpenMo)}> Sim </S.ButtonSim>
+                                                                     
+                                                                </S.ContainerModal>
+                                                           
+                                                      </Modal>
+                                                 </S.Flex>
                                             </S.QuebraLinha>
                                         </S.SobreContainer>
                                     </div>

@@ -7,11 +7,10 @@ export const ButtonCancelar = styled.button`
     border-radius: 4px;
     font-size: 16px;
     cursor: pointer;
-    
 
     padding: ${props => 
     props.tamanhobutton === 'primary' ?  '10px 16px;' : 
-    props.tamanhobutton === 'secondary' ?  '10px 70px' :
+    props.tamanhobutton === 'secondary' ?  '11px 35px' :
     '10px 16px;'
     };
 

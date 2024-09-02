@@ -1,7 +1,13 @@
 import * as S from "./buttonCancelarStyles"
 
-export default function ButtonCancelar({color, padding, backgroundcolor, border, text, actionTransition, ...rest }){
+export default function ButtonCancelar({color, padding, backgroundcolor,  text, actionTransition, ...rest }){
     return(
-        <S.ButtonCancelar withTransition={actionTransition} colortext = {color} tamanhobutton = {padding} modelobutton = {backgroundcolor} borderbutton = {border}  {...rest}>{ text }</S.ButtonCancelar>
+                      <S.ButtonCancelar 
+                            withTransition={actionTransition}
+                            tamanhobutton = {padding} 
+                            modelobutton = {backgroundcolor} 
+                                {...rest}>
+                                { text }
+                     </S.ButtonCancelar>
     )
 }

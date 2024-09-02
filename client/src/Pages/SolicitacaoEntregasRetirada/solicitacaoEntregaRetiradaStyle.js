@@ -305,6 +305,48 @@ export const BBarraAguardandoT = styled.div`
     }
 `;
 
+export const X = styled.button`
+    
+    cursor: pointer;
+    position: absolute; 
+    top: 0px;
+    right: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #555;
+    border: none;
+    background-color: #fff;
+
+` 
+
+export const TittleModal = styled.h1`
+     font-size: 18px;
+     font-weight: bold;
+     margin-left: 18px;
+`
+
+export const ContainerModal = styled.div`
+    display: flex;
+    gap: 38px;
+
+`
+
+export const ButtonSim = styled.div`
+    background-color: rgba(175, 117, 3, 0.9);
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    padding: 11px 36px;
+    border-radius: 4px;
+    cursor: pointer;
+
+    transition: transform 0.3s ease;
+
+&:hover {
+    transform: scale(1.1);
+}
+`
+
 
 
 
