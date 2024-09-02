@@ -69,7 +69,7 @@ export default function ModalMaisProdutos({ isOpen, setOpen, text}){
                                     <ButtonMod
                                         padding='terciário'
                                         text="Adicionar produto"
-                                        onClick={() => handleCadastraProduto()} 
+                                        onClick={() => {}} 
                                     />
                                  
                               </S.ContainerButtons>  
