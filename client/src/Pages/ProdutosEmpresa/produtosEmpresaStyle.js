@@ -12,7 +12,7 @@ export const Caixa = styled.div`
     background-repeat: no-repeat;
     width: 100%;
 
-    @media screen and (max-width:300px) {
+    @media screen and (max-width:410px) {
         width: 95%;
         
     }
@@ -44,14 +44,22 @@ export const Container = styled.div`
     align-items: center;
 
     @media screen and (max-width: 876px) {
-        width:300px;
-        height: 3500px;
+       width: 700px;
         margin-top: 20px;
+    }
+    @media screen and (max-width: 716px) {
+       width: 600px;
+    }
+    @media screen and (max-width: 620px) {
+        width: 500px;
+    }
+    @media screen and (max-width: 530px) {
+       width: 400px;
     }
 `;
 
 export const ContainerSmall = styled.div`
-    width: 705px;
+    width: 615px;
     height: 279px;
     background-color: rgba(231, 230, 230, 0.5);
     padding: 19px;
@@ -60,7 +68,7 @@ export const ContainerSmall = styled.div`
     display: flex;
     justify-content: center;
 
-    @media screen and (max-width: 678px) {
+    @media screen and (max-width: 778px) {
         width: 95%;
         gap: 20px;
         height: 289px;
@@ -91,9 +99,14 @@ export const Caixa1 = styled.div`
         width: 95%;
         gap: 261px;
     }
+    @media screen and (max-width: 720px) {
+        gap: 120px;
+    }
+    @media screen and (max-width: 530px) {
+        gap: 50px;
+    }
 
-    @media screen and (max-width: 300px) {
-        width: 95%;
+    @media screen and (max-width: 410px) {
         gap: 229px;
         height: 230px;
     }
@@ -111,9 +124,8 @@ export const FlexTextChek = styled.div`
         margin-right: 10px;
     }
 
-    @media screen and (max-width: 300px) {
+    @media screen and (max-width: 410px) {
         width: 9%;
-        margin-right: 10px;
     }
 `;
 
@@ -133,29 +145,26 @@ export const Switch = styled.label`
     display: flex;
     align-items: flex-end;
 
-    @media screen and (max-width: 790px) {
+    @media screen and (max-width: 500px) {
         margin-right: 241px;
     }
-
-    @media screen and (max-width: 599px) {
-        margin-right: 417px;
-    }
-
-    @media screen and (max-width: 300px) {
+    @media screen and (max-width: 410px) {
         width: 188%;
         height: 22px;
+        margin-right: 320px;
     }
+    
 `;
 
 export const TextPausar = styled.p`
     color: green;
     margin-right: 35px;
 
-    @media screen and (max-width: 790px) {
+    @media screen and (max-width: 500px) {
         margin-right: 241px;
     }
-    @media screen and (max-width: 300px) {
-        margin-right: 417px;
+    @media screen and (max-width: 410px) {
+        margin-right: 320px;
         font-size: 12px;
     }
 `;
@@ -192,7 +201,7 @@ export const Slider = styled.span`
         transition: 0.4s;
         border-radius: 50%;
 
-        @media screen and (max-width: 300px) {
+        @media screen and (max-width: 410px) {
             height: 15px;
             width: 14px;
             left: 7px;
@@ -219,13 +228,19 @@ export const TextProdutos = styled.p`
     font-size: 1rem;
     font-weight: bold;
     color: #228137;
+    @media screen and (max-width: 530px) {
+        font-size: 0.8rem;
+    }
 `;
 
 export const NameEmpresa = styled.div`
     font-size: 1rem;
     color: #af7503;
+     @media screen and (max-width: 530px) {
+        font-size: 0.8rem;
+    }
 
-    @media screen and (max-width: 300px) {
+    @media screen and (max-width: 410px) {
         white-space: nowrap;
     }
 `;
@@ -239,9 +254,8 @@ export const Logo = styled.img`
         height: 99px;
         width: 151px;
     }
-
-    @media screen and (max-width: 300px) {
+    @media screen and (max-width: 530px) {
         height: 99px;
-        width: 114px;
+        width: 100px;
     }
 `;
