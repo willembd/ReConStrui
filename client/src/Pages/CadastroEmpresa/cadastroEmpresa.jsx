@@ -272,7 +272,7 @@ export default function CadastroEmpresa() {
                                                          <S.SubTittleTermo> Bem-vindo(a) à plataforma ReConStrui. </S.SubTittleTermo>
                                                     <S.TextTermo>
 
-                                                               <S.TextP> Bem-vindo(a) à plataforma ReConStrui. Estes Termos de Uso regulam a inscrição, uso e participação das empresas interessadas em vender seus produtos na nossa plataforma. Ao se cadastrar, a empresa declara estar de acordo com todos os termos descritos abaixo.</S.TextP> 
+                                                               <S.TextP> Estes Termos de Uso regulam a inscrição, uso e participação das empresas interessadas em vender seus produtos na nossa plataforma. Ao se cadastrar, a empresa declara estar de acordo com todos os termos descritos abaixo.</S.TextP> 
 
                                                                <S.TextP>  1. Cadastro e Acesso 1.1. Para se cadastrar como fornecedor na ReConStrui, a empresa deve preencher o formulário de inscrição, fornecendo informações verídicas e atualizadas. 1.2. A ReConStrui se reserva o direito de verificar a autenticidade das informações fornecidas e, se necessário, solicitar documentos adicionais para validação do cadastro. 1.3. O acesso à plataforma é restrito às empresas aprovadas pela ReConStrui após análise do cadastro.</S.TextP>
 
