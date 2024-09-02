@@ -10,7 +10,6 @@ import EsqueceuSenha from "../Pages/EsqueceuSenha/esqueceuSenha";
 import Cartao from "../Pages/PagamentoCartao/cartao";
 import CadastroUsuario from "../Pages/CadastroUsuario/cadastroUsuario.jsx";
 import Pix from "../Pages/PagamentoPix/pix";
-import NovosOrcamentoEmp from "../Pages/NovosOrcamentoEmpresa/novosOrcamentoEmp";
 import Confirmacao from "../Pages/ConfirmacaoPedidos/confirmacaoPedidos.jsx";
 import OrcamentosEmpresa from "../Pages/OrcamentosEmpresa/orcamentosEmpresa.jsx";
 import ConfirmacaoEntrega from "../Pages/ConfirmacaoEntrega/confirmacaoEntrega.jsx";
@@ -80,10 +79,6 @@ export const router = createBrowserRouter([
     {
         path: "/pagamentopix",
         element: <Pix />,
-    },
-    {
-        path: "/novosOrcamentoEmp",
-        element: <NovosOrcamentoEmp />,
     },
     {
         path: "/orcamentosempresa",

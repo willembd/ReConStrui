@@ -37,8 +37,8 @@ export default function NavBar(){
                 <S.Nav >
                     <S.NavLogo src={ImgLogoNav} alt="" onClick={() => navigation('/')}/>
                     <S.ContainerButton>
-                        <S.ButtonPrimary onClick={() => { {type === 'usuario' ? navigation('/pedidos') : navigation('/orcamentosempresa')} } }>Pedidos</S.ButtonPrimary>
-                        <S.ButtonPrimary onClick={() => { {type === 'empresa' ? navigation('/perfilusuario') : navigation('/perfilempresa')} } }>Perfil</S.ButtonPrimary>
+                        <S.ButtonPrimary onClick={() => { {type === 'usuario' ? navigation('/pedidos') : navigation('/solicitacaopedidoemp')} } }>Pedidos</S.ButtonPrimary>
+                        <S.ButtonPrimary onClick={() => { {type === 'usuario' ? navigation('/perfilusuario') : navigation('/perfilempresa')} } }>Perfil</S.ButtonPrimary>
                         <ButtonNav text="Sair" onClick={() => handleLogout()} />
                     </S.ContainerButton>
                 </S.Nav>

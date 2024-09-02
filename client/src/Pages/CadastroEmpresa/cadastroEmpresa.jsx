@@ -54,6 +54,7 @@ export default function CadastroEmpresa() {
             })
             .then((response) => {
                 localStorage.setItem("token", response.data.token);
+                navigate("/paginalogin");
                 localStorage.removeItem("token")
             })
             .catch((error) => {
