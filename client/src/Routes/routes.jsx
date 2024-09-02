@@ -57,39 +57,39 @@ export const router = createBrowserRouter([
         ),
     },
     {
-        path: "/pagina/login",
+        path: "/paginalogin",
         element: <PaginaLogin />,
     },
     {
-        path: "/cadastro/usuario",
+        path: "/cadastrousuario",
         element: <CadastroUsuario />,
     },
     {
-        path: "/cadastro/empresa",
+        path: "/cadastroempresa",
         element: <CadastroEmpresa />,
     },
     {
-        path: "/esqueceu/senha",
+        path: "/esqueceusenha",
         element: <EsqueceuSenha />,
     },
     {
-        path: "/pag/cartao",
+        path: "/pagamentocartao",
         element: <Cartao />,
     },
     {
-        path: "/pag/pix",
+        path: "/pagamentopix",
         element: <Pix />,
     },
     {
-        path: "/orcamentos/empresa",
+        path: "/orcamentosempresa",
         element: <OrcamentosEmpresa />,
     },
     {
-        path: "/confirmacao/pedidos",
+        path: "/confirmacaopedidos",
         element: <Confirmacao />,
     },
     {
-        path: "/confirmacao/entrega",
+        path: "/confirmacaoentrega",
         element: <ConfirmacaoEntrega />,
     },
     {
@@ -102,35 +102,35 @@ export const router = createBrowserRouter([
         ),
     },
     {
-        path: "/pedidos/usuario",
+        path: "/pedidosorcamentousuario",
         element: <PedidosOrcamentoUsuario />,
     },
     {
-        path: "/historico/usuario",
+        path: "/historicousuario",
         element: <HistoricoUsuario />,
     },
     {
-        path: "/solicitacao/pedido",
+        path: "/solicitacaopedidoemp",
         element: <SolicitacaoPedidoEmp />
     },
     {
-        path: "/solicitacao/entrega",
+        path: "/solicitacaoentregaretirada",
         element: <SolicitacaoEntregaRetirada />
     },
     {
-        path: "/historico/empresa",
+        path: "/historicoempresa",
         element: <HistoricoEmpresa />
     },
     {
-        path: "/perfil/usuario",
+        path: "/perfilusuario",
         element: <PerfilUsuario/>
     },
     {
-        path: "/perfil/empresa",
+        path: "/perfilempresa",
         element: <PerfilEmpresa />
     },
     {
-        path: "/produtos/empresa",
+        path: "/produtosempresa",
         element: <ProdutosEmpresa/>
     }
 
