@@ -151,16 +151,50 @@ export default function CarrosselMaisVendidos() {
                                     </S.Left>
                                 </S.ContainerModal>
                                 <S.DivInput>
-                                        <S.TituloModal>Orçamento</S.TituloModal>
-                                        <S.FUNDO>
-                                            <Input text='Quantidade'/>
-                                            <S.Th3>Informação para Entrega</S.Th3>
-                                            <Input text='Cep'/>
-                                            <Input text='Cidade'/>
-                                            <Input text='Endereço'/>
-                                            <Input text='Bairro'/>
-                                            <Input text='Número'/>
-                                            <S.Th3 className="transorte">Forma de transpote</S.Th3>
+                                <S.TituloModal>Orçamento</S.TituloModal>
+                                            <S.FUNDO>
+                                                <Input>
+                                                    <label className="text">Quantidade</label>
+                                                    <input className="input" type="text" required />
+                                                </Input>
+                                                <S.Th3>Informação para Entrega</S.Th3>
+                                                <Input>
+                                                    <label className="text" > CEP </label>
+                                                    <input {...register("cep")} onBlur={checkCEP} className="input" type="text" required />
+                                                </Input>
+                                                
+                                                <Input>
+
+                                                    <label className="text" > Estado </label>
+                                                    <input {...register("uf")} className="input" type="text" required />
+                                                
+                                                </Input>
+                                                <Input>
+
+                                                    <label className="text" > Cidade </label>
+                                                    <input {...register("cidade")} className="input" type="text" required />
+
+                                                </Input>
+                                                
+                                                <Input>
+
+                                                    <label className="text" > Bairro </label>
+                                                    <input {...register("bairro")} className="input" type="text" required />
+
+                                                </Input>
+                                                <Input>
+
+                                                    <label className="text"> Endereço </label>
+                                                    <input {...register("endereco")} className="input" type="text" required />
+
+                                                </Input>
+
+                                                <Input>
+
+                                                    <label className="text"> Número </label>
+                                                    <input {...register("numero")} className="input" type="text" required />
+
+                                                </Input>   <S.Th3 className="transorte">Forma de transpote</S.Th3>
                                             <S.DivRadio>
                                                 <S.DivTransporte>
                                                     <input type="radio" value="Usuario"/>

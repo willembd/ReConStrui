@@ -326,7 +326,7 @@ export const TituloModal = styled.h1`
     @media screen and (max-width:920px) {
         font-size: 1.6rem;
     }
-    @media screen and (max-width:6750px) {
+    @media screen and (max-width:675px) {
         font-size: 1.3rem;
     }
     @media screen and (max-width:590px) {
@@ -356,10 +356,6 @@ export const FUNDO = styled.div`
     display: flex;
     flex-direction: column;
     justify-content:center;
-    gap: 0.4rem;
-    @media screen and (max-width:1535px) {
-        gap: 0.6rem;
-    }
     @media screen and (max-width: 546px){
         gap: 0px;
     } 
