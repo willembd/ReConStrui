@@ -18,6 +18,12 @@ export default function PerfilEmpresa() {
     const [razao_social, setRazao_social] = useState("");
     const [telefone, setTelefone] = useState("");
     const [cnpj, setCnpj] = useState("");
+    const [cep, setCep] = useState("");
+    const [estado, setEstado] = useState("");
+    const [cidade, setCidade] = useState("");
+    const [bairro, setBairro] = useState("");
+    const [endereco, setEndereco] = useState("");
+    const [numero, setNumero] = useState("");
     const [email, setEmail] = useState("");
     const [transporte, setTransporte] = useState([]);
 
@@ -78,6 +84,24 @@ export default function PerfilEmpresa() {
         if(empresa && empresa.cnpj){
             setCnpj(empresa.cnpj)
         }
+        if(empresa && empresa.cep){
+            setCep(empresa.cep)
+        }
+        if(empresa && empresa.estado){
+            setEstado(empresa.estado)
+        }
+        if(empresa && empresa.cidade){
+            setCidade(empresa.cidade)
+        }
+        if(empresa && empresa.bairro){
+            setBairro(empresa.bairro)
+        }
+        if(empresa && empresa.endereco){
+            setEndereco(empresa.endereco)
+        }
+        if(empresa && empresa.numero){
+            setNumero(empresa.numero)
+        }
         if(empresa && empresa.email){
             setEmail(empresa.email)
         }
@@ -123,7 +147,7 @@ export default function PerfilEmpresa() {
                         <S.ParteSuperior>
                             <S.ImagemPerfil src={ImgPerfil} alt="" />
                             <S.TextoCadastro>
-                                Perfil Empresa AGR Ambiental
+                                Perfil Empresa {empresa.nome}
                             </S.TextoCadastro>
                         </S.ParteSuperior>
 
@@ -174,31 +198,37 @@ export default function PerfilEmpresa() {
                                     <S.InputFlex>
                                         <InputPrimary 
                                         text="Cep" 
-                                       
+                                        value={cep}
+                                        onChange={(e) => setCpf(e.target.value)}
                                         />
                                         <InputPrimary 
                                         text="Estado"
-
+                                        value={estado}
+                                        onChange={(e) => setEstado(e.target.value)}
                                         />
                                     </S.InputFlex>
                                     <S.InputFlex>
                                         <InputPrimary 
                                         text="Cidade" 
-
+                                        value={cidade}
+                                        onChange={(e) => setCidade(e.target.value)}
                                         />
                                         <InputPrimary 
                                         text="Bairro" 
-
+                                        value={bairro}
+                                        onChange={(e) => setBairro(e.target.value)}
                                         />
                                     </S.InputFlex>
                                     <S.InputFlex>
                                         <InputPrimary 
                                         text="Endereço" 
-
+                                        value={endereco}
+                                        onChange={(e) => setEndereco(e.target.value)}
                                         />
                                         <InputPrimary 
                                         text="Número"
-
+                                        value={numero}
+                                        onChange={(e) => setNumero(e.target.value)}
                                          />
                                     </S.InputFlex>
                                 </S.ContainerInputs>
