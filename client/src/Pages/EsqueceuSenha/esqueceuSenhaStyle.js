@@ -99,7 +99,7 @@ export const Texto = styled.p`
     font-size: 15px;
 
     @media screen and (max-width: 500px) {
-        font-size: 11px;
+        font-size: 9px;
     }
 `;
 

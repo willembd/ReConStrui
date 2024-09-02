@@ -69,6 +69,10 @@ export const ContainerInput = styled.div`
     display: flex;
     flex-direction: column;
     gap: 18px;
+
+    @media screen and (max-width: 990px) {
+       width: 200px;
+    }
 `
 
 export const ContainerButton = styled.div`

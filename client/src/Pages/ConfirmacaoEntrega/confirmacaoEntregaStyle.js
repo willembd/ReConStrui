@@ -53,7 +53,7 @@ export const Button = styled.button`
     text-align: center;
     border: none;
     cursor: pointer;
-    border-radius: 0px 4px 4px 0px;
+    border-radius: 0px 0px 0px 0px;
 `;
 
 export const ButtonContainer = styled.div`
@@ -61,7 +61,7 @@ export const ButtonContainer = styled.div`
     margin-top: 10px;
 
     @media screen and (max-width: 500px) {
-        width:35px;
+        width:10%;
         flex-direction: column;
     }
 `;
@@ -95,7 +95,7 @@ export const Dados = styled.div`
     color: #228137;
     align-items: center;
 
-    @media screen and (max-width: 500px) {
+    @media screen and (max-width: 550px) {
         width:35px;
         flex-direction: column;
     }

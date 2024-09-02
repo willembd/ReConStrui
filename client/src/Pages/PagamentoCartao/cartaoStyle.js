@@ -25,7 +25,7 @@ export const Modal = styled.div`
     box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.25);
 
     @media screen and (max-width: 500px) {
-        width: 350px;
+        width: 380px;
         height: 560px;
         display: flex;
         justify-content: center;
@@ -102,22 +102,33 @@ export const FormadePagamento = styled.div`
     align-items: center;
     margin-bottom: 4px;
     gap: 16px;
+
+    @media screen and (max-width: 300px) {
+        display:flex;
+        align-items: center;
+        width: 200px;
+    }
 `;
 
 export const DivRadio = styled.div`
     display: flex;
     align-items: center;
-    gap: 2px;
+    gap: 0px;
 
     label {
         font-size: 12px;
+        width:30px;
     }
 `;
 
 export const DivSelect = styled.div`
     margin-bottom: 20px;
+
     @media screen and (max-width: 500px) {
-        width: 220px;
+        display: flex;
+        align-items: center;
+        width: 340px;
+        
     }
 `;
 export const X = styled.button`
@@ -132,4 +143,13 @@ export const X = styled.button`
     border: none;
     background-color: #fff;
 
-` 
+` ;
+
+export const Select =styled.div`
+
+
+ @media screen and (max-width: 300px) {
+        margin-right:0px;
+        width: 340px;
+ }
+`;
