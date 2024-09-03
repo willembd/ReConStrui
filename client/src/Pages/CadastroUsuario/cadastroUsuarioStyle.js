@@ -20,7 +20,7 @@ export const Modal = styled.div`
 
     @media screen and (max-width: 500px) {
         width: 350px;
-        height: 600px;
+        height: 620px;
         display: flex;
         justify-content: center;
     }
@@ -79,7 +79,7 @@ export const Titulo = styled.h1`
         font-size: 2rem;
     }
     @media screen and (max-width: 400px) {
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
 `;
 
