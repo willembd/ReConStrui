@@ -47,8 +47,8 @@ module.exports = class usuarioControllers {
   }
 
   static async getAllUsuario(response) {
-    const usuario = await Usuario.findAll();
-    response.status(200).json({ usuario: usuario });
+    const usuarios = await Usuario.findAll();
+    response.status(200).json({ usuario: usuarios });
   }
 
   static async getOneUsuario(request, response) {
