@@ -23,6 +23,19 @@ export const NavLogo = styled.img`
     }
 `
 
+export const HamburgerMenu = styled.div`
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+
+
+    @media screen and (max-width: 500px) {
+        display: block;
+        color: #1C4525;
+    }
+    
+`
+
 export const ContainerButton = styled.div`
     display: flex;
     gap: 80px;
@@ -32,7 +45,17 @@ export const ContainerButton = styled.div`
     }
 
     @media screen and (max-width: 500px) {
+        display: ${({ menuOpen }) => (menuOpen ? 'flex' : 'none')};
+        flex-direction: column;
         gap: 20px;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: white;
+        padding: 1rem;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+        z-index: 9;
+    
     }
 `
 

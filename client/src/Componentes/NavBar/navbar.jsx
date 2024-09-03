@@ -9,6 +9,7 @@ import { useEffect, useState } from "react"
 
 export default function NavBar(){
     const [type, setType] = useState()
+    const [menuOpen, setMenuOpen] = useState()
     const token = localStorage.getItem("token")
     const navigation = useNavigate()   
 
@@ -36,7 +37,10 @@ export default function NavBar(){
             {token ? (
                 <S.Nav >
                     <S.NavLogo src={ImgLogoNav} alt="" onClick={() => navigation('/')}/>
-                    <S.ContainerButton>
+                    <S.HamburgerMenu onClick={() => setMenuOpen(!menuOpen)}>
+                       <span>&#9776;</span> 
+                    </S.HamburgerMenu>
+                    <S.ContainerButton menuOpen={menuOpen}>
                         {type === 'empresa' && (
                             <S.ButtonPrimary onClick={() => navigation('/produtosempresa')}>Produto</S.ButtonPrimary>
                         )}
