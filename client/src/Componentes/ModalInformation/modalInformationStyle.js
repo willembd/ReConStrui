@@ -6,64 +6,53 @@ export const CaixaEmail = styled.div`
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgb(0, 0, 0, 0.7);
-    z-index: 9999; 
-        
-`
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+`;
+
 export const ModalStyle = styled.div`
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #FCFCFC;
-    border: 2px solid #295032; 
-    width: 363px;
-    height: 90px;
-    border-radius: 8px;
+    border: 0.125rem solid #295032;
+    width: 22.6875rem;
+    height: 5.625rem;
+    border-radius: 0.5rem;
     display: flex;
     align-items: center;
     justify-content: space-around;
 
-    @media screen and (max-width: 500px) {
-        width: 270px;
-        height: 68px;
-}
-
-   
-
-  `   
-
+    @media screen and (max-width: 31.25rem) {
+        width: 16.875rem;
+        height: 4.25rem;
+    }
+`;
 
 export const Itens = styled.div`
-    padding: 10px;
-    gap: 50px;
+    padding: 0.625rem;
+    gap: 3.125rem;
     color: #228137;
-   
-   
-
-`
-
-
+`;
 
 export const Texto = styled.div`
-         color: #228137;
-         font-size: 20px ;
-         
-    @media screen and (max-width: 500px) {
-        font-size: 13px ;
+    color: #228137;
+    font-size: 1.25rem;
 
+    @media screen and (max-width: 31.25rem) {
+        font-size: 0.8125rem;
     }
-    `
+`;
 
 export const X = styled.button`
     background-color: #fff;
     cursor: pointer;
-    position: absolute; /* Posiciona o 'X' em relação ao modal */
-    top: 0px;
-    right: 10px;
-    font-size: 30px;
+    position: absolute;
+    top: 0;
+    right: 0.625rem;
+    font-size: 1.875rem;
     font-weight: bold;
     color: #555;
     border: none;
-
-` 
+`;

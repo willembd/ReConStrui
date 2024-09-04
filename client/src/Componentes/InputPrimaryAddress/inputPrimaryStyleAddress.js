@@ -5,14 +5,14 @@ export const Campo = styled.div`
     flex-direction: column;
     width: fit-content;
     position: static;
-    width: 360px;
-    @media screen  and (max-width: 1190px){
-        width:290px ;
+    width: 22.5rem;
+
+    @media screen and (max-width: 74.375rem) {
+        width: 18.125rem;
     }
-    @media screen  and (max-width: 920px){
-        width: 250px;
+    @media screen and (max-width: 57.5rem) {
+        width: 15.625rem;
     } 
-    
 
     label.text {
         font-size: 0.75rem;
@@ -20,19 +20,18 @@ export const Campo = styled.div`
         font-weight: 700;
         position: relative;
         top: 0.5rem;
-        margin: 0 0 0 16px;
-        padding: 0 3px;
+        margin: 0 0 0 1rem;
+        padding: 0 0.1875rem;
         background: #fff;
         width: fit-content;
     }
 
     .input {
-        padding: 11px 10px;
+        padding: 0.6875rem 0.625rem;
         font-size: 1rem;
-        border: 2px #E0E0E0 solid;
-        border-radius: 12px;
+        border: 0.125rem #E0E0E0 solid;
+        border-radius: 0.75rem;
         background: #fff;
         outline-color: #228137;
-       
     }
 `;
