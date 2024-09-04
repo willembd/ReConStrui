@@ -7,26 +7,26 @@ export const Caixa = styled.div`
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin: 100px 0px;
+    margin: 6.25rem 0;
 `;
 
 export const Modal = styled.div`
     background-color: #fcfcfc;
     color: black;
-    width: 1040px;
-    height: 540px;
-    border-radius: 8px;
+    width: 65rem;
+    height: 33.75rem;
+    border-radius: 0.5rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 20px;
-    margin-bottom: 40px;
-    border-radius: 12px;
-    box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.25);
+    gap: 1.25rem;
+    margin-bottom: 2.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0.5rem 0.5rem 0.625rem rgba(0, 0, 0, 0.25);
 
-    @media screen and (max-width: 500px) {
-        width: 330px;
-        height: 500px;
+    @media screen and (max-width: 31.25rem) {
+        width: 20.625rem;
+        height: 31.25rem;
         display: flex;
         justify-content: center;
     }
@@ -39,18 +39,18 @@ export const ModalContainer = styled.div`
 `;
 
 export const Button = styled.button`
-    padding: 12px;
+    padding: 0.75rem;
     background-color: #228137;
     color: white;
     text-align: center;
     border: none;
     cursor: pointer;
-    border-radius: 0px 4px 4px 0px;
+    border-radius: 0 0.25rem 0.25rem 0;
 `;
 
 export const ButtonContainer = styled.div`
     width: 100%;
-    margin-top: 10px;
+    margin-top: 0.625rem;
 `;
 
 export const Imagem = styled.div`
@@ -58,10 +58,10 @@ export const Imagem = styled.div`
     justify-content: space-between;
     align-items: center;
     width: 50%;
-    height: 540px;
-    border-radius: 12px 0px 0px 12px;
+    height: 33.75rem;
+    border-radius: 0.75rem 0 0 0.75rem;
 
-    @media screen and (max-width: 500px) {
+    @media screen and (max-width: 31.25rem) {
         display: none;
     }
 `;
@@ -77,11 +77,11 @@ export const Form = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 1.25rem;
     width: 50%;
 
-    @media screen and (max-width: 500px) {
-        width: 390px;
+    @media screen and (max-width: 31.25rem) {
+        width: 24.375rem;
     }
 `;
 
