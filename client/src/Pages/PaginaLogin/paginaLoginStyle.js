@@ -3,19 +3,19 @@ import styled from "styled-components";
 export const Caixa = styled.div`
     display: flex;
     justify-content: center;
-    margin: 100px 0px;
+    margin: 6.25rem 0rem;
 `;
 
 export const Modal = styled.div`
     background-color: #fcfcfc;
-    width: 1040px;
-    height: 590px;
-    border-radius: 12px;
-    box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.25);
+    width: 65rem;
+    height: 36.875rem;
+    border-radius: 0.75rem;
+    box-shadow: 0.5rem 0.5rem 0.625rem rgba(0, 0, 0, 0.25);
 
-    @media screen and (max-width: 500px) {
-        width: 350px;
-        height: 500px;
+    @media screen and (max-width: 31.25rem) {
+        width: 21.875rem;
+        height: 31.25rem;
         display: flex;
         justify-content: center;
     }
@@ -27,26 +27,26 @@ export const ModalContainer = styled.div`
 `;
 
 export const Button = styled.button`
-    padding: 12px;
+    padding: 0.75rem;
     background-color: #228137;
     color: white;
     text-align: center;
     border: none;
     cursor: pointer;
-    border-radius: 0px 4px 4px 0px;
+    border-radius: 0rem 0.25rem 0.25rem 0rem;
 `;
 
 export const ButtonContainer = styled.div`
     width: 100%;
-    margin-top: 10px;
+    margin-top: 0.625rem;
 `;
 
 export const Imagem = styled.div`
     width: 50%;
-    height: 590px;
-    border-radius: 12px 0px 0px 12px;
+    height: 36.875rem;
+    border-radius: 0.75rem 0rem 0rem 0.75rem;
 
-    @media screen and (max-width: 500px) {
+    @media screen and (max-width: 31.25rem) {
         display: none;
     }
 `;
@@ -62,17 +62,17 @@ export const FormLogin = styled.div`
     justify-content: center;
     width: 50%;
     
-    @media screen and (max-width: 500px) {
-        width: 0px;
+    @media screen and (max-width: 31.25rem) {
+        width: 0rem;
     }
 `;
 
 export const Titulo = styled.h1`
     color: #228137;
-    font-size: 43px;
+    font-size: 2.628rem;
 
-    @media screen and (max-width: 500px) {
-        font-size: 36px;
+    @media screen and (max-width: 31.25rem) {
+        font-size: 2.25rem;
     }
 `;
 
@@ -84,48 +84,48 @@ export const Organizacao = styled.div`
 export const DivInput = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 40px;
-    margin: 50px 0px 05px 0px;
+    gap: 2.5rem;
+    margin: 3.125rem 0rem 0.313rem 0rem;
 `;
 export const Linksenha = styled.a`
     color: #288137;
-    font-size:16px;
+    font-size:1rem;
 `;
 export const DivRadio = styled.div`
     display: flex;
-    margin-top: 20px;
-    margin-bottom: 25px;
-    gap: 40px;
+    margin-top: 1.25rem;
+    margin-bottom: 1.563rem;
+    gap: 2.5rem;
 `;
 
 export const DivRadioOpcoes = styled.div`
     display: flex;
-    gap: 6px;
+    gap: 0.375rem;
 `
 
 export const DivLink = styled.div`
     display: flex;
     align-items: center;
-    gap: 8px;
-    margin-top: 20px;
+    gap: 0.5rem;
+    margin-top: 1.25rem;
     color: #288137;
     
-    @media screen and (max-width: 500px) {
+    @media screen and (max-width: 31.25rem) {
         flex-direction: column;
     }
 `;
 
 export const TextP = styled.p`
-    font-size: 16px;
+    font-size: 1rem;
 
 `
 
 export const Links = styled.a`
     color: #af7503;
     text-decoration: underline;
-    font-size:16px;
+    font-size:1rem;
 
-    @media screen and (max-width: 500px) {
-        font-size: 13px;
+    @media screen and (max-width: 31.25rem) {
+        font-size: 0.813rem;
     }
 `;
