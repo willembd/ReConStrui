@@ -18,7 +18,6 @@ export default function CadastroUsuario() {
     const [senha, setSenha] = useState("");
     const [termo, setTermo] = useState(false);
 
-
     const navigate = useNavigate();
 
     const handleFechar = () => {
@@ -38,6 +37,7 @@ export default function CadastroUsuario() {
             })
             .then((response) => {
                 localStorage.setItem("token", response.data.token);
+                alert("Usuário cadastrado com sucesso!");
                 navigate("/paginalogin");
                 localStorage.removeItem("token")
             })

@@ -65,6 +65,7 @@ export default function CadastroEmpresa() {
             .then((response) => {
                 localStorage.setItem("token", response.data.token);
                 localStorage.removeItem("token")
+                alert("Usuário cadastrado com sucesso!");
                 navigate("/paginalogin");
             })
             .catch((error) => {
