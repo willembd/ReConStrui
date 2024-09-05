@@ -1,0 +1,49 @@
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+import "./carrossel.css"
+
+import "swiper/css/autoplay";
+
+import { Navigation, Pagination, Autoplay} from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import * as S from "./carrosselStyle"
+
+
+export default function Carrossel(){
+
+  const imagens = [
+
+    {id: '1', image: "/Carrossel-1.svg" },
+    {id: '2', image: "/Carrossel-2.svg" },
+    {id: '3', image: "/Carrossel-3.svg" },
+
+  ]
+  
+
+  return (
+      <div className='Conteiner'>
+
+         <Swiper 
+            modules={[Navigation, Pagination, Autoplay]}
+            slidesPerView={1}
+            navigation 
+            autoplay={{delay: 4000, disableOnInteraction: true}}
+            pagination={{ clickable: true}}
+                 
+           >
+            
+             {imagens.map( (item) => (
+                <SwiperSlide key={item.id}>
+                   <S.Imagens src={item.image} alt="Slide" className='slide-item'/>
+                </SwiperSlide>
+
+              ))}
+           </Swiper>
+
+      </div>
+     
+  )
+}

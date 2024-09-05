@@ -1,0 +1,50 @@
+.swiper-button-next, .swiper-button-prev {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
+  color: #fff;
+}
+
+.swiper-pagination-bullet {
+  background-color: #fff;
+  top: 1.25rem;
+  width: 0.6875rem;
+  height: 0.75rem;
+
+  @media screen and (max-width: 31.25rem) {
+    width: 0.5625rem;
+    height: 0.5rem;
+  } 
+
+  @media screen and (max-width: 23.75rem) {
+    width: 0.375rem;
+    height: 0.3125rem;
+  } 
+}
+
+@media screen and (max-width: 46.875rem) {
+  .swiper-button-prev:after, .swiper-button-next:after {
+    font-size: 1rem;
+  }
+}
+
+.swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: 4.125rem;
+
+  @media screen and (max-width: 62.5rem) {
+    bottom: 4.625rem;
+    position: relative;
+  }
+
+  @media screen and (max-width: 62.5rem) {
+    bottom: 3.125rem;
+    position: relative;
+  }
+
+  @media screen and (max-width: 54.5rem) {
+    bottom: 3.125rem;
+    position: relative;
+  }
+}
