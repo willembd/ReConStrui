@@ -1,0 +1,15 @@
+FROM node:20
+
+WORKDIR /server
+
+COPY package*.jsom ./
+
+RUN rm -rf node_modules
+
+RUN npm install
+
+COPY . .
+
+EXPOSE 3003
+
+CMD [ "npm", "start" ]
