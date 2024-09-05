@@ -16,6 +16,8 @@ export default function CadastroUsuario() {
     const [cpf, setCpf] = useState("");
     const [email, setEmail] = useState("");
     const [senha, setSenha] = useState("");
+    const [termo, setTermo] = useState(false);
+
 
     const navigate = useNavigate();
 
@@ -24,7 +26,10 @@ export default function CadastroUsuario() {
     };
 
     async function handleCadastrarUser(e) {
-        await api.post('/usuario/create', {
+        if (termo === false) {
+            alert("Por favor, confirme que leu e aceita os Termos e condições antes de prosseguir.");
+        } else {
+            await api.post('/usuario/create', {
                 nome,
                 data_nascimento,
                 cpf,
@@ -39,6 +44,8 @@ export default function CadastroUsuario() {
             .catch((error) => {
                 alert(error.response.data.message);
             });
+        }
+        
     }
     const [isOpen, setOpen] = useState(false)
 
@@ -87,7 +94,9 @@ export default function CadastroUsuario() {
                             </S.DivInput>
 
                             <S.CheckBoxTermo>
-                                       <input 
+                                       <input onChange={() =>
+                                                    setTermo(!termo)
+                                                }
                                        type="checkbox" 
                                         id="TermoDeUso" />
 

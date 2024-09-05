@@ -19,6 +19,8 @@ export default function CadastroEmpresa() {
     const [email, setEmail] = useState("");
     const [senha, setSenha] = useState("");
     const [transporte, setTransporte] = useState([]);
+    const [termo, setTermo] = useState(false);
+
 
     const navigate = useNavigate();
     const {register, setValue, getValues, setFocus} = useForm();
@@ -39,8 +41,12 @@ export default function CadastroEmpresa() {
 
     async function handleCadastrarEmpresa() {
         console.log(getValues("endereco"))
+        console.log(termo);
 
-        await api
+        if (termo === false) {
+            alert("Por favor, confirme que leu e aceita os Termos e condições antes de prosseguir.");
+        } else {
+            await api
             .post("/empresa/create", {
                 nome,
                 razao_social,
@@ -59,10 +65,14 @@ export default function CadastroEmpresa() {
             .then((response) => {
                 localStorage.setItem("token", response.data.token);
                 localStorage.removeItem("token")
+                navigate("/paginalogin");
             })
             .catch((error) => {
                 alert(error.response.data.message);
             });
+        }
+
+        
     }
 
 
@@ -252,7 +262,9 @@ export default function CadastroEmpresa() {
                                     </S.CheckboxTransporte>
                                 </S.ContainerInputs>
                                         <S.CheckBoxTermo>
-                                                <input 
+                                                <input onChange={() =>
+                                                    setTermo(!termo)
+                                                }
                                                 type="checkbox" 
                                                     id="TermoDeUso" />
 
