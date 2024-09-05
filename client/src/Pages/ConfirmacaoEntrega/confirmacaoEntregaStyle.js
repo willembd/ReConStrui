@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import PlanoFundo from "../../assets/planodefundo.svg"
+import PlanoFundo from "../../assets/planodefundo.svg";
 
 export const Caixa = styled.div`
     background-color: white;
@@ -12,56 +12,50 @@ export const Caixa = styled.div`
     height: 100vh;
     background-image: url(${PlanoFundo});
     background-repeat: no-repeat;
-
 `;
 
 export const Modal = styled.div`
     color: black;
-    width: 900px;
-    height: 540px;
-    border-radius: 8px;
+    width: 56.25rem;
+    height: 33.75rem;
+    border-radius: 0.75rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 20px;
-    margin-bottom: 40px;
-    border-radius: 12px;
-    box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.25);
+    gap: 1.25rem;
+    margin-bottom: 2.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0.5rem 0.5rem 0.625rem rgba(0, 0, 0, 0.25);
     background-color: white;
-
-   
 `;
 
 export const ModalContainer = styled.div`
     display: flex;
     width: 100%;
     justify-content: center;
-    gap: 50px;
+    gap: 3.125rem;
 
     @media screen {
-        width:95%;
-       
+        width: 95%;
     }
-
-   
 `;
 
 export const Button = styled.button`
-    padding: 12px;
+    padding: 0.75rem;
     background-color: #228137;
     color: white;
     text-align: center;
     border: none;
     cursor: pointer;
-    border-radius: 0px 0px 0px 0px;
+    border-radius: 0;
 `;
 
 export const ButtonContainer = styled.div`
     width: 100%;
-    margin-top: 10px;
+    margin-top: 0.625rem;
 
-    @media screen and (max-width: 500px) {
-        width:10%;
+    @media screen and (max-width: 31.25rem) {
+        width: 10%;
         flex-direction: column;
     }
 `;
@@ -70,46 +64,43 @@ export const Campos = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    width: 40%;
-    height: 300px;
-    border-radius: 12px 0px 0px 12px;
-    gap: 10px;
+    width: 25rem;
+    height: 18.75rem;
+    border-radius: 0.75rem 0 0 0.75rem;
+    gap: 0.625rem;
 
-    @media screen and (max-width: 500px) {
-        width: 120px;
+    @media screen and (max-width: 31.25rem) {
+        width: 7.5rem;
         flex-direction: column;
-        height:200px;
+        height: 12.5rem;
     }
 `;
 
 export const Titulo = styled.h1`
     color: #228137;
-    margin-top: 30px;
+    margin-top: 1.875rem;
 `;
 
 export const Dados = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 25px;
-    margin-top: 50px;
+    gap: 1.5625rem;
+    margin-top: 3.125rem;
     color: #228137;
     align-items: center;
 
-    @media screen and (max-width: 550px) {
-        width:35px;
+    @media screen and (max-width: 34.375rem) {
+        width: 2.1875rem;
         flex-direction: column;
     }
-
 `;
 
 export const Titulo1 = styled.h1`
     color: #228137;
-    margin-top: 60px;
-    margin-right: 70px;
+    margin-top: 3.75rem;
+    margin-right: 4.375rem;
     display: flex;
-    padding-left: 10px;
-    padding: 5px;
-    margin-bottom: 30px;
+    padding-left: 0.625rem;
+    padding: 0.3125rem;
+    margin-bottom: 1.875rem;
 `;
-
-
