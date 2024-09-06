@@ -2,47 +2,43 @@ version: '3.8'
 
 services:
   db:
-    image: mysql:8.0
+    container_name: db
+    image: mysql:8
     environment:
-      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_ROOT_PASSWORD: password
       MYSQL_DATABASE: reconstrui
-      MYSQL_USER: user
-      MYSQL_PASSWORD: password
-    ports:
+    ports: 
       - "3306:3306"
-    volumes:
+    volumes: 
       - db_data:/var/lib/mysql
     networks:
       - app-networks
 
   flyway:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    depends_on:
+    image: flyway/flyway
+    command: -url=jdbc:mysql://db -schemas=myschema -user=root -password=password -connectRetries=60 migrate
+    volumes: 
+      - ./sql:/flyway/sql
+    depends_on: 
       - db
-    environment:
-      FLYWAY_URL: jdbc:mysql://db:3306/reconstrui
-      FLYWAY_USER: user
-      FLYWAY_PASSWORD: password
-    command: migrate
     networks:
       - app-networks
 
   server:
     build:
       context: ./server
-    ports:
+      dockerfile: Dockerfile
+    ports: 
       - "3003:3003"
     environment:
       DB_HOST: db
       DB_PORT: 3306
-      DB_USER: user
+      DB_USER: root
       DB_PASSWORD: password
       DB_NAME: reconstrui
     depends_on:
       - db
-    networks:
+    networks: 
       - app-networks
     entrypoint: ["/wait-for-it.sh", "db:3306", "--", "npm", "start"]
 
@@ -51,7 +47,7 @@ services:
       context: ./client
     ports:
       - "3000:3000"
-    depends_on:
+    depends_on: 
       - server
     networks:
       - app-networks
