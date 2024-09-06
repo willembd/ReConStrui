@@ -8,14 +8,26 @@ services:
       MYSQL_DATABASE: reconstrui
       MYSQL_USER: user
       MYSQL_PASSWORD: password
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - app-networks
 
-  ports:
-    - "3306:3306"
-  volumes:
-    - db_data:/var/lib/mysql
-  networks:
-  - app-networks      
-
+  flyway:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - db
+    environment:
+      FLYWAY_URL: jdbc:mysql://db:3306/reconstrui
+      FLYWAY_USER: user
+      FLYWAY_PASSWORD: password
+    command: migrate
+    networks:
+      - app-networks
 
   server:
     build:
@@ -31,22 +43,21 @@ services:
     depends_on:
       - db
     networks:
-    - app-networks
+      - app-networks
+    entrypoint: ["/wait-for-it.sh", "db:3306", "--", "npm", "start"]
 
-    client:
-      build:
-        context: ./client
-      ports:
-        - 3000:80
-      depends_on:
-        - client
-      networks:
-        - app-networks
+  client:
+    build:
+      context: ./client
+    ports:
+      - "3000:3000"
+    depends_on:
+      - server
+    networks:
+      - app-networks
 
 volumes:
   db_data:
 
 networks:
-  app-networks
-
-      
+  app-networks:

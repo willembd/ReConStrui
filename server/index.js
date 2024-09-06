@@ -10,6 +10,6 @@ app.use(cors())
 
 app.use(router)
 
-app.listen(3031, () => {
+app.listen(3003, () => {
     console.log('Ola mundo')
 })

@@ -8,13 +8,11 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { useState, useEffect } from "react"; 
 import { useNavigate } from "react-router-dom";
 import Cards from "../Cards/cards.jsx"
-import "../Cards/cards.css"
 import ModalCards from "../modalCards/modalCards.jsx";
 import ButtonMod from "../ButtonModelo/buttonModelo.jsx";
 import Input from "../Input/input.jsx";
 import Modal from "../Modal/modal.jsx";
 
-import { api } from "../../service/api.js";
 import { useForm } from "react-hook-form";
 
 

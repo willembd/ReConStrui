@@ -1,19 +1,13 @@
-FROM node:20 AS build
+FROM node:20.11.1-slim
 
-WORKDIR /client
-
-COPY package*.jsom ./
-
-RUN npm install 
+WORKDIR /app
 
 COPY . .
 
+RUN npm install
+
 RUN npm run build
 
-FROM nginx:alpine
+EXPOSE 3000
 
-COPY --from=build /client/dist /usr/share/nginx/html
-
-EXPOSE 80
-
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["npm", "run", "preview"]

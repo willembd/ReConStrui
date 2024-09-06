@@ -17,7 +17,7 @@ const Usuario = db.define(
       type: DataTypes.DATE
     },
     cpf: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       unique: true
     },
     email: {
